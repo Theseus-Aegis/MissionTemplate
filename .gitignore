@@ -46,6 +46,9 @@ Temporary Items
 # Project Files
 # =========================
 
+# Release
+release/*
+
 # Swap
 *.swp
 
@@ -55,6 +58,3 @@ Temporary Items
 # Arma
 *.pbo
 texHeaders.bin
-
-# Tools temporary files
-tools/temp

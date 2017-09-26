@@ -8,11 +8,10 @@ Various staging for proper framework, proof of concept and other scripts for plu
 
 ### Usage
 
-- Copy `CfgFunctions.hpp` and `functions` folder to your mission root (next to `description.ext`)
-- Add `#include "CfgFunctions.hpp"` to `description.ext`
-- Remove unneeded functions from `functions` folder and their respective classes from `CfgFunctions.hpp` (eg. `class someFunction;`)
+- Add function by adding it to `functions` folder with name `fn_myFunction.sqf` and add class `PATHTO_FNC(myFunction);` in `CfgFunctions.hpp`
+- Remove unneeded functions from `functions` folder and their respective classes from `CfgFunctions.hpp` (eg. `PATHTO_FNC(someFunction);`)
 
 #### Debugging
 
 - Add `allowFunctionsRecompile = 1;` to `description.ext`
-- Uncomment `recompile = 1;` in `CfgFunctions.hpp`
+- Uncomment `#define RECOMPILE` in `script_component.hpp`

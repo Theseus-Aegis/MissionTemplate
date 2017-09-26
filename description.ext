@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 OnLoadName = "MISSION NAME"; // Mission Title
 OnLoadMission = "MISSION SUMMARY"; // Mission Short Description
 onLoadIntroTime = 1;
