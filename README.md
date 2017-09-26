@@ -1,2 +1,2 @@
-# tac-a3-mission-template
-Arma 3 - Theseus Inc. Mission Template
+# Mission Template
+TAC Arma 3 Mission Template

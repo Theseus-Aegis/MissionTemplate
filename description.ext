@@ -1,0 +1,31 @@
+OnLoadName = "MISSION NAME"; // Mission Title
+OnLoadMission = "MISSION SUMMARY"; // Mission Short Description
+onLoadIntroTime = 1;
+loadScreen = "images\loadingscreen.jpg"; // Mission Loading Image
+author = "YOURNAME, Theseus Inc.";
+overviewText = "Theseus Inc.";
+onLoadMissionTime = 1;
+
+class Header {
+    gameType = "COOP"; //Mission Type
+    minPlayers = 1;
+    maxPlayers = 27;
+};
+
+class ACE_Settings {
+	class tac_apollo_enabled {
+       value = 1; //Chronos - disable when testing locally
+       typeName = "BOOL";
+   };
+};
+
+respawn = "BASE"; // BASE (3) Respawn on markers "respawn_west". Multiple markers possible. If no marker present, player respawns where he started the mission.
+respawnButton = 1; // Respawn button enabled
+respawnDelay = 5; // Delay in seconds before playable unit respawns.
+respawnDialog = 0; // 0/1 to disable the scoreboard from showing automatically
+
+disabledAI = 1; // Disables AI for Playable Units
+enableDebugConsole[] = {"76561198048995566"}; // Enables Debug Console for players with specified UIDs (Jonpas) and Host/Admin
+enableTargetDebug = 1;
+
+#include "CfgFunctions.hpp"

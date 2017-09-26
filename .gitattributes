@@ -1,0 +1,7 @@
+* text=auto
+*.png binary
+*.jpg binary
+*.paa binary
+
+# Use new for mission.sqm merging
+*.sqm merge=theirs
