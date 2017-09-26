@@ -35,14 +35,14 @@ private _actionOpen = [
 [_object, 0, ["ACE_MainActions"], _actionOpen] call ace_interact_menu_fnc_addActionToObject;
 
 // Admin chat command to toggle spectator availability
-tac_baseSpectatorObject = _object;
 ["tac-spectator", {
-    if (tac_baseSpectatorObject getVariable ["tac_baseSpectatorAllowed", false]) then {
+    params ["_object"];
+    if (_object getVariable ["tac_baseSpectatorAllowed", false]) then {
         ["tac_baseSpectatorProhibit", nil, call CBA_fnc_players] call CBA_fnc_targetEvent;
-        tac_baseSpectatorObject setVariable ["tac_baseSpectatorAllowed", false, true];
+        _object setVariable ["tac_baseSpectatorAllowed", false, true];
         ["ace_common_systemChatGlobal", "[TAC] Spectator Prohibited"] call CBA_fnc_globalEvent;
     } else {
-        tac_baseSpectatorObject setVariable ["tac_baseSpectatorAllowed", true, true];
+        _object setVariable ["tac_baseSpectatorAllowed", true, true];
         ["ace_common_systemChatGlobal", "[TAC] Spectator Allowed"] call CBA_fnc_globalEvent;
     };
-}] call CBA_fnc_registerChatCommand;
+}, "admin", _object] call CBA_fnc_registerChatCommand;
