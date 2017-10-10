@@ -1,5 +1,5 @@
 /*
- * Author: Kresky
+ * Author: Kresky, Jonpas
  * Adds briefing based on side.
  * Call from initPlayerLocal.sqf.
  * Uncomment specific sections below and fill out the briefing text.
