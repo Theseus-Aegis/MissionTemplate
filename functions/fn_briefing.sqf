@@ -37,10 +37,10 @@ switch (side _player) do {
 		_player createDiaryRecord ["Diary", ["Objectives", "
 			<br/>	Mission Objectives goes here.
 			<br/>
-			<br/>	<font color='#E3D310'>PRIMARY OBJECTIVE:</font color>
+			<br/>	<font color='#E3D310'>PRIMARY OBJECTIVES:</font color>
 			<br/>	Your Primary Objective
 			<br/>
-			<br/>	<font color='#E3D310'>SECONDARY OBJECTIVE:</font color>
+			<br/>	<font color='#E3D310'>SECONDARY OBJECTIVES:</font color>
 			<br/>	Your Secondary Objective
 
 		"]];
