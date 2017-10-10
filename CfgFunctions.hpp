@@ -6,6 +6,7 @@ class CfgFunctions {
             // Reference README.md for usage instructions
             PATHTO_FNC(baseSpectator);
             PATHTO_FNC(briefing);
+            PATHTO_FNC(searchIntel);
         };
     };
 };
