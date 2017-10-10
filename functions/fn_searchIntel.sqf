@@ -16,6 +16,7 @@
  * Example:
  * [this, "Search", "Found a document", "Enemy Documents", "Document describing enemy movement plans"] call TAC_Scripts_fnc_searchIntel
  */
+#include "script_component.hpp"
 
 params ["_controller", "_interactText", "_hintText", "_intelEntry", "_intelDescription"];
 
