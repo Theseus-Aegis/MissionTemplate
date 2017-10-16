@@ -21,18 +21,18 @@
 params ["_controller", "_interactText", "_hintText", "_intelEntry", "_intelDescription"];
 
 private _actionSearch = [
-	format ["TAC_Scripts_searchIntel_%1", _controller],
-	_interactText,
-	"",
-	{
-       (_this select 2) params ["_hintText", "_intelEntry", "_intelDescription"];
-       [_hintText] call ace_common_fnc_displayTextStructured;
-       [-1, {player createDiaryRecord _this}, ["Diary", [format ["%1", _intelEntry], format ["%1", _intelDescription]]]] call CBA_fnc_globalExecute;
-       deleteVehicle this;
-   },
-   {true},
-   {},
-   [_hintText, _intelEntry, _intelDescription]
+    format ["TAC_Scripts_searchIntel_%1", _controller],
+    _interactText,
+    "",
+    {
+        (_this select 2) params ["_hintText", "_intelEntry", "_intelDescription"];
+        [_hintText] call ace_common_fnc_displayTextStructured;
+        [QGVAR(createDiaryRecordGlobal), [_player, ["Diary", [_intelEntry, _intelDescription]]]] call CBA_fnc_globalEventJIP;
+        deleteVehicle this;
+    },
+    {true},
+    {},
+    [_hintText, _intelEntry, _intelDescription]
 ] call ace_interact_menu_fnc_createAction;
 
 [_controller, 0, ["ACE_MainActions"], _actionSearch] call ACE_Interact_Menu_fnc_addActionToObject;
