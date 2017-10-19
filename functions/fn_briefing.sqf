@@ -2,8 +2,7 @@
  * Author: Kresky, Jonpas
  * Adds briefing based on side.
  * Call from initPlayerLocal.sqf.
- * Uncomment specific sections below and fill out the briefing text.
- * Copy to other side briefings for use with other sides.
+ * Copy to other side briefings if you want to add briefings to those sides.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -25,7 +24,6 @@
  *
  * Image:
  * <img image='FOLDER\IMAGE.jpg' width='200' height='100'/>
- *
  */
 #include "..\script_component.hpp"
 
@@ -38,11 +36,10 @@ switch (side _player) do {
 			<br/>	Mission Objectives goes here.
 			<br/>
 			<br/>	<font color='#E3D310'>PRIMARY OBJECTIVES:</font color>
-			<br/>	Your Primary Objective
+			<br/>	Your Primary Objective(s)
 			<br/>
 			<br/>	<font color='#E3D310'>SECONDARY OBJECTIVES:</font color>
-			<br/>	Your Secondary Objective
-
+			<br/>	Your Secondary Objective(s)
 		"]];
 
 		_player createDiaryRecord ["Diary", ["Situation", "

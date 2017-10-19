@@ -1,6 +1,6 @@
 /*
  * Author: Kresky, Jonpas
- * Adds the ability to search an object for intel or "collect" objects as intel items. Intel will be added to the ingame briefing tab.
+ * Adds the ability to "pick up" objects, and add an intel entry in the briefing tab.
  * Call from object init.
  *
  * Arguments:
@@ -14,17 +14,17 @@
  * None
  *
  * Example:
- * [this, "Search", "Found a document", "Enemy Documents", "Document describing enemy movement plans"] call TAC_Scripts_fnc_searchIntel
+ * [this, "Collect Document", "Document picked up", "Intel", "Document describing enemy movement plans"] call TAC_Scripts_fnc_collectIntel
  */
 #include "..\script_component.hpp"
 
 params ["_controller", "_interactText", "_hintText", "_intelEntry", "_intelDescription"];
 
 private _actionSearch = [
-	format [QGVAR(searchIntel_%1), _controller],
-	_interactText,
-	"",
-	{
+    format [QGVAR(collectIntel_%1), _controller],
+    _interactText,
+    "",
+    {
        (_this select 2) params ["_hintText", "_intelEntry", "_intelDescription"];
        [_hintText] call ace_common_fnc_displayTextStructured;
        [_player, ["Diary", [_intelEntry, _IntelDescription]]] remoteExecCall ["createDiaryRecord", 0, true];

@@ -1,6 +1,6 @@
 # Mission Template
 
-TAC Arma 3 Mission Template
+Theseus Mission Template.
 
 # TAC Scripts
 
@@ -8,8 +8,8 @@ Various staging for proper framework, proof of concept and other scripts for plu
 
 ### Usage
 
-- Add function by adding it to `functions` folder with name `fn_myFunction.sqf` and add class `class myFunction;` in `CfgFunctions.hpp`
-- Remove unneeded functions from `functions` folder and their respective classes from `CfgFunctions.hpp` (eg. `class someFunction;`)
+- Add a function by adding it to `functions` folder with name `fn_myFunction.sqf` and add class `class myFunction;` in `CfgFunctions.hpp`
+- Remove unneeded functions from `functions` folder and their respective classes from `CfgFunctions.hpp` (eg. `class myFunction;`)
 
 #### Debugging
 

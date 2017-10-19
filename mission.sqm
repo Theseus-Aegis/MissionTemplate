@@ -12,7 +12,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=5;
+		nextID=10;
 	};
 	class Camera
 	{
@@ -71,7 +71,7 @@ class AddonsMetaData
 		class Item4
 		{
 			className="tacs_units";
-			name="tacs_units";
+			name="Theseus Services - Units";
 			author="Theseus Services Team";
 			url="https://github.com/Theseus-Aegis/TheseusServices";
 		};
@@ -2532,7 +2532,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={4014.5588,6.0431652,3998.4998};
-								angles[]={-0,3.1415927,0};
+								angles[]={0,3.1415927,0};
 							};
 							side="Empty";
 							flags=4;
@@ -2562,10 +2562,10 @@ class Mission
 					dataType="Comment";
 					class PositionInfo
 					{
-						position[]={4000.4924,5,3984.5803};
+						position[]={4000.896,5,3988.1201};
 					};
 					title="Spawn";
-					description="Where you spawn when you first load in before your location is saved to Chronos.";
+					description="Where you spawn when you first load in before your location is saved to Chronos." \n "" \n "Note: Don't forget the respawn marker. It is only visible from the map in the editor.";
 					id=15;
 				};
 				class Item6
@@ -2576,7 +2576,7 @@ class Mission
 						position[]={4014.4871,5,3996.825};
 					};
 					title="Spectator";
-					description="Spectator object used for activating the spectator mode." \n "Requires the ""fn_baseSpectator.sqf"" (Ask on Slack if you're in doubt)." \n "To toggle spectating, on/off a logged in admin must type ""#tac-spectator"" in chat. Afterwards, players can use ACE interaction on the monitor (specScreen) to go into spectator mode.";
+					description="Spectator object used for activating the spectator mode." \n "Requires the ""fn_baseSpectator.sqf"" (Ask on Slack if you're in doubt)." \n "To toggle spectating on/off, a logged in admin must type ""#tacSpec"" in chat. Afterwards, players can use ACE interaction on the monitor (specScreen) to go into spectator mode.";
 					id=16;
 				};
 			};

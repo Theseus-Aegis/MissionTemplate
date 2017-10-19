@@ -1,33 +1,37 @@
 #include "script_component.hpp"
+#include "CfgFunctions.hpp"
 
-OnLoadName = "MISSION NAME"; // Mission Title
-OnLoadMission = "MISSION SUMMARY"; // Mission Short Description
-onLoadIntroTime = 1;
-loadScreen = "images\loadingscreen.jpg"; // Mission Loading Image
-author = "YOURNAME, Theseus Inc.";
+// Mission settings - title, description, author etc.
+OnLoadName = "MISSION NAME";  // Mission title
+OnLoadMission = "MISSION SUMMARY";  // Short description under the mission loading image
+author = "YOUR.NAME, Theseus Inc."; // Mission maker
+loadScreen = "x\tac\addons\resources\images\MissionLoad.paa";  // Mission Loading Image
 overviewText = "Theseus Inc.";
+onLoadIntroTime = 1;
 onLoadMissionTime = 1;
 
+// Gametype and playercount
 class Header {
-    gameType = "COOP"; //Mission Type
+    gameType = "COOP"; // Mission Type
     minPlayers = 1;
-    maxPlayers = 27;
+    maxPlayers = 27; // Number of player slots. Include Headless Clients as well. Eg 24 playable slots and 3 HC = 27.
 };
 
 class ACE_Settings {
+    // Chronos - disable when testing locally
 	class tac_apollo_enabled {
-       value = 1; //Chronos - disable when testing locally
+       value = 1;
        typeName = "BOOL";
    };
 };
 
+// Respawn settings
 respawn = "BASE"; // BASE (3) Respawn on markers "respawn_west". Multiple markers possible. If no marker present, player respawns where he started the mission.
 respawnButton = 1; // Respawn button enabled
 respawnDelay = 5; // Delay in seconds before playable unit respawns.
 respawnDialog = 0; // 0/1 to disable the scoreboard from showing automatically
 
+// AI & debug
 disabledAI = 1; // Disables AI for Playable Units
 enableDebugConsole[] = {"76561198048995566"}; // Enables Debug Console for players with specified UIDs (Jonpas) and Host/Admin
 enableTargetDebug = 1;
-
-#include "CfgFunctions.hpp"
