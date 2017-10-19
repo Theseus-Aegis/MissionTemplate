@@ -13,7 +13,7 @@
  * Example:
  * [player, spectatorObject] call TAC_Scripts_fnc_baseSpectator
  */
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 
 params ["_player", "_object"];
 
@@ -37,13 +37,13 @@ private _actionOpen = [
 
 // Admin chat command to toggle spectator availability
 ["tac-spectator", {
-    params ["_object"];
-    if (_object getVariable [QGVAR(baseSpectatorAllowed), false]) then {
+    //USES_VARIABLES ["_thisArgs"]
+    if (_thisArgs getVariable [QGVAR(baseSpectatorAllowed), false]) then {
         [QGVAR(baseSpectatorProhibit), nil, call CBA_fnc_players] call CBA_fnc_targetEvent;
-        _object setVariable [QGVAR(baseSpectatorAllowed), false, true];
+        _thisArgs setVariable [QGVAR(baseSpectatorAllowed), false, true];
         ["ace_common_systemChatGlobal", "[TAC] Spectator Prohibited"] call CBA_fnc_globalEvent;
     } else {
-        _object setVariable [QGVAR(baseSpectatorAllowed), true, true];
+        _thisArgs setVariable [QGVAR(baseSpectatorAllowed), true, true];
         ["ace_common_systemChatGlobal", "[TAC] Spectator Allowed"] call CBA_fnc_globalEvent;
     };
 }, "admin", _object] call CBA_fnc_registerChatCommand;
