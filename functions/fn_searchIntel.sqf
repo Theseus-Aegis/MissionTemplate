@@ -21,7 +21,7 @@
 params ["_controller", "_interactText", "_hintText", "_intelEntry", "_intelDescription"];
 
 private _actionSearch = [
-	format ["TAC_Scripts_searchIntel_%1", _controller],
+	format [QGVAR(searchIntel_%1), _controller],
 	_interactText,
 	"",
 	{
