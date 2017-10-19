@@ -7,7 +7,7 @@ class CfgFunctions {
             // Reference README.md for usage instructions
             class baseSpectator;
             class briefing;
-            class searchIntel;
+            class collectIntel;
         };
     };
 };
