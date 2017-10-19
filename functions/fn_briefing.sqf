@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player] call TAC_Scripts_fnc_briefing
+ * [player] call FUNC(briefing);
  *
  * Line Break:
  * <br/>

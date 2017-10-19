@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [this, "Collect Document", "Document picked up", "Intel", "Document describing enemy movement plans"] call TAC_Scripts_fnc_collectIntel
+ * [this, "Collect Document", "Document picked up", "Intel", "Document describing enemy movement plans"] call FUNC(collectIntel);
  */
 #include "..\script_component.hpp"
 
