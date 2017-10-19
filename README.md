@@ -14,4 +14,4 @@ Various staging for proper framework, proof of concept and other scripts for plu
 #### Debugging
 
 - Add `allowFunctionsRecompile = 1;` to `description.ext`
-- Uncomment `#define RECOMPILE` in `script_component.hpp`
+- Uncomment `recompile = 1;` in `CfgFunctions.hpp`
