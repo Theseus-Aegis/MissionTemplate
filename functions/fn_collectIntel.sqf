@@ -1,10 +1,10 @@
 /*
  * Author: Kresky, Jonpas
  * Adds the ability to "pick up" objects, and add an intel entry in the briefing tab.
- * Call from object init.
+ * Call from initPlayerLocal.sqf
  *
  * Arguments:
- * 0: Interaction object <OBJECT>
+ * 0: Object name (The object you want to "pick up") <OBJECT>
  * 1: ACE Interact text <STRING>
  * 2: Hint message <STRING>
  * 3: Diary/briefing entry tab name <STRING>
@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [this, "Collect Document", "Document picked up", "Intel", "Document describing enemy movement plans"] call FUNC(collectIntel);
+ * [doc01, "Collect Document", "Document picked up", "Intel", "Document describing enemy movement plans"] call FUNC(collectIntel);
  */
 #include "..\script_component.hpp"
 
