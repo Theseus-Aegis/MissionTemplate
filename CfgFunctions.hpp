@@ -1,12 +1,12 @@
 class CfgFunctions {
-    class ADDON {
-        tag = QUOTE(ADDON);
+    class TAC_Scripts {
+        tag = "TAC_Scripts";
         class functions {
             file = "functions";
-            // Reference README.md for usage instructions
-            PATHTO_FNC(baseSpectator);
-            PATHTO_FNC(briefing);
-            PATHTO_FNC(searchIntel);
+            //recompile = 1; // Debug - Requires allowFunctionsRecompile = 1; in description.ext
+            class baseSpectator;
+            class briefing;
+			class collectIntel;
         };
     };
 };
