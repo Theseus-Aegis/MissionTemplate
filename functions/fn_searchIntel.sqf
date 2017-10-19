@@ -27,7 +27,7 @@ private _actionSearch = [
 	{
        (_this select 2) params ["_hintText", "_intelEntry", "_intelDescription"];
        [_hintText] call ace_common_fnc_displayTextStructured;
-       [-1, {player createDiaryRecord _this}, ["Diary", [format ["%1", _intelEntry], format ["%1", _intelDescription]]]] call CBA_fnc_globalExecute;
+       [_player, ["Diary", [_intelEntry, _IntelDescription]]] remoteExecCall ["createDiaryRecord", 0, true];
        deleteVehicle this;
    },
    {true},
