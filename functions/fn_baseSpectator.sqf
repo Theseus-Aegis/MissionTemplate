@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, spectatorObject] call TAC_Scripts_fnc_baseSpectator
+ * [player, spectatorObject] call FUNC(baseSpectator);
  */
 #include "..\script_component.hpp"
 

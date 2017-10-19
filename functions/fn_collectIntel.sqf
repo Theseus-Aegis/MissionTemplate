@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [this, "Collect Document", "Document picked up", "Intel", "Document describing enemy movement plans"] call TAC_Scripts_fnc_collectIntel
+ * [this, "Collect Document", "Document picked up", "Intel", "Document describing enemy movement plans"] call FUNC(collectIntel);
  */
 #include "..\script_component.hpp"
 
@@ -26,13 +26,13 @@ private _actionCollectIntel = [
     "",
     {
        (_this select 2) params ["_hintText", "_intelEntry", "_intelDescription"];
-       [_hintText] call ace_common_fnc_displayTextStructured;
-       [_player, ["Diary", [_intelEntry, _IntelDescription]]] remoteExecCall ["createDiaryRecord", 0, true];
+       [_hintText] call ACEFUNC(common,displayTextStructured);
+       [_player, ["Diary", [_intelEntry, _intelDescription]]] remoteExecCall ["createDiaryRecord", 0, true];
        deleteVehicle this;
    },
    {true},
    {},
    [_hintText, _intelEntry, _intelDescription]
-] call ace_interact_menu_fnc_createAction;
+] call ACEFUNC(interact_menu,createAction);
 
-[_controller, 0, ["ACE_MainActions"], _actionCollectIntel] call ACE_Interact_Menu_fnc_addActionToObject;
+[_controller, 0, ["ACE_MainActions"], _actionCollectIntel] call ACEFUNC(interact_menu,addActionToObject);
