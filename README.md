@@ -8,7 +8,6 @@ Various staging for proper framework, proof of concept and other scripts for plu
 
 ### Usage
 
-<<<<<<< HEAD
 - Add a function by adding it to `functions` folder with name `fn_myFunction.sqf` and add class `class myFunction;` in `CfgFunctions.hpp`
 - Remove unneeded functions from `functions` folder and their respective classes from `CfgFunctions.hpp` (eg. `class myFunction;`)
 

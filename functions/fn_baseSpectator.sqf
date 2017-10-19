@@ -31,9 +31,9 @@ private _actionOpen = [
     {(_this select 2) getVariable [QGVAR(baseSpectatorAllowed), false]},
     {},
     _object
-] call ace_interact_menu_fnc_createAction;
+] call ACEFUNC(interact_menu,createAction);
 
-[_object, 0, ["ACE_MainActions"], _actionOpen] call ace_interact_menu_fnc_addActionToObject;
+[_object, 0, ["ACE_MainActions"], _actionOpen] call ACEFUNC(interact_menu,addActionToObject);
 
 // Admin chat command to toggle spectator availability
 ["tac-spectator", {
@@ -46,4 +46,4 @@ private _actionOpen = [
         _thisArgs setVariable [QGVAR(baseSpectatorAllowed), true, true];
         ["ace_common_systemChatGlobal", "[TAC] Spectator Allowed"] call CBA_fnc_globalEvent;
     };
-}] call CBA_fnc_registerChatCommand;
+}, "admin", _object] call CBA_fnc_registerChatCommand;
