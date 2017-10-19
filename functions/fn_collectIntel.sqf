@@ -20,7 +20,7 @@
 
 params ["_controller", "_interactText", "_hintText", "_intelEntry", "_intelDescription"];
 
-private _actionSearch = [
+private _actionCollectIntel = [
     format [QGVAR(collectIntel_%1), _controller],
     _interactText,
     "",
@@ -35,4 +35,4 @@ private _actionSearch = [
    [_hintText, _intelEntry, _intelDescription]
 ] call ace_interact_menu_fnc_createAction;
 
-[_controller, 0, ["ACE_MainActions"], _actionSearch] call ACE_Interact_Menu_fnc_addActionToObject;
+[_controller, 0, ["ACE_MainActions"], _actionCollectIntel] call ACE_Interact_Menu_fnc_addActionToObject;
