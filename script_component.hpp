@@ -11,7 +11,6 @@
 
 #define DEBUG_SYNCHRONOUS
 //#define DEBUG_MODE_FULL
-//#define RECOMPILE // Debug - Requires allowFunctionsRecompile = 1; in description.ext
 
 #include "\x\cba\addons\main\script_macros_mission.hpp"
 
