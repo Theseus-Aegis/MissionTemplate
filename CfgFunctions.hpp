@@ -3,10 +3,11 @@ class CfgFunctions {
         tag = QUOTE(ADDON);
         class functions {
             file = "functions";
+            //recompile = 1; // Debug - Requires allowFunctionsRecompile = 1; in description.ext
             // Reference README.md for usage instructions
-            PATHTO_FNC(baseSpectator);
-            PATHTO_FNC(briefing);
-            PATHTO_FNC(searchIntel);
+            class baseSpectator;
+            class briefing;
+            class searchIntel;
         };
     };
 };

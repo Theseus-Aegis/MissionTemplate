@@ -13,22 +13,22 @@
  * Example:
  * [player, spectatorObject] call TAC_Scripts_fnc_baseSpectator
  */
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 
 params ["_player", "_object"];
 
 // Event for closing spectator from other machines
-["tac_baseSpectatorProhibit", {
+[QGVAR(baseSpectatorProhibit), {
     [false] call ACEFUNC(spectator,setSpectator);
 }, _player] call CBA_fnc_addEventHandlerArgs;
 
 // Player open spectator on specified object
 private _actionOpen = [
-    "tac_baseSpectatorOpen",
+    QGVAR(baseSpectatorOpen),
     "Open Spectator",
     "\a3\3den\data\cfg3den\camera\cameratexture_ca.paa",
     {[true, false] call ACEFUNC(spectator,setSpectator)}, // Forced by default (second parameter), non-forced allows user to exit
-    {(_this select 2) getVariable ["tac_baseSpectatorAllowed", false]},
+    {(_this select 2) getVariable [QGVAR(baseSpectatorAllowed), false]},
     {},
     _object
 ] call ACEFUNC(interact_menu,createAction);
@@ -37,13 +37,13 @@ private _actionOpen = [
 
 // Admin chat command to toggle spectator availability
 ["tac-spectator", {
-    params ["_object"];
-    if (_object getVariable ["tac_baseSpectatorAllowed", false]) then {
-        ["tac_baseSpectatorProhibit", nil, call CBA_fnc_players] call CBA_fnc_targetEvent;
-        _object setVariable ["tac_baseSpectatorAllowed", false, true];
+    //USES_VARIABLES ["_thisArgs"]
+    if (_thisArgs getVariable [QGVAR(baseSpectatorAllowed), false]) then {
+        [QGVAR(baseSpectatorProhibit), nil, call CBA_fnc_players] call CBA_fnc_targetEvent;
+        _thisArgs setVariable [QGVAR(baseSpectatorAllowed), false, true];
         ["ace_common_systemChatGlobal", "[TAC] Spectator Prohibited"] call CBA_fnc_globalEvent;
     } else {
-        _object setVariable ["tac_baseSpectatorAllowed", true, true];
+        _thisArgs setVariable [QGVAR(baseSpectatorAllowed), true, true];
         ["ace_common_systemChatGlobal", "[TAC] Spectator Allowed"] call CBA_fnc_globalEvent;
     };
 }, "admin", _object] call CBA_fnc_registerChatCommand;

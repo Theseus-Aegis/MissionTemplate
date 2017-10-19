@@ -27,7 +27,7 @@
  * <img image='FOLDER\IMAGE.jpg' width='200' height='100'/>
  *
  */
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 
 params ["_player"];
 
