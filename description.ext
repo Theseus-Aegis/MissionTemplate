@@ -2,19 +2,19 @@
 #include "CfgFunctions.hpp"
 
 // Mission settings - title, description, author etc.
-OnLoadName = "MISSION NAME";  // Mission title
-OnLoadMission = "MISSION SUMMARY";  // Short description under the mission loading image
-author = "YOUR.NAME, Theseus Inc.";  // Mission maker
-loadScreen = "x\tac\addons\resources\images\MissionLoad.paa";  // Mission Loading Image
+OnLoadName = "MISSION NAME";
+OnLoadMission = "MISSION SUMMARY";
+author = "YOUR.NAME, Theseus Inc.";
+loadScreen = "x\tac\addons\resources\images\MissionLoad.paa";
 overviewText = "Theseus Inc.";
 onLoadIntroTime = 1;
 onLoadMissionTime = 1;
 
 // Gametype and playercount
 class Header {
-    gameType = "COOP";  // Mission Type
+    gameType = "COOP";
     minPlayers = 1;
-    maxPlayers = 27;  // Number of player slots. Include Headless Clients as well. Eg 24 playable slots and 3 HC = 27.
+    maxPlayers = 27;
 };
 
 class ACE_Settings {
@@ -26,10 +26,10 @@ class ACE_Settings {
 };
 
 // Respawn settings
-respawn = "BASE";  // BASE (3) Respawn on markers "respawn_west". Multiple markers possible. If no marker present, player respawns where he started the mission.
-respawnButton = 1;  // Respawn button enabled
-respawnDelay = 5;  // Delay in seconds before playable unit respawns.
-respawnDialog = 0;  // 0/1 to disable the scoreboard from showing automatically
+respawn = "BASE";
+respawnButton = 1;
+respawnDelay = 5;
+respawnDialog = 0;
 
 // AI & debug
 disabledAI = 1;  // Disables AI for Playable Units
