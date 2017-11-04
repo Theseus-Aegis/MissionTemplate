@@ -8,7 +8,7 @@ class EditorData
 	toggles=33;
 	class ItemIDProvider
 	{
-		nextID=59;
+		nextID=60;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3997.5168,20.523855,3974.9773};
-		dir[]={0.00049718854,-0.57056469,0.82128787};
-		up[]={0.00034536037,0.82122743,0.57060266};
-		aside[]={1.0000259,-3.0309252e-008,-0.00060588308};
+		pos[]={3999.238,24.585907,3973.2249};
+		dir[]={-0.0012988283,-0.63965559,0.76870394};
+		up[]={-0.0010809047,0.76863188,0.63969111};
+		aside[]={1.0000284,1.6324066e-008,0.0016891813};
 	};
 };
 binarizationWanted=0;
@@ -2086,9 +2086,10 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={3999.072,5,3994.8076};
+				position[]={3999.072,5,3994.8081};
 			};
 			title="Spawn";
+			description="The place people spawn before Chronos saves your location." \n "" \n "Note: The respawn marker (""respawn_west"") is the location you respawn after dying. This marker can only be selected from the Map screen in the editor.";
 			id=47;
 		};
 		class Item7
@@ -2498,6 +2499,7 @@ class Mission
 				position[]={3987.9861,5,3997.0249};
 			};
 			title="HC & Zeus Modules";
+			description="Headless Clients & Zeus Modules." \n "Location of these doesn't matter.";
 			id=55;
 		};
 		class Item15
