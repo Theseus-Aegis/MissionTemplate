@@ -17,14 +17,6 @@ class Header {
     maxPlayers = 27;
 };
 
-class ACE_Settings {
-    // Chronos - disable when testing locally
-	class tac_apollo_enabled {
-       value = 1;
-       typeName = "BOOL";
-   };
-};
-
 // Respawn settings
 respawn = "BASE";
 respawnButton = 1;

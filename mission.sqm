@@ -5,21 +5,17 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=33;
+	toggles=37;
 	class ItemIDProvider
 	{
-		nextID=60;
-	};
-	class MarkerIDProvider
-	{
-		nextID=1;
+		nextID=43;
 	};
 	class Camera
 	{
-		pos[]={3999.238,24.585907,3973.2249};
-		dir[]={-0.0012988283,-0.63965559,0.76870394};
-		up[]={-0.0010809047,0.76863188,0.63969111};
-		aside[]={1.0000284,1.6324066e-008,0.0016891813};
+		pos[]={32.192822,16.346016,52.256332};
+		dir[]={-0.0055092825,-0.53615314,-0.84411985};
+		up[]={-0.0034991843,0.84410799,-0.53616041};
+		aside[]={-0.99999565,-9.9438239e-008,0.0065270485};
 	};
 };
 binarizationWanted=0;
@@ -30,16 +26,15 @@ addons[]=
 	"Desert",
 	"A3_Characters_F",
 	"A3_Modules_F_Curator_Curator",
-	"ace_zeus",
-	"ace_weather",
 	"A3_Props_F_Exp_Military_Camps",
-	"A3_Structures_F_Mil_Flags"
+	"A3_Structures_F_Mil_Flags",
+	"tac_armory"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=8;
 		class Item0
 		{
 			className="tacs_units";
@@ -75,38 +70,58 @@ class AddonsMetaData
 		};
 		class Item5
 		{
-			className="ace_zeus";
-			name="ACE3 - Zeus";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item6
-		{
-			className="ace_weather";
-			name="ACE3 - Weather";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item7
-		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item6
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item7
+		{
+			className="tac_armory";
+			name="TAC - Armory";
+			author="TAC Mod Team";
+			url="http://www.theseus-aegis.com/";
+		};
 	};
 };
-randomSeed=15082414;
+randomSeed=14014387;
 class ScenarioData
 {
 	author="Kresky";
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
@@ -119,21 +134,21 @@ class Mission
 		forecastWeather=0;
 		forecastWind=0.1;
 		forecastWaves=0.1;
-		forecastLightnings=0.1;
 		rainForced=1;
 		lightningsForced=1;
 		wavesForced=1;
 		windForced=1;
-		year=2035;
-		day=28;
+		year=2015;
+		month=6;
+		day=6;
 		hour=13;
 		minute=37;
-		startFogDecay=0.014;
-		forecastFogDecay=0.014;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 	class Entities
 	{
-		items=17;
+		items=19;
 		class Item0
 		{
 			dataType="Group";
@@ -146,8 +161,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3994.9609,5.0014391,3992.9722};
-						angles[]={0,3.1370897,0};
+						position[]={36,5.0014391,34.050049};
 					};
 					side="West";
 					flags=7;
@@ -225,8 +239,84 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3996.981,5.0014391,3993.019};
-						angles[]={0,3.1370897,0};
+						position[]={34,5.0014391,34.050049};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=2;
+					type="tacs_Unit_B_Medic";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={36,5.0014391,32.050049};
 					};
 					side="West";
 					flags=5;
@@ -298,91 +388,12 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3995.0354,5.0014391,3995.0662};
-						angles[]={0,3.1370897,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=5;
-					type="tacs_Unit_B_Medic";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male01ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3996.9944,5.0014391,3994.9905};
-						angles[]={0,3.1370897,0};
+						position[]={33.999512,5.0014391,32.050537};
 					};
 					side="West";
 					flags=5;
@@ -390,7 +401,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=7;
+					id=4;
 					type="tacs_Unit_B_Medic";
 					class CustomAttributes
 					{
@@ -472,8 +483,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4000.9761,5.0014391,3993.0439};
-						angles[]={0,3.1393237,0};
+						position[]={30,5.0014391,34.050049};
 					};
 					side="West";
 					flags=7;
@@ -481,7 +491,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=9;
+					id=6;
 					type="tacs_Unit_B_Engineer";
 					class CustomAttributes
 					{
@@ -550,8 +560,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4002.9536,5.0014391,3992.9009};
-						angles[]={0,3.1393237,0};
+						position[]={28,5.0014391,34.050049};
 					};
 					side="West";
 					flags=5;
@@ -559,7 +568,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=11;
+					id=7;
 					type="tacs_Unit_B_Engineer";
 					class CustomAttributes
 					{
@@ -628,8 +637,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4001.0327,5.0014391,3994.9875};
-						angles[]={0,3.1393237,0};
+						position[]={29.999756,5.0014391,32.049561};
 					};
 					side="West";
 					flags=5;
@@ -637,7 +645,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=13;
+					id=8;
 					type="tacs_Unit_B_Engineer";
 					class CustomAttributes
 					{
@@ -706,8 +714,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4002.936,5.0014391,3995.0056};
-						angles[]={0,3.1393237,0};
+						position[]={27.999512,5.0014391,32.049561};
 					};
 					side="West";
 					flags=5;
@@ -715,7 +722,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=15;
+					id=9;
 					type="tacs_Unit_B_Engineer";
 					class CustomAttributes
 					{
@@ -783,7 +790,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=8;
+			id=5;
 		};
 		class Item2
 		{
@@ -797,8 +804,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3992.9751,5.0014391,3999.0933};
-						angles[]={0,3.1654339,0};
+						position[]={38.000488,5.0014391,28.049805};
 					};
 					side="West";
 					flags=7;
@@ -806,7 +812,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=21;
+					id=11;
 					type="tacs_Unit_B_TeamLeader";
 					class CustomAttributes
 					{
@@ -875,8 +881,813 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3994.8411,5.0014391,3999.0654};
-						angles[]={0,3.1304049,0};
+						position[]={36,5.0014391,28.050049};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=12;
+					type="tacs_Unit_B_Contractor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={33.999756,5.0014391,28.049561};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=13;
+					type="tacs_Unit_B_Contractor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={31.999512,5.0014391,28.050049};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=14;
+					type="tacs_Unit_B_Contractor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={30.000244,5.0014391,28.050537};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=15;
+					type="tacs_Unit_B_Contractor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27.999512,5.0014391,28.050293};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=16;
+					type="tacs_Unit_B_Contractor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={25.999512,5.0014391,28.050537};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=17;
+					type="tacs_Unit_B_Contractor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=10;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acex_headless_blacklist";
+					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item3
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=7;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={38.000488,5.0014391,26.049561};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=19;
+					type="tacs_Unit_B_TeamLeader";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={36,5.0014391,26.050049};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=20;
+					type="tacs_Unit_B_Contractor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={33.999512,5.0014391,26.050293};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=21;
+					type="tacs_Unit_B_Contractor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={32,5.0014391,26.050049};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=22;
+					type="tacs_Unit_B_Contractor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={29.999512,5.0014391,26.050293};
 					};
 					side="West";
 					flags=5;
@@ -948,13 +1759,89 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item2
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3996.792,5.0014391,3999.0803};
-						angles[]={0,3.1304049,0};
+						position[]={28,5.0014391,26.050537};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=24;
+					type="tacs_Unit_B_Contractor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={25.999756,5.0014391,26.049561};
 					};
 					side="West";
 					flags=5;
@@ -1026,882 +1913,34 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3999.2097,5.0014391,3998.9771};
-						angles[]={0,3.1304049,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=27;
-					type="tacs_Unit_B_Contractor";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4000.8938,5.0014391,3999.075};
-						angles[]={0,3.1304049,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=29;
-					type="tacs_Unit_B_Contractor";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4002.8203,5.0014391,3999.1223};
-						angles[]={0,3.1304049,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=31;
-					type="tacs_Unit_B_Contractor";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4004.8762,5.0014391,3999.075};
-						angles[]={0,3.1304049,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=33;
-					type="tacs_Unit_B_Contractor";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
 			};
 			class Attributes
 			{
 			};
-			id=20;
-		};
-		class Item3
-		{
-			dataType="Group";
-			side="West";
-			class Entities
+			id=18;
+			class CustomAttributes
 			{
-				items=7;
-				class Item0
+				class Attribute0
 				{
-					dataType="Object";
-					class PositionInfo
+					property="acex_headless_blacklist";
+					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+					class Value
 					{
-						position[]={3993.1099,5.0014391,4001.1265};
-						angles[]={0,3.1654339,0};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=35;
-					type="tacs_Unit_B_TeamLeader";
-					class CustomAttributes
-					{
-						class Attribute0
+						class data
 						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
+							class type
 							{
-								class data
+								type[]=
 								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
+									"BOOL"
 								};
 							};
+							value=0;
 						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male11ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=3;
 					};
 				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3994.9758,5.0014391,4001.0986};
-						angles[]={0,3.1304049,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=36;
-					type="tacs_Unit_B_Contractor";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3996.9268,5.0014391,4001.1135};
-						angles[]={0,3.1304049,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=37;
-					type="tacs_Unit_B_Contractor";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3999.3445,5.0014391,4001.0103};
-						angles[]={0,3.1304049,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=38;
-					type="tacs_Unit_B_Contractor";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4001.0286,5.0014391,4001.1082};
-						angles[]={0,3.1304049,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=39;
-					type="tacs_Unit_B_Contractor";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4002.9551,5.0014391,4001.1555};
-						angles[]={0,3.1304049,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=40;
-					type="tacs_Unit_B_Contractor";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4005.011,5.0014391,4001.1082};
-						angles[]={0,3.1304049,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=41;
-					type="tacs_Unit_B_Contractor";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
+				nAttributes=1;
 			};
-			class Attributes
-			{
-			};
-			id=34;
 		};
 		class Item4
 		{
@@ -1915,8 +1954,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3998.0259,5.0014391,3996.9202};
-						angles[]={0,3.117734,0};
+						position[]={33,5.0014391,30.050049};
 					};
 					side="West";
 					flags=7;
@@ -1924,7 +1962,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=43;
+					id=27;
 					type="tacs_Unit_B_PilotHeli";
 					class CustomAttributes
 					{
@@ -1993,8 +2031,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.8752,5.0014391,3996.9053};
-						angles[]={0,3.117734,0};
+						position[]={30.999268,5.0014391,30.050049};
 					};
 					side="West";
 					flags=5;
@@ -2002,7 +2039,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=45;
+					id=28;
 					type="tacs_Unit_B_PilotHeli";
 					class CustomAttributes
 					{
@@ -2070,38 +2107,63 @@ class Mission
 			class Attributes
 			{
 			};
-			id=42;
+			id=26;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acex_headless_blacklist";
+					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item5
 		{
 			dataType="Marker";
-			position[]={3999.1707,0,4003.7063};
+			position[]={32.009521,5,32.540283};
 			name="respawn_west";
 			type="Empty";
-			id=46;
-			atlOffset=-5;
+			angle=180.00002;
+			id=29;
 		};
 		class Item6
 		{
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={3999.072,5,3994.8081};
+				position[]={32.000488,5,33.000244};
+				angles[]={0,3.1415935,0};
 			};
 			title="Spawn";
 			description="The place people spawn before Chronos saves your location." \n "" \n "Note: The respawn marker (""respawn_west"") is the location you respawn after dying. This marker can only be selected from the Map screen in the editor.";
-			id=47;
+			id=30;
 		};
 		class Item7
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3987.0112,5,3995.1191};
+				position[]={46,5,33};
+				angles[]={0,3.1415935,0};
 			};
 			name="headlessclient1";
 			isPlayable=1;
-			id=48;
+			id=31;
 			type="HeadlessClient_F";
 		};
 		class Item8
@@ -2109,11 +2171,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3987.0471,5,3997.175};
+				position[]={46,5,30};
+				angles[]={0,3.1415935,0};
 			};
 			name="headlessclient2";
 			isPlayable=1;
-			id=49;
+			id=32;
 			type="HeadlessClient_F";
 		};
 		class Item9
@@ -2121,11 +2184,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3987.0613,5,3999.1191};
+				position[]={46,5,27};
+				angles[]={0,3.1415935,0};
 			};
 			name="headlessclient3";
 			isPlayable=1;
-			id=50;
+			id=33;
 			type="HeadlessClient_F";
 		};
 		class Item10
@@ -2133,9 +2197,10 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3988.9705,5,3994.9792};
+				position[]={42,5,30};
+				angles[]={0,3.1415935,0};
 			};
-			id=51;
+			id=34;
 			type="ModuleCurator_F";
 			class CustomAttributes
 			{
@@ -2220,267 +2285,10 @@ class Mission
 		};
 		class Item11
 		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={3988.9924,5,3997.0173};
-			};
-			id=52;
-			type="ace_zeus_moduleSettings";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_zeus_moduleSettings_remoteWind";
-					expression="_this setVariable ['remoteWind',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_zeus_moduleSettings_zeusAscension";
-					expression="_this setVariable ['zeusAscension',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ace_zeus_moduleSettings_radioOrdnance";
-					expression="_this setVariable ['radioOrdnance',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ace_zeus_moduleSettings_revealMines";
-					expression="_this setVariable ['revealMines',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ace_zeus_moduleSettings_zeusBird";
-					expression="_this setVariable ['zeusBird',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ace_zeus_moduleSettings_autoAddObjects";
-					expression="_this setVariable ['autoAddObjects',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=6;
-			};
-		};
-		class Item12
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={3989.032,5,3999.0649};
-			};
-			id=53;
-			type="ace_weather_ModuleSettings";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_weather_ModuleSettings_useACEWeather";
-					expression="_this setVariable ['useACEWeather',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_weather_ModuleSettings_serverUpdateInterval";
-					expression="_this setVariable ['serverUpdateInterval',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=60;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ace_weather_ModuleSettings_syncMisc";
-					expression="_this setVariable ['syncMisc',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ace_weather_ModuleSettings_syncRain";
-					expression="_this setVariable ['syncRain',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ace_weather_ModuleSettings_enableServerController";
-					expression="_this setVariable ['enableServerController',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ace_weather_ModuleSettings_syncWind";
-					expression="_this setVariable ['syncWind',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=6;
-			};
-		};
-		class Item13
-		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4011.98,6.0431652,3998.219};
-				angles[]={0,3.1415927,0};
+				position[]={19,6.0431652,29};
 			};
 			side="Empty";
 			flags=4;
@@ -2488,45 +2296,130 @@ class Mission
 			{
 				name="specScreen";
 			};
-			id=54;
+			id=35;
 			type="Land_TripodScreen_01_large_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="\x\tac\addons\resources\images\SpecScreen.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item14
+		class Item12
 		{
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={3987.9861,5,3997.0249};
+				position[]={44,5,30};
+				angles[]={0,3.1415935,0};
 			};
 			title="HC & Zeus Modules";
 			description="Headless Clients & Zeus Modules." \n "Location of these doesn't matter.";
-			id=55;
+			id=36;
 		};
-		class Item15
+		class Item13
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4011.0498,8.9768047,3999.2983};
+				position[]={20,8.9768047,28};
+				angles[]={0,3.1415935,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
 			};
-			id=57;
+			id=37;
 			type="Flag_White_F";
 		};
-		class Item16
+		class Item14
 		{
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={4011.5339,5,3996.698};
+				position[]={20.000244,5,30.999512};
+				angles[]={0,3.1415935,0};
 			};
 			title="Spectator";
 			description="TAC Spectator." \n "To toggle on/off, a logged in Admin must type ""#tacSpec"" in the chat (without quotation marks)." \n "It should be confirmed with a ""[TAC] Spectating Allowed"" message." \n "" \n "Note that you cannot open chat when testing directly in Eden. If you want to confirm that it is working, you need to create an MP session and load your mission.";
-			id=58;
+			id=38;
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={34.999756,5.8924227,42};
+				angles[]={0,3.1415935,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=39;
+			type="tac_armory_Locker";
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={32,5.8924227,42};
+				angles[]={0,3.1415935,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=40;
+			type="tac_armory_Locker";
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={29,5.8924227,42};
+				angles[]={0,3.1415935,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=41;
+			type="tac_armory_Locker";
+		};
+		class Item18
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={32,5,43};
+				angles[]={0,3.1415935,0};
+			};
+			title="Armory Lockers";
+			id=42;
 		};
 	};
 };
