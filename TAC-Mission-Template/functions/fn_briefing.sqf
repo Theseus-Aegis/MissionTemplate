@@ -13,7 +13,7 @@
  * Example:
  * [player] call FUNC(briefing);
  *
- * Line Break:
+ * New Line:
  * <br/>
  *
  * Text Colour (Hex colour Code)
