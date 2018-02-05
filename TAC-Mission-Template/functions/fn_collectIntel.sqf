@@ -29,7 +29,7 @@ private _actionCollectIntel = [
     {
         (_this select 2) params ["_actionCollectIntelPath", "_hintText", "_intelEntry", "_intelDescription", "_deleteOnCollect"];
         [_hintText] call ACEFUNC(common,displayTextStructured);
-        [_player, ["Diary", [_intelEntry, _intelDescription]]] remoteExecCall ["createDiaryRecord", 0, true];
+        [_player, ["Diary", [_intelEntry, _intelDescription]]] remoteExecCall ["createDiaryRecord", side _player, true];
 
         if (_deleteOnCollect) then {
             deleteVehicle _target;
