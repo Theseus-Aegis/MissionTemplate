@@ -2,6 +2,7 @@
  * Author: Kresky, Jonpas
  * Adds the ability to "pick up" objects, and add an intel entry in the briefing tab.
  * Call from initPlayerLocal.sqf
+ * Check for validity of object when using delete on collection (isNull)!
  *
  * Arguments:
  * 0: Object name (The object you want to "pick up") <OBJECT>
@@ -21,23 +22,25 @@
 
 params ["_controller", "_interactText", "_hintText", "_intelEntry", "_intelDescription", ["_deleteOnCollect", true]];
 
+// Add action
 private _actionPath = format [QGVAR(collectIntel_%1), _controller];
 private _actionCollectIntel = [
     _actionPath,
     _interactText,
     "",
     {
-        (_this select 2) params ["_actionCollectIntelPath", "_hintText", "_intelEntry", "_intelDescription", "_deleteOnCollect"];
+        (_this select 2) params ["_actionPath", "_hintText", "_intelEntry", "_intelDescription", "_deleteOnCollect"];
+
         [_hintText] call ACEFUNC(common,displayTextStructured);
-        [_player, ["Diary", [_intelEntry, _intelDescription]]] remoteExecCall ["createDiaryRecord", side _player, true];
+        [QGVAR(collectIntel_collect), [side group _player, ["Diary", [_intelEntry, _intelDescription]]]] call CBA_fnc_serverEvent;
 
         if (_deleteOnCollect) then {
             deleteVehicle _target;
         } else {
-            [_target, 0, ["ACE_MainActions", _actionPath]] call ACEFUNC(interact_menu,removeActionFromObject);
+            _target setVariable [QGVAR(collectIntel_collected), true, true];
         };
     },
-    {true},
+    {!(_target getVariable [QGVAR(collectIntel_collected), false])},
     {},
     [_actionPath, _hintText, _intelEntry, _intelDescription, _deleteOnCollect]
 ] call ACEFUNC(interact_menu,createAction);
