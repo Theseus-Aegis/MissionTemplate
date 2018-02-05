@@ -21,24 +21,25 @@
 
 params ["_controller", "_interactText", "_hintText", "_intelEntry", "_intelDescription", ["_deleteOnCollect", true]];
 
+private _actionPath = format [QGVAR(collectIntel_%1), _controller];
 private _actionCollectIntel = [
-    format [QGVAR(collectIntel_%1), _controller],
+    _actionPath,
     _interactText,
     "",
     {
-        (_this select 2) params ["_hintText", "_intelEntry", "_intelDescription"];
+        (_this select 2) params ["_actionCollectIntelPath", "_hintText", "_intelEntry", "_intelDescription", "_deleteOnCollect"];
         [_hintText] call ACEFUNC(common,displayTextStructured);
         [_player, ["Diary", [_intelEntry, _intelDescription]]] remoteExecCall ["createDiaryRecord", 0, true];
 
         if (_deleteOnCollect) then {
             deleteVehicle _target;
         } else {
-            _target setVariable [QGVAR(collectedIntel), true, true];
+            [_target, 0, ["ACE_MainActions", _actionPath]] call ACEFUNC(interact_menu,removeActionFromObject);
         };
     },
-    {!(_target getVariable [QGVAR(collectedIntel), false])},
+    {true},
     {},
-    [_hintText, _intelEntry, _intelDescription, _deleteOnCollect]
+    [_actionPath, _hintText, _intelEntry, _intelDescription, _deleteOnCollect]
 ] call ACEFUNC(interact_menu,createAction);
 
 [_controller, 0, ["ACE_MainActions"], _actionCollectIntel] call ACEFUNC(interact_menu,addActionToObject);
