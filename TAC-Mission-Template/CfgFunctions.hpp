@@ -8,6 +8,8 @@ class CfgFunctions {
             class baseSpectator;
             class briefing;
             class collectIntel;
+            class collectIntelPreInit { preInit = 1; };
+            class collectIntelPostInit { postInit = 1; };
         };
     };
 };
