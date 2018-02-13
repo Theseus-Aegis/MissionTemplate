@@ -14,9 +14,6 @@
  */
 #include "..\script_component.hpp"
 
-// Exit on Headless Client
-if (!isServer && !hasInterface) exitWith {};
-
 if (isServer) then {
     // Track picked up records on server
     GVAR(collectIntel_records) = [];
@@ -32,7 +29,9 @@ if (isServer) then {
         GVAR(collectIntel_records) pushBack _this;
         [QGVAR(collectIntel_update), [_this]] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addEventHandler;
-} else {
+};
+
+if (hasInterface) then {
     // Accept remote records and add them if of same side
     [QGVAR(collectIntel_update), {
         {

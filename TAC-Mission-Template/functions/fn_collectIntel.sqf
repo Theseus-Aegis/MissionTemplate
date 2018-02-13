@@ -16,7 +16,9 @@
  * None
  *
  * Example:
- * [doc01, "Collect Document", "Document picked up", "Intel", "Document describing enemy movement plans"] call FUNC(collectIntel);
+ * if (!isNil "intel01") then {
+ * 	[intel01, "Collect Document", "Document picked up", "Intel", "Documents describing some stuff", true] call FUNC(collectIntel);
+ * };
  */
 #include "..\script_component.hpp"
 
