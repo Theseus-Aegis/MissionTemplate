@@ -2,7 +2,7 @@
  * Author: Kresky, Jonpas
  * Adds the ability to "pick up" objects, and add an intel entry in the briefing tab.
  * Call from initPlayerLocal.sqf
- * Check for validity of object when using delete on collection (isNull)!
+ * Check for validity of object when using delete on collection (isNil)!
  *
  * Arguments:
  * 0: Object name (The object you want to "pick up") <OBJECT>
