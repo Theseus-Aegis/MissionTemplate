@@ -36,7 +36,7 @@ private _actionOpen = [
 [_object, 0, ["ACE_MainActions"], _actionOpen] call ACEFUNC(interact_menu,addActionToObject);
 
 // Admin chat command to toggle spectator availability
-["tacSpec", {
+["tac-spec", {
     //USES_VARIABLES ["_thisArgs"]
     if (_thisArgs getVariable [QGVAR(baseSpectatorAllowed), false]) then {
         [QGVAR(baseSpectatorProhibit), nil, call CBA_fnc_players] call CBA_fnc_targetEvent;
