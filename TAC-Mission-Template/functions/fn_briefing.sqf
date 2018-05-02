@@ -30,41 +30,41 @@
 params ["_player"];
 
 switch (side _player) do {
-	// BLUFOR briefing
-	case west: {
-		_player createDiaryRecord ["Diary", ["Objectives", "
-			<br/>	Mission Objectives goes here.
-			<br/>
-			<br/>	<font color='#E3D310'>PRIMARY OBJECTIVES:</font color>
-			<br/>	Your Primary Objective(s)
-			<br/>
-			<br/>	<font color='#E3D310'>SECONDARY OBJECTIVES:</font color>
-			<br/>	Your Secondary Objective(s)
-		"]];
+    // BLUFOR briefing
+    case west: {
+        _player createDiaryRecord ["Diary", ["Objectives", "
+            <br/>Mission Objectives goes here.
+            <br/>
+            <br/><font color='#E3D310'>PRIMARY OBJECTIVES:</font color>
+            <br/>Your Primary Objective(s)
+            <br/>
+            <br/><font color='#E3D310'>SECONDARY OBJECTIVES:</font color>
+            <br/>Your Secondary Objective(s)
+        "]];
 
-		_player createDiaryRecord ["Diary", ["Situation", "
-			<br/>	Mission Situation goes here.
-			<br/>
-			<br/>	<font color='#1D69F6'>FRIENDLY FORCES:</font color>
-			<br/>	Details on Friendly Forces.
-			<br/>
-			<br/>	<font color='#D81717'>ENEMY FORCES:</font color>
-			<br/>	Details on Enemy Forces.
-		"]];
-	};
+        _player createDiaryRecord ["Diary", ["Situation", "
+            <br/>Mission Situation goes here.
+            <br/>
+            <br/><font color='#1D69F6'>FRIENDLY FORCES:</font color>
+            <br/>Details on Friendly Forces.
+            <br/>
+            <br/><font color='#D81717'>ENEMY FORCES:</font color>
+            <br/>Details on Enemy Forces.
+        "]];
+    };
 
-	// OPFOR briefing
-	case east: {
+    // OPFOR briefing
+    case east: {
 
-	};
+    };
 
-	// RESISTANCE/INDEPENDENT briefing
-	case resistance: {
+    // RESISTANCE/INDEPENDENT briefing
+    case resistance: {
 
-	};
+    };
 
-	// CIVILIAN briefing
-	case civilian: {
+    // CIVILIAN briefing
+    case civilian: {
 
-	};
+    };
 };
