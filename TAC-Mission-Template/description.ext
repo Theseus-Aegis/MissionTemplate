@@ -27,3 +27,6 @@ respawnDialog = 0;
 disabledAI = 1;  // Disables AI for Playable Units
 enableDebugConsole[] = {"76561198048995566"};  // Enables Debug Console for players with specified UIDs (Jonpas) and Host/Admin
 enableTargetDebug = 1;
+
+// Other settings
+cba_settings_hasSettingsFile = 1;  // Enables use of "cba_settings.sqf", remove if file is not present (will crash)
