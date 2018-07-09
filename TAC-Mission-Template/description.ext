@@ -6,7 +6,6 @@ OnLoadName = "MISSION NAME";
 OnLoadMission = "MISSION SUMMARY";
 author = "YOUR.NAME, Theseus Inc.";
 loadScreen = "x\tacr\addons\images\general\MissionLoad.paa";
-overviewText = "Theseus Inc.";
 onLoadIntroTime = 1;
 onLoadMissionTime = 1;
 
