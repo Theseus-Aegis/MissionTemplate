@@ -1,0 +1,31 @@
+#include "script_component.hpp"
+#include "CfgFunctions.hpp"
+
+// Mission settings - title, description, author etc.
+OnLoadName = "MISSION NAME";
+OnLoadMission = "MISSION SUMMARY";
+author = "YOUR.NAME, Theseus Inc.";
+loadScreen = "x\tacr\addons\images\general\MissionLoad.paa";
+onLoadIntroTime = 1;
+onLoadMissionTime = 1;
+
+// Gametype and playercount
+class Header {
+    gameType = "COOP";
+    minPlayers = 1;
+    maxPlayers = XX;
+};
+
+// Respawn settings
+respawn = 1;
+respawnButton = 1;
+respawnDelay = 3;
+respawnTemplates[] = {"Spectator"};
+
+// AI & debug
+disabledAI = 0;  // Disables AI for Playable Units
+enableDebugConsole[] = {"76561198048995566"};  // Enables Debug Console for players with specified UIDs (Jonpas) and Host/Admin
+enableTargetDebug = 1;
+
+// Other settings
+cba_settings_hasSettingsFile = 1;  // Enables use of "cba_settings.sqf", remove if file is not present (will crash)

@@ -2,9 +2,9 @@
 #define COMPONENT Scripts
 
 // Version
-#define MAJOR 1
-#define MINOR 2
-#define PATCHLVL 4
+#define MAJOR 2
+#define MINOR 0
+#define PATCHLVL 0
 
 // Map
 #define MAP VR
