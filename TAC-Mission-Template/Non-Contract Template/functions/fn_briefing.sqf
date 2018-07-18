@@ -32,6 +32,10 @@ params ["_player"];
 switch (side _player) do {
     // BLUFOR briefing
     case west: {
+        _player createDiaryRecord ["Diary", ["Execution", "
+            <br/>Some guidelines on how to execute the mission goes here.
+        "]];
+
         _player createDiaryRecord ["Diary", ["Objectives", "
             <br/>Mission Objectives goes here.
             <br/>
