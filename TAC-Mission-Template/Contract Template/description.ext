@@ -1,3 +1,5 @@
+// Description.ext for Contract missions
+
 #include "script_component.hpp"
 #include "CfgFunctions.hpp"
 
@@ -13,7 +15,7 @@ onLoadMissionTime = 1;
 class Header {
     gameType = "COOP";
     minPlayers = 1;
-    maxPlayers = 27;
+    maxPlayers = 29;
 };
 
 // Respawn settings
