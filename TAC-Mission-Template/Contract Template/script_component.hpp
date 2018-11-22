@@ -3,8 +3,8 @@
 
 // Version
 #define MAJOR 2
-#define MINOR 0
-#define PATCHLVL 2
+#define MINOR 1
+#define PATCHLVL 0
 
 // Map
 #define MAP VR
