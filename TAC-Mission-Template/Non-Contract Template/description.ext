@@ -23,7 +23,7 @@ class Header {
 respawn = 1;
 respawnButton = 1;
 respawnDelay = 3;
-respawnTemplates[] = {"Spectator"};
+respawnTemplates[] = {"ace_spectator"};
 
 // AI & debug
 disabledAI = 0;  // Disables AI for Playable Units
