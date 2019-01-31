@@ -1,18 +1,18 @@
 version=53;
-center[]={3072,5,4476};
+center[]={1986.4635,5,6023.7959};
 class items
 {
-	items=4;
+	items=8;
 	class Item0
 	{
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={6,0,0};
+			position[]={1.3632813,0,0.049804688};
 		};
 		name="headlessclient1";
 		isPlayable=1;
-		id=56;
+		id=46;
 		type="HeadlessClient_F";
 	};
 	class Item1
@@ -20,11 +20,11 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={2,0,0};
+			position[]={-2.6367188,0,0.049804688};
 		};
 		name="headlessclient2";
 		isPlayable=1;
-		id=57;
+		id=47;
 		type="HeadlessClient_F";
 	};
 	class Item2
@@ -32,11 +32,11 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-2,0,0};
+			position[]={-6.6367188,0,0.049804688};
 		};
 		name="headlessclient3";
 		isPlayable=1;
-		id=58;
+		id=48;
 		type="HeadlessClient_F";
 	};
 	class Item3
@@ -44,9 +44,9 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-6,0,0};
+			position[]={-10.636719,0,0.049804688};
 		};
-		id=59;
+		id=49;
 		type="ModuleCurator_F";
 		class CustomAttributes
 		{
@@ -128,5 +128,69 @@ class items
 			};
 			nAttributes=4;
 		};
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={4.6359863,0.15592003,-0.049804688};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			disableSimulation=1;
+		};
+		id=50;
+		type="ACE_Wheel";
+	};
+	class Item5
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={4.6369629,0.47392082,-0.048828125};
+		};
+		side="Empty";
+		class Attributes
+		{
+			disableSimulation=1;
+		};
+		id=51;
+		type="ACE_Wheel";
+		atlOffset=0.31800079;
+	};
+	class Item6
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={4.6369629,0.77592087,-0.048828125};
+		};
+		side="Empty";
+		class Attributes
+		{
+			disableSimulation=1;
+		};
+		id=52;
+		type="ACE_Wheel";
+		atlOffset=0.62000084;
+	};
+	class Item7
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={4.6369629,1.0679207,-0.048828125};
+		};
+		side="Empty";
+		class Attributes
+		{
+			disableSimulation=1;
+		};
+		id=53;
+		type="ACE_Wheel";
+		atlOffset=0.91200066;
 	};
 };
