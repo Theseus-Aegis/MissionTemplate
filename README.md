@@ -1,5 +1,7 @@
 # Mission Template
 
+[![](https://img.shields.io/badge/Download-Latest-blue.svg?style=flat-square)](https://github.com/Theseus-Aegis/MissionTemplate/releases/latest)
+
 Theseus Mission Template.
 
 # TAC Scripts
