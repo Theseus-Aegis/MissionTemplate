@@ -33,6 +33,8 @@ private _actionCollectIntel = [
     {
         (_this select 2) params ["_actionPath", "_hintText", "_intelEntry", "_intelDescription", "_deleteOnCollect"];
 
+        _player playMoveNow "AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon";
+
         [_hintText] call ACEFUNC(common,displayTextStructured);
         [QGVAR(collectIntel_collect), [side group _player, ["Diary", [_intelEntry, _intelDescription]]]] call CBA_fnc_serverEvent;
 
