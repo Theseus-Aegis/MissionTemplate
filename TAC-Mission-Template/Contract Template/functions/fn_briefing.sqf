@@ -42,6 +42,17 @@ switch (side _player) do {
             <br/>Your Secondary Objective(s)
         "]];
 
+        _player createDiaryRecord ["Diary", ["Equipment", "
+            <br/><font color='#E3D310'>GROUND ASSETS:</font color>
+            <br/>- N/A
+            <br/>
+            <br/><font color='#E3D310'>AIR ASSETS:</font color>
+            <br/>- N/A
+            <br/>
+            <br/><font color='#E3D310'>SPECIAL ASSETS:</font color>
+            <br/>- N/A
+        "]];
+
         _player createDiaryRecord ["Diary", ["Situation", "
             <br/>Mission Situation goes here.
             <br/>
