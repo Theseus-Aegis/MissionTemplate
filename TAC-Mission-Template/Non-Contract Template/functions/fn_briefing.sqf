@@ -34,6 +34,7 @@ switch (side _player) do {
     case west: {
         _player createDiaryRecord ["Diary", ["Execution", "
             <br/>Some guidelines on how to execute the mission goes here.
+            <br/>Intended to help the command element plan the mission quicker.
         "]];
 
         _player createDiaryRecord ["Diary", ["Objectives", "
@@ -61,6 +62,7 @@ switch (side _player) do {
     case east: {
         _player createDiaryRecord ["Diary", ["Execution", "
             <br/>Some guidelines on how to execute the mission goes here.
+            <br/>Intended to help the command element plan the mission quicker.
         "]];
 
         _player createDiaryRecord ["Diary", ["Objectives", "
@@ -88,6 +90,7 @@ switch (side _player) do {
     case resistance: {
         _player createDiaryRecord ["Diary", ["Execution", "
             <br/>Some guidelines on how to execute the mission goes here.
+            <br/>Intended to help the command element plan the mission quicker.
         "]];
 
         _player createDiaryRecord ["Diary", ["Objectives", "
@@ -115,6 +118,7 @@ switch (side _player) do {
     case civilian: {
         _player createDiaryRecord ["Diary", ["Execution", "
             <br/>Some guidelines on how to execute the mission goes here.
+            <br/>Intended to help the command element plan the mission quicker.
         "]];
 
         _player createDiaryRecord ["Diary", ["Objectives", "
