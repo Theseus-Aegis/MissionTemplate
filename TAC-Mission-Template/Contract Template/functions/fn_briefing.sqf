@@ -43,13 +43,13 @@ switch (side _player) do {
         "]];
 
         _player createDiaryRecord ["Diary", ["Equipment", "
-            <br/><font color='#E3D310'>GROUND ASSETS:</font color>
+            <br/><font color='#0ECE68'>GROUND ASSETS:</font color>
             <br/>- N/A
             <br/>
-            <br/><font color='#E3D310'>AIR ASSETS:</font color>
+            <br/><font color='#0ECE68'>AIR ASSETS:</font color>
             <br/>- N/A
             <br/>
-            <br/><font color='#E3D310'>SPECIAL ASSETS:</font color>
+            <br/><font color='#0ECE68'>SPECIAL ASSETS:</font color>
             <br/>- N/A
         "]];
 
