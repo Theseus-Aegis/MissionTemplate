@@ -32,16 +32,6 @@ params ["_player"];
 switch (side _player) do {
     // BLUFOR briefing
     case west: {
-        _player createDiaryRecord ["Diary", ["Objectives", "
-            <br/>Mission Objectives goes here.
-            <br/>
-            <br/><font color='#E3D310'>PRIMARY OBJECTIVES:</font color>
-            <br/>Your Primary Objective(s)
-            <br/>
-            <br/><font color='#E3D310'>SECONDARY OBJECTIVES:</font color>
-            <br/>Your Secondary Objective(s)
-        "]];
-
         _player createDiaryRecord ["Diary", ["Equipment", "
             <br/><font color='#0ECE68'>GROUND ASSETS:</font color>
             <br/>- N/A
@@ -51,6 +41,16 @@ switch (side _player) do {
             <br/>
             <br/><font color='#0ECE68'>SPECIAL ASSETS:</font color>
             <br/>- N/A
+        "]];
+
+        _player createDiaryRecord ["Diary", ["Objectives", "
+            <br/>Mission Objectives goes here.
+            <br/>
+            <br/><font color='#E3D310'>PRIMARY OBJECTIVES:</font color>
+            <br/>Your Primary Objective(s)
+            <br/>
+            <br/><font color='#E3D310'>SECONDARY OBJECTIVES:</font color>
+            <br/>Your Secondary Objective(s)
         "]];
 
         _player createDiaryRecord ["Diary", ["Situation", "
