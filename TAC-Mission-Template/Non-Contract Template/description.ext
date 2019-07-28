@@ -26,7 +26,7 @@ respawnDelay = 3;
 respawnTemplates[] = {"ace_spectator"};
 
 // AI & debug
-disabledAI = 0;  // Disables AI for Playable Units
+disabledAI = 1;  // Disables AI for Playable Units
 enableDebugConsole[] = {"76561198048995566", "76561198033169512"};  // Enables Debug Console for players with specified UIDs (Jonpas and Kresky) and Host/Admin
 enableTargetDebug = 1;
 
