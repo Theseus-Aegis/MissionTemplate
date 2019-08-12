@@ -1,5 +1,5 @@
 version=53;
-center[]={5024.2856,5,4603.0239};
+center[]={2951.3564,5,6583.9824};
 class items
 {
 	items=16;
@@ -15,7 +15,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={7.7143555,0.0014390945,1.0258789};
+					position[]={7.7175293,0.0014390945,1.0268555};
 				};
 				side="West";
 				flags=7;
@@ -74,7 +74,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.7143555,0.0014390945,1.0258789};
+					position[]={5.7175293,0.0014390945,1.0268555};
 				};
 				side="West";
 				flags=5;
@@ -82,7 +82,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=11;
+				id=2;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item2
@@ -90,7 +90,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7143555,0.0014390945,1.0258789};
+					position[]={3.7175293,0.0014390945,1.0268555};
 				};
 				side="West";
 				flags=5;
@@ -98,7 +98,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=13;
+				id=3;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item3
@@ -106,7 +106,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7143555,0.0014390945,1.0258789};
+					position[]={1.7175293,0.0014390945,1.0268555};
 				};
 				side="West";
 				flags=5;
@@ -114,7 +114,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=15;
+				id=4;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item4
@@ -122,7 +122,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.28564453,0.0014390945,1.0258789};
+					position[]={-0.2824707,0.0014390945,1.0268555};
 				};
 				side="West";
 				flags=5;
@@ -130,7 +130,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=17;
+				id=5;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item5
@@ -138,7 +138,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.2856445,0.0014390945,1.0258789};
+					position[]={-2.2824707,0.0014390945,1.0268555};
 				};
 				side="West";
 				flags=5;
@@ -146,7 +146,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=19;
+				id=6;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item6
@@ -154,7 +154,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.2856445,0.0014390945,1.0258789};
+					position[]={-4.2824707,0.0014390945,1.0268555};
 				};
 				side="West";
 				flags=5;
@@ -162,7 +162,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=21;
+				id=7;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item7
@@ -170,7 +170,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-6.2856445,0.0014390945,1.0258789};
+					position[]={-6.2824707,0.0014390945,1.0268555};
 				};
 				side="West";
 				flags=5;
@@ -178,7 +178,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=23;
+				id=8;
 				type="tacs_Unit_B_Contractor";
 			};
 		};
@@ -199,7 +199,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={7.7143555,0.0014390945,-0.97412109};
+					position[]={7.7175293,0.0014390945,-0.97314453};
 				};
 				side="West";
 				flags=7;
@@ -207,7 +207,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=3;
+				id=10;
 				type="tacs_Unit_B_TeamLeader";
 				class CustomAttributes
 				{
@@ -257,7 +257,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.7143555,0.0014390945,-0.97412109};
+					position[]={5.7175293,0.0014390945,-0.97314453};
 				};
 				side="West";
 				flags=5;
@@ -265,7 +265,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=25;
+				id=11;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item2
@@ -273,7 +273,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7143555,0.0014390945,-0.97412109};
+					position[]={3.7175293,0.0014390945,-0.97314453};
 				};
 				side="West";
 				flags=5;
@@ -281,7 +281,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=26;
+				id=12;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item3
@@ -289,7 +289,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7143555,0.0014390945,-0.97412109};
+					position[]={1.7175293,0.0014390945,-0.97314453};
 				};
 				side="West";
 				flags=5;
@@ -297,7 +297,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=27;
+				id=13;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item4
@@ -305,7 +305,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.28564453,0.0014390945,-0.97412109};
+					position[]={-0.2824707,0.0014390945,-0.97314453};
 				};
 				side="West";
 				flags=5;
@@ -313,7 +313,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=28;
+				id=14;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item5
@@ -321,7 +321,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.2856445,0.0014390945,-0.97412109};
+					position[]={-2.2824707,0.0014390945,-0.97314453};
 				};
 				side="West";
 				flags=5;
@@ -329,7 +329,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=29;
+				id=15;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item6
@@ -337,7 +337,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.2856445,0.0014390945,-0.97412109};
+					position[]={-4.2824707,0.0014390945,-0.97314453};
 				};
 				side="West";
 				flags=5;
@@ -345,7 +345,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=30;
+				id=16;
 				type="tacs_Unit_B_Contractor";
 			};
 			class Item7
@@ -353,7 +353,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-6.2856445,0.0014390945,-0.97412109};
+					position[]={-6.2824707,0.0014390945,-0.97314453};
 				};
 				side="West";
 				flags=5;
@@ -361,14 +361,14 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=31;
+				id=17;
 				type="tacs_Unit_B_Contractor";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=2;
+		id=9;
 	};
 	class Item2
 	{
@@ -382,7 +382,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.7143555,0.0014390945,-2.9741211};
+					position[]={5.7175293,0.0014390945,-2.9731445};
 				};
 				side="West";
 				flags=7;
@@ -390,7 +390,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=5;
+				id=19;
 				type="tacs_Unit_B_Medic";
 				class CustomAttributes
 				{
@@ -440,7 +440,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.7143555,0.0014390945,-4.9741211};
+					position[]={5.7175293,0.0014390945,-4.9731445};
 				};
 				side="West";
 				flags=5;
@@ -448,7 +448,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=37;
+				id=20;
 				type="tacs_Unit_B_Medic";
 				class CustomAttributes
 				{
@@ -498,7 +498,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7143555,0.0014390945,-2.9741211};
+					position[]={3.7175293,0.0014390945,-2.9731445};
 				};
 				side="West";
 				flags=5;
@@ -506,7 +506,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=33;
+				id=21;
 				type="tacs_Unit_B_Medic";
 				class CustomAttributes
 				{
@@ -556,7 +556,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7143555,0.0014390945,-4.9741211};
+					position[]={3.7175293,0.0014390945,-4.9731445};
 				};
 				side="West";
 				flags=5;
@@ -564,7 +564,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=35;
+				id=22;
 				type="tacs_Unit_B_Medic";
 				class CustomAttributes
 				{
@@ -613,7 +613,7 @@ class items
 		class Attributes
 		{
 		};
-		id=4;
+		id=18;
 	};
 	class Item3
 	{
@@ -627,7 +627,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.2856445,0.0014390945,-2.9741211};
+					position[]={-2.2824707,0.0014390945,-2.9731445};
 				};
 				side="West";
 				flags=7;
@@ -635,7 +635,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=7;
+				id=24;
 				type="tacs_Unit_B_Engineer";
 				class CustomAttributes
 				{
@@ -685,7 +685,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.2856445,0.0014390945,-2.9741211};
+					position[]={-4.2824707,0.0014390945,-2.9731445};
 				};
 				side="West";
 				flags=5;
@@ -693,7 +693,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=39;
+				id=25;
 				type="tacs_Unit_B_Engineer";
 				class CustomAttributes
 				{
@@ -743,7 +743,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.2856445,0.0014390945,-4.9741211};
+					position[]={-4.2824707,0.0014390945,-4.9731445};
 				};
 				side="West";
 				flags=5;
@@ -751,7 +751,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=41;
+				id=26;
 				type="tacs_Unit_B_Engineer";
 				class CustomAttributes
 				{
@@ -801,7 +801,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.2856445,0.0014390945,-4.9741211};
+					position[]={-2.2824707,0.0014390945,-4.9731445};
 				};
 				side="West";
 				flags=5;
@@ -809,7 +809,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=43;
+				id=27;
 				type="tacs_Unit_B_Engineer";
 				class CustomAttributes
 				{
@@ -858,7 +858,7 @@ class items
 		class Attributes
 		{
 		};
-		id=6;
+		id=23;
 	};
 	class Item4
 	{
@@ -872,7 +872,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7143555,0.0014390945,-3.9741211};
+					position[]={1.7175293,0.0014390945,-3.9731445};
 				};
 				side="West";
 				flags=7;
@@ -880,7 +880,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=9;
+				id=29;
 				type="tacs_Unit_B_PilotHeli";
 				class CustomAttributes
 				{
@@ -930,7 +930,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.28564453,0.0014390945,-3.9741211};
+					position[]={-0.2824707,0.0014390945,-3.9731445};
 				};
 				side="West";
 				flags=5;
@@ -938,7 +938,7 @@ class items
 				{
 					isPlayable=1;
 				};
-				id=45;
+				id=30;
 				type="tacs_Unit_B_PilotHeli";
 				class CustomAttributes
 				{
@@ -987,14 +987,14 @@ class items
 		class Attributes
 		{
 		};
-		id=8;
+		id=28;
 	};
 	class Item5
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.71435547,0.89242268,8.9760742};
+			position[]={0.7175293,0.89242268,8.9770508};
 			angles[]={-0,3.1233413,0};
 		};
 		side="Empty";
@@ -1002,7 +1002,7 @@ class items
 		class Attributes
 		{
 		};
-		id=46;
+		id=31;
 		type="tac_armory_Locker";
 	};
 	class Item6
@@ -1010,7 +1010,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-1.2856445,0.89242268,8.9760742};
+			position[]={-1.2824707,0.89242268,8.9770508};
 			angles[]={-0,3.1233413,0};
 		};
 		side="Empty";
@@ -1018,7 +1018,7 @@ class items
 		class Attributes
 		{
 		};
-		id=47;
+		id=32;
 		type="tac_armory_Locker";
 	};
 	class Item7
@@ -1026,7 +1026,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={2.7143555,0.89242268,8.9760742};
+			position[]={2.7175293,0.89242268,8.9770508};
 			angles[]={-0,3.1233413,0};
 		};
 		side="Empty";
@@ -1034,7 +1034,7 @@ class items
 		class Attributes
 		{
 		};
-		id=48;
+		id=33;
 		type="tac_armory_Locker";
 	};
 	class Item8
@@ -1042,7 +1042,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={5.7143555,1.0431652,8.9760742};
+			position[]={5.7175293,1.0431652,8.9770508};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
@@ -1052,7 +1052,7 @@ class items
 			name="SpecScreen";
 			disableSimulation=1;
 		};
-		id=49;
+		id=34;
 		type="Land_TripodScreen_01_large_F";
 		class CustomAttributes
 		{
@@ -1083,9 +1083,9 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-12.285645,0,6.9760742};
+			position[]={-12.282471,0,6.9770508};
 		};
-		id=50;
+		id=35;
 		type="ModuleCurator_F";
 		class CustomAttributes
 		{
@@ -1173,11 +1173,11 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-12.285645,0,2.9760742};
+			position[]={-12.282471,0,2.9770508};
 		};
 		name="headlessclient1";
 		isPlayable=1;
-		id=51;
+		id=36;
 		type="HeadlessClient_F";
 	};
 	class Item11
@@ -1185,11 +1185,11 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-12.285645,0,-1.0239258};
+			position[]={-12.282471,0,-1.0229492};
 		};
 		name="headlessclient2";
 		isPlayable=1;
-		id=52;
+		id=37;
 		type="HeadlessClient_F";
 	};
 	class Item12
@@ -1197,28 +1197,28 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-12.285645,0,-5.0239258};
+			position[]={-12.282471,0,-5.0229492};
 		};
 		name="headlessclient3";
 		isPlayable=1;
-		id=53;
+		id=38;
 		type="HeadlessClient_F";
 	};
 	class Item13
 	{
 		dataType="Marker";
-		position[]={0.71435547,0,-3.0239258};
+		position[]={0.7175293,0,-3.0229492};
 		name="respawn_west";
 		text="Respawn";
 		type="Empty";
-		id=54;
+		id=39;
 	};
 	class Item14
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-0.28564453,0,6.9760742};
+			position[]={1.7175293,0,6.9765625};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
@@ -1226,23 +1226,69 @@ class items
 		class Attributes
 		{
 		};
-		id=55;
+		id=41;
 		type="ACE_medicalSupplyCrate_advanced";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[""ACE_fieldDressing"",""ACE_packingBandage"",""ACE_elasticBandage"",""ACE_tourniquet"",""ACE_morphine"",""ACE_adenosine"",""ACE_atropine"",""ACE_epinephrine"",""ACE_plasmaIV"",""ACE_plasmaIV_500"",""ACE_plasmaIV_250"",""ACE_salineIV"",""ACE_salineIV_500"",""ACE_salineIV_250"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_quikclot"",""ACE_personalAidKit"",""ACE_surgicalKit"",""ACE_bodyBag""],[50,50,50,30,30,30,30,30,14,14,14,14,14,14,14,14,14,40,6,4,10]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
 	};
 	class Item15
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={1.7143555,0,6.9760742};
-			angles[]={-0,3.1415927,0};
+			position[]={-0.35644531,0.28405476,7.0175781};
+			angles[]={-0,1.5707964,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=56;
-		type="ACE_medicalSupplyCrate_advanced";
+		id=44;
+		type="Box_NATO_AmmoOrd_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag""],[6,2]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
 	};
 };
