@@ -1,30 +1,25 @@
 version=53;
-center[]={2952.0046,5,6581.2539};
+center[]={6967.248,5,4918.0234};
 class items
 {
-	items=12;
+	items=14;
 	class Item0
 	{
-		dataType="Object";
+		dataType="Comment";
 		class PositionInfo
 		{
-			position[]={-1.0693359,0,0.40332031};
-			angles[]={-0,3.1415927,0};
+			position[]={6.3891602,0,-0.52832031};
 		};
-		side="Empty";
-		flags=4;
-		class Attributes
-		{
-		};
-		id=56;
-		type="ACE_medicalSupplyCrate_advanced";
+		title="Suppressors";
+		description="Contains suppressors to be borrowed by recruits";
+		id=9;
 	};
 	class Item1
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.93066406,0.38152885,0.40332031};
+			position[]={1.8652344,0.28405476,0.41357422};
 			angles[]={-0,1.5707964,0};
 		};
 		side="Empty";
@@ -32,46 +27,7 @@ class items
 		class Attributes
 		{
 		};
-		id=57;
-		type="Box_NATO_Equip_F";
-		class CustomAttributes
-		{
-			class Attribute0
-			{
-				property="ammoBox";
-				expression="[_this,_value] call bis_fnc_initAmmoBox;";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"STRING"
-							};
-						};
-						value="[[[[],[]],[[],[]],[[""CUP_NVG_PVS14"",""ACE_UAVBattery"",""B_UavTerminal""],[20,2,2]],[[""B_UAV_01_backpack_F""],[2]]],false]";
-					};
-				};
-			};
-			nAttributes=1;
-		};
-	};
-	class Item2
-	{
-		dataType="Object";
-		class PositionInfo
-		{
-			position[]={2.9304199,0.28405476,0.40332031};
-			angles[]={-0,1.5707964,0};
-		};
-		side="Empty";
-		flags=4;
-		class Attributes
-		{
-		};
-		id=58;
+		id=16;
 		type="Box_NATO_AmmoOrd_F";
 		class CustomAttributes
 		{
@@ -97,19 +53,19 @@ class items
 			nAttributes=1;
 		};
 	};
-	class Item3
+	class Item2
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={4.9304199,0.14963102,0.40332031};
+			position[]={3.8652344,0.14963102,0.41357422};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=59;
+		id=17;
 		type="Box_NATO_WpsLaunch_F";
 		class CustomAttributes
 		{
@@ -135,63 +91,78 @@ class items
 			nAttributes=1;
 		};
 	};
+	class Item3
+	{
+		dataType="Comment";
+		class PositionInfo
+		{
+			position[]={-2.1352539,0,-0.58642578};
+		};
+		title="Medical";
+		description="Contains medical items";
+		id=18;
+	};
 	class Item4
 	{
 		dataType="Comment";
 		class PositionInfo
 		{
-			position[]={-1.0693359,0,-0.59667969};
+			position[]={-0.13525391,0,-0.58642578};
 		};
-		title="Medical";
-		description="Contains medical items";
-		id=61;
+		title="Night Vision Goggles";
+		description="Contains NVGs to be borrowed by recruits during night missions";
+		id=19;
 	};
 	class Item5
 	{
 		dataType="Comment";
 		class PositionInfo
 		{
-			position[]={0.93066406,0,-0.59667969};
+			position[]={1.8647461,0,-0.58642578};
 		};
-		title="Basic Equipment";
-		description="Contains NVGs and drone equipment";
-		id=62;
+		title="Explosives";
+		description="Contains explosive items";
+		id=20;
 	};
 	class Item6
 	{
 		dataType="Comment";
 		class PositionInfo
 		{
-			position[]={2.9306641,0,-0.59667969};
-		};
-		title="Explosives";
-		description="Contains explosive items";
-		id=63;
-	};
-	class Item7
-	{
-		dataType="Comment";
-		class PositionInfo
-		{
-			position[]={4.9306641,0,-0.59667969};
+			position[]={3.8647461,0,-0.58642578};
 		};
 		title="Launchers";
-		description="Contains launchers and ammo";
-		id=64;
+		description="Contains launchers and ammo" \n "Edit the box inventory to only contain the appropriate launcher / ammo";
+		id=21;
 	};
-	class Item8
+	class Item7
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-3.3051758,0.15592003,-0.34960938};
+			position[]={-4.3706055,0.15592003,-0.33935547};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=66;
+		id=22;
+		type="ACE_Wheel";
+	};
+	class Item8
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-5.4853516,0.15592003,-0.34912109};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=23;
 		type="ACE_Wheel";
 	};
 	class Item9
@@ -199,14 +170,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-4.4199219,0.15592003,-0.359375};
+			position[]={-4.3652344,0.15592003,0.78076172};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=67;
+		id=24;
 		type="ACE_Wheel";
 	};
 	class Item10
@@ -214,14 +185,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-3.2998047,0.15592003,0.77050781};
+			position[]={-5.4863281,0.15592003,0.73095703};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=68;
+		id=25;
 		type="ACE_Wheel";
 	};
 	class Item11
@@ -229,14 +200,115 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-4.4208984,0.15592003,0.72070313};
+			position[]={-2.1826172,0,0.42529297};
+			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=69;
-		type="ACE_Wheel";
+		id=29;
+		type="ACE_medicalSupplyCrate_advanced";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[""ACE_fieldDressing"",""ACE_packingBandage"",""ACE_elasticBandage"",""ACE_tourniquet"",""ACE_morphine"",""ACE_epinephrine"",""ACE_plasmaIV"",""ACE_plasmaIV_500"",""ACE_plasmaIV_250"",""ACE_salineIV"",""ACE_salineIV_500"",""ACE_salineIV_250"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_quikclot"",""ACE_surgicalKit"",""ACE_bodyBag"",""tac_medical_painkillers""],[60,60,60,30,15,15,15,15,15,15,15,15,15,15,15,60,5,10,20]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item12
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={6.3500977,0.18670559,0.42871094};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=30;
+		type="Box_NATO_WpsSpecial_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[""muzzle_snds_M"",""CUP_muzzle_PBS4""],[5,5]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item13
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.054199219,0.28405476,0.36669922};
+			angles[]={-0,4.712389,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=34;
+		type="Box_NATO_Support_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[""CUP_NVG_PVS14""],[5]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
 	};
 };

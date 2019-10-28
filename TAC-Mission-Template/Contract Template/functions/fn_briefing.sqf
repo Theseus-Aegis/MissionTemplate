@@ -32,6 +32,11 @@ params ["_player"];
 switch (side _player) do {
     // BLUFOR briefing
     case west: {
+        _player createDiaryRecord ["Diary", ["Intelligence", "
+            <br/>You can flesh out the intel we have on enemy compositions and equipment here
+            <br/>As well as other things that fits the intel section
+        "]];
+
         _player createDiaryRecord ["Diary", ["Equipment", "
             <br/><font color='#0ECE68'>GROUND ASSETS:</font color>
             <br/>- N/A
@@ -44,23 +49,26 @@ switch (side _player) do {
         "]];
 
         _player createDiaryRecord ["Diary", ["Objectives", "
-            <br/>Mission Objectives goes here.
+            <br/>The overall description of the objective for Theseus to complete
             <br/>
             <br/><font color='#E3D310'>PRIMARY OBJECTIVES:</font color>
-            <br/>Your Primary Objective(s)
+            <br/>- A quick summary of the primary objectives to be completed for mission success
             <br/>
             <br/><font color='#E3D310'>SECONDARY OBJECTIVES:</font color>
-            <br/>Your Secondary Objective(s)
+            <br/>- A quick summary of the secondary objectives that can be completed
         "]];
 
         _player createDiaryRecord ["Diary", ["Situation", "
-            <br/>Mission Situation goes here.
+            <br/>The overall situation of the mission scenario goes here
             <br/>
             <br/><font color='#1D69F6'>FRIENDLY FORCES:</font color>
-            <br/>Details on Friendly Forces.
+            <br/>- Theseus Inc.
+            <br/>
+            <br/><font color='#1D69F6'>INDEPENDENT FORCES:</font color>
+            <br/>- Remove this section if there's no independent forces
             <br/>
             <br/><font color='#D81717'>ENEMY FORCES:</font color>
-            <br/>Details on Enemy Forces.
+            <br/>- Enemy combatants
         "]];
     };
 

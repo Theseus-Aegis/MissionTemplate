@@ -35,26 +35,36 @@ switch (side _player) do {
         _player createDiaryRecord ["Diary", ["Execution", "
             <br/>Some guidelines on how to execute the mission goes here.
             <br/>Intended to help the command element plan the mission quicker.
+            <br/>Examples can be push through X, enter town from Y side etc.
+            <br/>Do not plan the entire mission path, just set some helpers for the lead element to plan quicker.
+        "]];
+
+        _player createDiaryRecord ["Diary", ["Intelligence", "
+            <br/>You can flesh out the intel we have on enemy compositions and equipment here
+            <br/>As well as other things that fits the intel section
         "]];
 
         _player createDiaryRecord ["Diary", ["Objectives", "
-            <br/>Mission Objectives goes here.
+            <br/>The overall description of the objective to complete
             <br/>
             <br/><font color='#E3D310'>PRIMARY OBJECTIVES:</font color>
-            <br/>Your Primary Objective(s)
+            <br/>- A quick summary of the primary objectives to be completed for mission success
             <br/>
             <br/><font color='#E3D310'>SECONDARY OBJECTIVES:</font color>
-            <br/>Your Secondary Objective(s)
+            <br/>- A quick summary of the secondary objectives that can be completed
         "]];
 
         _player createDiaryRecord ["Diary", ["Situation", "
-            <br/>Mission Situation goes here.
+            <br/>The overall situation of the mission scenario goes here
             <br/>
             <br/><font color='#1D69F6'>FRIENDLY FORCES:</font color>
-            <br/>Details on Friendly Forces.
+            <br/>- Friendly combatants
+            <br/>
+            <br/><font color='#1D69F6'>INDEPENDENT FORCES:</font color>
+            <br/>- Remove this section if there's no independent forces
             <br/>
             <br/><font color='#D81717'>ENEMY FORCES:</font color>
-            <br/>Details on Enemy Forces.
+            <br/>- Enemy combatants
         "]];
     };
 
@@ -63,26 +73,36 @@ switch (side _player) do {
         _player createDiaryRecord ["Diary", ["Execution", "
             <br/>Some guidelines on how to execute the mission goes here.
             <br/>Intended to help the command element plan the mission quicker.
+            <br/>Examples can be push through X, enter town from Y side etc.
+            <br/>Do not plan the entire mission path, just set some helpers for the lead element to plan quicker.
+        "]];
+
+        _player createDiaryRecord ["Diary", ["Intelligence", "
+            <br/>You can flesh out the intel we have on enemy compositions and equipment here
+            <br/>As well as other things that fits the intel section
         "]];
 
         _player createDiaryRecord ["Diary", ["Objectives", "
-            <br/>Mission Objectives goes here.
+            <br/>The overall description of the objective to complete
             <br/>
             <br/><font color='#E3D310'>PRIMARY OBJECTIVES:</font color>
-            <br/>Your Primary Objective(s)
+            <br/>- A quick summary of the primary objectives to be completed for mission success
             <br/>
             <br/><font color='#E3D310'>SECONDARY OBJECTIVES:</font color>
-            <br/>Your Secondary Objective(s)
+            <br/>- A quick summary of the secondary objectives that can be completed
         "]];
 
         _player createDiaryRecord ["Diary", ["Situation", "
-            <br/>Mission Situation goes here.
+            <br/>The overall situation of the mission scenario goes here
             <br/>
             <br/><font color='#1D69F6'>FRIENDLY FORCES:</font color>
-            <br/>Details on Friendly Forces.
+            <br/>- Friendly combatants
+            <br/>
+            <br/><font color='#1D69F6'>INDEPENDENT FORCES:</font color>
+            <br/>- Remove this section if there's no independent forces
             <br/>
             <br/><font color='#D81717'>ENEMY FORCES:</font color>
-            <br/>Details on Enemy Forces.
+            <br/>- Enemy combatants
         "]];
     };
 
@@ -91,26 +111,36 @@ switch (side _player) do {
         _player createDiaryRecord ["Diary", ["Execution", "
             <br/>Some guidelines on how to execute the mission goes here.
             <br/>Intended to help the command element plan the mission quicker.
+            <br/>Examples can be push through X, enter town from Y side etc.
+            <br/>Do not plan the entire mission path, just set some helpers for the lead element to plan quicker.
+        "]];
+
+        _player createDiaryRecord ["Diary", ["Intelligence", "
+            <br/>You can flesh out the intel we have on enemy compositions and equipment here
+            <br/>As well as other things that fits the intel section
         "]];
 
         _player createDiaryRecord ["Diary", ["Objectives", "
-            <br/>Mission Objectives goes here.
+            <br/>The overall description of the objective to complete
             <br/>
             <br/><font color='#E3D310'>PRIMARY OBJECTIVES:</font color>
-            <br/>Your Primary Objective(s)
+            <br/>- A quick summary of the primary objectives to be completed for mission success
             <br/>
             <br/><font color='#E3D310'>SECONDARY OBJECTIVES:</font color>
-            <br/>Your Secondary Objective(s)
+            <br/>- A quick summary of the secondary objectives that can be completed
         "]];
 
         _player createDiaryRecord ["Diary", ["Situation", "
-            <br/>Mission Situation goes here.
+            <br/>The overall situation of the mission scenario goes here
             <br/>
             <br/><font color='#1D69F6'>FRIENDLY FORCES:</font color>
-            <br/>Details on Friendly Forces.
+            <br/>- Friendly combatants
+            <br/>
+            <br/><font color='#1D69F6'>INDEPENDENT FORCES:</font color>
+            <br/>- Remove this section if there's no independent forces
             <br/>
             <br/><font color='#D81717'>ENEMY FORCES:</font color>
-            <br/>Details on Enemy Forces.
+            <br/>- Enemy combatants
         "]];
     };
 
@@ -119,26 +149,36 @@ switch (side _player) do {
         _player createDiaryRecord ["Diary", ["Execution", "
             <br/>Some guidelines on how to execute the mission goes here.
             <br/>Intended to help the command element plan the mission quicker.
+            <br/>Examples can be push through X, enter town from Y side etc.
+            <br/>Do not plan the entire mission path, just set some helpers for the lead element to plan quicker.
+        "]];
+
+        _player createDiaryRecord ["Diary", ["Intelligence", "
+            <br/>You can flesh out the intel we have on enemy compositions and equipment here
+            <br/>As well as other things that fits the intel section
         "]];
 
         _player createDiaryRecord ["Diary", ["Objectives", "
-            <br/>Mission Objectives goes here.
+            <br/>The overall description of the objective to complete
             <br/>
             <br/><font color='#E3D310'>PRIMARY OBJECTIVES:</font color>
-            <br/>Your Primary Objective(s)
+            <br/>- A quick summary of the primary objectives to be completed for mission success
             <br/>
             <br/><font color='#E3D310'>SECONDARY OBJECTIVES:</font color>
-            <br/>Your Secondary Objective(s)
+            <br/>- A quick summary of the secondary objectives that can be completed
         "]];
 
         _player createDiaryRecord ["Diary", ["Situation", "
-            <br/>Mission Situation goes here.
+            <br/>The overall situation of the mission scenario goes here
             <br/>
             <br/><font color='#1D69F6'>FRIENDLY FORCES:</font color>
-            <br/>Details on Friendly Forces.
+            <br/>- Friendly combatants
+            <br/>
+            <br/><font color='#1D69F6'>INDEPENDENT FORCES:</font color>
+            <br/>- Remove this section if there's no independent forces
             <br/>
             <br/><font color='#D81717'>ENEMY FORCES:</font color>
-            <br/>Details on Enemy Forces.
+            <br/>- Enemy combatants
         "]];
     };
 };
