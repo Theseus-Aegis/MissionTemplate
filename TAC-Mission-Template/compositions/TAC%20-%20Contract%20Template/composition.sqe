@@ -1,5 +1,5 @@
 version=53;
-center[]={7202.5537,5,6713.5254};
+center[]={6327.2925,5,4479.4819};
 class items
 {
 	items=16;
@@ -15,7 +15,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={7.7197266,0.0014390945,1.0209961};
+					position[]={-0.69824219,0.0014390945,8.1616211};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=7;
@@ -74,7 +75,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.7197266,0.0014390945,1.0209961};
+					position[]={-0.72607422,0.0014390945,6.1621094};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -90,7 +92,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7197266,0.0014390945,1.0209961};
+					position[]={-0.75341797,0.0014390945,4.1621094};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -106,7 +109,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7197266,0.0014390945,1.0209961};
+					position[]={-0.78125,0.0014390945,2.1625977};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -122,7 +126,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.28027344,0.0014390945,1.0209961};
+					position[]={-0.80908203,0.0014390945,0.16259766};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -138,7 +143,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.2802734,0.0014390945,1.0209961};
+					position[]={-0.83691406,0.0014390945,-1.8374023};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -154,7 +160,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.2802734,0.0014390945,1.0209961};
+					position[]={-0.86474609,0.0014390945,-3.8369141};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -170,7 +177,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-6.2802734,0.0014390945,1.0209961};
+					position[]={-0.89208984,0.0014390945,-5.8369141};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -199,7 +207,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={7.7197266,0.0014390945,-0.97900391};
+					position[]={1.3017578,0.0014390945,8.1342773};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=7;
@@ -257,7 +266,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.7197266,0.0014390945,-0.97900391};
+					position[]={1.2739258,0.0014390945,6.1342773};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -273,7 +283,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7197266,0.0014390945,-0.97900391};
+					position[]={1.2460938,0.0014390945,4.1342773};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -289,7 +300,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7197266,0.0014390945,-0.97900391};
+					position[]={1.2182617,0.0014390945,2.1347656};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -305,7 +317,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.28027344,0.0014390945,-0.97900391};
+					position[]={1.190918,0.0014390945,0.13476563};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -321,7 +334,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.2802734,0.0014390945,-0.97900391};
+					position[]={1.1630859,0.0014390945,-1.8652344};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -337,7 +351,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.2802734,0.0014390945,-0.97900391};
+					position[]={1.1352539,0.0014390945,-3.8647461};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -353,7 +368,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-6.2802734,0.0014390945,-0.97900391};
+					position[]={1.1074219,0.0014390945,-5.8647461};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -382,7 +398,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.7197266,0.0014390945,-2.9790039};
+					position[]={3.2739258,0.0014390945,6.1064453};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=7;
@@ -440,7 +457,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.7197266,0.0014390945,-4.9790039};
+					position[]={5.2734375,0.0014390945,6.0786133};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -498,7 +516,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7197266,0.0014390945,-2.9790039};
+					position[]={3.2460938,0.0014390945,4.1064453};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -556,7 +575,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7197266,0.0014390945,-4.9790039};
+					position[]={5.2456055,0.0014390945,4.0791016};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -627,7 +647,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.2802734,0.0014390945,-2.9790039};
+					position[]={3.1625977,0.0014390945,-1.8925781};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=7;
@@ -685,7 +706,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.2802734,0.0014390945,-2.9790039};
+					position[]={3.1352539,0.0014390945,-3.8925781};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -743,7 +765,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.2802734,0.0014390945,-4.9790039};
+					position[]={5.1347656,0.0014390945,-3.9204102};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -801,7 +824,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.2802734,0.0014390945,-4.9790039};
+					position[]={5.1625977,0.0014390945,-1.9204102};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -872,7 +896,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7197266,0.0014390945,-3.9790039};
+					position[]={4.2182617,0.0014390945,2.0927734};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=7;
@@ -930,7 +955,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.28027344,0.0014390945,-3.9790039};
+					position[]={4.1904297,0.0014390945,0.093261719};
+					angles[]={0,4.7262621,0};
 				};
 				side="West";
 				flags=5;
@@ -994,8 +1020,8 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.71972656,0.89242268,8.9711914};
-			angles[]={-0,3.1233413,0};
+			position[]={-8.7944336,0.89242268,1.2236328};
+			angles[]={-0,1.5664178,0};
 		};
 		side="Empty";
 		flags=4;
@@ -1010,8 +1036,8 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-1.2802734,0.89242268,8.9711914};
-			angles[]={-0,3.1233413,0};
+			position[]={-8.8222656,0.89242268,-0.77636719};
+			angles[]={-0,1.5664178,0};
 		};
 		side="Empty";
 		flags=4;
@@ -1026,8 +1052,8 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={2.7197266,0.89242268,8.9711914};
-			angles[]={-0,3.1233413,0};
+			position[]={-8.7666016,0.89242268,3.2236328};
+			angles[]={-0,1.5664178,0};
 		};
 		side="Empty";
 		flags=4;
@@ -1042,8 +1068,8 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={5.7197266,1.0431652,8.9711914};
-			angles[]={-0,3.1415927,0};
+			position[]={-8.7250977,1.0431652,6.2231445};
+			angles[]={-0,1.5846692,0};
 		};
 		side="Empty";
 		flags=4;
@@ -1083,7 +1109,8 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-12.280273,0,6.9711914};
+			position[]={-6.9750977,0,-11.802734};
+			angles[]={-0,4.7262621,0};
 		};
 		id=35;
 		type="ModuleCurator_F";
@@ -1173,7 +1200,8 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-12.280273,0,2.9711914};
+			position[]={-2.9755859,0,-11.858398};
+			angles[]={-0,4.7262621,0};
 		};
 		name="headlessclient1";
 		isPlayable=1;
@@ -1185,7 +1213,8 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-12.280273,0,-1.0288086};
+			position[]={1.0244141,0,-11.914063};
+			angles[]={-0,4.7262621,0};
 		};
 		name="headlessclient2";
 		isPlayable=1;
@@ -1197,7 +1226,8 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-12.280273,0,-5.0288086};
+			position[]={5.0239258,0,-11.969238};
+			angles[]={-0,4.7262621,0};
 		};
 		name="headlessclient3";
 		isPlayable=1;
@@ -1206,27 +1236,18 @@ class items
 	};
 	class Item13
 	{
-		dataType="Marker";
-		position[]={0.71972656,0,-3.0288086};
-		name="respawn_west";
-		text="Respawn";
-		type="Empty";
-		id=39;
-	};
-	class Item14
-	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-0.35449219,0.28405476,7.0117188};
-			angles[]={-0,1.5707964,0};
+			position[]={-6.8500977,0.28405476,0.12255859};
+			angles[]={-0,0.013872862,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=41;
+		id=39;
 		type="Box_NATO_AmmoOrd_F";
 		class CustomAttributes
 		{
@@ -1252,20 +1273,20 @@ class items
 			nAttributes=1;
 		};
 	};
-	class Item15
+	class Item14
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={1.402832,0,7.0322266};
-			angles[]={-0,3.1415927,0};
+			position[]={-6.8466797,0,1.8793945};
+			angles[]={-0,1.5846692,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=58;
+		id=40;
 		type="ACE_medicalSupplyCrate_advanced";
 		class CustomAttributes
 		{
@@ -1284,7 +1305,7 @@ class items
 								"STRING"
 							};
 						};
-						value="[[[[],[]],[[],[]],[[""ACE_fieldDressing"",""ACE_packingBandage"",""ACE_elasticBandage"",""ACE_tourniquet"",""ACE_morphine"",""ACE_epinephrine"",""ACE_plasmaIV"",""ACE_plasmaIV_500"",""ACE_plasmaIV_250"",""ACE_salineIV"",""ACE_salineIV_500"",""ACE_salineIV_250"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_quikclot"",""ACE_surgicalKit"",""ACE_bodyBag"",""tac_medical_painkillers""],[60,60,60,30,15,15,15,15,15,15,15,15,15,15,15,60,5,10,20]],[[],[]]],false]";
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 					};
 				};
 			};
@@ -1307,7 +1328,362 @@ class items
 					};
 				};
 			};
-			nAttributes=2;
+			class Attribute2
+			{
+				property="ace_arsenal_attribute";
+				expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"ARRAY"
+							};
+						};
+						class value
+						{
+							items=2;
+							class Item0
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+									class value
+									{
+										items=21;
+										class Item0
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_packingBandage";
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_elasticBandage";
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_fieldDressing";
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_bloodIV";
+											};
+										};
+										class Item4
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_bloodIV_250";
+											};
+										};
+										class Item5
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_bloodIV_500";
+											};
+										};
+										class Item6
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_bodyBag";
+											};
+										};
+										class Item7
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_epinephrine";
+											};
+										};
+										class Item8
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_morphine";
+											};
+										};
+										class Item9
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="tac_medical_painkillers";
+											};
+										};
+										class Item10
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_plasmaIV";
+											};
+										};
+										class Item11
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_plasmaIV_250";
+											};
+										};
+										class Item12
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_plasmaIV_500";
+											};
+										};
+										class Item13
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_salineIV";
+											};
+										};
+										class Item14
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_salineIV_250";
+											};
+										};
+										class Item15
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_salineIV_500";
+											};
+										};
+										class Item16
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_splint";
+											};
+										};
+										class Item17
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_surgicalKit";
+											};
+										};
+										class Item18
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_tourniquet";
+											};
+										};
+										class Item19
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_adenosine";
+											};
+										};
+										class Item20
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ACE_quikclot";
+											};
+										};
+									};
+								};
+							};
+							class Item1
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+					};
+				};
+			};
+			nAttributes=3;
 		};
+	};
+	class Item15
+	{
+		dataType="Marker";
+		position[]={-3.2226563,0,1.5092773};
+		name="respawn_west";
+		type="Empty";
+		id=57;
 	};
 };
