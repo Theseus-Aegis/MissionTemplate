@@ -4,7 +4,7 @@
 // Version
 #define MAJOR 2
 #define MINOR 2
-#define PATCHLVL 5
+#define PATCHLVL 6
 
 // Map
 #define MAP VR
