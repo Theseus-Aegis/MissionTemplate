@@ -6,7 +6,7 @@
  *
  * Arguments
  * 0: Battery <OBJECT>
- * 1: IED <OBJECT>
+ * 1: Defusable Explosive <OBJECT>
  *
  * Return Value:
  * None
@@ -23,13 +23,22 @@ private _action = [
     "Disconnect IED",
     "",
     {
-        params ["_target", "_player", "_args"];
-        _args params ["_battery", "_explosive"];
-        [5, [_player, _explosive], {(_this select 0) call ACEFUNC(explosives,defuseExplosive)}, {}, "Disconnecting Battery...", {true}, ["isNotSwimming"]] call ACEFUNC(common,progressBar);
+        params ["_target", "_player", "_explosive"];
+        [
+            5,
+            [_player, _explosive],
+            {
+                (_this select 0) call ACEFUNC(explosives,defuseExplosive);
+            },
+            {},
+            "Disconnecting Battery...",
+            {true},
+            ["isNotSwimming"]
+        ] call ACEFUNC(common,progressBar);
     },
     {true},
     {},
-    [_battery, _explosive]
+    _explosive
 ] call ACEFUNC(interact_menu,createAction);
 
 [_battery, 0, ["ACE_MainActions"], _action] call ACEFUNC(interact_menu,addActionToObject);
