@@ -27,7 +27,7 @@ respawnDialog = 0;
 
 // AI & debug
 disabledAI = 1;  // Disables AI for Playable Units
-enableDebugConsole[] = {"76561198048995566", "76561198033169512"};  // Enables Debug Console for players with specified UIDs (Jonpas and Kresky) and Host/Admin
+enableDebugConsole[] = {"76561198048995566", "76561198085500182"};  // Enables Debug Console for players with specified UIDs (Jonpas and Tyrone) and Host/Admin
 enableTargetDebug = 1;
 
 // Other settings
