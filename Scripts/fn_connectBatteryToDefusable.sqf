@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [Battery, IED] call TAC_Scripts_fnc_connectIEDBattery;
+ * [Battery, IED] call TAC_Scripts_fnc_connectBatteryToDefusable;
  */
 #include "..\script_component.hpp"
 
