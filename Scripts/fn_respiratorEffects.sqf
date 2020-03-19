@@ -1,0 +1,68 @@
+/*
+ * Author: Alganthe, TyroneMF
+ * Specified masks protect from a contamination zone while providing HUD/Sound effects.
+ * Requires a marker covering an area named "Contamination" for damage to take effect.
+ *
+ * Call from initPlayerLocal.sqf
+ *
+ * Arguments:
+ * 0: Player <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_player] call FUNC(respiratorEffects);
+ */
+#include "..\script_component.hpp"
+
+params ["_player"];
+
+tac_co_maskCounter =  CBA_missionTime;
+tac_co_lastSoundRan = CBA_missionTime;
+tac_co_oldGlasses = "";
+[{
+    private _masks = [
+        "avon_ct12", // AVON FM12 Mod Respirators
+        "avon_ct12_strapless",
+        "avon_fm12",
+        "avon_fm12_strapless",
+        "avon_SF12",
+        "avon_SF12_strapless",
+        "G_AirPurifyingRespirator_01_F", // Contact DLC respirators
+        "G_AirPurifyingRespirator_02_black_F",
+        "G_AirPurifyingRespirator_02_olive_F",
+        "G_AirPurifyingRespirator_02_sand_F",
+        "G_RegulatorMask_F"
+    ];
+
+    private _goggles = goggles ACE_player;
+
+    if (_goggles in _masks) then {
+        // Breathing effect, adjust to fit sound length.
+        if (tac_co_lastSoundRan + 3 < CBA_missionTime) then {
+            tac_co_lastSoundRan = CBA_missionTime;
+            playSound "tacr_gasmask_breath";
+        };
+        // Add Mask
+        if (tac_co_oldGlasses != _goggles) then {
+            playSound "tacr_gasmask_on";
+            "tac_gasmask_overlay" cutRsc ["tac_gasmask", "PLAIN", 1, false];
+        };
+    } else {
+        // Mask Removal
+        if (tac_co_oldGlasses in _masks) then {
+            playSound "tacr_gasmask_off";
+            "tac_gasmask_overlay" cutFadeOut 0;
+        };
+        // Damage
+        if (ACE_player inArea "Contamination" && {tac_co_maskCounter + 10 < CBA_missionTime}) then {
+            tac_co_maskCounter = CBA_missionTime;
+            // Adjust damage / remove body parts to fit your needs.
+            private _bodypart = selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
+            [ACE_player, 0.15, _bodyPart, "stab"] call ACEFUNC(medical,addDamageToUnit);
+        };
+    };
+
+    tac_co_oldGlasses = _goggles;
+} , 1, []] call CBA_fnc_addPerFrameHandler;
