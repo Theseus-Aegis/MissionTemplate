@@ -47,13 +47,13 @@ tac_co_oldGlasses = "";
         // Add Mask
         if (tac_co_oldGlasses != _goggles) then {
             playSound "tacr_gasmask_on";
-            "tac_gasmask_overlay" cutRsc ["tac_gasmask", "PLAIN", 1, false];
+            "tacr_gasmask_overlay" cutRsc ["tacr_gasmask", "PLAIN", 1, false];
         };
     } else {
         // Mask Removal
         if (tac_co_oldGlasses in _masks) then {
             playSound "tacr_gasmask_off";
-            "tac_gasmask_overlay" cutFadeOut 0;
+            "tacr_gasmask_overlay" cutFadeOut 0;
         };
         // Damage
         if (ACE_player inArea "Contamination" && {tac_co_maskCounter + 10 < CBA_missionTime}) then {
