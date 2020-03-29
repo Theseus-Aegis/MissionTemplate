@@ -16,7 +16,7 @@ forceRotorLibSimulation = 1;
 class Header {
     gameType = "COOP";
     minPlayers = 1;
-    maxPlayers = 29;
+    maxPlayers = 32;
 };
 
 // Respawn settings
