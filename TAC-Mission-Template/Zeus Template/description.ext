@@ -10,7 +10,6 @@ author = "YOUR.NAME, Theseus Inc.";
 loadScreen = "x\tacr\addons\images\general\MissionLoad.paa";
 onLoadIntroTime = 1;
 onLoadMissionTime = 1;
-forceRotorLibSimulation = 0;
 
 // Gametype and playercount
 class Header {
