@@ -18,9 +18,9 @@
 
 params ["_player"];
 
-tac_co_maskCounter =  CBA_missionTime;
-tac_co_lastSoundRan = CBA_missionTime;
-tac_co_oldGlasses = "";
+GVAR(maskCounter) =  CBA_missionTime;
+GVAR(lastSoundRan) = CBA_missionTime;
+GVAR(oldGlasses) = "";
 [{
     private _masks = [
         "avon_ct12", // AVON FM12 Mod Respirators
@@ -40,29 +40,29 @@ tac_co_oldGlasses = "";
 
     if (_goggles in _masks) then {
         // Breathing effect, adjust to fit sound length.
-        if (tac_co_lastSoundRan + 3 < CBA_missionTime) then {
-            tac_co_lastSoundRan = CBA_missionTime;
+        if (GVAR(lastSoundRan) + 3 < CBA_missionTime) then {
+            GVAR(lastSoundRan) = CBA_missionTime;
             playSound "tacr_gasmask_breath";
         };
         // Add Mask
-        if (tac_co_oldGlasses != _goggles) then {
+        if (GVAR(oldGlasses) != _goggles) then {
             playSound "tacr_gasmask_on";
             "tacr_gasmask_overlay" cutRsc ["tacr_gasmask", "PLAIN", 1, false];
         };
     } else {
         // Mask Removal
-        if (tac_co_oldGlasses in _masks) then {
+        if (GVAR(oldGlasses) in _masks) then {
             playSound "tacr_gasmask_off";
             "tacr_gasmask_overlay" cutFadeOut 0;
         };
         // Damage
-        if (ACE_player inArea "Contamination" && {tac_co_maskCounter + 10 < CBA_missionTime}) then {
-            tac_co_maskCounter = CBA_missionTime;
+        if (ACE_player inArea "Contamination" && {GVAR(maskCounter) + 10 < CBA_missionTime}) then {
+            GVAR(maskCounter) = CBA_missionTime;
             // Adjust damage / remove body parts to fit your needs.
             private _bodypart = selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
             [ACE_player, 0.15, _bodyPart, "stab"] call ACEFUNC(medical,addDamageToUnit);
         };
     };
 
-    tac_co_oldGlasses = _goggles;
+    GVAR(oldGlasses) = _goggles;
 } , 1, []] call CBA_fnc_addPerFrameHandler;
