@@ -21,24 +21,14 @@ params ["_player"];
 GVAR(maskCounter) =  CBA_missionTime;
 GVAR(lastSoundRan) = CBA_missionTime;
 GVAR(oldGlasses) = "";
+
+// Lower-case!
+#define MASKS ["avon_ct12", "avon_ct12_strapless", "avon_fm12", "avon_fm12_strapless", "avon_sf12", "avon_sf12_strapless", "g_airpurifyingrespirator_01_f", "g_airpurifyingrespirator_02_black_f", "g_airpurifyingrespirator_02_olive_f", "g_airpurifyingrespirator_02_sand_f", "g_regulatormask_f"]
+
 [{
-    private _masks = [
-        "avon_ct12", // AVON FM12 Mod Respirators
-        "avon_ct12_strapless",
-        "avon_fm12",
-        "avon_fm12_strapless",
-        "avon_SF12",
-        "avon_SF12_strapless",
-        "G_AirPurifyingRespirator_01_F", // Contact DLC respirators
-        "G_AirPurifyingRespirator_02_black_F",
-        "G_AirPurifyingRespirator_02_olive_F",
-        "G_AirPurifyingRespirator_02_sand_F",
-        "G_RegulatorMask_F"
-    ];
+    private _goggles = toLower (goggles ACE_player);
 
-    private _goggles = goggles ACE_player;
-
-    if (_goggles in _masks) then {
+    if (_goggles in MASKS) then {
         // Breathing effect, adjust to fit sound length.
         if (GVAR(lastSoundRan) + 3 < CBA_missionTime) then {
             GVAR(lastSoundRan) = CBA_missionTime;
@@ -51,7 +41,7 @@ GVAR(oldGlasses) = "";
         };
     } else {
         // Mask Removal
-        if (GVAR(oldGlasses) in _masks) then {
+        if (GVAR(oldGlasses) in MASKS) then {
             playSound "tacr_gasmask_off";
             "tacr_gasmask_overlay" cutFadeOut 0;
         };
