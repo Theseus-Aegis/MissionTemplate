@@ -31,6 +31,6 @@ private _action = [
     {true},
     {},
     [_teleportObject, _text]
-] call ACE_Interact_Menu_fnc_createAction;
+] call ACEFUNC(interact_menu,createAction);
 
-[_controller, 0, ["ACE_MainActions"], _action] call ACE_Interact_Menu_fnc_addActionToObject;
+[_controller, 0, ["ACE_MainActions"], _action] call ACEFUNC(interact_menu,addActionToObject);
