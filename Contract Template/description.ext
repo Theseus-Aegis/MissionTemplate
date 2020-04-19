@@ -1,5 +1,3 @@
-// Description.ext for Contract missions
-
 #include "script_component.hpp"
 #include "CfgFunctions.hpp"
 

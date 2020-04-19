@@ -23,7 +23,7 @@ GVAR(lastSoundRan) = CBA_missionTime;
 GVAR(oldGlasses) = "";
 
 // Lower-case!
-#define MASKS ["avon_ct12", "avon_ct12_strapless", "avon_fm12", "avon_fm12_strapless", "avon_sf12", "avon_sf12_strapless", "g_airpurifyingrespirator_01_f", "g_airpurifyingrespirator_02_black_f", "g_airpurifyingrespirator_02_olive_f", "g_airpurifyingrespirator_02_sand_f", "g_regulatormask_f"]
+#define MASKS ["g_airpurifyingrespirator_01_f", "g_airpurifyingrespirator_02_black_f", "g_airpurifyingrespirator_02_olive_f", "g_airpurifyingrespirator_02_sand_f", "g_regulatormask_f"]
 
 [{
     private _goggles = toLower (goggles ACE_player);

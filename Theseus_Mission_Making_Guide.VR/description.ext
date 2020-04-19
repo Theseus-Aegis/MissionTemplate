@@ -1,12 +1,10 @@
-// Description.ext for Zeus Missions
-
 #include "script_component.hpp"
 #include "CfgFunctions.hpp"
 
 // Mission settings - title, description, author etc.
-OnLoadName = "MISSION NAME";
-OnLoadMission = "MISSION SUMMARY";
-author = "YOUR.NAME, Theseus Inc.";
+OnLoadName = "Mission Making Guide";
+OnLoadMission = "LEARN STUFF.";
+author = "Tyrone Woods, Theseus Inc.";
 loadScreen = "x\tacr\addons\images\general\MissionLoad.paa";
 onLoadIntroTime = 1;
 onLoadMissionTime = 1;
@@ -15,7 +13,7 @@ onLoadMissionTime = 1;
 class Header {
     gameType = "COOP";
     minPlayers = 1;
-    maxPlayers = XX;
+    maxPlayers = 32;
 };
 
 // Respawn settings
