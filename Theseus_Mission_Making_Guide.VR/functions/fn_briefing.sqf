@@ -64,7 +64,7 @@ switch (side _player) do {
             <br/><font color='#1D69F6'>FRIENDLY FORCES:</font color>
             <br/>- Theseus Inc.
             <br/>
-            <br/><font color='#1D69F6'>INDEPENDENT FORCES:</font color>
+            <br/><font color='#139120'>INDEPENDENT FORCES:</font color>
             <br/>- Remove this section if there's no independent forces
             <br/>
             <br/><font color='#D81717'>ENEMY FORCES:</font color>
