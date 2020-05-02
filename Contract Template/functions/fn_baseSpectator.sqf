@@ -15,6 +15,8 @@
  */
 #include "..\script_component.hpp"
 
+#define NOTIFY_RANGE 50
+
 params ["_player", "_object"];
 
 // Event for closing spectator from other machines
@@ -38,12 +40,16 @@ private _actionOpen = [
 // Admin chat command to toggle spectator availability
 ["tac-spec", {
     //USES_VARIABLES ["_thisArgs"]
+
+    private _nearbyPlayers = (getPosATL _thisArgs) nearObjects ["CAManBase", NOTIFY_RANGE];
+    _nearbyPlayers pushBackUnique ACE_player;
+
     if (_thisArgs getVariable [QGVAR(baseSpectatorAllowed), false]) then {
         [QGVAR(baseSpectatorProhibit), nil, call CBA_fnc_players] call CBA_fnc_targetEvent;
         _thisArgs setVariable [QGVAR(baseSpectatorAllowed), false, true];
-        ["ace_common_systemChatGlobal", "[TAC] Spectator Prohibited"] call CBA_fnc_globalEvent;
+        ["ace_common_systemChatGlobal", "[TAC] Spectator Prohibited", _nearbyPlayers] call CBA_fnc_targetEvent;
     } else {
         _thisArgs setVariable [QGVAR(baseSpectatorAllowed), true, true];
-        ["ace_common_systemChatGlobal", "[TAC] Spectator Allowed"] call CBA_fnc_globalEvent;
+        ["ace_common_systemChatGlobal", "[TAC] Spectator Allowed", _nearbyPlayers] call CBA_fnc_targetEvent;
     };
 }, "admin", _object] call CBA_fnc_registerChatCommand;
