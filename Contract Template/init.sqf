@@ -13,6 +13,6 @@
     [_x, "theseus", 12, "label", "HELIOS 2"] call acre_api_fnc_setPresetChannelField;
     [_x, "theseus", 13, "label", "HELIOS 3"] call acre_api_fnc_setPresetChannelField;
     [_x, "theseus", 14, "label", "HELIOS 4"] call acre_api_fnc_setPresetChannelField;
-    [_x, "theseus", 15, "label", "HELIOS COMMAND"] call acre_api_fnc_setPresetChannelField;
+    [_x, "theseus", 15, "label", "HELIOS COMM"] call acre_api_fnc_setPresetChannelField;
     [_x, "theseus"] call acre_api_fnc_setPreset;
 } forEach ["ACRE_PRC152", "ACRE_PRC117F"];
