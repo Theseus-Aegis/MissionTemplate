@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Adds dynamic spectator availability through CBA Chat Commands and ACE3 Interaction Menu.
@@ -13,7 +14,6 @@
  * Example:
  * [player, spectatorObject] call FUNC(baseSpectator);
  */
-#include "..\script_component.hpp"
 
 #define NOTIFY_RANGE 50
 

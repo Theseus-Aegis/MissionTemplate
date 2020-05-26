@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Kresky, Jonpas
  * Adds the ability to "pick up" objects, and add an intel entry in the briefing tab.
@@ -20,7 +21,6 @@
  * 	[intel01, "Collect Document", "Document picked up", "Intel", "Documents describing some stuff", true] call FUNC(collectIntel);
  * };
  */
-#include "..\script_component.hpp"
 
 params ["_controller", "_interactText", "_hintText", "_intelEntry", "_intelDescription", ["_deleteOnCollect", true]];
 

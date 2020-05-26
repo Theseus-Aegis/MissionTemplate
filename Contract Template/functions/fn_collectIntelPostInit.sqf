@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Kresky, Jonpas
  * Initializes requirements for intel collection script.
@@ -12,7 +13,6 @@
  * Example:
  * ["postInit", didJIP] call FUNC(collectIntelPostInit);
  */
-#include "..\script_component.hpp"
 
 // Exit if not player client
 if (!hasInterface) exitWith {};
