@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 /*
  * Author: Theseus Incorporated
- * Initialization of scripts local to player
- * Executed locally when player joins mission (includes both mission start and JIP)
+ * Runs local to player on initialization.
+ * Executed locally when player joins mission (includes both mission start and JIP).
  * Executed after initServer and before initPlayerServer and init.
  *
  * Arguments:
