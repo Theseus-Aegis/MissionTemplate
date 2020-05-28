@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Kresky, Jonpas
  * Initializes requirements for intel collection script.
@@ -12,7 +13,6 @@
  * Example:
  * ["preInit"] call FUNC(collectIntelPreInit);
  */
-#include "..\script_component.hpp"
 
 if (isServer) then {
     // Track picked up records on server

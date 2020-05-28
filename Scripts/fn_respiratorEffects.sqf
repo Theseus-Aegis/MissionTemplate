@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe, TyroneMF
  * Specified masks protect from a contamination zone while providing HUD/Sound effects.
@@ -14,7 +15,6 @@
  * Example:
  * [_player] call FUNC(respiratorEffects);
  */
-#include "..\script_component.hpp"
 
 params ["_player"];
 

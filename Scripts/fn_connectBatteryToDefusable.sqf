@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas, TyroneMF
  * Requires a Battery to IED setup, handles disconnecting battery from IED and defusing it.
- * 
+ *
  * Call from initPlayerLocal.sqf
  *
  * Arguments
@@ -14,7 +15,6 @@
  * Example:
  * [Battery, IED] call TAC_Scripts_fnc_connectBatteryToDefusable;
  */
-#include "..\script_component.hpp"
 
 params ["_battery", "_explosive"];
 

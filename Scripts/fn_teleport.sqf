@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Rory, Jonpas
  * Teleports the player from base (this) to teleport locations (objects).
@@ -14,7 +15,6 @@
  * Example:
  * [tpObj, tpPos, "Teleport"] call FUNC(teleport);
  */
-#include "..\script_component.hpp"
 
 params ["_controller", "_teleportObject", "_text"];
 
