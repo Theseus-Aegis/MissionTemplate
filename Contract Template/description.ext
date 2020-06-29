@@ -4,7 +4,7 @@
 // Mission settings - title, description, author etc.
 OnLoadName = "MISSION NAME";
 OnLoadMission = "MISSION SUMMARY";
-author = "YOUR.NAME, Theseus Inc.";
+author = "YOUR NAME, Theseus Inc.";
 loadScreen = "x\tacr\addons\images\general\MissionLoad.paa";
 onLoadIntroTime = 1;
 onLoadMissionTime = 1;
@@ -13,7 +13,7 @@ onLoadMissionTime = 1;
 class Header {
     gameType = "COOP";
     minPlayers = 1;
-    maxPlayers = 32;
+    maxPlayers = 34;
 };
 
 // Respawn settings
@@ -30,3 +30,4 @@ enableTargetDebug = 1;
 // Other settings
 cba_settings_hasSettingsFile = 1;  // Enables use of "cba_settings.sqf", remove if file is not present (will crash)
 corpseManagerMode = 0; // No bodies will be cleaned up
+disableRandomization[] = {}; // Disables randomization of units and vehicles based off of variable name or classname
