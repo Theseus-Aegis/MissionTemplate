@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Theseus Incorporated
  * Runs globally on mission start
