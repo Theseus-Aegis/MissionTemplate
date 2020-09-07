@@ -31,3 +31,7 @@ enableTargetDebug = 1;
 // Other settings -  Do Not Edit.
 cba_settings_hasSettingsFile = 1;  // Enables use of "cba_settings.sqf", remove if file is not present (will crash)
 corpseManagerMode = 0; // No bodies will be cleaned up
+disableChannels[] = { // Disables unused chat channels
+    {0, true, true}, // Global
+    {2, true, true} // Command
+};
