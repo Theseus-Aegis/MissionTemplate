@@ -1,14 +1,14 @@
 version=53;
-center[]={4035.2493,5,860.97406};
+center[]={6465.2251,5,1112.3646};
 class items
 {
-	items=25;
+	items=26;
 	class Item0
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-6.4658203,0.89242268,-0.20812988};
+			position[]={-6.6083984,0.89242268,-0.20019531};
 			angles[]={-0,1.5707964,0};
 		};
 		side="Empty";
@@ -24,7 +24,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-6.4538574,0.89242268,-3.4381104};
+			position[]={-6.5961914,0.89242268,-3.4301758};
 			angles[]={-0,1.5707964,0};
 		};
 		side="Empty";
@@ -40,7 +40,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-6.465332,0.89242268,1.4075928};
+			position[]={-6.6079102,0.89242268,1.4155273};
 			angles[]={-0,1.5707964,0};
 		};
 		side="Empty";
@@ -56,7 +56,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-6.484375,1.0431652,5.0882568};
+			position[]={-6.6269531,1.0431652,5.0961914};
 			angles[]={-0,1.5846692,0};
 		};
 		side="Empty";
@@ -97,7 +97,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-6.4406738,0.89242268,-4.9903564};
+			position[]={-6.5834961,0.89242268,-4.9824219};
 			angles[]={-0,1.5707964,0};
 		};
 		side="Empty";
@@ -105,7 +105,7 @@ class items
 		class Attributes
 		{
 		};
-		id=7;
+		id=4;
 		type="tac_armory_Locker";
 	};
 	class Item5
@@ -113,7 +113,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-6.4645996,0.89242268,-1.8370361};
+			position[]={-6.6069336,0.89242268,-1.8291016};
 			angles[]={-0,1.5707964,0};
 		};
 		side="Empty";
@@ -121,7 +121,7 @@ class items
 		class Attributes
 		{
 		};
-		id=8;
+		id=5;
 		type="tac_armory_Locker";
 	};
 	class Item6
@@ -129,7 +129,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-6.4521484,0.89242268,2.9989014};
+			position[]={-6.5947266,0.89242268,3.0068359};
 			angles[]={-0,1.5707964,0};
 		};
 		side="Empty";
@@ -137,7 +137,7 @@ class items
 		class Attributes
 		{
 		};
-		id=9;
+		id=6;
 		type="tac_armory_Locker";
 	};
 	class Item7
@@ -145,9 +145,9 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={6.7277832,0,1.0481567};
+			position[]={6.5854492,0,1.0560303};
 		};
-		id=10;
+		id=7;
 		type="ModuleCurator_F";
 		class CustomAttributes
 		{
@@ -242,7 +242,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.2600098,0.0014390945,-4.8863525};
+					position[]={-4.402832,0.0014390945,-4.878418};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -253,7 +253,7 @@ class items
 					description="Team Leader@Ares 1";
 					isPlayer=1;
 				};
-				id=12;
+				id=9;
 				type="tacs_Unit_B_TeamLeader";
 				class CustomAttributes
 				{
@@ -303,7 +303,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.2770996,0.0014390945,-2.9083252};
+					position[]={-4.4194336,0.0014390945,-2.9003906};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -313,7 +313,7 @@ class items
 					description="Medic";
 					isPlayable=1;
 				};
-				id=13;
+				id=10;
 				type="tacs_Unit_B_Medic";
 				class CustomAttributes
 				{
@@ -363,7 +363,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.3059082,0.0014390945,-0.90246582};
+					position[]={-4.4487305,0.0014390945,-0.89453125};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -373,7 +373,7 @@ class items
 					description="Demolitions";
 					isPlayable=1;
 				};
-				id=14;
+				id=11;
 				type="tacs_Unit_B_Engineer";
 				class CustomAttributes
 				{
@@ -423,7 +423,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.2919922,0.0014390945,1.0775146};
+					position[]={-4.4345703,0.0014390945,1.0854492};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -433,7 +433,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=15;
+				id=12;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -483,7 +483,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.3068848,0.0014390945,3.1156006};
+					position[]={-4.449707,0.0014390945,3.1235352};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -493,7 +493,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=16;
+				id=13;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -543,7 +543,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.309082,0.0014390945,5.1326904};
+					position[]={-4.4516602,0.0014390945,5.140625};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -553,7 +553,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=17;
+				id=14;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -602,7 +602,7 @@ class items
 		class Attributes
 		{
 		};
-		id=11;
+		id=8;
 	};
 	class Item9
 	{
@@ -616,7 +616,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.3129883,0.0014390945,-4.9180908};
+					position[]={-2.4555664,0.0014390945,-4.9101563};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -627,7 +627,7 @@ class items
 					description="Team Leader@Ares 2";
 					isPlayable=1;
 				};
-				id=19;
+				id=16;
 				type="tacs_Unit_B_TeamLeader";
 				class CustomAttributes
 				{
@@ -677,7 +677,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.3303223,0.0014390945,-2.9405518};
+					position[]={-2.4731445,0.0014390945,-2.9326172};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -687,7 +687,7 @@ class items
 					description="Medic";
 					isPlayable=1;
 				};
-				id=20;
+				id=17;
 				type="tacs_Unit_B_Medic";
 				class CustomAttributes
 				{
@@ -737,7 +737,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.3591309,0.0014390945,-0.93469238};
+					position[]={-2.5014648,0.0014390945,-0.92675781};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -747,7 +747,7 @@ class items
 					description="Demolitions";
 					isPlayable=1;
 				};
-				id=21;
+				id=18;
 				type="tacs_Unit_B_Engineer";
 				class CustomAttributes
 				{
@@ -797,7 +797,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.3452148,0.0014390945,1.0452881};
+					position[]={-2.487793,0.0014390945,1.0532227};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -807,7 +807,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=22;
+				id=19;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -857,7 +857,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.3601074,0.0014390945,3.083374};
+					position[]={-2.5024414,0.0014390945,3.0913086};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -867,7 +867,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=23;
+				id=20;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -917,7 +917,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.3623047,0.0014390945,5.1004639};
+					position[]={-2.5048828,0.0014390945,5.1083984};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -927,7 +927,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=24;
+				id=21;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -976,7 +976,7 @@ class items
 		class Attributes
 		{
 		};
-		id=18;
+		id=15;
 	};
 	class Item10
 	{
@@ -990,7 +990,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.28100586,0.0014390945,-4.8902588};
+					position[]={-0.42333984,0.0014390945,-4.8823242};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1001,7 +1001,7 @@ class items
 					description="Team Leader@Ares 3";
 					isPlayable=1;
 				};
-				id=26;
+				id=23;
 				type="tacs_Unit_B_TeamLeader";
 				class CustomAttributes
 				{
@@ -1051,7 +1051,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.29858398,0.0014390945,-2.913208};
+					position[]={-0.44091797,0.0014390945,-2.9052734};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1061,7 +1061,7 @@ class items
 					description="Medic";
 					isPlayable=1;
 				};
-				id=27;
+				id=24;
 				type="tacs_Unit_B_Medic";
 				class CustomAttributes
 				{
@@ -1111,7 +1111,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.32739258,0.0014390945,-0.90734863};
+					position[]={-0.47021484,0.0014390945,-0.89941406};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1121,7 +1121,7 @@ class items
 					description="Demolitions";
 					isPlayable=1;
 				};
-				id=28;
+				id=25;
 				type="tacs_Unit_B_Engineer";
 				class CustomAttributes
 				{
@@ -1171,7 +1171,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.31347656,0.0014390945,1.0726318};
+					position[]={-0.45605469,0.0014390945,1.0805664};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1181,7 +1181,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=29;
+				id=26;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -1231,7 +1231,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.32836914,0.0014390945,3.1107178};
+					position[]={-0.47119141,0.0014390945,3.1186523};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1241,7 +1241,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=30;
+				id=27;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -1291,7 +1291,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.33056641,0.0014390945,5.1278076};
+					position[]={-0.47314453,0.0014390945,5.1357422};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1301,7 +1301,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=31;
+				id=28;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -1350,7 +1350,7 @@ class items
 		class Attributes
 		{
 		};
-		id=25;
+		id=22;
 	};
 	class Item11
 	{
@@ -1364,7 +1364,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7539063,0.0014390945,-4.8082275};
+					position[]={1.6113281,0.0014390945,-4.800293};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1375,7 +1375,7 @@ class items
 					description="Team Leader@Ares 4";
 					isPlayable=1;
 				};
-				id=33;
+				id=30;
 				type="tacs_Unit_B_TeamLeader";
 				class CustomAttributes
 				{
@@ -1425,7 +1425,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7365723,0.0014390945,-2.8311768};
+					position[]={1.5942383,0.0014390945,-2.8232422};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1435,7 +1435,7 @@ class items
 					description="Medic";
 					isPlayable=1;
 				};
-				id=34;
+				id=31;
 				type="tacs_Unit_B_Medic";
 				class CustomAttributes
 				{
@@ -1485,7 +1485,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7077637,0.0014390945,-0.82531738};
+					position[]={1.5649414,0.0014390945,-0.81738281};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1495,7 +1495,7 @@ class items
 					description="Demolitions";
 					isPlayable=1;
 				};
-				id=35;
+				id=32;
 				type="tacs_Unit_B_Engineer";
 				class CustomAttributes
 				{
@@ -1545,7 +1545,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7216797,0.0014390945,1.1546631};
+					position[]={1.5791016,0.0014390945,1.1625977};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1555,7 +1555,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=36;
+				id=33;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -1605,7 +1605,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7067871,0.0014390945,3.192749};
+					position[]={1.5639648,0.0014390945,3.2006836};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1615,7 +1615,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=37;
+				id=34;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -1665,7 +1665,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7045898,0.0014390945,5.2098389};
+					position[]={1.5620117,0.0014390945,5.2177734};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1675,7 +1675,7 @@ class items
 					description="Contractor";
 					isPlayable=1;
 				};
-				id=38;
+				id=35;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -1724,7 +1724,7 @@ class items
 		class Attributes
 		{
 		};
-		id=32;
+		id=29;
 	};
 	class Item12
 	{
@@ -1738,7 +1738,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.7043457,0.0014390945,-4.9215088};
+					position[]={5.5620117,0.0014390945,-4.9135742};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1748,7 +1748,7 @@ class items
 					description="Helicopter Pilot@Helios";
 					isPlayable=1;
 				};
-				id=40;
+				id=37;
 				type="tacs_Unit_B_PilotHeli";
 				class CustomAttributes
 				{
@@ -1798,7 +1798,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.6894531,0.0014390945,-2.8995361};
+					position[]={5.546875,0.0014390945,-2.8916016};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1808,7 +1808,7 @@ class items
 					description="Helicopter Pilot";
 					isPlayable=1;
 				};
-				id=41;
+				id=38;
 				type="tacs_Unit_B_PilotHeli";
 				class CustomAttributes
 				{
@@ -1857,7 +1857,7 @@ class items
 		class Attributes
 		{
 		};
-		id=39;
+		id=36;
 	};
 	class Item13
 	{
@@ -1871,7 +1871,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.715332,0.0014390945,-4.9005127};
+					position[]={3.5727539,0.0014390945,-4.8925781};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1881,7 +1881,7 @@ class items
 					description="Contractor@Reserve";
 					isPlayable=1;
 				};
-				id=43;
+				id=40;
 				type="tacs_Unit_B_Contractor";
 				class CustomAttributes
 				{
@@ -1931,7 +1931,187 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.722168,0.0014390945,-2.8922119};
+					position[]={3.5795898,0.0014390945,-2.8842773};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					description="Contractor";
+					isPlayable=1;
+				};
+				id=41;
+				type="tacs_Unit_B_Contractor";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male08ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.98000002;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={3.5786133,0.0014390945,-0.87890625};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					description="Contractor";
+					isPlayable=1;
+				};
+				id=42;
+				type="tacs_Unit_B_Contractor";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male08ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.98000002;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={3.5883789,0.0014390945,1.1308594};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					description="Contractor";
+					isPlayable=1;
+				};
+				id=43;
+				type="tacs_Unit_B_Contractor";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male08ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.98000002;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item4
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={3.5908203,0.0014390945,3.1245117};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -1986,12 +2166,12 @@ class items
 					nAttributes=2;
 				};
 			};
-			class Item2
+			class Item5
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7214355,0.0014390945,-0.88684082};
+					position[]={3.5727539,0.0014390945,5.1225586};
 					angles[]={0,4.712389,0};
 				};
 				side="West";
@@ -2046,203 +2226,23 @@ class items
 					nAttributes=2;
 				};
 			};
-			class Item3
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={3.7307129,0.0014390945,1.1229248};
-					angles[]={0,4.712389,0};
-				};
-				side="West";
-				flags=5;
-				class Attributes
-				{
-					description="Contractor";
-					isPlayable=1;
-				};
-				id=46;
-				type="tacs_Unit_B_Contractor";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male08ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0.98000002;
-							};
-						};
-					};
-					nAttributes=2;
-				};
-			};
-			class Item4
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={3.7333984,0.0014390945,3.1165771};
-					angles[]={0,4.712389,0};
-				};
-				side="West";
-				flags=5;
-				class Attributes
-				{
-					description="Contractor";
-					isPlayable=1;
-				};
-				id=47;
-				type="tacs_Unit_B_Contractor";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male08ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0.98000002;
-							};
-						};
-					};
-					nAttributes=2;
-				};
-			};
-			class Item5
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={3.715332,0.0014390945,5.114624};
-					angles[]={0,4.712389,0};
-				};
-				side="West";
-				flags=5;
-				class Attributes
-				{
-					description="Contractor";
-					isPlayable=1;
-				};
-				id=48;
-				type="tacs_Unit_B_Contractor";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male08ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0.98000002;
-							};
-						};
-					};
-					nAttributes=2;
-				};
-			};
 		};
 		class Attributes
 		{
 		};
-		id=42;
+		id=39;
 	};
 	class Item14
 	{
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={6.7453613,0,-4.9425659};
-			angles[]={-0,4.7262621,0};
+			position[]={6.6030273,0,-4.9346924};
+			angles[]={0,4.7262621,0};
 		};
 		name="headlessclient1";
 		isPlayable=1;
-		id=49;
+		id=46;
 		type="HeadlessClient_F";
 	};
 	class Item15
@@ -2250,11 +2250,11 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={6.7426758,0,-2.9469604};
+			position[]={6.6000977,0,-2.9390869};
 		};
 		name="headlessclient2";
 		isPlayable=1;
-		id=50;
+		id=47;
 		type="HeadlessClient_F";
 	};
 	class Item16
@@ -2262,12 +2262,12 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={6.7363281,0,-0.93231201};
-			angles[]={-0,4.7262621,0};
+			position[]={6.59375,0,-0.92443848};
+			angles[]={0,4.7262621,0};
 		};
 		name="headlessclient3";
 		isPlayable=1;
-		id=51;
+		id=48;
 		type="HeadlessClient_F";
 	};
 	class Item17
@@ -2275,7 +2275,55 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-0.20458984,0.15592003,7.0438232};
+			position[]={-0.34716797,0.15592003,7.0517578};
+			angles[]={-0,4.7038436,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=49;
+		type="ACE_Wheel";
+	};
+	class Item18
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-2.3959961,0.15592003,7.0561523};
+			angles[]={-0,4.7038436,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=50;
+		type="ACE_Wheel";
+	};
+	class Item19
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-4.3496094,0.15592003,7.0498047};
+			angles[]={-0,4.7038436,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=51;
+		type="ACE_Wheel";
+	};
+	class Item20
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-6.2836914,0.15592003,7.0634766};
 			angles[]={-0,4.7038436,0};
 		};
 		side="Empty";
@@ -2286,60 +2334,12 @@ class items
 		id=52;
 		type="ACE_Wheel";
 	};
-	class Item18
-	{
-		dataType="Object";
-		class PositionInfo
-		{
-			position[]={-2.253418,0.15592003,7.0482178};
-			angles[]={-0,4.7038436,0};
-		};
-		side="Empty";
-		flags=4;
-		class Attributes
-		{
-		};
-		id=53;
-		type="ACE_Wheel";
-	};
-	class Item19
-	{
-		dataType="Object";
-		class PositionInfo
-		{
-			position[]={-4.2070313,0.15592003,7.0418701};
-			angles[]={-0,4.7038436,0};
-		};
-		side="Empty";
-		flags=4;
-		class Attributes
-		{
-		};
-		id=54;
-		type="ACE_Wheel";
-	};
-	class Item20
-	{
-		dataType="Object";
-		class PositionInfo
-		{
-			position[]={-6.1411133,0.15592003,7.055542};
-			angles[]={-0,4.7038436,0};
-		};
-		side="Empty";
-		flags=4;
-		class Attributes
-		{
-		};
-		id=55;
-		type="ACE_Wheel";
-	};
 	class Item21
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={6.7446289,0.38152885,3.0446167};
+			position[]={6.6020508,0.38152885,3.0526123};
 		};
 		side="Empty";
 		flags=4;
@@ -2347,7 +2347,7 @@ class items
 		{
 			ammo=0.89999998;
 		};
-		id=56;
+		id=53;
 		type="tac_supplies_Engineer";
 	};
 	class Item22
@@ -2355,14 +2355,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={6.7138672,0.38152933,5.0263672};
+			position[]={6.5712891,0.38152933,5.0343018};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=57;
+		id=54;
 		type="tac_supplies_Medic";
 		atlOffset=4.7683716e-007;
 	};
@@ -2371,14 +2371,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={5.5175781,0.38152885,5.0328979};
+			position[]={5.375,0.38152885,5.0408936};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=58;
+		id=55;
 		type="tac_supplies_Recruit";
 	};
 	class Item24
@@ -2386,14 +2386,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={5.3728027,0.14963102,3.0626831};
+			position[]={5.2299805,0.14963102,3.0706787};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=59;
+		id=56;
 		type="tac_supplies_Launchers";
 		class CustomAttributes
 		{
@@ -2418,5 +2418,14 @@ class items
 			};
 			nAttributes=1;
 		};
+	};
+	class Item25
+	{
+		dataType="Marker";
+		position[]={8.2124023,0,-0.45202637};
+		name="respawn_west";
+		type="Empty";
+		angle=270.40363;
+		id=57;
 	};
 };
