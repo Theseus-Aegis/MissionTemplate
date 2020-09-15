@@ -13,7 +13,7 @@ onLoadMissionTime = 1;
 class Header {
     gameType = "COOP";
     minPlayers = 1;
-    maxPlayers = 34;
+    maxPlayers = 37;
 };
 
 // Respawn settings
