@@ -10,6 +10,7 @@ class CfgFunctions {
             class collectIntel;
             class collectIntelPreInit { preInit = 1; };
             class collectIntelPostInit { postInit = 1; };
+            class godMode;
         };
     };
 };

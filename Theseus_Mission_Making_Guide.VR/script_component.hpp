@@ -37,3 +37,15 @@
 
 #define PATHTOTACF(var1,var2) PATHTOF_SYS(\x\tac\addons,var1,var2)
 #define QPATHTOTACF(var1,var2) QUOTE(PATHTOTACF(var1,var2))
+
+// Statics
+#define ADMINS [ \
+    "76561198048995566", /* Jonpas */ \
+    "76561198033169512", /* Kresky */ \
+    "76561197985332763", /* rg */ \
+    "76561198060588521", /* NevilleR */ \
+    "76561197975361559", /* grueneteufel */ \
+    "76561198085500182", /* Tyrone */ \
+    "76561198024182729", /* Laird */ \
+    "76561198324654204"  /* gilleedoo */ \
+]
