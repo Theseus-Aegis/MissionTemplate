@@ -23,3 +23,15 @@ params ["_player", "_didJIP"];
 
 // Disable CUP street lights based on lighting levels (bad performance script)
 CUP_stopLampCheck = true;
+
+// ACRE2 God Mode
+private _admins = ["76561198048995566", "76561198085500182"];
+if ((getPlayerUID _player) in _admins) then {
+    [true, true] call acre_api_fnc_godModeConfigureAccess;
+    [_admins, 0] call acre_api_fnc_godModeModifyGroup;
+} else {
+    [{
+        IS_ADMIN || isServer // Logged-in admin or local host
+    }, 0] call acre_api_fnc_godModeModifyGroup;
+};
+["Admins", 0] call acre_api_fnc_godModeNameGroup;
