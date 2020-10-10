@@ -17,7 +17,7 @@
 [{
     #include "admin\init.sqf"
 
-// START USER CODE
+    // START USER CODE
 
-// END USER CODE
+    // END USER CODE
 }] call CBA_fnc_directCall;
