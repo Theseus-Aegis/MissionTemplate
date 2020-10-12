@@ -1,39 +1,9 @@
-#include "script_component.hpp"
-#include "CfgFunctions.hpp"
+#include "admin\description.ext"
 
 // Mission settings - title, description, author etc.
 OnLoadName = "MISSION NAME";
 OnLoadMission = "MISSION SUMMARY";
 author = "YOUR NAME, Theseus Inc.";
-loadScreen = "x\tacr\addons\images\general\MissionLoad.paa";
-onLoadIntroTime = 1;
-onLoadMissionTime = 1;
 
-// Gametype and playercount
-class Header {
-    gameType = "COOP";
-    minPlayers = 1;
-    maxPlayers = 34;
-};
-
-// Respawn settings
-respawn = "BASE";
-respawnButton = 1;
-respawnDelay = 5;
-respawnDialog = 0;
-
-// Disable Chat Channels
-disableChannels[] = { // Disables unused chat channels - Comment out Global in PVP events.
-    {0, true, true}, // Global
-    {2, true, true} // Command
-};
-
-// AI & debug
-disabledAI = 1;  // Disables AI for Playable Units
+// Randomization
 disableRandomization[] = {}; // Disables randomization of units and vehicles based off of variable name or classname
-enableDebugConsole[] = {"76561198048995566", "76561198085500182"};  // Enables Debug Console for players with specified UIDs (Jonpas and Tyrone) and Host/Admin
-enableTargetDebug = 1;
-
-// Other settings -  Do Not Edit.
-cba_settings_hasSettingsFile = 1;  // Enables use of "cba_settings.sqf", remove if file is not present (will crash)
-corpseManagerMode = 0; // No bodies will be cleaned up

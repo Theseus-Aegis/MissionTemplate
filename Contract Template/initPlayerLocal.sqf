@@ -16,11 +16,13 @@
  * None
  */
 
-params ["_player", "_didJIP"];
+[{
+    params ["_player", "_didJIP"];
 
-[_player, specScreen] call FUNC(baseSpectator);
-[_player] call FUNC(briefing);
-[_player] call FUNC(godMode);
 
-// Disable CUP street lights based on lighting levels (bad performance script)
-CUP_stopLampCheck = true;
+    #include "admin\initPlayerLocal.sqf"
+
+    // START USER CODE
+
+    // END USER CODE
+}, _this] call CBA_fnc_directCall;
