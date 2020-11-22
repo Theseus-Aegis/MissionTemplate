@@ -1,0 +1,36 @@
+version=53;
+center[]={1344.4485,5,5690.6143};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Trigger";
+		position[]={1.0324707,0,-0.060058594};
+		angle=4.7119875;
+		class Attributes
+		{
+			text="Mission Name";
+			condition="call{daytime >= 1}";
+			onActivation="call{[  " \n "    [  " \n "        [""MISSION NAME"", ""<t size = '1.5' underline = '1'>%1</t><br/>""],  " \n "        [""Theseus Incorporated""],  " \n "        [""MAP"", ""<t size = '1' font='puristaSemiBold'>%1</t>"", 70]  " \n "    ], 1, 0.75, ""<t align = 'center' shadow = '1' size = '1.0'>%1</t>""  " \n "] spawn BIS_fnc_typeText;}";
+			sizeA=0;
+			sizeB=0;
+			sizeC=0;
+			activationBy="ANYPLAYER";
+			isRectangle=1;
+		};
+		id=2;
+		type="EmptyDetector";
+	};
+	class Item1
+	{
+		dataType="Comment";
+		class PositionInfo
+		{
+			position[]={-1.0324707,0,0.059570313};
+		};
+		title="Mission Name";
+		description="For the mission name to pop up on mission start time, the trigger uses ""Daytime""" \n "" \n "If your mission is designed to start at 10am the condition of the trigger will be" \n "daytime >= 10" \n "" \n "The onActivation only has 2 parts to change which are capitalised as" \n """MISSION NAME""" \n """MAP""";
+		id=3;
+	};
+};

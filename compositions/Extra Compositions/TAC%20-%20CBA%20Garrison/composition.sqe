@@ -1,0 +1,154 @@
+version=53;
+center[]={1345.8817,5,5691.0269};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Comment";
+		class PositionInfo
+		{
+			position[]={-2.291748,0,-1.8300781};
+			angles[]={-0,1.5230596,0};
+		};
+		title="CBA Garrison Function";
+		description="Placed into the GROUP init field." \n "[ " \n "1. Group Variable Name " \n "2. Position (Marker or Object: Object doesn't need 'getMarkerPos' " \n "3. Radius (in meters) " \n "4. Threshold, Minimum amount of buildings required to be considered for Garrison " \n "5. Patrol chance, 0-1 chance per individual unit patrolling instead of garrisoning " \n "6. Hold Garrison, 0-1 chance per individual unit keeping the garrison instead of moving to help in combat. " \n "] " \n "For 5/6 can use True for 100% and False for 0% " \n " " \n "[  " \n "    garrisonedGroup1,  " \n "    getMarkerPos ""garrison1"",  " \n "    50,  " \n "    3,  " \n "    0.5,  " \n "    0.5  " \n "] call CBA_fnc_taskDefend;" \n "" \n "NOTE: All units that will be garrisoned need to have the ""Headless Blacklist"" box checked under Attributes > ACE Options." \n "" \n "If they aren't blacklisted from the headless client they won't garrison." \n "" \n "Final Note:" \n "Don't spam these, We use the headless client for a reason.";
+		id=10;
+	};
+	class Item1
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.65893555,0.0014390945,-1.9916992};
+					angles[]={0,3.1071572,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+				};
+				id=14;
+				type="B_Soldier_SL_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="acex_headless_blacklist";
+						expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-4.5102539,0.0014390945,2.8334961};
+					angles[]={0,3.1071572,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+				};
+				id=15;
+				type="B_soldier_AR_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="acex_headless_blacklist";
+						expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={5.4841309,0.0014390945,3.1777344};
+					angles[]={0,3.1071572,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.44999999;
+					rank="CORPORAL";
+				};
+				id=16;
+				type="B_HeavyGunner_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="acex_headless_blacklist";
+						expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+		};
+		class Attributes
+		{
+			name="garrisonedGroup1";
+			init="call{[ " \n "    garrisonedGroup1, " \n "    getMarkerPos ""garrison1"", " \n "    50, " \n "    3, " \n "    0.5, " \n "    0.5 " \n "] call CBA_fnc_taskDefend;}";
+		};
+		id=13;
+	};
+};

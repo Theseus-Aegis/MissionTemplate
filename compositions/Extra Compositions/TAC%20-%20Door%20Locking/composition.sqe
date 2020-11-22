@@ -1,0 +1,212 @@
+version=53;
+center[]={1343.3463,5,5692.5386};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={-1.0997314,3.8146973e-006,-0.040527344};
+			angles[]={6.2431998,0,6.1716413};
+		};
+		areaSize[]={1,-1,1};
+		id=0;
+		type="ModuleEditTerrainObject_F";
+		atlOffset=3.8146973e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="#name";
+				expression="_this setVariable [""#name"",_value]";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="#filter";
+				expression="_this setVariable [""#filter"",_value]";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=1;
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="#initServer";
+				expression="_this setVariable [""#initServer"",_value]";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute3
+			{
+				property="#state";
+				expression="_this setVariable [""#state"",_value]";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute4
+			{
+				property="#allowDamage";
+				expression="_this setVariable [""#allowDamage"",_value]";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=1;
+					};
+				};
+			};
+			class Attribute5
+			{
+				property="#doorStates";
+				expression="_this setVariable [""#doorStates"",_value]";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"ARRAY"
+							};
+						};
+						class value
+						{
+							items=3;
+							class Item0
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+							class Item1
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+							class Item2
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+					};
+				};
+			};
+			class Attribute6
+			{
+				property="#init";
+				expression="_this setVariable [""#init"",_value]";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="if (isServer) then {" \n "_this setVariable [""bis_disabled_Door_1"", 1, true];" \n "};";
+					};
+				};
+			};
+			nAttributes=7;
+		};
+	};
+	class Item1
+	{
+		dataType="Comment";
+		class PositionInfo
+		{
+			position[]={1.0997314,0,0.040527344};
+		};
+		title="Locking Doors";
+		description="Click the Edit Terrain Object module once, it'll highlight which door is what number." \n "" \n "_this setVariable [""bis_disabled_Door_1"", 1, true];" \n "This locks door number 1." \n "" \n "_this setVariable [""bis_disabled_Door_2"", 1, true];" \n "this locks door number 2." \n "" \n "the final number before ""true"" is if the door is locked." \n "1 = Yes" \n "0 = No." \n "" \n "All of this MUST be wrapped in" \n "if (isServer) then {" \n "    _this setVariable [""bis_disabled_Door_1"", 1, true];" \n "};" \n "" \n "If you're locking more than 1 door on the same building you can simply do this:" \n "" \n "if (isServer) then {" \n "    _this setVariable [""bis_disabled_Door_1"", 1, true];" \n "    _this setVariable [""bis_disabled_Door_2"", 1, true];" \n "" \n "};" \n "" \n "Must be called from Global Object Init using the module. Regular editor placed buildings can be done via regular init. (with the isServer check.)";
+		id=1;
+	};
+};
