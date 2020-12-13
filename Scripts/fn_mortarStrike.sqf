@@ -8,7 +8,7 @@
  * Ammo types are listed as HE (0), Smoke (1), Ilumination (2)
  * Barrage will have mortars select a new target for every round fired.
  * 1 Barrage will fire all shells at 1 target.
- * Using this script requires that "Disable Artillery Computer" & "Use Ammo Handling" ACE settings be false in cba_settings.sqf
+ * Using this script requires "force ace_mk6mortar_useAmmoHandling = false;" in cba_settings.sqf
  *
  *
  * Arguments:
