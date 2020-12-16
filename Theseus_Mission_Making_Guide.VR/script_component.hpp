@@ -2,9 +2,9 @@
 #define COMPONENT Scripts
 
 // Version
-#define MAJOR 2
-#define MINOR 5
-#define PATCHLVL 1
+#define MAJOR 3
+#define MINOR 0
+#define PATCHLVL 0
 
 // Map
 #define MAP VR
@@ -47,5 +47,6 @@
     "76561197975361559", /* grueneteufel */ \
     "76561198085500182", /* Tyrone */ \
     "76561198024182729", /* Laird */ \
-    "76561198324654204"  /* gilleedoo */ \
+    "76561198324654204", /* gilleedoo */ \
+    "76561198040879834"  /* JoramD */ \
 ]
