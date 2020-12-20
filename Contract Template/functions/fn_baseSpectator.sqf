@@ -19,6 +19,8 @@
 
 params ["_player", "_object"];
 
+if (isNull _object) exitWith { ERROR_WITH_TITLE("Spectator screen not found!", "Expected 'specScreen' object"); };
+
 // Event for closing spectator from other machines
 [QGVAR(baseSpectatorProhibit), {
     [false] call ACEFUNC(spectator,setSpectator);
