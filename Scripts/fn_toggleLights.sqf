@@ -14,12 +14,12 @@
  *
  * Example:
  * ["LightsOut", 500, true] call FUNC(toggleLights);
- * ["LightsOut2", 250, false] call tac_Scripts_fnc_toggleLights;
+ * ["LightsOut2", 250, false] call TAC_Scripts_fnc_toggleLights;
  */
 
 params ["_marker", "_radius", "_on"];
 
-_targetTypes = [
+private _targetTypes = [
     "Lamps_Base_F",
     "PowerLines_base_F",
     "Land_LampDecor_F",
@@ -36,9 +36,10 @@ _targetTypes = [
     "Land_Airport_Tower_F"
 ];
 
+private _state = ["OFF", "ON"] select _on;
+private _markerPos = getMarkerPos _marker;
+
 {
-    private _state = if (_on) then {"ON"} else {"OFF"};
-    private _markerPos = getMarkerPos _marker;
     private _lights = _markerPos nearObjects [_x, _radius];
 
     {
