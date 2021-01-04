@@ -19,7 +19,10 @@
 
 params ["_player", "_object"];
 
-if (isNull _object) exitWith { ERROR_WITH_TITLE("Spectator screen not found!", "Expected 'specScreen' object"); };
+// Verify object exists (getVariable work-around as we get object, which likes to return <any>)
+if (isNull (missionNamespace getVariable [str _object, objNull])) exitWith {
+    ERROR_WITH_TITLE("Spectator screen not found!", "Expected 'specScreen' object");
+};
 
 // Event for closing spectator from other machines
 [QGVAR(baseSpectatorProhibit), {
@@ -43,7 +46,7 @@ private _actionOpen = [
 ["tac-spec", {
     //USES_VARIABLES ["_thisArgs"]
 
-    private _nearbyPlayers = (getPosATL _thisArgs) nearObjects ["CAManBase", NOTIFY_RANGE];
+    private _nearbyPlayers = _thisArgs nearObjects ["CAManBase", NOTIFY_RANGE];
     _nearbyPlayers pushBackUnique ACE_player;
 
     if (_thisArgs getVariable [QGVAR(baseSpectatorAllowed), false]) then {
