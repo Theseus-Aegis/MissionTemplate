@@ -1,0 +1,75 @@
+version=53;
+center[]={1310.0886,5,5690.6475};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Layer";
+		name="Tyrone - Trigger Bargate";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Layer";
+				name="Triggers";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Layer";
+						name="Bargate - Trigger";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.016601563,4.0502806,-0.0073242188};
+									angles[]={0,4.7159142,0};
+								};
+								side="Empty";
+								flags=5;
+								class Attributes
+								{
+									init="call{if (isServer) then {" \n "    this allowDamage false;" \n "};}";
+									name="entryGate";
+								};
+								id=26;
+								type="Land_BarGate_F";
+							};
+							class Item1
+							{
+								dataType="Trigger";
+								position[]={0.016479492,0,0.0078125};
+								angle=0.0070668436;
+								class Attributes
+								{
+									text="Bar Gate";
+									condition="call{this}";
+									onActivation="call{entryGate animate [""Door_1_rot"", 1];}";
+									onDeactivation="call{entryGate animate [""Door_1_rot"", 0];}";
+									sizeA=5;
+									sizeB=5;
+									sizeC=3;
+									repeatable=1;
+									activationBy="ANYPLAYER";
+									isRectangle=1;
+								};
+								id=27;
+								type="EmptyDetector";
+							};
+						};
+						id=25;
+					};
+				};
+				id=24;
+			};
+		};
+		id=23;
+	};
+};
