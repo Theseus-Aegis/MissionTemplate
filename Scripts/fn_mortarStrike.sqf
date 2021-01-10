@@ -3,6 +3,7 @@
  * Author: TyroneMF, Jonpas
  * Orders mortars to fire on an area.
  * If amount fired is 0 the amount is randomly selected between 1-8
+ * Markers must be either Area Markers (Ellipse or Rectangle)
  * Marker array can be set in init.sqf (See Example 2)
  * Marker array is randomly selected but all rounds fire on the same marker.
  * Ammo types are listed as HE (0), Smoke (1), Ilumination (2)
