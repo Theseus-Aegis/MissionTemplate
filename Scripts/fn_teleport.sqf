@@ -2,7 +2,7 @@
 /*
  * Author: Rory, Jonpas, Tyrone
  * Teleports the player from base (this) to teleport locations (objects).
- * Condition can be added to add or remove teleport actions.
+ * Condition to show teleport action can be set.
  * Call from initPlayerLocal.sqf
  *
  * Arguments:
