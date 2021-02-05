@@ -1,22 +1,25 @@
 #include "..\script_component.hpp"
 /*
- * Author: Rory, Jonpas
+ * Author: Rory, Jonpas, Tyrone
  * Teleports the player from base (this) to teleport locations (objects).
+ * Condition to show teleport action can be set.
  * Call from initPlayerLocal.sqf
  *
  * Arguments:
  * 0: Interaction object <OBJECT>
  * 1: Teleport target object <OBJECT>
  * 2: Teleport target display name <STRING>
+ * 3: Condition <CODE> (default: {true})
  *
  * Return Value:
  * None
  *
  * Example:
  * [tpObj, tpPos, "Teleport"] call FUNC(teleport);
+ * [tpObj, tpPos, "Teleport", {TAC_Example}] call FUNC(teleport);
  */
 
-params ["_controller", "_teleportObject", "_text"];
+params ["_controller", "_teleportObject", "_text", ["_condition", {true}]];
 
 private _action = [
     format ["TAC_Scripts_teleport_%1", _teleportObject],
@@ -28,7 +31,7 @@ private _action = [
         ACE_player setPosASL (getPosASL _teleportObject);
         titleFadeOut 2;
     },
-    {true},
+    _condition,
     {},
     [_teleportObject, _text]
 ] call ACEFUNC(interact_menu,createAction);
