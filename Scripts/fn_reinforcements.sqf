@@ -12,24 +12,26 @@
  * None
  *
  * Example:
- * [Test_Group_1, true] call TAC_scripts_fnc_reinforcements;
- * [Test_Group_1, false] call FUNC(reinforcements);
+ * [Test_Group_1, true] call FUNC(reinforcements);
+ * [Test_Group_1, false] call TAC_Scripts_fnc_reinforcements;
  */
-
 
 params ["_group", "_state"];
 
+if (hasInterface) exitWith {};
+
 {
     {
-        if (_state) then {
-            _x disableAI "ALL";
-        } else {
-            _x enableAI "ALL";
+        if (local _x) then {
+            if (_state) then {
+                _x disableAI "ALL";
+            } else {
+                _x enableAI "ALL";
+            };
         };
         if (isServer) then {
             _x enableSimulationGlobal !_state;
             _x hideObjectGlobal _state;
         };
-    } forEach Units _x;
-} forEach [_Group];
-
+    } forEach (units _x);
+} forEach [_group];

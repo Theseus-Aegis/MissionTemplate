@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Tyrone, Jonpas
- * Modified version of mortarStrike for use with CUP D30 Artillery
+ * Modified version of mortarStrike for use with CUP D30 Artillery.
  *
  * Orders D30 to fire on an area.
  * If amount fired is 0 the amount is randomly selected between 1-8
@@ -22,8 +22,8 @@
  * None
  *
  * Examples:
- * [D30_1, ["Marker1", "Marker2"], 0, 0, 2] call tac_Scripts_fnc_d30Strike;
- * [D30_1, tac_MarkerArray, 0, 0, 1] call tac_Scripts_fnc_d30Strike;
+ * [D30_1, ["Marker1", "Marker2"], 0, 0, 2] call TAC_Scripts_fnc_d30Strike;
+ * [D30_1, tac_MarkerArray, 0, 0, 1] call TAC_Scripts_fnc_d30Strike;
  */
 
 #define AMMO_TYPES ["CUP_30Rnd_122mmHE_D30_M"]
@@ -33,7 +33,6 @@ params ["_mortar", "_markersArray", ["_amount", 0], ["_ammoType", 0], ["_barrage
 
 private _ammo = AMMO_TYPES select _ammoType;
 
-// Debug
 //diag_log [_mortar, _randomPosition, _ammo, _amount];
 
 for "_i" from 0 to _barrages - 1 do {
