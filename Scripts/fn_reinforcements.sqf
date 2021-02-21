@@ -2,7 +2,7 @@
 /*
  * Author: Jonpas, Tyrone
  * Sets visibility of units, simulation and AI behaviour of a group.
- * Call from initServer.sqf
+ * Call from init.sqf
  *
  * Arguments:
  * 0: Group <GROUP>
@@ -18,7 +18,7 @@
 
 params ["_group", "_state"];
 
-if (hasInterface) exitWith {};
+if (hasInterface && !isServer) exitWith {};
 
 {
     {
