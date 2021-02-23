@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jonpas, Tyrone
- * Sets visibility of units, simulation and AI behaviour of a group.
+ * Sets visibility of units, simulation and AI behaviour of a group along with any vehicles manned by the group.
  * Call from init.sqf
  *
  * Arguments:
@@ -32,6 +32,12 @@ if (hasInterface && !isServer) exitWith {};
         if (isServer) then {
             _x enableSimulationGlobal !_state;
             _x hideObjectGlobal _state;
+
+            private _vehicle = vehicle _x;
+            if (_vehicle != _x && simulationEnabled _vehicle == _state) then {
+                _vehicle enableSimulationGlobal !_state;
+                _vehicle hideObjectGlobal _state;
+            };
         };
     } forEach (units _x);
 } forEach [_group];
