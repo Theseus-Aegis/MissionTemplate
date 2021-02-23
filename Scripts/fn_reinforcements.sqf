@@ -34,7 +34,7 @@ if (hasInterface && !isServer) exitWith {};
             _x hideObjectGlobal _state;
 
             private _vehicle = vehicle _x;
-            if (_vehicle != _x && simulationEnabled _vehicle == _state) then {
+            if (_vehicle != _x && {simulationEnabled _vehicle == _state}) then {
                 _vehicle enableSimulationGlobal !_state;
                 _vehicle hideObjectGlobal _state;
             };
