@@ -26,6 +26,18 @@
 #define PATHTOACEF(var1,var2) PATHTOF_SYS(\z\ace\addons,var1,var2)
 #define QPATHTOACEF(var1,var2) QUOTE(PATHTOACEF(var1,var2))
 
+// ACRE2
+#define ACRE_PREFIX acre
+
+#define ACREGVAR(module,var) TRIPLES(ACRE_PREFIX,module,var)
+#define QACREGVAR(module,var) QUOTE(ACREGVAR(module,var))
+
+#define ACREFUNC(var1,var2) TRIPLES(DOUBLES(ACRE_PREFIX,var1),fnc,var2)
+#define QACREFUNC(var1,var2) QUOTE(ACREFUNC(var1,var2))
+
+#define PATHTOACREF(var1,var2) PATHTOF_SYS(\idi\acre\addons,var1,var2)
+#define QPATHTOACREF(var1,var2) QUOTE(PATHTOACREF(var1,var2))
+
 // TAC Mods
 #define TAC_PREFIX tac
 
