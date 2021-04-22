@@ -27,7 +27,7 @@
  */
 
 #define AMMO_TYPES ["CUP_30Rnd_122mmHE_D30_M"]
-#define FIREMISSION_DELAY 2
+#define FIREMISSION_DELAY 3
 
 params ["_mortar", "_markersArray", ["_amount", 0], ["_ammoType", 0], ["_barrages", 1]];
 
