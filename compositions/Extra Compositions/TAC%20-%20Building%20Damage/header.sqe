@@ -1,8 +1,0 @@
-version=54;
-name="TAC - Building Damage";
-author="Jack";
-category="EdSubcat_Tools";
-requiredAddons[]=
-{
-	"A3_Modules_F"
-};
