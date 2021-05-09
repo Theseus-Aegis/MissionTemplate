@@ -1,4 +1,4 @@
-version=53;
+version=54;
 class EditorData
 {
 	moveGridStep=1;
@@ -8,21 +8,22 @@ class EditorData
 	toggles=33;
 	class ItemIDProvider
 	{
-		nextID=291;
+		nextID=308;
 	};
 	class LayerIndexProvider
 	{
-		nextID=119;
+		nextID=131;
 	};
 	class Camera
 	{
-		pos[]={498.7515,180.07669,102.32298};
-		dir[]={0.1184248,-0.74877626,0.65227163};
-		up[]={0.13377571,0.66267097,0.73682261};
-		aside[]={0.9839679,-8.3836494e-007,-0.17864549};
+		pos[]={404.05658,177.26131,62.43996};
+		dir[]={0.0091536809,-0.65225244,0.75805831};
+		up[]={0.0078775259,0.75782669,0.65234607};
+		aside[]={0.99999017,-6.7266774e-007,-0.0120729};
 	};
 };
 binarizationWanted=0;
+sourceName="Theseus_Mission_Making_Guide";
 addons[]=
 {
 	"Desert",
@@ -35,7 +36,7 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"tacs_units",
 	"tac_armory",
-	"tac_supplies",
+	"tacgt_supplies",
 	"A3_Props_F_Exp_Military_Camps",
 	"A3_Structures_F_Furniture",
 	"A3_Structures_F_Heli_Items_Electronics",
@@ -43,14 +44,13 @@ addons[]=
 	"A3_Modules_F",
 	"A3_Modules_F_Effects",
 	"A3_Misc_F_Helpers",
-	"RHNET_Actionbuilder",
 	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=18;
+		items=17;
 		class Item0
 		{
 			className="Desert";
@@ -114,10 +114,10 @@ class AddonsMetaData
 		};
 		class Item9
 		{
-			className="tac_supplies";
-			name="TAC - Supplies";
-			author="TAC Mod Team";
-			url="https://www.theseus-aegis.com/";
+			className="tacgt_supplies";
+			name="GT Armory - Supplies";
+			author="GT Armory Team";
+			url="https://github.com/Theseus-Aegis/GTArmory";
 		};
 		class Item10
 		{
@@ -163,17 +163,19 @@ class AddonsMetaData
 		};
 		class Item16
 		{
-			className="RHNET_Actionbuilder";
-			name="RHNET_Actionbuilder";
-		};
-		class Item17
-		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
 	};
+};
+dlcs[]=
+{
+	"Expansion",
+	"tacs",
+	"Heli",
+	"ORANGE"
 };
 randomSeed=14040693;
 class ScenarioData
@@ -972,7 +974,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_cargo_space";
-							expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+							expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 							class Value
 							{
 								class data
@@ -1049,7 +1051,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_cargo_space";
-							expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+							expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 							class Value
 							{
 								class data
@@ -1126,7 +1128,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_cargo_space";
-							expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+							expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 							class Value
 							{
 								class data
@@ -1203,7 +1205,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_cargo_space";
-							expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+							expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 							class Value
 							{
 								class data
@@ -1280,7 +1282,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_cargo_space";
-							expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+							expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 							class Value
 							{
 								class data
@@ -1357,7 +1359,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_cargo_space";
-							expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+							expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 							class Value
 							{
 								class data
@@ -1396,7 +1398,7 @@ class Mission
 			name="Waypoints";
 			class Entities
 			{
-				items=9;
+				items=8;
 				class Item0
 				{
 					dataType="Group";
@@ -1584,17 +1586,6 @@ class Mission
 					description="SEEK AND DESTROY : AI will move towards this spot searching for targets to engage." \n "" \n "HOLD : AI will hold the position until specified otherwise." \n "" \n "GUARD : AI will move around the area and hold it against enemy forces.";
 					id=152;
 				};
-				class Item8
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={617.8858,5,224.04489};
-					};
-					title="Next Waypoint";
-					description="Sync the last placed waypoint to the previously placed waypoint.";
-					id=203;
-				};
 			};
 			id=32;
 		};
@@ -1713,14 +1704,14 @@ class Mission
 			name="Theseus Contract Template";
 			class Entities
 			{
-				items=50;
+				items=52;
 				class Item0
 				{
 					dataType="Logic";
 					class PositionInfo
 					{
 						position[]={301.93723,5,212.02635};
-						angles[]={-0,3.1342137,0};
+						angles[]={0,3.1342137,0};
 					};
 					id=111;
 					type="ModuleCurator_F";
@@ -1811,7 +1802,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={298.01785,5,212.01776};
-						angles[]={-0,1.5781267,0};
+						angles[]={0,1.5781267,0};
 					};
 					name="headlessclient1";
 					isPlayable=1;
@@ -1824,7 +1815,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={279.97659,5,232.0164};
-						angles[]={-0,0.023461819,0};
+						angles[]={0,0.023461819,0};
 					};
 					title="Armory Boxes";
 					description="The Contract template has enough of these to be used in a mission." \n "" \n "If you have a mission where the end point is different from the starting point simply copy and paste the boxes into the end point too.";
@@ -1847,7 +1838,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={273.99277,5,220.03038};
-						angles[]={-0,0.023461819,0};
+						angles[]={0,0.023461819,0};
 					};
 					title="Engineer Box";
 					description="This is mandatory, it gives Engineers access to the tools they need." \n "" \n "They can get breaching charges, Explosives and even a fancy shoot-shoot bot because they're super scared of explosives.";
@@ -1870,7 +1861,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={273.96701,5,223.981};
-						angles[]={-0,0.023461819,0};
+						angles[]={0,0.023461819,0};
 					};
 					title="Contract - Medical Box";
 					description="This is a requirement, it uses a fancy API to connect to the database and will let you use the medical arsenal if you are a medic." \n "" \n "How fancy are we?!";
@@ -1904,7 +1895,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={294.34637,5,234.19258};
-						angles[]={-0,0.023461819,0};
+						angles[]={0,0.023461819,0};
 					};
 					title="Spectator Screen";
 					description="I personally see no reason to ever remove this. If we die it means we're not standing around doing absolutely nothing until the mission ends." \n "" \n "It also allows us to come out of spectator for Debrief.";
@@ -4391,7 +4382,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={274.02704,5.3815289,222.05481};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -4407,7 +4398,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={282.03171,5.149631,225.99835};
-						angles[]={-0,3.1415925,0};
+						angles[]={0,3.1415925,0};
 					};
 					side="Empty";
 					flags=4;
@@ -4423,7 +4414,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={273.96213,5.3815289,225.97275};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -4437,7 +4428,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedicalFacility";
-							expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+							expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
 							class Value
 							{
 								class data
@@ -4462,7 +4453,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={278.0311,5.3815289,226.01126};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -4478,7 +4469,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={274.06583,5.3815289,218.12759};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -4494,7 +4485,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={294.30215,6.0431652,235.98047};
-						angles[]={-0,3.1554656,0};
+						angles[]={0,3.1554656,0};
 					};
 					side="Empty";
 					flags=4;
@@ -4572,6 +4563,33 @@ class Mission
 					title="Recruit Box";
 					description="Also mandatory, if we're playing a night mission where NVGs are required our freshlings can get access to the equipment they'll need." \n "" \n "This also has some suppressors for them too.";
 					id=279;
+				};
+				class Item50
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={273.987,5,212.019};
+					};
+					title="VIP Box";
+					description="Only mandatory on VIP based missions, contains vests and helmets.";
+					id=292;
+				};
+				class Item51
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={274.01654,5.3815289,213.95122};
+						angles[]={-0,1.5707963,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=291;
+					type="tac_supplies_VIP";
 				};
 			};
 			id=115;
@@ -4716,6 +4734,7 @@ class Mission
 					};
 					id=130;
 					type="Land_PCSet_01_mouse_F";
+					atlOffset=4.7683716e-007;
 				};
 				class Item8
 				{
@@ -4733,6 +4752,7 @@ class Mission
 					};
 					id=138;
 					type="Land_PCSet_01_mouse_F";
+					atlOffset=4.7683716e-007;
 				};
 				class Item9
 				{
@@ -4894,7 +4914,7 @@ class Mission
 					};
 					id=145;
 					type="Land_PCSet_01_mouse_F";
-					atlOffset=1.4305115e-006;
+					atlOffset=1.9073486e-006;
 				};
 				class Item19
 				{
@@ -5879,763 +5899,208 @@ class Mission
 		class Item9
 		{
 			dataType="Layer";
-			name="Actionbuilder";
+			name="Reinforcements";
 			class Entities
 			{
-				items=17;
+				items=6;
 				class Item0
 				{
 					dataType="Group";
 					side="West";
 					class Entities
 					{
-						items=2;
+						items=9;
 						class Item0
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={609.88855,5.0014391,217.96213};
+								position[]={612.00659,5.0014391,220.03679};
 							};
 							side="West";
 							flags=7;
 							class Attributes
 							{
+								rank="SERGEANT";
 							};
-							id=193;
-							type="B_Soldier_F";
+							id=295;
+							type="B_Soldier_TL_F";
 						};
 						class Item1
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={611.89679,5.0014391,217.96999};
+								position[]={617.00659,5.0014391,215.03679};
 							};
 							side="West";
 							flags=5;
 							class Attributes
 							{
+								skill=0.44999999;
+								rank="CORPORAL";
 							};
-							id=194;
-							type="B_Soldier_F";
+							id=296;
+							type="B_soldier_AR_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={607.00659,5.0014391,215.03679};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								skill=0.40000001;
+							};
+							id=297;
+							type="B_Soldier_GL_F";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={622.00659,5.0014391,210.03679};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								skill=0.40000001;
+							};
+							id=298;
+							type="B_soldier_LAT_F";
+						};
+						class Item4
+						{
+							dataType="Waypoint";
+							loiterAltitude=-3.4028235e+038;
+							position[]={612.01459,5,225.96014};
+							class Effects
+							{
+							};
+							showWP="NEVER";
+							id=302;
+							type="Move";
+						};
+						class Item5
+						{
+							dataType="Waypoint";
+							loiterAltitude=-3.4028235e+038;
+							position[]={611.95721,5,236.03296};
+							class Effects
+							{
+							};
+							showWP="NEVER";
+							id=303;
+							type="Move";
+						};
+						class Item6
+						{
+							dataType="Waypoint";
+							loiterAltitude=-3.4028235e+038;
+							position[]={619.99188,5,236.00607};
+							class Effects
+							{
+							};
+							showWP="NEVER";
+							id=304;
+							type="Move";
+						};
+						class Item7
+						{
+							dataType="Waypoint";
+							loiterAltitude=-3.4028235e+038;
+							position[]={619.98889,5,226.02403};
+							class Effects
+							{
+							};
+							showWP="NEVER";
+							id=305;
+							type="Move";
+						};
+						class Item8
+						{
+							dataType="Waypoint";
+							loiterAltitude=-3.4028235e+038;
+							position[]={613.99298,5,225.995};
+							type="Cycle";
+							class Effects
+							{
+							};
+							showWP="NEVER";
+							id=306;
 						};
 					};
 					class Attributes
 					{
+						name="Group_1";
 					};
-					id=192;
+					id=294;
 				};
 				class Item1
 				{
-					dataType="Object";
+					dataType="Comment";
 					class PositionInfo
 					{
-						position[]={611.96918,5.0580888,221.98207};
-						angles[]={0,4.6939149,0};
+						position[]={597.94299,5,213.974};
 					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=183;
-					type="Sign_Arrow_Direction_Blue_F";
+					title="Activating the units";
+					description="On trigger fire, this will unhide the units and they will go do whatever business you gave them before hiding them.";
+					id=307;
 				};
 				class Item2
 				{
-					dataType="Object";
+					dataType="Comment";
 					class PositionInfo
 					{
-						position[]={607.96973,5.0580888,221.99875};
-						angles[]={0,4.6824384,0};
+						position[]={621.98218,5,225.97598};
 					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=184;
-					type="Sign_Arrow_Direction_Blue_F";
+					title="Naming the Unit";
+					description="The big rectangle above the units is where you edit the group, double click it." \n "" \n "You will then give the group a variable name, i.e; ""Group_1""" \n "" \n "Then you can hide these with the reinforcement module by doing:" \n "[Group_1, true] call FUNC(reinforcements);" \n "in the init.sqf file in the mission directory.";
+					id=299;
 				};
 				class Item3
 				{
-					dataType="Object";
+					dataType="Comment";
 					class PositionInfo
 					{
-						position[]={605.94092,5.0580888,219.97202};
-						angles[]={0,6.2778845,0};
+						position[]={607.92902,5,247.96899};
 					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=187;
-					type="Sign_Arrow_Direction_Blue_F";
+					title="Reinforcements";
+					id=293;
 				};
 				class Item4
 				{
-					dataType="Object";
+					dataType="Comment";
 					class PositionInfo
 					{
-						position[]={609.97144,5.0580888,219.98618};
-						angles[]={0,0.0019582747,0};
+						position[]={622.00549,5,214.03593};
 					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=195;
-					type="Sign_Arrow_Direction_Blue_F";
+					title="Waypoints";
+					description="Units hidden by the reinforcement script do not lose their waypoints, they just cant complete them until they become active.";
+					id=301;
 				};
 				class Item5
 				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={615.91681,5.0580888,222.00099};
-						angles[]={0,4.6939149,0};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=197;
-					type="Sign_Arrow_Direction_Blue_F";
-				};
-				class Item6
-				{
 					dataType="Trigger";
-					position[]={605.922,5,217.98599};
+					position[]={597.96899,5,217.991};
 					class Attributes
 					{
-						text="Actionpoint Activation";
-						sizeA=1;
-						sizeB=1;
-						sizeC=2;
+						condition="call{this}";
+						onActivation="call{[Group_1, false] call TAC_Scripts_fnc_reinforcements;}";
+						sizeA=2;
+						sizeB=2;
+						sizeC=3;
 						activationBy="ANYPLAYER";
+						isRectangle=1;
 					};
-					id=186;
+					id=300;
 					type="EmptyDetector";
-				};
-				class Item7
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={605.92493,5,221.97743};
-					};
-					id=180;
-					type="RHNET_ab_moduleAP_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RHNET_ab_moduleAP_F_PlayersAlive";
-							expression="_this setVariable ['PlayersAlive',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RHNET_ab_moduleAP_F_ExecutePortals";
-							expression="_this setVariable ['ExecutePortals',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=-1;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RHNET_ab_moduleAP_F_SafeLock";
-							expression="_this setVariable ['SafeLock',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=128;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item8
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={609.92151,5,221.98082};
-					};
-					id=181;
-					type="RHNET_ab_modulePORTAL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RHNET_ab_modulePORTAL_F_p_Skill";
-							expression="_this setVariable ['p_Skill',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.5;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RHNET_ab_modulePORTAL_F_p_Fuel";
-							expression="_this setVariable ['p_Fuel',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RHNET_ab_modulePORTAL_F_p_MinDist";
-							expression="_this setVariable ['p_MinDist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=400;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="RHNET_ab_modulePORTAL_F_p_Special";
-							expression="_this setVariable ['p_Special',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="NONE";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="RHNET_ab_modulePORTAL_F_p_Ammo";
-							expression="_this setVariable ['p_Ammo',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="RHNET_ab_modulePORTAL_F_p_Damage";
-							expression="_this setVariable ['p_Damage',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="RHNET_ab_modulePORTAL_F_p_Positioning";
-							expression="_this setVariable ['p_Positioning',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="NONE";
-								};
-							};
-						};
-						nAttributes=7;
-					};
-				};
-				class Item9
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={613.92218,5,222.00336};
-					};
-					id=182;
-					type="RHNET_ab_moduleWP_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RHNET_ab_moduleWP_F_WpSpeed";
-							expression="_this setVariable ['WpSpeed',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="UNCHANGED";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RHNET_ab_moduleWP_F_WpPlacement";
-							expression="_this setVariable ['WpPlacement',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RHNET_ab_moduleWP_F_WpType";
-							expression="_this setVariable ['WpType',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="MOVE";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="RHNET_ab_moduleWP_F_WpMode";
-							expression="_this setVariable ['WpMode',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="NO CHANGE";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="RHNET_ab_moduleWP_F_WpSpecial";
-							expression="_this setVariable ['WpSpecial',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="RHNET_ab_moduleWP_F_WpFormation";
-							expression="_this setVariable ['WpFormation',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="NO CHANGE";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="RHNET_ab_moduleWP_F_WpBehaviour";
-							expression="_this setVariable ['WpBehaviour',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="UNCHANGED";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="RHNET_ab_moduleWP_F_WpWait";
-							expression="_this setVariable ['WpWait',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=8;
-					};
-				};
-				class Item10
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={617.8642,5,221.9987};
-					};
-					id=196;
-					type="RHNET_ab_moduleWP_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="RHNET_ab_moduleWP_F_WpSpeed";
-							expression="_this setVariable ['WpSpeed',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="UNCHANGED";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="RHNET_ab_moduleWP_F_WpPlacement";
-							expression="_this setVariable ['WpPlacement',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="RHNET_ab_moduleWP_F_WpType";
-							expression="_this setVariable ['WpType',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="MOVE";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="RHNET_ab_moduleWP_F_WpMode";
-							expression="_this setVariable ['WpMode',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="NO CHANGE";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="RHNET_ab_moduleWP_F_WpSpecial";
-							expression="_this setVariable ['WpSpecial',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="RHNET_ab_moduleWP_F_WpFormation";
-							expression="_this setVariable ['WpFormation',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="NO CHANGE";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="RHNET_ab_moduleWP_F_WpBehaviour";
-							expression="_this setVariable ['WpBehaviour',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="UNCHANGED";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="RHNET_ab_moduleWP_F_WpWait";
-							expression="_this setVariable ['WpWait',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=8;
-					};
-				};
-				class Item11
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={609.86041,5,247.83734};
-					};
-					title="Actionbuilder";
-					description="Actionbuilder is used as a dynamic spawn system, primarily used when missions will have a heavy AI count, or if there are multiple ways players can go throughout the mission." \n "" \n "Actionbuilder can essentially cover all bases, but should not be used to populate the mission to begin with." \n "" \n "NOTE: You should never actively rely too heavily on Actionbuilder.";
-					id=149;
-				};
-				class Item12
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={605.89136,5,223.99649};
-					};
-					title="Actionpoint";
-					description="The Actionpoint is basically the beginning of the Actionbuilder series." \n "" \n "Actionpoint has multiple options." \n "Minimum Players Alive: Should always be set to 1." \n "" \n "Maximum Units Alive: This is an AI cap which prevents the actionpoint from activating if the AI count is at this number or higher." \n "" \n "Executed Portals: This is how it will decide which of the synced portals to activate, Generally it's best to not use too many portals based from one actionpoint. It's useful if you're looking for randomisation with where your units will come from.";
-					id=188;
-				};
-				class Item13
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={601.94531,5,221.92068};
-					};
-					title="Basic Actionbuilder Setup";
-					description="To function, Actionbuilder requires an Actionpoint & Portal." \n "" \n "Blue Arrows will mark which way you Sync from one to the next.";
-					id=179;
-				};
-				class Item14
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={609.93018,5,223.94905};
-					};
-					title="Portal";
-					description="The portal activates when the Actionpoint does, It's the designated ""spawning point"" for AI you want to spawn for it." \n "" \n "Portal has a few options you can change." \n "" \n "Positioning: This can be set to where you place the AI on the map, or have them spawn directly on the portal." \n "" \n "No Player Radius : By default it's set to 400m, if there is a singular player closer than that it will not spawn units." \n "" \n "Special: If you use Actionbuilder for Helicopters you can spawn them in the air, which will automatically mean they're flying.";
-					id=189;
-				};
-				class Item15
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={613.92828,5,217.97592};
-					};
-					title="Units";
-					description="Units must be synced directly to the Portal." \n "" \n "You only need to sync the ""Group Leader""  to the portal, not the entire group.";
-					id=191;
-				};
-				class Item16
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={613.94769,5,223.96564};
-					};
-					title="Waypoint";
-					description="Once the Portal spawns units, they will move to the waypoint that is Synced to the Portal." \n "" \n "Waypoint can be set to any of the usual waypoints and synced to another Actionbuilder waypoint to create the chain." \n "" \n "You can also set the behaviour of the units as they move from waypoint to waypoint.";
-					id=190;
 				};
 			};
 			id=201;
@@ -6654,66 +6119,16 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=6;
+			nextID=1;
 		};
 		class Links
 		{
-			items=6;
+			items=1;
 			class Item0
 			{
 				linkID=0;
 				item0=178;
 				item1=177;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item1
-			{
-				linkID=1;
-				item0=182;
-				item1=181;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item2
-			{
-				linkID=2;
-				item0=181;
-				item1=180;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item3
-			{
-				linkID=3;
-				item0=186;
-				item1=180;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item4
-			{
-				linkID=4;
-				item0=193;
-				item1=181;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item5
-			{
-				linkID=5;
-				item0=196;
-				item1=182;
 				class CustomData
 				{
 					type="Sync";

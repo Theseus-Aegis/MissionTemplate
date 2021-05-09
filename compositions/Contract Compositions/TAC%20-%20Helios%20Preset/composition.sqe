@@ -1,5 +1,5 @@
-version=53;
-center[]={641.97113,5,3965.5093};
+version=54;
+center[]={2723.4341,5,1661.6123};
 class items
 {
 	items=8;
@@ -8,7 +8,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={4.7911987,1.3620372,6.0720215};
+			position[]={4.7912598,1.3620372,6.0718994};
 		};
 		side="Empty";
 		flags=4;
@@ -23,7 +23,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={4.7911987,1.3624501,0.072021484};
+			position[]={4.7912598,1.3624501,0.071899414};
 		};
 		side="Empty";
 		flags=4;
@@ -38,7 +38,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={4.7911987,1.3605165,-5.9279785};
+			position[]={4.7912598,1.3605165,-5.9281006};
 		};
 		side="Empty";
 		flags=4;
@@ -53,12 +53,13 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-4.2088013,1.9160042,-2.4279785};
+			position[]={-4.2089844,1.9160042,-2.4283447};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
+			init="call{if (isServer) then { " \n "    [""Land_CanisterFuel_F"", this, 2] call ace_cargo_fnc_addCargoItem; };}";
 		};
 		id=5;
 		type="B_Truck_01_fuel_F";
@@ -91,7 +92,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-8.2088013,2.3134775,-2.9279785};
+			position[]={-8.2087402,2.3134775,-2.9281006};
 		};
 		side="Empty";
 		flags=4;
@@ -129,7 +130,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-0.20880127,1.9255862,-2.4279785};
+			position[]={-0.20874023,1.9255862,-2.4281006};
 		};
 		side="Empty";
 		flags=4;
@@ -167,7 +168,7 @@ class items
 		dataType="Comment";
 		class PositionInfo
 		{
-			position[]={2.4620972,0,0.49682617};
+			position[]={2.4621582,0,0.4967041};
 		};
 		title="Refuel, Repair and Rearming";
 		description="Either use the crates, or the trucks. No need for both." \n "" \n "Crates are better for open-areas." \n "" \n "Trucks are better for more closed in areas where space is more valuable.";
@@ -178,7 +179,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-4.2091064,1.8728976,7.0717773};
+			position[]={-4.2089844,1.8728976,7.0716553};
 			angles[]={-0,4.712389,0};
 		};
 		side="Empty";
