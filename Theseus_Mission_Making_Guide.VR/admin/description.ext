@@ -34,3 +34,4 @@ enableTargetDebug = 1;
 // Other settings -  Do Not Edit.
 cba_settings_hasSettingsFile = 1;  // Enables use of "cba_settings.sqf", remove if file is not present (will crash)
 corpseManagerMode = 0; // No bodies will be cleaned up
+allowProfileGlasses = 0; // Disables glasses set in profile being added to player gear
