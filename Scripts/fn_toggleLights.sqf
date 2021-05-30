@@ -22,18 +22,7 @@ params ["_marker", "_radius", "_on"];
 private _targetTypes = [
     "Lamps_Base_F",
     "PowerLines_base_F",
-    "Land_LampDecor_F",
-    "Land_LampHalogen_F",
-    "Land_LampHarbour_F",
-    "Land_LampShabby_F",
-    "Land_NavigLight",
-    "Land_runway_edgelight",
-    "Land_PowerPoleWooden_L_F",
-    "Land_FuelStation_01_roof_malevil_F",
-    "Land_fs_roof_F",
-    "Land_Lighthouse_03_base_F",
-    "Land_LightHouse_F",
-    "Land_Airport_Tower_F"
+    "House"
 ];
 
 private _state = ["OFF", "ON"] select _on;
