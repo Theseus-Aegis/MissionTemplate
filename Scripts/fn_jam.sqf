@@ -23,17 +23,22 @@
  */
 
 params [["_jammers", [], [[]]], ["_degradation", [], [[]]]];
-private _countJammers = count _jammers;
+
+if (count _jammers != count _degradation) exitWith {
+    ERROR_WITH_TITLE("Invalid signal jamming parameters!", "Expected 0 or %1 degradation parameters for %1 jammers",count _jammers);
+};
+
 _degradation params [
-    ["_strengthReduction", [], [0], [0, _countJammers]],
-    ["_decibelReduction", [], [0], [0, _countJammers]]
+    ["_strengthReduction", [], [[]], [2]],
+    ["_decibelReduction", [], [[]], [2]]
 ];
 
 // Make global for PFH/EH use
 GVAR(activeJammers) = _jammers;
 
 // Remove jammer objects on destruction
-private _jammerClasses = _jammers arrayIntersect _jammers; // remove duplicates
+private _jammerClasses = _jammers apply {typeOf _x};
+_jammerClasses = _jammerClasses arrayIntersect _jammerClasses; // remove duplicates
 {
     [_x, "Killed", { // executed locally
         params ["_object"];
@@ -46,7 +51,7 @@ private _jammerClasses = _jammers arrayIntersect _jammers; // remove duplicates
 [{
     // ACRE signal processing
     private _coreSignal = _this call ACREFUNC(sys_signal,getSignalCore);
-    _coreSignal params ["_f", "_mW", "_receiverClass", "_transmitterClass"];
+    _coreSignal params ["_Px", "_maxSignal"];
 
     // Modify if any active jammers
     private _activeJammers = count GVAR(activeJammers);
