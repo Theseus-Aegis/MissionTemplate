@@ -11,7 +11,7 @@ loadScreen = "x\tacr\addons\images\general\MissionLoad.paa";
 class Header {
     gameType = "COOP";
     minPlayers = 1;
-    maxPlayers = 47;
+    maxPlayers = 38;
 };
 
 // Respawn settings

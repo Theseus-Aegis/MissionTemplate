@@ -1,6 +1,6 @@
 version=54;
 name="TAC - Contract Template";
-author="Theseus";
+author="Tyrone";
 category="EdSubcat_Tools";
 requiredAddons[]=
 {
