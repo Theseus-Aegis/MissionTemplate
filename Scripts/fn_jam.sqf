@@ -25,16 +25,12 @@
 params [["_jammers", [], [[]]], ["_degradation", [], [[]]]];
 
 if (count _jammers != count _degradation) exitWith {
-    ERROR_WITH_TITLE("Invalid signal jamming parameters!", "Expected 0 or %1 degradation parameters for %1 jammers",count _jammers);
+    ERROR_WITH_TITLE_1("Invalid signal jamming parameters!", "Expected 0 or %1 degradation parameters for %1 jammers",count _jammers);
 };
 
-_degradation params [
-    ["_strengthReduction", [], [[]], [2]],
-    ["_decibelReduction", [], [[]], [2]]
-];
-
-// Make global for PFH/EH use
+// Make global for EH and signal function use
 GVAR(activeJammers) = _jammers;
+GVAR(jamParameters) = _degradation;
 
 // Remove jammer objects on destruction
 private _jammerClasses = _jammers apply {typeOf _x};
@@ -56,8 +52,10 @@ _jammerClasses = _jammerClasses arrayIntersect _jammerClasses; // remove duplica
     // Modify if any active jammers
     private _activeJammers = count GVAR(activeJammers);
     if (_activeJammers > 0) then {
-        _maxSignal = _maxSignal - (_strengthReduction select (_activeJammers - 1));
-        _Px = _Px - (_decibelReduction select (_activeJammers - 1));
+        (GVAR(jamParameters) select (_activeJammers - 1)) params ["_strengthReduction", "_decibelReduction"];
+
+        _maxSignal = _maxSignal - _strengthReduction;
+        _Px = _Px - _decibelReduction;
     };
 
     // return final values
