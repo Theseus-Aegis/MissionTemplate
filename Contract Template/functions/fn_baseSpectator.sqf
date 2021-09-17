@@ -44,7 +44,7 @@ private _actionOpen = [
 [_object, 0, ["ACE_MainActions"], _actionOpen] call ACEFUNC(interact_menu,addActionToObject);
 
 // First call only
-if (isNil 'GVAR(baseSpectatorAllowed)') then {
+if (isNil QGVAR(baseSpectatorAllowed)) then {
     GVAR(baseSpectatorAllowed) = false;
     GVAR(baseSpectatorScreens) = [_object];
 
