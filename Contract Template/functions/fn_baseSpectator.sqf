@@ -45,7 +45,7 @@ private _actionOpen = [
 
 // First call only
 if (isNil QGVAR(baseSpectatorAllowed)) then {
-    GVAR(baseSpectatorAllowed) = false;
+    GVAR(baseSpectatorAllowed) = true;
     GVAR(baseSpectatorScreens) = [_object];
 
     // Admin chat command to toggle spectator availability
