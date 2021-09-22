@@ -41,23 +41,25 @@ _hunters setVariable ["acex_headless_blacklist", true];
         private _hunterLeader = leader _hunters;
         private _nearest = nearestObjects [_hunterLeader, ["CAManBase"], 1000, true];
         _nearest = _nearest select {isPlayer _x};
-        _nearest = _nearest select 0;
+        _nearest = _nearest param [0, objNull];
         _hunted = group _nearest;
+        _args set [2, _hunted];
     };
+    if (!isNull _hunted) then {
+        // Get Group Leaders
+        private _huntedLeader = leader _hunted;
 
-    // Get Group Leaders
-    private _huntedLeader = leader _hunted;
-
-    // Move to hunted leader pos.
-    private _huntedPos = position _huntedLeader;
-    _hunters move _huntedPos;
+        // Move to estimated hunted leader position
+        private _huntedPos = _huntedLeader getPos [random 100, random 360];
+        _hunters move _huntedPos;
+    };
 
     // Check for alive units
     private _huntersDead = {alive _x} count units _hunters == 0;
     private _huntedDead = {alive _x} count units _hunted == 0;
 
     // Remove PFH.
-    if (_huntersDead || _huntedDead) then {
+    if (_huntersDead || _huntedDead && !isNull _hunted) then {
         _handle call CBA_fnc_removePerFrameHandler;
     };
 }, _refresh, [_hunters, _refresh, _hunted]] call CBA_fnc_addPerFrameHandler;
