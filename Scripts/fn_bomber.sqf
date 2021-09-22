@@ -20,7 +20,7 @@
  * [bomber, 15, 50, 50] call FUNC(bomber);
  */
 
-params ["_unit", ["_radius", 10], ["_activateDistance", 100], ["_screamingDistance", 100]];
+params ["_unit", ["_radius", 10], ["_activateDistance", 100], ["_screamingDistance", 100], ["_nearest", objNull];
 
 _unit addVest "UMI_Bomb_Vest_Camo";
 _unit setVariable ["acex_headless_blacklist", true];
@@ -33,13 +33,16 @@ private _time = CBA_missionTime;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_unit", "_radius", "_activateDistance", "_screamingDistance", "_time"];
+    _args params ["_unit", "_radius", "_activateDistance", "_screamingDistance", "_time", "_nearest"];
 
-    private _nearest = nearestObjects [_unit, ["CAManBase"], _activateDistance, true];
-    _nearest = _nearest select {isPlayer _x};
-    _nearest = _nearest select 0;
+    if (isNull _nearest) then {
+        private _nearest = nearestObjects [_unit, ["CAManBase"], _activateDistance, true];
+        _nearest = _nearest select {isPlayer _x};
+        _nearest = _nearest param [0, objNull];
+        _args set [5, _nearest];
+    };
 
-    if (CBA_missionTime >= _time + 5) then {
+    if (CBA_missionTime >= _time + 5 && !isNull _nearest) then {
         _unit doMove (position _nearest);
         _unit setSpeedMode "FULL";
         _time = CBA_missiontime;
@@ -71,4 +74,4 @@ private _time = CBA_missionTime;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-}, 1, [_unit, _radius, _activateDistance, _screamingDistance, _time]] call CBA_fnc_addPerFrameHandler;
+}, 1, [_unit, _radius, _activateDistance, _screamingDistance, _time, _nearest]] call CBA_fnc_addPerFrameHandler;
