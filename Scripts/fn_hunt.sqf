@@ -59,7 +59,7 @@ _hunters setVariable ["acex_headless_blacklist", true];
     private _huntedDead = {alive _x} count units _hunted == 0;
 
     // Remove PFH.
-    if (_huntersDead || _huntedDead && !isNull _hunted) then {
+    if (_huntersDead || {_huntedDead && !isNull _hunted}) then {
         _handle call CBA_fnc_removePerFrameHandler;
     };
 }, _refresh, [_hunters, _refresh, _hunted]] call CBA_fnc_addPerFrameHandler;
