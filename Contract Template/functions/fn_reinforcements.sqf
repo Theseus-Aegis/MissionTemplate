@@ -61,7 +61,7 @@ if (_anyClose isEqualTo [] || CBA_MissionTime == 0) then {
         }, [_group, _searchDistance], 10] call CBA_fnc_waitAndExecute;
     };
 } else {
-    if (is3DENMultiplayer) then {
+    if (is3DENPreview) then {
         private _groupName = groupID _group;
         private _groupSide = side _group;
         hint format ["[Reinforcements] Too close to group: %1, on: %2", _groupName, _groupSide];
