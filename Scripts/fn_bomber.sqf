@@ -20,7 +20,7 @@
  * [bomber, 15, 50, 50] call FUNC(bomber);
  */
 
-params ["_unit", ["_radius", 10], ["_activateDistance", 100], ["_screamingDistance", 100], ["_nearest", objNull];
+params ["_unit", ["_radius", 10], ["_activateDistance", 100], ["_screamingDistance", 100], ["_nearest", objNull]];
 
 _unit addVest "UMI_Bomb_Vest_Camo";
 _unit setVariable ["acex_headless_blacklist", true];
@@ -50,6 +50,12 @@ private _time = CBA_missionTime;
 
     private _distance = _unit distance _nearest;
     private _unitPos = getPosATL _unit;
+    private _unconscious = _unit getVariable ["ACE_isUnconscious", false];
+
+    // If knocked out, kill the unit because it won't stop screaming.
+    if (_unconscious) then {
+        _unit setDamage 1;
+    };
 
     if (_distance <= _screamingDistance || !alive _unit) then {
         // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -57,7 +63,7 @@ private _time = CBA_missionTime;
             [_unit, "tacr_kamikaze"] remoteExec ["say3D"];
         };
 
-        if (_distance <= _radius) then {
+        if (_distance <= _radius || !alive _unit) then {
             private _randomExplosive = selectRandom ["DemoCharge_Remote_Ammo_Scripted", "SatchelCharge_Remote_Ammo_Scripted"];
             doStop _unit;
 
