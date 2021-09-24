@@ -3,7 +3,7 @@
  * Author: Tyrone
  * Has an enemy group hunt a player group.
  * If units have waypoints they will return to them after a successful hunt.
- * If no hunted group is given it will select nearest player group within 1km and target those.
+ * If no hunted group is given it will select nearest player group within a given distance and target those.
  *
  * Call from Trigger with (isServer) check.
  *
@@ -11,6 +11,7 @@
  * 0: Hunter Group <GROUP>
  * 1: Waypoint Refresh <NUMBER> (Optional - Default: 5)
  * 2: Hunted Group <GROUP> (Optional - Default grpNull)
+ * 2: Search Distance <NUMBER> (Optional - Default 1000)
  *
  * Return Value:
  * None
@@ -19,9 +20,10 @@
  * [Enemy_Group] call TAC_Scripts_fnc_hunt;
  * [Enemy_Group, 10] call TAC_Scripts_fnc_hunt;
  * [Enemy_Group, nil, Player_Group] call TAC_Scripts_fnc_hunt;
+ * [Enemy_Group, nil, nil, 2000] call TAC_Scripts_fnc_hunt;
  */
 
-params ["_hunters", ["_refresh", 5], ["_hunted", grpNull]];
+params ["_hunters", ["_refresh", 5], ["_hunted", grpNull], ["_searchDistance", 1000]];
 
 // Headless Blacklist
 _hunters setVariable ["acex_headless_blacklist", true];
@@ -34,12 +36,12 @@ _hunters setVariable ["acex_headless_blacklist", true];
 // PFH for movement
 [{
     params ["_args", "_handle"];
-    _args params ["_hunters", "_refresh", "_hunted"];
+    _args params ["_hunters", "_refresh", "_hunted", "_searchDistance"];
 
     // Select closest player group
     if (isNull _hunted) then {
         private _hunterLeader = leader _hunters;
-        private _nearest = nearestObjects [_hunterLeader, ["CAManBase"], 1000, true];
+        private _nearest = nearestObjects [_hunterLeader, ["CAManBase"], _searchDistance, true];
         _nearest = _nearest select {isPlayer _x};
         _nearest = _nearest param [0, objNull];
         _hunted = group _nearest;
@@ -62,4 +64,4 @@ _hunters setVariable ["acex_headless_blacklist", true];
     if (_huntersDead || {_huntedDead && !isNull _hunted}) then {
         _handle call CBA_fnc_removePerFrameHandler;
     };
-}, _refresh, [_hunters, _refresh, _hunted]] call CBA_fnc_addPerFrameHandler;
+}, _refresh, [_hunters, _refresh, _hunted, _searchDistance]] call CBA_fnc_addPerFrameHandler;
