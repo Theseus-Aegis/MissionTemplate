@@ -4,11 +4,11 @@ author="Theseus";
 category="EdSubcat_Tools";
 requiredAddons[]=
 {
+	"tacs_units",
 	"tac_armory",
 	"tacgt_supplies",
 	"A3_Props_F_Exp_Military_Camps",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Ui_F",
-	"tacs_units",
 	"A3_Characters_F"
 };
