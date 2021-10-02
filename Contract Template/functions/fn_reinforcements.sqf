@@ -2,12 +2,15 @@
 /*
  * Author: Jonpas, Tyrone
  * Sets visibility of units, simulation and AI behaviour of a group along with any vehicles manned by the group.
+ * Requires fn_hunt.sqf if using the moveToPlayer parameter.
  * Call from init.sqf
  *
  * Arguments:
  * 0: Group <GROUP>
  * 1: Disable <BOOL>
- * 2: Distance <NUMBER>
+ * 2: Distance <NUMBER> (default: 0)
+ * 3: Move to Nearest Player <BOOL> (default: false)
+ * 4: Distance to search for player <NUMBER> (default: 1000)
  *
  * Return Value:
  * None
@@ -16,9 +19,10 @@
  * [Test_Group_1, true] call FUNC(reinforcements);
  * [Test_Group_1, false] call TAC_Scripts_fnc_reinforcements;
  * [Test_Group_1, false, 50] call TAC_Scripts_fnc_reinforcements;
+ * [Test_Group_1, false, 0, true, 2000] call TAC_Scripts_fnc_reinforcements;
  */
 
-params ["_group", "_state", ["_distance", 0]];
+params ["_group", "_state", ["_distance", 0], ["_moveToPlayer", false], ["_searchDistance", 1000]];
 
 if (hasInterface && !isServer) exitWith {};
 
@@ -48,8 +52,16 @@ if (_anyClose isEqualTo [] || CBA_MissionTime == 0) then {
             };
         } forEach (units _x);
     } forEach [_group];
+
+    // Orders reinforcement group to hunt nearest player group.
+    if (_moveToPlayer) then {
+        [{
+            params ["_group", "_searchDistance"];
+            [_group, nil, nil, _searchDistance] call FUNC(hunt);
+        }, [_group, _searchDistance], 10] call CBA_fnc_waitAndExecute;
+    };
 } else {
-    if (is3DENMultiplayer) then {
+    if (is3DENPreview) then {
         private _groupName = groupID _group;
         private _groupSide = side _group;
         hint format ["[Reinforcements] Too close to group: %1, on: %2", _groupName, _groupSide];
