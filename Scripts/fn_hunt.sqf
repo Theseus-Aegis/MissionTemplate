@@ -26,7 +26,10 @@
 params ["_hunters", ["_refresh", 5], ["_hunted", grpNull], ["_searchDistance", 1000]];
 
 // Headless Blacklist
-_hunters setVariable ["acex_headless_blacklist", true];
+_hunters setVariable ["acex_headless_blacklist", true, true];
+
+// Switch locality back to server
+_hunters setGroupOwner 2;
 
 // Disable Fleeing
 {
