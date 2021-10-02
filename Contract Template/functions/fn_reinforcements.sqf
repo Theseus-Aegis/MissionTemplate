@@ -8,9 +8,9 @@
  * Arguments:
  * 0: Group <GROUP>
  * 1: Disable <BOOL>
- * 2: Distance <NUMBER> (Optional - Default: 0)
- * 2: Move to Nearest Player <BOOL> (Optional - Default: False)
- * 2: Distance to search for player <NUMBER> (Optional - Default: 1000)
+ * 2: Distance <NUMBER> (default: 0)
+ * 3: Move to Nearest Player <BOOL> (default: false)
+ * 4: Distance to search for player <NUMBER> (default: 1000)
  *
  * Return Value:
  * None
