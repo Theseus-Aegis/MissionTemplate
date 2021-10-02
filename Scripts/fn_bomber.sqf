@@ -25,7 +25,7 @@ params ["_unit", ["_radius", 10], ["_activateDistance", 100], ["_screamingDistan
 _unit addVest "UMI_Bomb_Vest_Camo";
 
 // Headless Blacklist
-_unit setVariable ["acex_headless_blacklist", true, true];
+_unit setVariable ["acex_headless_blacklist", true];
 
 {
     _unit disableAI _x
