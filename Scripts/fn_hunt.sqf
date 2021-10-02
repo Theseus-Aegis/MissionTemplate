@@ -33,6 +33,9 @@ _hunters setVariable ["acex_headless_blacklist", true];
     _x allowFleeing 0;
 } forEach (units _hunters);
 
+_hunters setSpeedMode "FULL";
+_hunters setCombatMode "RED";
+
 // PFH for movement
 [{
     params ["_args", "_handle"];
