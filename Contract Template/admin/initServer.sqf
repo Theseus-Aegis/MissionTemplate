@@ -7,7 +7,7 @@
         private _playerTraits = [];
         {
             _playerTraits pushBack [_x, _y];
-        } forEach tac_supplies_playerTraits
-        INFO_1("Player Traits: %1",_playerTraits) // For now just logging to RPT, future uses TBD.
+        } forEach tac_supplies_playerTraits;
+        INFO_1("Player Traits: %1",_playerTraits); // For now just logging to RPT, future uses TBD.
     },
 ] call CBA_fnc_waitUntilAndExecute;
