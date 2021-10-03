@@ -2,7 +2,6 @@
 
 // Log given traits to RPT 70 minutes after mission start.
 [
-    {cba_missiontime >= 4200},
     {
         private _playerTraits = [];
         {
@@ -10,4 +9,6 @@
         } forEach tac_supplies_playerTraits;
         INFO_1("Player Traits: %1",_playerTraits); // For now just logging to RPT, future uses TBD.
     },
-] call CBA_fnc_waitUntilAndExecute;
+    [],
+    4200
+] call CBA_fnc_waitAndExecute;
