@@ -2,7 +2,6 @@
 /*
  * Author: Jonpas, Tyrone
  * Sets visibility of units, simulation and AI behaviour of a group along with any vehicles manned by the group.
- * Requires fn_hunt.sqf if using the moveToPlayer parameter.
  * Call from init.sqf
  *
  * Arguments:
