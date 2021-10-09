@@ -11,6 +11,7 @@ class CfgFunctions {
             class collectIntelPreInit { preInit = 1; };
             class collectIntelPostInit { postInit = 1; };
             class godMode;
+            class hunt;
             class reinforcements;
         };
     };
