@@ -24,7 +24,7 @@
 
 params ["_group", "_state", ["_distance", 0], ["_moveToPlayer", false], ["_searchDistance", 1000]];
 
-if (hasInterface && !isServer) exitWith {};
+if (!isServer) exitWith {};
 
 private _groupLeader = leader _group;
 private _playerList = [] call CBA_fnc_players;
@@ -32,26 +32,15 @@ private _anyClose = _playerList select {_groupLeader distance _x < _distance};
 
 if (_anyClose isEqualTo [] || CBA_MissionTime == 0) then {
     {
-        {
-            if (local _x) then {
-                if (_state) then {
-                    _x disableAI "ALL";
-                } else {
-                    _x enableAI "ALL";
-                };
-            };
-            if (isServer) then {
-                _x enableSimulationGlobal !_state;
-                _x hideObjectGlobal _state;
+        _x enableSimulationGlobal !_state;
+        _x hideObjectGlobal _state;
 
-                private _vehicle = vehicle _x;
-                if (_vehicle != _x && {simulationEnabled _vehicle == _state}) then {
-                    _vehicle enableSimulationGlobal !_state;
-                    _vehicle hideObjectGlobal _state;
-                };
-            };
-        } forEach (units _x);
-    } forEach [_group];
+        private _vehicle = vehicle _x;
+        if (_vehicle != _x && {simulationEnabled _vehicle == _state}) then {
+            _vehicle enableSimulationGlobal !_state;
+            _vehicle hideObjectGlobal _state;
+        };
+    } forEach (units _group);
 
     // Orders reinforcement group to hunt nearest player group.
     if (_moveToPlayer) then {
