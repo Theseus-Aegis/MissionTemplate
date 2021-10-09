@@ -32,17 +32,15 @@ private _anyClose = _playerList select {_groupLeader distance _x < _distance};
 
 if (_anyClose isEqualTo [] || CBA_MissionTime == 0) then {
     {
-        {
-            _x enableSimulationGlobal !_state;
-            _x hideObjectGlobal _state;
+        _x enableSimulationGlobal !_state;
+        _x hideObjectGlobal _state;
 
-            private _vehicle = vehicle _x;
-            if (_vehicle != _x && {simulationEnabled _vehicle == _state}) then {
-                _vehicle enableSimulationGlobal !_state;
-                _vehicle hideObjectGlobal _state;
-            };
-        } forEach (units _x);
-    } forEach [_group];
+        private _vehicle = vehicle _x;
+        if (_vehicle != _x && {simulationEnabled _vehicle == _state}) then {
+            _vehicle enableSimulationGlobal !_state;
+            _vehicle hideObjectGlobal _state;
+        };
+    } forEach (units _group);
 
     // Orders reinforcement group to hunt nearest player group.
     if (_moveToPlayer) then {
