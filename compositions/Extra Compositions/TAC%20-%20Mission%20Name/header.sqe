@@ -1,4 +1,8 @@
-version=53;
+version=54;
 name="TAC - Mission Name";
 author="Tyrone";
 category="EdSubcat_Tools";
+requiredAddons[]=
+{
+	"Desert"
+};
