@@ -1,25 +1,27 @@
-version=53;
-center[]={1344.4485,5,5690.6143};
+version=54;
+center[]={4648.1504,5,5093.4248};
 class items
 {
 	items=2;
 	class Item0
 	{
 		dataType="Trigger";
-		position[]={1.0324707,0,-0.060058594};
+		position[]={1.0327148,0,-0.059570313};
 		angle=4.7119875;
 		class Attributes
 		{
+			name="MN";
 			text="Mission Name";
-			condition="call{daytime >= 1}";
-			onActivation="call{[  " \n "    [  " \n "        [""MISSION NAME"", ""<t size = '1.5' underline = '1'>%1</t><br/>""],  " \n "        [""Theseus Incorporated""],  " \n "        [""MAP"", ""<t size = '1' font='puristaSemiBold'>%1</t>"", 70]  " \n "    ], 1, 0.75, ""<t align = 'center' shadow = '1' size = '1.0'>%1</t>""  " \n "] spawn BIS_fnc_typeText;}";
+			condition="daytime >= 1";
+			onActivation="[  " \n "    [  " \n "        [""MISSION NAME"", ""<t size = '1.5' underline = '1'>%1</t><br/>""],  " \n "        [""Theseus Incorporated""],  " \n "        [""MAP"", ""<t size = '1' font='puristaSemiBold'>%1</t>"", 70]  " \n "    ], 1, 0.75, ""<t align = 'center' shadow = '1' size = '1.0'>%1</t>""  " \n "] spawn BIS_fnc_typeText;" \n "" \n "[{" \n "    deleteVehicle MN;" \n "}, [], 10] call CBA_fnc_waitAndExecute;";
 			sizeA=0;
 			sizeB=0;
 			sizeC=0;
 			activationBy="ANYPLAYER";
 			isRectangle=1;
+			triggerInterval=1;
 		};
-		id=2;
+		id=0;
 		type="EmptyDetector";
 	};
 	class Item1
@@ -27,10 +29,10 @@ class items
 		dataType="Comment";
 		class PositionInfo
 		{
-			position[]={-1.0324707,0,0.059570313};
+			position[]={-1.0332031,0,0.059570313};
 		};
 		title="Mission Name";
 		description="For the mission name to pop up on mission start time, the trigger uses ""Daytime""" \n "" \n "If your mission is designed to start at 10am the condition of the trigger will be" \n "daytime >= 10" \n "" \n "The onActivation only has 2 parts to change which are capitalised as" \n """MISSION NAME""" \n """MAP""";
-		id=3;
+		id=1;
 	};
 };
