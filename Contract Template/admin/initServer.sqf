@@ -9,4 +9,4 @@ if (TACGVAR(apollo,enabled)) then {
         } forEach TACGVAR(supplies,playerTraits);
         INFO_1("Player Traits: %1",_playerTraits); // For now just logging to RPT, future uses TBD.
     }, [], 4200] call CBA_fnc_waitAndExecute;
-}
+};
