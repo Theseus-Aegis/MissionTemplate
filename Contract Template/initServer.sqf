@@ -14,6 +14,8 @@
  * None
  */
 [{
+    #include "admin\initServer.sqf"
+
     // START USER CODE
 
     // END USER CODE
