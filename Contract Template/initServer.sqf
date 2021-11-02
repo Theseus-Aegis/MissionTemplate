@@ -16,6 +16,10 @@
 [{
     #include "admin\initServer.sqf"
 
+    [{
+        [QGVAR(MissionName), ["MISSION NAME", "MAP NAME"]] call CBA_fnc_globalEvent;
+    }, [], 3600] call CBA_fnc_waitAndExecute;
+
     // START USER CODE
 
     // END USER CODE
