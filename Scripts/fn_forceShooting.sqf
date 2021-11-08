@@ -4,7 +4,7 @@
  * Orders a unit to target an object and begin firing until either the shooter or target is dead or the timer elapses.
  * Firemode types Single (0) and Full auto (1)
  * Set firing timer to 0.1 for full auto
- * Designed ONLY for infantry, vehicle results not guaranteed.
+ * Designed ONLY for infantry, using with vehicles will result in undefined behaviour.
  *
  * Arguments:
  * 0: AI Shooter <OBJECT>
@@ -43,13 +43,12 @@ private _ehIndex = _shooter addEventHandler ["Reloaded", {
 
 // Wait for unit to actually target.
 [{
-    private _array = _this select 0;
-    private _firingTimer = _array select 4;
+    private _firingTimer = (_this select 0) select 4;
 
     [{
         params ["_args", "_handle"];
         _args params ["_functionArgs", "_additionalArgs"];
-        _functionArgs params ["_shooter", "_target", "", "_timer", "_firingTimer"];
+        _functionArgs params ["_shooter", "_target", "", "_timer"];
         _additionalArgs params ["_weapon", "_time", "_firemodeType", "_ehIndex"];
 
         // Exit if unit is dead, target is dead or time has elapsed.
