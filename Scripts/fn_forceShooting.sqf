@@ -32,6 +32,9 @@ private _weapon = currentWeapon _shooter;
 private _time = CBA_missionTime;
 private _firemodeType = FIREMODE_TYPES select _firemode;
 
+// Limit firing timer.
+_firingTimer = _firingTimer max 0.1;
+
 _shooter doTarget _target;
 
 // Replace magazines so unit doesn't run out.
