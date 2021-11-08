@@ -3,8 +3,6 @@
  * Author: Tyrone
  * Functionality for toggling switches, When "OFF" switch is red and power levels are 0, when "ON" switch is Green and power levels are either 1 or player defined.
  *
- * Requires fn_switchAction.sqf
- *
  * Can be checked by using getVariable on the object for switch state.
  * My_Switch getVariable ["TAC_Switched", false];
  *
