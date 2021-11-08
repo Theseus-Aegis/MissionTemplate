@@ -11,7 +11,7 @@
 CUP_stopLampCheck = true;
 
 // Mission name event
-[QGVAR(MissionName), {
+[QGVAR(missionName), {
     params ["_missionName", "_mapName"];
     [
         [
