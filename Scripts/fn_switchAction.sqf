@@ -1,5 +1,4 @@
 #include "..\script_component.hpp"
-
 /*
  * Author: Tyrone
  * Adds ACE action for fn_switch.sqf
@@ -22,8 +21,7 @@ private _switchAction = [
     "Flick Switch",
     "",
     {
-        params ["_player", "_target", "_args"];
-        _args params ["_object"];
+        (_this select 2) params ["_object"];
         private _sourcePhase = _object animationSourcePhase "SwitchPosition";
         if (_sourcePhase == -1) then {
             _object animateSource ["SwitchPosition", 1, 0.5];

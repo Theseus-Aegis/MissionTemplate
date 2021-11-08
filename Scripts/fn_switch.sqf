@@ -37,7 +37,7 @@ params ["_object", ["_powerOne", 1], ["_powerTwo", 1]];
     _args set [3, _switch];
 
     if (_switch != _switchLastState) then {
-        if (_switch == 1) then {
+        if (_switch == 1) exitWith {
             _object animateSource ["Power_1", _powerOne, 0.25];
             _object animateSource ["Power_2", _powerTwo, 0.25];
             _object setObjectTextureGlobal [1, "#(argb,8,8,3)color(0,1,0,0.05,ca)"];
