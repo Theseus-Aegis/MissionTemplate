@@ -1,5 +1,5 @@
-version=53;
-center[]={5131.4668,10.35,6029.1689};
+version=54;
+center[]={5159.0815,5,328.20602};
 class items
 {
 	items=6;
@@ -8,16 +8,16 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-3.4887695,1.0358486,-3.3632813};
+			position[]={-3.5292969,0.088064194,-3.6627808};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
-			init="call{if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem; " \n "};}";
+			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 01""; " \n "};";
 		};
-		id=341;
+		id=12;
 		type="tacs_Arcadian_B_Tan";
 		class CustomAttributes
 		{
@@ -55,14 +55,14 @@ class items
 								"STRING"
 							};
 						};
-						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
 					};
 				};
 			};
 			class Attribute2
 			{
 				property="ace_cargo_space";
-				expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 				class Value
 				{
 					class data
@@ -86,16 +86,16 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.011230469,1.0358486,-3.3632813};
+			position[]={-0.029296875,0.088064194,-3.6627808};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
-			init="call{if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem; " \n "};}";
+			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 02""; " \n "};";
 		};
-		id=342;
+		id=13;
 		type="tacs_Arcadian_B_Tan";
 		class CustomAttributes
 		{
@@ -133,14 +133,14 @@ class items
 								"STRING"
 							};
 						};
-						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
 					};
 				};
 			};
 			class Attribute2
 			{
 				property="ace_cargo_space";
-				expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 				class Value
 				{
 					class data
@@ -164,16 +164,16 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={3.5112305,1.0358486,-3.3632813};
+			position[]={3.4707031,0.088064194,-3.6627808};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
-			init="call{if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem; " \n "};}";
+			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 03""; " \n "};";
 		};
-		id=343;
+		id=14;
 		type="tacs_Arcadian_B_Tan";
 		class CustomAttributes
 		{
@@ -211,14 +211,14 @@ class items
 								"STRING"
 							};
 						};
-						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
 					};
 				};
 			};
 			class Attribute2
 			{
 				property="ace_cargo_space";
-				expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 				class Value
 				{
 					class data
@@ -242,16 +242,16 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-3.4887695,1.0358486,3.1367188};
+			position[]={-3.5292969,0.088064194,2.8372192};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
-			init="call{if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem; " \n "};}";
+			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 04""; " \n "};";
 		};
-		id=344;
+		id=15;
 		type="tacs_Arcadian_B_Tan";
 		class CustomAttributes
 		{
@@ -289,14 +289,14 @@ class items
 								"STRING"
 							};
 						};
-						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
 					};
 				};
 			};
 			class Attribute2
 			{
 				property="ace_cargo_space";
-				expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 				class Value
 				{
 					class data
@@ -320,16 +320,16 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.011230469,1.0358486,3.1367188};
+			position[]={-0.029296875,0.088064194,2.8372192};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
-			init="call{if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem; " \n "};}";
+			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 05""; " \n "};";
 		};
-		id=345;
+		id=16;
 		type="tacs_Arcadian_B_Tan";
 		class CustomAttributes
 		{
@@ -367,14 +367,14 @@ class items
 								"STRING"
 							};
 						};
-						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
 					};
 				};
 			};
 			class Attribute2
 			{
 				property="ace_cargo_space";
-				expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 				class Value
 				{
 					class data
@@ -398,16 +398,16 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={3.5112305,1.0358486,3.1367188};
+			position[]={3.4707031,0.088064194,2.8372192};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
-			init="call{if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem; " \n "};}";
+			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 06""; " \n "};";
 		};
-		id=346;
+		id=17;
 		type="tacs_Arcadian_B_Tan";
 		class CustomAttributes
 		{
@@ -445,14 +445,14 @@ class items
 								"STRING"
 							};
 						};
-						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
 					};
 				};
 			};
 			class Attribute2
 			{
 				property="ace_cargo_space";
-				expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
 				class Value
 				{
 					class data
