@@ -43,7 +43,7 @@ params ["_object", ["_powerOne", 1], ["_powerTwo", 1]];
             _object setObjectTextureGlobal [1, "#(argb,8,8,3)color(0,1,0,0.05,ca)"];
             _object setVariable ["TAC_Switched", true, true];
         };
-        if (_switch == -1) then {
+        if (_switch == -1) exitWith {
             _object animateSource ["Power_1", 0, 0.25];
             _object animateSource ["Power_2", 0, 0.25];
             _object setObjectTextureGlobal [1, "#(argb,8,8,3)color(1,0,0,0.05,ca)"];
