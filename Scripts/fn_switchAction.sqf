@@ -55,11 +55,8 @@ if (isServer) then {
     _object animateSource ["SwitchLight", 1, 1];
 
     // Default switch state, OFF or ON
-    if (_defaultState == 0) then {
-        _object animateSource ["SwitchPosition", -1, 0.5];
-    } else {
-        _object animateSource ["SwitchPosition", 1, 0.5];
-    };
+    private _switchState = [-1, 1] select _defaultState; // translate default state to switch state (0 = -1, 1 = 1)
+    _object animateSource ["SwitchPosition", _switchState, 0.5];
 
     [{
         params ["_args", "_handle"];
