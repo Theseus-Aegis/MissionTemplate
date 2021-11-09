@@ -3,6 +3,8 @@
  * Author: Tyrone
  * Functionality for toggling switches, When "OFF" switch is red and power levels are 0, when "ON" switch is Green and power levels are either 1 or player defined.
  *
+ * Default state is 0 (OFF) or 1 (ON)
+ *
  * Can be checked by using getVariable on the object for switch state.
  * My_Switch getVariable ["TAC_Switched", false];
  *
@@ -12,6 +14,7 @@
  * 0: Switch <OBJECT>
  * 1: Left Voltage On <NUMBER> (default: 1)
  * 2: Right Voltage On <NUMBER> (default: 1)
+ * 3: Default state <NUMBER> (default: 0)
  *
  * Return Value:
  * None
@@ -19,9 +22,10 @@
  * Example:
  * [My_Switch] call FUNC(switch);
  * [My_Switch, 0.5, 0.7] call FUNC(switch);
+ * [My_Switch, 0.5, 0.7, 1] call FUNC(switch);
  */
 
-params ["_object", ["_powerOne", 1], ["_powerTwo", 1]];
+params ["_object", ["_powerOne", 1], ["_powerTwo", 1], ["_defaultState", 0]];
 
 if (hasInterface) then {
     private _switchAction = [
@@ -47,6 +51,16 @@ if (hasInterface) then {
 };
 
 if (isServer) then {
+    // Turn light on.
+    _object animateSource ["SwitchLight", 1, 1];
+
+    // Default switch state, OFF or ON
+    if (_defaultState == 0) then {
+        _object animateSource ["SwitchPosition", -1, 0.5];
+    } else {
+        _object animateSource ["SwitchPosition", 1, 0.5];
+    };
+
     [{
         params ["_args", "_handle"];
         _args params ["_object", "_powerOne", "_powerTwo", ["_switchLastState", -1]];
