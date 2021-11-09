@@ -20,9 +20,9 @@
  * None
  *
  * Example:
- * [My_Switch] call FUNC(switch);
- * [My_Switch, 0.5, 0.7] call FUNC(switch);
- * [My_Switch, 0.5, 0.7, 1] call FUNC(switch);
+ * [My_Switch] call FUNC(switchAction);
+ * [My_Switch, 0.5, 0.7] call FUNC(switchAction);
+ * [My_Switch, 0.5, 0.7, 1] call FUNC(switchAction);
  */
 
 params ["_object", ["_powerOne", 1], ["_powerTwo", 1], ["_defaultState", 0]];
