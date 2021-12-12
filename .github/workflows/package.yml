@@ -37,6 +37,6 @@ jobs:
       if: startsWith(github.ref, 'refs/tags')
       with:
         draft: true
-        files: *.zip
+        files: "*.zip"
         name: "TAC Mission Template $VERSION"
         tag_name: v$VERSION
