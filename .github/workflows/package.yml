@@ -42,5 +42,5 @@ jobs:
       with:
         draft: true
         files: "*.zip"
-        name: "TAC Mission Template ${{ env.VERSION }}"
-        tag_name: v${{ env.VERSION }}
+        name: "TAC Mission Template"
+        tag_name: v${{ github.ref_name }}
