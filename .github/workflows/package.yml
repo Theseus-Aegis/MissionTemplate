@@ -21,12 +21,12 @@ jobs:
         MAJOR=$(grep -oP "#define MAJOR \K(\d+)" template/script_component.hpp)
         MINOR=$(grep -oP "#define MINOR \K(\d+)" template/script_component.hpp)
         PATCH=$(grep -oP "#define PATCHLVL \K(\d+)" template/script_component.hpp)
-        echo "VERSION=$MAJOR.$MINOR.$PATCH" >> $env:GITHUB_ENV
-        echo "  ${{ env.VERSION }}"
+        echo "VERSION=$MAJOR.$MINOR.$PATCH" >> $GITHUB_ENV
+        echo "  $VERSION"
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: TAC-Mission-Template_${{ env.VERSION }}
+        name: TAC-Mission-Template_$VERSION
         path: |
           compositions
           Theseus_Mission_Making_Guide.VR
@@ -39,5 +39,5 @@ jobs:
       with:
         draft: true
         files: "*.zip"
-        name: "TAC Mission Template ${{ env.VERSION }}"
-        tag_name: v${{ env.VERSION }}
+        name: "TAC Mission Template $VERSION"
+        tag_name: v$VERSION
