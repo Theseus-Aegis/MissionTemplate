@@ -1,0 +1,46 @@
+name: Package
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@v2
+    - name: Package
+      run: |
+        # Rename
+        mv -v guide Theseus_Mission_Making_Guide.VR
+        # Version
+        MAJOR=$(grep -oP "#define MAJOR \K(\d+)" template/script_component.hpp)
+        MINOR=$(grep -oP "#define MINOR \K(\d+)" template/script_component.hpp)
+        PATCH=$(grep -oP "#define PATCHLVL \K(\d+)" template/script_component.hpp)
+        VERSION=$MAJOR.$MINOR.$PATCH
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+        echo "Version: $VERSION"
+        # Archive for GitHub Release
+        zip -r TAC-Mission-Template_$VERSION.zip compositions Theseus_Mission_Making_Guide.VR scripts template LICENSE README.md
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: TAC-Mission-Template
+        path: |
+          compositions
+          Theseus_Mission_Making_Guide.VR
+          scripts
+          template
+          LICENSE
+          README.md
+    - name: Upload to GitHub
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        draft: true
+        files: "*.zip"
+        name: "TAC Mission Template"
+        tag_name: v${{ github.ref_name }}

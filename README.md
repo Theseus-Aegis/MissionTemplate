@@ -2,18 +2,6 @@
 
 [![](https://img.shields.io/badge/Download-Latest-blue.svg?style=flat-square)](https://github.com/Theseus-Aegis/MissionTemplate/releases/latest)
 
-Theseus Mission Template.
+Theseus Mission Template for Arma 3. Always requires the latest Theseus Modpack.
 
-# TAC Scripts
-
-Various staging for proper framework, proof of concept and other scripts for plug into missions.
-
-### Usage
-
-- Add a function by adding it to `functions` folder with name `fn_myFunction.sqf` and add class `class myFunction;` in `CfgFunctions.hpp`
-- Remove unneeded functions from `functions` folder and their respective classes from `CfgFunctions.hpp` (eg. `class myFunction;`)
-
-#### Debugging
-
-- Add `allowFunctionsRecompile = 1;` to `description.ext`
-- Uncomment `recompile = 1;` in `CfgFunctions.hpp`
+**See the [Mission Template Wiki](https://github.com/Theseus-Aegis/MissionTemplate/wiki) for all information.**
