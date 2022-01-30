@@ -28,7 +28,9 @@ if (!hasInterface) exitWith {};
 // Switch language on unconscious toggle
 ["ace_unconscious", {
     params ["_unit", "_state"];
-    if (_unit != ACE_player) exitWith {}; // Required because of global event
+
+    if (_unit != ACE_player) exitWith {}; // Ignore if remote unit
+
     if (_state) then {
         ["un"] call acre_api_fnc_babelSetSpokenLanguages;
     } else {
@@ -36,7 +38,26 @@ if (!hasInterface) exitWith {};
     };
 }] call CBA_fnc_addEventHandler;
 
-// Handle dying while unconscious
-_player addEventHandler ["Respawn", {
-    ["en"] call acre_api_fnc_babelSetSpokenLanguages;
-}];
+// Handle unit change (including death)
+["unit", {
+    params ["_newUnit", "_oldUnit"];
+
+    if (call CBA_fnc_getActiveFeatureCamera != "") exitWith {}; // Ignore if feature camera active (eg. Zeus)
+
+    if (_newUnit getVariable ["ACE_isUnconscious", false]) then {
+        ["un"] call acre_api_fnc_babelSetSpokenLanguages;
+    } else {
+        ["en"] call acre_api_fnc_babelSetSpokenLanguages;
+    };
+}, false] call CBA_fnc_addPlayerEventHandler;
+
+// Handle feature camera (eg. Zeus)
+["featureCamera", {
+    params ["_unit", "_newCamera"]; 
+    
+    if (_newCamera == "" && {ACE_player getVariable ["ACE_isUnconscious", false]})
+        ["un"] call acre_api_fnc_babelSetSpokenLanguages; 
+    } else { 
+        ["en"] call acre_api_fnc_babelSetSpokenLanguages; 
+    }; 
+}, false] call CBA_fnc_addPlayerEventHandler;
