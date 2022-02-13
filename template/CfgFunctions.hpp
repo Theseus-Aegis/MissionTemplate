@@ -7,6 +7,7 @@ class CfgFunctions {
             // Reference README.md for usage instructions
             class baseSpectator;
             class briefing;
+            class chatCommands;
             class collectIntel;
             class collectIntelPreInit { preInit = 1; };
             class collectIntelPostInit { postInit = 1; };
