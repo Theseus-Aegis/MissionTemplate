@@ -21,7 +21,7 @@ if (TACGVAR(apollo,enabled)) then {
     }, [], _timeUntilStart + 10*60] call CBA_fnc_waitAndExecute;
 };
 
-// Unit Counter Tool - Target Watch: TAC_Scripts_unitCounter
-[{
-    GVAR(unitCounter) = format ["West: %1|East: %2|Indep: %3|Civ: %4|Player: %5", west countSide allUnits, east countSide allUnits, resistance countside allUnits, civilian countSide allUnits, count playableUnits];
-}, 10, []] call CBA_fnc_addPerFrameHandler;
+// Unit Counter Tool - Target Watch: `call TAC_Scripts_fnc_monitorUnits`
+FUNC(monitorUnits) = {
+    format ["West: %1|East: %2|Indep: %3|Civ: %4|Player: %5", west countSide allUnits, east countSide allUnits, resistance countside allUnits, civilian countSide allUnits, count playableUnits]
+};
