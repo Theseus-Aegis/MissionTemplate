@@ -23,8 +23,8 @@
 }] call CBA_fnc_addEventHandler;
 
 ["tac-capture", {
-	[QGVAR(captureAAR), []] call CBA_fnc_serverEvent;
-	"AAR Recording." call CBA_fnc_notify;
+    [QGVAR(captureAAR), []] call CBA_fnc_serverEvent;
+    "AAR Recording." call CBA_fnc_notify;
 }, "admin"] call CBA_fnc_registerChatCommand;
 
 ["tac-save", {
