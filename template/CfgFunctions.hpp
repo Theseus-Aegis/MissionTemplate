@@ -13,6 +13,7 @@ class CfgFunctions {
             class godMode;
             class hunt;
             class reinforcements;
+            class unconscious;
         };
     };
 };
