@@ -52,20 +52,3 @@ for "_i" from 0 to _barrages - 1 do {
         _mortar setVehicleAmmo 1;
     }, [_mortar, _randomPosition, _ammo, _amount], _i * FIREMISSION_DELAY] call CBA_fnc_waitAndExecute;
 };
-
-//diag_log [_mortar, _randomPosition, _ammo, _amount];
-
-for "_i" from 0 to _barrages - 1 do {
-    private _randomMarker = selectRandom _markersArray;
-    private _randomPosition = [_randomMarker, true] call CBA_fnc_randPosArea;
-
-    if (_amount == 0) then {
-        _amount = random 8 + 1;
-    };
-
-    [{
-        params ["_mortar", "_randomPosition", "_ammo", "_amount"];
-        _mortar doArtilleryFire [_randomPosition, _ammo, _amount];
-        _mortar setVehicleAmmo 1;
-    }, [_mortar, _randomPosition, _ammo, _amount], _i * FIREMISSION_DELAY] call CBA_fnc_waitAndExecute;
-};
