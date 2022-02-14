@@ -20,3 +20,8 @@ if (TACGVAR(apollo,enabled)) then {
         INFO_1("Player Traits: %1",_playerTraits); // For now just logging to RPT, future uses TBD.
     }, [], _timeUntilStart + 10*60] call CBA_fnc_waitAndExecute;
 };
+
+// Unit Counter Tool - Target Watch: `call TAC_Scripts_fnc_monitorUnits`
+FUNC(monitorUnits) = {
+    format ["West: %1|East: %2|Indep: %3|Civ: %4|Player: %5", west countSide allUnits, east countSide allUnits, resistance countside allUnits, civilian countSide allUnits, count playableUnits]
+};
