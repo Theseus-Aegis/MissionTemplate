@@ -7,8 +7,10 @@
  * If amount fired is 0 the amount is randomly selected between 1-8
  * Marker array can be set in init.sqf (See Example 2)
  * Marker array is randomly selected but all rounds fire on the same marker.
- * Ammo types are listed as HE (0).
+ * Ammo types are listed as HE (0), Cluster Smoke (1), Illumination (2).
+ * Note that smoke and illumination rounds do not have whistling sound effects.
  * Barrage will have mortars select a new target for every round fired.
+ * Do not use more than 3 cluster smoke rounds or graphics will cut smoke effects.
  * 1 Barrage will fire all shells at 1 target.
  *
  * Arguments:
@@ -26,7 +28,7 @@
  * [D30_1, tac_MarkerArray, 0, 0, 1] call TAC_Scripts_fnc_d30Strike;
  */
 
-#define AMMO_TYPES ["CUP_30Rnd_122mmHE_D30_M"]
+#define AMMO_TYPES ["CUP_30Rnd_122mmHE_D30_M", "CUP_30Rnd_122mmSMOKE_D30_M", "CUP_30Rnd_122mmILLUM_D30_M"]
 #define FIREMISSION_DELAY 3
 
 params ["_mortar", "_markersArray", ["_amount", 0], ["_ammoType", 0], ["_barrages", 1]];
