@@ -4,7 +4,17 @@
 OnLoadName = "MISSION NAME";
 OnLoadMission = "MISSION SUMMARY";
 author = "YOUR NAME, Theseus Inc.";
-tac_type = "Contract"; // Values are "Contract", "Non-Contract", "Training", "Special", "Special (PvP)", "PvP" or "Gimmick".
+tac_type = 0;
+/*
+ * Values for tac_type are:
+ * 0: Contract
+ * 1: Non-Contract
+ * 2: Training
+ * 3: Special
+ * 4: Special (PvP)
+ * 5: PvP
+ * 6: Gimmick
+*/
 
 // Randomization
 disableRandomization[] = {}; // Disables randomization of units and vehicles based off of variable name or classname
