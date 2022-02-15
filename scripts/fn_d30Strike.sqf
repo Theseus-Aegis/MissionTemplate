@@ -26,7 +26,6 @@
  * Examples:
  * [D30_1, ["Marker1", "Marker2"], 0, 0, 2] call TAC_Scripts_fnc_d30Strike;
  * [D30_1, tac_MarkerArray, 0, 0, 1] call TAC_Scripts_fnc_d30Strike;
- *
  */
 
 #define AMMO_TYPES ["CUP_30Rnd_122mmHE_D30_M", "CUP_30Rnd_122mmSMOKE_D30_M", "CUP_30Rnd_122mmILLUM_D30_M"]
