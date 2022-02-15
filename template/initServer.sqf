@@ -17,7 +17,7 @@
     #include "admin\initServer.sqf"
 
     // Mission start notification
-    ["MISSION NAME", "MAP NAME"] call _setMissionName;
+    [getMissionConfigValue ["onLoadName", ""], getText (configFile >> "CfgWorlds" >> worldName >> "description")] call _setMissionName;
 
     // START USER CODE
 
