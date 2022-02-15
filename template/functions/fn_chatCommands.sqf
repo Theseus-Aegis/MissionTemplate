@@ -14,14 +14,6 @@
  * [] call FUNC(chatCommands);
  */
 
-[QGVAR(saveAAR), {
-    [] call ocap_fnc_exportData;
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(captureAAR), {
-    [] call ocap_fnc_init;
-}] call CBA_fnc_addEventHandler;
-
 ["tac-capture", {
     [QGVAR(captureAAR), []] call CBA_fnc_serverEvent;
     "AAR Recording." call CBA_fnc_notify;

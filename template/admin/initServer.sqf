@@ -20,3 +20,12 @@ if (TACGVAR(apollo,enabled)) then {
         INFO_1("Player Traits: %1",_playerTraits); // For now just logging to RPT, future uses TBD.
     }, [], _timeUntilStart + 10*60] call CBA_fnc_waitAndExecute;
 };
+
+// AAR Events
+[QGVAR(captureAAR), {
+    [] call ocap_fnc_init;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(saveAAR), {
+    [] call ocap_fnc_exportData;
+}] call CBA_fnc_addEventHandler;
