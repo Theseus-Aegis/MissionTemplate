@@ -29,3 +29,8 @@ if (TACGVAR(apollo,enabled)) then {
 [QGVAR(saveAAR), {
     [] call ocap_fnc_exportData;
 }] call CBA_fnc_addEventHandler;
+
+// Unit Counter Tool - Target Watch: `call TAC_Scripts_fnc_monitorUnits`
+FUNC(monitorUnits) = {
+    format ["West: %1|East: %2|Indep: %3|Civ: %4|Player: %5", west countSide allUnits, east countSide allUnits, resistance countside allUnits, civilian countSide allUnits, count playableUnits]
+};

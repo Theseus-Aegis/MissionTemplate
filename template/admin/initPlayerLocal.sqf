@@ -6,6 +6,7 @@
 [_player, specScreen] call FUNC(baseSpectator);
 [_player] call FUNC(briefing);
 [_player] call FUNC(godMode);
+[_player] call FUNC(unconscious);
 
 // Disable CUP street lights based on lighting levels (bad performance script)
 CUP_stopLampCheck = true;
