@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Tyrone
- * Adds chat command to save AAR replay for logged in admin.
+ * Registers chat commands for use.
  * call from init.sqf
  *
  * Arguments:
@@ -14,6 +14,7 @@
  * [] call FUNC(chatCommands);
  */
 
+// AAR Capture and Save
 ["tac-capture", {
     [QGVAR(captureAAR), []] call CBA_fnc_serverEvent;
     "AAR Recording." call CBA_fnc_notify;
