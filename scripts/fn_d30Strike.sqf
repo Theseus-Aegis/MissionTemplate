@@ -10,7 +10,7 @@
  * Ammo types are listed as HE (0), Cluster Smoke (1), Illumination (2).
  * Note that smoke and illumination rounds do not have whistling sound effects.
  * Barrage will have mortars select a new target for every round fired.
- * Do not use more than 3 cluster smoke rounds or graphics will cut smoke effedts.
+ * Do not use more than 3 cluster smoke rounds or graphics will cut smoke effects.
  * 1 Barrage will fire all shells at 1 target.
  *
  * Arguments:
@@ -29,7 +29,7 @@
  *
  */
 
-#define AMMO_TYPES ["CUP_30Rnd_122mmHE_D30_M","CUP_30Rnd_122mmSMOKE_D30_M","CUP_30Rnd_122mmILLUM_D30_M"]
+#define AMMO_TYPES ["CUP_30Rnd_122mmHE_D30_M", "CUP_30Rnd_122mmSMOKE_D30_M", "CUP_30Rnd_122mmILLUM_D30_M"]
 #define FIREMISSION_DELAY 3
 
 params ["_mortar", "_markersArray", ["_amount", 0], ["_ammoType", 0], ["_barrages", 1]];
