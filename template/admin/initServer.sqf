@@ -10,6 +10,9 @@ private _setMissionName = {
     }, _this, _timeUntilStart] call CBA_fnc_waitAndExecute;
 };
 
+// Mission start notification
+[getMissionConfigValue ["onLoadName", ""], getText (configFile >> "CfgWorlds" >> worldName >> "description")] call _setMissionName;
+
 // Log given traits to RPT 70 minutes after mission start if apollo is enabled.
 if (TACGVAR(apollo,enabled)) then {
     [{
