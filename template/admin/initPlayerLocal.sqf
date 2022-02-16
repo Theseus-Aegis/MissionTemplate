@@ -13,7 +13,6 @@ CUP_stopLampCheck = true;
 
 // Mission name event
 [QGVAR(missionName), {
-    params ["_missionName", "_mapName"];
     [
         [
             [getMissionConfigValue ["onLoadName", ""], "<t size = '1.5' underline = '1'>%1</t><br/>"],
