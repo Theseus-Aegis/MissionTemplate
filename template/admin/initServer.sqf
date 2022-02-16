@@ -29,24 +29,30 @@ tac_getWeekDay = {
 // Mathematical Heresy
 systemTimeUTC params ["", "", "", "_hour", "_minute"];
 private _weekDay = [systemTimeUTC] call tac_getWeekDay;
-private _startTime = [15, 14] select (_weekDay == 6); // 1400z on Saturday, 1500z otherwise
+private _startTime = [15, 14] select (_weekDay == 5); // 1400z on Saturday, 1500z otherwise
 private _timeUntilStart = ((_startTime * 60) - (_hour * 60 + _minute)) * 60; // start time - current time = time until start time
+_timeUntilStart = _timeUntilStart max 0;
+
+//diag_log format ["[TAC] Time Until Start: %1", _timeUntilStart];
 
 // Mission end function
 private _endAAR = {
     private _missionType = getMissionConfigValue ["tac_type", ""];
     private _missionTypeString = ["Contract", "Non-Contract", "Training", "Special", "Special (PvP)", "PvP"] select _missionType;
+    //diag_log format ["[TAC] Mission Type: %1", _missionType];
+    //diag_log format ["[TAC] Mission Type String: %1", _missionTypeString];
     ["", "", _missionTypeString] call ocap_fnc_exportData;
 };
 
 // Handle mission ending
 addMissionEventHandler ["MpEnded", _endAAR];
 
-if (_missionType != 6) then { // Handle Contract/Non-Contracts
+if (_missionType != 5) then { // Handle Contract/Non-Contracts
     [{
         params ["_endAAR"];
         [{
-            params ["_endAAR"];
+            params ["_args", "_handle"];
+            _args params ["_endAAR"];
             private _playerCount = call CBA_fnc_players;
 
             if (!ocap_capture && {_playerCount >= 5}) then {
@@ -54,10 +60,10 @@ if (_missionType != 6) then { // Handle Contract/Non-Contracts
             };
 
             if (ocap_capture && {_playerCount < 5}) then {
-                _endAAR
+                call _endAAR
             };
         }, 60, [_endAAR]] call CBA_fnc_addPerFrameHandler;
-    }, [_endAAR], _timeUntilStart max 0] call CBA_fnc_waitAndExecute;
+    }, [_endAAR], _timeUntilStart] call CBA_fnc_waitAndExecute;
 };
 
 // AAR Events for chat commands

@@ -11,9 +11,8 @@ tac_type = 0;
  * 1: Non-Contract
  * 2: Training
  * 3: Special
- * 4: Special (PvP)
- * 5: PvP
- * 6: Gimmick
+ * 4: PvP
+ * 5: Gimmick
 */
 
 // Randomization
