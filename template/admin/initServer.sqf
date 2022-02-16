@@ -27,7 +27,7 @@ _timeUntilStart = _timeUntilStart max 0;
 // Mission end function
 private _endAAR = {
     private _missionType = getMissionConfigValue ["tac_type", ""];
-    private _missionTypeString = ["Contract", "Non-Contract", "Training", "Special", "Special (PvP)", "PvP"] select _missionType;
+    private _missionTypeString = ["Contract", "Non-Contract", "Training", "Special", "PvP"] select _missionType;
     //diag_log format ["[TAC] Mission Type: %1", _missionType];
     //diag_log format ["[TAC] Mission Type String: %1", _missionTypeString];
     ["", "", _missionTypeString] call ocap_fnc_exportData;
