@@ -41,10 +41,8 @@ private _missionType = getMissionConfigValue ["tac_type", ""];
  // Handle Contract/Non-Contracts
 if (_missionType != 5) then {
     [{
-        params ["_endAAR"];
         [{
-            params ["_args", "_handle"];
-            _args params ["_endAAR"];
+            params ["_endAAR", "_handle"];
             private _playerCount = count call CBA_fnc_players;
 
             if ((isNil "ocap_capture" || {!ocap_capture}) && {_playerCount >= 1}) then {
@@ -54,8 +52,8 @@ if (_missionType != 5) then {
             if ((!isNil "ocap_capture" && {ocap_capture}) && {_playerCount < 1}) then {
                 call _endAAR;
             };
-        }, 60, [_endAAR]] call CBA_fnc_addPerFrameHandler;
-    }, [_endAAR], _timeUntilStart] call CBA_fnc_waitAndExecute;
+        }, 60, _this] call CBA_fnc_addPerFrameHandler;
+    }, _endAAR, _timeUntilStart] call CBA_fnc_waitAndExecute;
 };
 
 // AAR Events for chat commands

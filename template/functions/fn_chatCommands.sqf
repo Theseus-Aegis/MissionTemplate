@@ -2,7 +2,7 @@
 /*
  * Author: Tyrone
  * Registers chat commands for use.
- * call from init.sqf
+ * Call from init.sqf.
  *
  * Arguments:
  * None
