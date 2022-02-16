@@ -24,25 +24,23 @@ private _weekDay = [systemTimeUTC] call tac_getWeekDay;
 private _startTime = [15, 14] select (_weekDay == 5); // 1400z on Saturday, 1500z otherwise
 private _timeUntilStart = ((_startTime * 60) - (_hour * 60 + _minute)) * 60; // start time - current time = time until start time
 _timeUntilStart = _timeUntilStart max 0;
-
-//diag_log format ["[TAC] Time Until Start: %1", _timeUntilStart];
+LOG_1("Time Until Start: %1",_timeUntilStart);
 
 // Mission end function
 private _endAAR = {
-    private _missionType = getMissionConfigValue ["tac_type", ""];
-    private _missionTypeString = ["Contract", "Non-Contract", "Training", "Special", "PvP"] select _missionType;
-    //diag_log format ["[TAC] Mission Type: %1", _missionType];
-    //diag_log format ["[TAC] Mission Type String: %1", _missionTypeString];
-    [west, "", _missionTypeString] call ocap_fnc_exportData;
+    private _missionType = getMissionConfigValue ["tac_type", -1];
+    if (_missionType != -1 && {_missionType <= 4}) then {
+        private _missionTypeString = ["Contract", "Non-Contract", "Training", "Special", "PvP"] select _missionType;
+        [sideAmbientLife, "", _missionTypeString] call ocap_fnc_exportData; // side must be given
+    };
 };
 
 // Handle mission ending
-addMissionEventHandler ["MpEnded", _endAAR];
+addMissionEventHandler ["MPEnded", _endAAR];
 
-private _missionType = getMissionConfigValue ["tac_type", ""];
-
- // Handle Contract/Non-Contracts
-if (_missionType != 5) then {
+// Only record Contract, Non-Contract, Training, Special, PvP
+private _missionType = getMissionConfigValue ["tac_type", -1];
+if (_missionType != -1 && {_missionType <= 4}) then {
     [{
         [{
             params ["_endAAR", "_handle"];
