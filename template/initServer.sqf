@@ -16,9 +16,6 @@
 [{
     #include "admin\initServer.sqf"
 
-    // Mission start notification
-    ["MISSION NAME", "MAP NAME"] call _setMissionName;
-
     // START USER CODE
 
     // END USER CODE
