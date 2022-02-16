@@ -30,26 +30,29 @@ private _endAAR = {
     private _missionTypeString = ["Contract", "Non-Contract", "Training", "Special", "PvP"] select _missionType;
     //diag_log format ["[TAC] Mission Type: %1", _missionType];
     //diag_log format ["[TAC] Mission Type String: %1", _missionTypeString];
-    ["", "", _missionTypeString] call ocap_fnc_exportData;
+    [west, "", _missionTypeString] call ocap_fnc_exportData;
 };
 
 // Handle mission ending
 addMissionEventHandler ["MpEnded", _endAAR];
 
-if (_missionType != 5) then { // Handle Contract/Non-Contracts
+private _missionType = getMissionConfigValue ["tac_type", ""];
+
+ // Handle Contract/Non-Contracts
+if (_missionType != 5) then {
     [{
         params ["_endAAR"];
         [{
             params ["_args", "_handle"];
             _args params ["_endAAR"];
-            private _playerCount = call CBA_fnc_players;
+            private _playerCount = count call CBA_fnc_players;
 
-            if (!ocap_capture && {_playerCount >= 5}) then {
+            if ((isNil "ocap_capture" || {!ocap_capture}) && {_playerCount >= 1}) then {
                 [] call ocap_fnc_init;
             };
 
-            if (ocap_capture && {_playerCount < 5}) then {
-                call _endAAR
+            if ((!isNil "ocap_capture" && {ocap_capture}) && {_playerCount < 1}) then {
+                call _endAAR;
             };
         }, 60, [_endAAR]] call CBA_fnc_addPerFrameHandler;
     }, [_endAAR], _timeUntilStart] call CBA_fnc_waitAndExecute;
