@@ -3,7 +3,7 @@
 #define MISSION_TYPES ["Contract", "Non-Contract", "Training", "Special", "PvP", "Gimmick"]
 
 // Get weekday for start times
-tac_weekDay = {
+FUNC(weekDay) = { // Replace with CBA_fnc_weekDay when released
     params ["_date"];
 
     // Keep only year, month, day if longer date format is given
@@ -19,7 +19,7 @@ tac_weekDay = {
 
 // Mathematical Heresy
 systemTimeUTC params ["", "", "", "_hour", "_minute"];
-private _weekDay = [systemTimeUTC] call tac_weekDay;
+private _weekDay = [systemTimeUTC] call FUNC(weekDay);
 private _startTime = [15, 14] select (_weekDay == 5); // 1400z on Saturday, 1500z otherwise
 private _timeUntilStart = ((_startTime * 60) - (_hour * 60 + _minute)) * 60; // start time - current time = time until start time
 _timeUntilStart = _timeUntilStart max 0;

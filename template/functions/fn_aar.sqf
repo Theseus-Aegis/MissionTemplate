@@ -17,17 +17,17 @@
 params [["_timeUntilStart", 0]];
 
 // Functions
-tac_canStartAAR = {
+FUNC(canStartAAR) = {
     isNil "ocap_capture" || {!ocap_capture}
 };
-tac_canStopAAR = {
+FUNC(canStopAAR) = {
     !isNil "ocap_capture" && {ocap_capture}
 };
-tac_startAAR = {
+FUNC(startAAR) = {
     [] call ocap_fnc_init;
     [ACEGVAR(common,systemChatGlobal), "AAR Started"] call CBA_fnc_globalEvent;
 };
-tac_stopAAR = {
+FUNC(stopAAR) = {
     private _missionType = getMissionConfigValue ["tac_type", -1];
     [sideAmbientLife, "", MISSION_TYPES select _missionType] call ocap_fnc_exportData; // side must be given
     INFO_2("AAR stopped with type %1 '%'",_missionType,_missionTypeString);
@@ -36,7 +36,7 @@ tac_stopAAR = {
 
 // Auto-AAR (only non-Gimmick)
 if (_missionType in AUTOAAR_TYPES) then {
-    INFO_1("Auto-AAR waiting for start of type: %1",_missionType);
+    INFO_1("Auto-AAR waiting for start [type: %1]",_missionType);
     [{
         [{
             params ["_args"];
@@ -44,15 +44,15 @@ if (_missionType in AUTOAAR_TYPES) then {
 
             private _playerCount = count (call CBA_fnc_players);
 
-            if (call tac_canStartAAR && {_playerCount >= AUTOAAR_PLAYER_COUNT}) exitWith {
-                call tac_startAAR;
+            if (call FUNC(canStartAAR) && {_playerCount >= AUTOAAR_PLAYER_COUNT}) exitWith {
+                call FUNC(startAAR);
                 _args set [0, true];
                 INFO_1("Auto-AAR started [players: %1]",_playerCount);
             };
 
             // Only end AAR if it was started with Auto-AAR (don't stop a Manual-AAR automatically)
-            if (_autoStarted && {call tac_canStopAAR} && {_playerCount < AUTOAAR_PLAYER_COUNT}) exitWith {
-                call tac_stopAAR;
+            if (_autoStarted && {call FUNC(canStopAAR)} && {_playerCount < AUTOAAR_PLAYER_COUNT}) exitWith {
+                call FUNC(stopAAR);
                 _args set [0, false];
                 INFO_1("Auto-AAR stopped [players: %1]",_playerCount);
             };
@@ -62,19 +62,19 @@ if (_missionType in AUTOAAR_TYPES) then {
 
 // Manual-AAR
 [QGVAR(manualAAR), {
-    if (call tac_canStartAAR) exitWith {
-        call tac_startAAR;
+    if (call FUNC(canStartAAR)) exitWith {
+        call FUNC(startAAR);
         INFO("Manual-AAR started");
     };
-    if (call tac_canStopAAR) exitWith {
-        call tac_stopAAR;
+    if (call FUNC(canStopAAR)) exitWith {
+        call FUNC(stopAAR);
         INFO("Manual-AAR stopped");
     };
 }] call CBA_fnc_addEventHandler;
 
 // Handle mission ending
 addMissionEventHandler ["MPEnded", {
-    if (call tac_canStopAAR) then {
-        call tac_stopAAR;
+    if (call FUNC(canStopAAR)) then {
+        call FUNC(stopAAR);
     };
 }];
