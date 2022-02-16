@@ -6,9 +6,6 @@
 #define MINOR 5
 #define PATCHLVL 1
 
-// Map
-#define MAP VR
-
 #define DEBUG_SYNCHRONOUS
 //#define DEBUG_MODE_FULL
 
