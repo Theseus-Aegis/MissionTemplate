@@ -4,11 +4,10 @@
 systemTimeUTC params ["", "", "", "_hour", "_minute"];
 private _timeUntilStart = ((14 * 60) - (_hour * 60 + _minute)) * 60; // start time (1400z) - current time = time until start time
 
-private _setMissionName = {
-    [{
-        [QGVAR(missionName), _this] call CBA_fnc_globalEvent;
-    }, _this, _timeUntilStart] call CBA_fnc_waitAndExecute;
-};
+// Mission Name call on mission start
+[{
+    [QGVAR(missionName), _this] call CBA_fnc_globalEvent;
+}, _this, _timeUntilStart] call CBA_fnc_waitAndExecute;
 
 // Log given traits to RPT 70 minutes after mission start if apollo is enabled.
 if (TACGVAR(apollo,enabled)) then {
