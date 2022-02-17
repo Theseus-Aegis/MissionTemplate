@@ -74,9 +74,7 @@ params ["_pilotGroup","_dropGroups","_loc",["_dropMode",0],["_resetHeight",false
 
 if (_loc isEqualTo []) exitWith {};
 
-private _dropHeight = 0;
-private _dropLength = 0;
-private _chuteHeight = 0;
+private _dropData = [];
 // first process dropMode
 if (_dropMode isEqualType 0) then {
     _dropData = DROP_MODES select _dropMode;
