@@ -82,9 +82,7 @@ if (_dropMode isEqualType 0) then {
     _dropData = DROP_MODES select _dropMode;
 } else {
     i f(_dropMode isEqualType [] && {count _dropMode == 3}) then {
-        _dropHeight = _dropMode select 0;
-        _dropLength = _dropMode select 1;
-        _chuteHeight = _dropMode select 2;
+        _dropData = _dropMode;
     };
 };
 
