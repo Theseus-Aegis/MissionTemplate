@@ -79,7 +79,7 @@ private _dropData = [];
 if (_dropMode isEqualType 0) then {
     _dropData = DROP_MODES select _dropMode;
 } else {
-    i f(_dropMode isEqualType [] && {count _dropMode == 3}) then {
+    if (_dropMode isEqualType [] && {count _dropMode == 3}) then {
         _dropData = _dropMode;
     };
 };
