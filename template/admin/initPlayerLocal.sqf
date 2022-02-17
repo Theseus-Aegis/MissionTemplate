@@ -21,3 +21,8 @@ CUP_stopLampCheck = true;
         ], 1, 0.75, "<t align = 'center' shadow = '1' size = '1.0'>%1</t>"
     ] spawn BIS_fnc_typeText;
 }] call CBA_fnc_addEventHandler;
+
+// Chat Commands
+["tac-aar", {
+    [QGVAR(manualAAR), []] call CBA_fnc_serverEvent;
+}, "admin"] call CBA_fnc_registerChatCommand;

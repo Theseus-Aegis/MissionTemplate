@@ -6,9 +6,12 @@
 #define MINOR 5
 #define PATCHLVL 1
 
-// Map
-#define MAP VR
+// Mission
+#define MISSION_TYPES ["Contract", "Non-Contract", "Training", "Special", "PvP", "Gimmick"]
+#define AUTOAAR_TYPES [0, 1, 2, 3, 4]
+#define AUTOAAR_PLAYER_COUNT 5
 
+// Debug
 #define DEBUG_SYNCHRONOUS
 //#define DEBUG_MODE_FULL
 
