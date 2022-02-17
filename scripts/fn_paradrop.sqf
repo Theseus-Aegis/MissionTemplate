@@ -191,7 +191,7 @@ private _fnc_dropParas = {
                     _chute setPosATL _manPos;
                     _man moveInDriver _chute;
                 }, _this] call CBA_fnc_waitUntilAndExecute;
-            },[_x,_chuteHeight],_jumpDelay] call CBA_fnc_waitAndExecute;
+            }, [_x, _chuteHeight, _vehicle] ,_jumpDelay] call CBA_fnc_waitAndExecute;
         } forEach units _x; 
     } forEach (_paraGroups select {local leader _x}); 
 };
