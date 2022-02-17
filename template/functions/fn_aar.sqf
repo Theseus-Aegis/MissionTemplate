@@ -29,8 +29,9 @@ FUNC(startAAR) = {
 };
 FUNC(stopAAR) = {
     private _missionType = getMissionConfigValue ["tac_type", -1];
-    [sideAmbientLife, "", MISSION_TYPES select _missionType] call ocap_fnc_exportData; // side must be given
-    INFO_2("AAR stopped with type %1 '%'",_missionType,_missionTypeString);
+    private _missionTypePretty = MISSION_TYPES select _missionType;
+    [sideAmbientLife, "", _missionTypePretty] call ocap_fnc_exportData; // side must be given
+    INFO_2("AAR stopped with type %1 '%2'",_missionType,_missionTypePretty);
     [QACEGVAR(common,systemChatGlobal), "AAR Stopped"] call CBA_fnc_globalEvent;
 };
 
