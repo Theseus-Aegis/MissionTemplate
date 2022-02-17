@@ -72,7 +72,7 @@
 
 params ["_pilotGroup","_dropGroups","_loc",["_dropMode",0],["_resetHeight",false],["_disableWP2",false]];
 
-if(count _loc == 0) exitWith{};
+if (_loc isEqualTo []) exitWith {};
 
 private _dropHeight = 0;
 private _dropLength = 0;
