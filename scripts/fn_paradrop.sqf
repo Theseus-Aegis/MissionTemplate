@@ -177,8 +177,7 @@ private _fnc_dropParas = {
         {
             private _jumpDelay = _forEachIndex*_jumpFreq+(_groupAdjust select _groupCount)*_jumpFreq;
             [{
-                private _man = _this select 0;
-                private _chuteHeight = _this select 1;
+                params ["_man"];
                 unassignVehicle _man;
                 moveOut _man;
                 [{
