@@ -88,6 +88,8 @@ if (_dropMode isEqualType 0) then {
     };
 };
 
+_dropData params ["_dropHeight", "_dropLength", "_chuteHeight"];
+
 private _vehicle = assignedVehicle (leader _pilotGroup);
 if(isNull _vehicle) exitWith {}; // then there's something seriously wrong here
 
