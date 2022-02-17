@@ -79,9 +79,7 @@ private _dropLength = 0;
 private _chuteHeight = 0;
 // first process dropMode
 if (_dropMode isEqualType 0) then {
-    _dropHeight = (DROP_MODES select _dropMode) select 0;
-    _dropLength = (DROP_MODES select _dropMode) select 1;
-    _chuteHeight = (DROP_MODES select _dropMode) select 2;
+    _dropData = DROP_MODES select _dropMode;
 } else {
     if(typeName _dropMode == "ARRAY" && count _dropMode == 3) then {
         _dropHeight = _dropMode select 0;
