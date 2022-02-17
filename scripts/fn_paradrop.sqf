@@ -155,8 +155,8 @@ _vehicle setVariable [QGVAR(paradropChuteHeight), _chuteHeight];
 
 private _fnc_dropParas = {
     private _vehicle = vehicle this; 
-    private _paraGroups = _vehicle getVariable ['tac_dropGroups', []];
-    private _chuteHeight = _vehicle getVariable ['tac_chuteHeight',[]];
+    private _paraGroups = _vehicle getVariable [QGVAR(paradropGroups), []];
+    private _chuteHeight = _vehicle getVariable [QGVAR(paradropChuteHeight), []];
     private _dropCount = _paraGroups apply {count units _x};
     private _groupAdjust = [];
     _groupAdjust resize (count _dropCount);
@@ -169,11 +169,10 @@ private _fnc_dropParas = {
         _groupAdjust set [_i,_sum];
     };
 
-    private _jumpFreq = 0.3;
-    if(speed _vehicle < 250) then {_jumpFreq = 0.5;};
+    private _jumpFreq = [0.3, 0.5] select (speed _vehicle < 250);
 
     {
-        units _x allowGetIn false;
+        (units _x) allowGetIn false;
         private _groupCount = _forEachIndex;
         {
             private _jumpDelay = _forEachIndex*_jumpFreq+(_groupAdjust select _groupCount)*_jumpFreq;
