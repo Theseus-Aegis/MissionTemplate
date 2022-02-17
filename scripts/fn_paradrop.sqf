@@ -143,7 +143,7 @@ _vehicle setVariable [QGVAR(paradropChuteHeight), _chuteHeight];
 // currently this is set for a drop interval of 1/2 second, allowing AI to keep cohesion
 // but not collide into each other
 
-// if  _groupAjudst is not used, then each group being parachuted will getOut a unit
+// if _groupAdjust is not used, then each group being parachuted will getOut a unit
 // at the same time as the forEach executes in parallel. 
 // Nominally, could use count units _x with _forEachIndex but will not work with groups
 // of different sizes
