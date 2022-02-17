@@ -78,7 +78,7 @@ private _dropHeight = 0;
 private _dropLength = 0;
 private _chuteHeight = 0;
 // first process dropMode
-if(typeName _dropMode == "SCALAR") then {
+if (_dropMode isEqualType 0) then {
     _dropHeight = (DROP_MODES select _dropMode) select 0;
     _dropLength = (DROP_MODES select _dropMode) select 1;
     _chuteHeight = (DROP_MODES select _dropMode) select 2;
