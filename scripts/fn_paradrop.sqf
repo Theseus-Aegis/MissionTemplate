@@ -134,8 +134,8 @@ if(!_disableWP2) then {
 // Add the waypoint paradrop operation.  Eject automatically gives people a parachute 
 // Adds a key,value pair to the vehicle characteristics hash that can be referenced globally
 // No global variable names required
-_vehicle setVariable ['tac_dropGroups',_dropGroups];
-_vehicle setVariable ['tac_chuteHeight',_chuteHeight];
+_vehicle setVariable [QGVAR(paradropGroups), _dropGroups];
+_vehicle setVariable [QGVAR(paradropChuteHeight), _chuteHeight];
 
 // note - moveOut instantly pushes them out of vehicle without playing animation
 // this emulates a static line drop dropping very quickly, but needs to be spaced
