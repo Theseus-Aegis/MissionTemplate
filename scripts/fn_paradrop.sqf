@@ -89,13 +89,16 @@ _dropData params ["_dropHeight", "_dropLength", "_chuteHeight"];
 private _vehicle = vehicle (leader _pilotGroup);
 if(isNull _vehicle) exitWith {}; // group not in vehicle
 
+private _origHeight = (getPosATL _vehicle) select 2;
 _vehicle flyInHeight _dropHeight; // set forced flying height
 if(_resetHeight) then {
-    [_vehicle] spawn {
+    [{
         params ["_vehicle"];
-        waitUntil {sleep 5; count (fullCrew [_vehicle,"cargo"]) == 0}; //checks every 5 seconds for all cargo exited
-        _vehicle flyInHeight 100; // this is the default value
-    };
+        (fullCrew [_vehicle,"cargo"]) isEqualTo []
+    }, {
+        params ["_vehicle", "_origHeight"];
+        _vehicle flyInHeight _origHeight;
+    }, [_vehicle, _origHeight]] call CBA_fnc_waitUntilAndExecute;
 };
 
 // next process waypoints if waypoints desired. 
