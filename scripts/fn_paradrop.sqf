@@ -181,13 +181,17 @@ private _fnc_dropParas = {
                 private _chuteHeight = _this select 1;
                 unassignVehicle _man;
                 moveOut _man;
-                [_man, _chuteHeight] spawn {
-                    params ['_man','_chuteHeight'];
-                    waitUntil {sleep 0.5; ((getPosATL _man) select 2) <= _chuteHeight};
-                    _chute = createVehicle ['Steerable_Parachute_F', position _man, [], 0, 'FLY'];
-                    _chute setPos (getPosATL _man);
+                [{
+                    params ["_man", "_chuteHeight", "_vehicle"];
+                    (getPosATL _man) select 2 <= _chuteHeight && {_man distance _vehicle >= 15}
+                }, {
+                    params ["_man", "_chuteHeight"];
+
+                    private _manPos = getPosATL _man;
+                    private _chute = createVehicle ["Steerable_Parachute_F", _manPos, [], 0, "FLY"];
+                    _chute setPosATL _manPos;
                     _man moveInDriver _chute;
-                };
+                }, _this] call CBA_fnc_waitUntilAndExecute;
             },[_x,_chuteHeight],_jumpDelay] call CBA_fnc_waitAndExecute;
         } forEach units _x; 
     } forEach (_paraGroups select {local leader _x}); 
