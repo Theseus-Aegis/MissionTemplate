@@ -25,13 +25,13 @@ FUNC(canStopAAR) = {
 };
 FUNC(startAAR) = {
     [] call ocap_fnc_init;
-    [ACEGVAR(common,systemChatGlobal), "AAR Started"] call CBA_fnc_globalEvent;
+    [ACEQGVAR(common,systemChatGlobal), "AAR Started"] call CBA_fnc_globalEvent;
 };
 FUNC(stopAAR) = {
     private _missionType = getMissionConfigValue ["tac_type", -1];
     [sideAmbientLife, "", MISSION_TYPES select _missionType] call ocap_fnc_exportData; // side must be given
     INFO_2("AAR stopped with type %1 '%'",_missionType,_missionTypeString);
-    [ACEGVAR(common,systemChatGlobal), "AAR Stopped"] call CBA_fnc_globalEvent;
+    [ACEQGVAR(common,systemChatGlobal), "AAR Stopped"] call CBA_fnc_globalEvent;
 };
 
 // Auto-AAR (only non-Gimmick)

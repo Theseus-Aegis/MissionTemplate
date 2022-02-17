@@ -23,7 +23,7 @@ private _weekDay = [systemTimeUTC] call FUNC(weekDay);
 private _startTime = [15, 14] select (_weekDay == 5); // 1400z on Saturday, 1500z otherwise
 private _timeUntilStart = ((_startTime * 60) - (_hour * 60 + _minute)) * 60; // start time - current time = time until start time
 _timeUntilStart = _timeUntilStart max 0;
-LOG_1("Time Until Start: %1",_timeUntilStart);
+INFO_1("Time Until Start: %1",_timeUntilStart);
 
 // Verify mission type is correct
 private _missionType = getMissionConfigValue ["tac_type", -1];
