@@ -87,7 +87,7 @@ if (_dropMode isEqualType 0) then {
 _dropData params ["_dropHeight", "_dropLength", "_chuteHeight"];
 
 private _vehicle = vehicle (leader _pilotGroup);
-if(isNull _vehicle) exitWith {}; // then there's something seriously wrong here
+if(isNull _vehicle) exitWith {}; // group not in vehicle
 
 _vehicle flyInHeight _dropHeight; // set forced flying height
 if(_resetHeight) then {
