@@ -120,15 +120,22 @@ private _dropTarget = [_loc,true] call CBA_fnc_randPosArea;
 
 if (_dropTarget isEqualTo []) exitWith {};
 
+    diag_log [_pilotGroup];
 private _fnc_dzLocs = {
     params ["_dropTarget","_dropRunOrigin","_dropLength"];
-    private _theta = _dropRunOrigin getDir _dropTarget;
-
-    // For a known drop point and known radius with azimuth _theta,
+    // getDir gives the azimuth, which differs in convention from trig
+    // in two ways: (1) azimuth has zero origin at North and
+    // (2) advances clockwise rather than counterclockwise
+    // To convert, use a conditional function:    
+    private _azimuth = _dropRunOrigin getDir _dropTarget;
+    private _theta = switch (floor _azimuth/90) do {
+        case 0: {90-_azimuth;};
+        default {450-_azimuth;};
+    };
+    // For a known drop point and known radius with trig angle _theta,
     // and radius r given by _dropLength/2,
     // then coordinates in the xy-plane relative to _dropTarget are:
     // +/- r*cos _theta for x (Northing) and +/- r*sin _theta for x (Easting)
-    // however, closest one is determined dynamically due to quadrant dependence
 
     private _yDiff = (sin _theta) * _dropLength/2;
     private _xDiff = (cos _theta) * _dropLength/2;
@@ -139,21 +146,18 @@ private _fnc_dzLocs = {
 };
 
 private _dropZoneLocs = [_dropTarget, _dropRunOrigin, _dropLength] call _fnc_dzLocs;
-private _distanceToDZ = [_dropRunOrigin distance (_dropZoneLocs select 0), _dropRunOrigin distance (_dropZoneLocs select 1)];
-private _minDistance = selectMin _distanceToDZ;
-private _indexOfMin = _distanceToDZ find _minDistance;
+private _minDistance = _dropRunOrigin distance (_dropZoneLocs select 1);
 
 // Handling for when calling waypoint is within distance _dropLength
-// indexOfMin is still the same, however, because that only depends on azimuth which hasn't changed
 if (_minDistance < _dropLength) then {
     _dropLength = _minDistance - 100; //arbitrary distance to allow for a helicopter turn
     if (_dropLength < 0) exitWith {ERROR_1("Waypoint too close to DZ for drop!")};
     _dropZoneLocs = [_dropTarget,_dropRunOrigin, _dropLength] call _fnc_dzLocs;
 }; 
 
-private _dp = _pilotGroup addWaypoint [_dropZoneLocs select _indexOfMin,-1,currentWaypoint _pilotGroup + 1,""];
+private _dp = _pilotGroup addWaypoint [_dropZoneLocs select 1,-1,currentWaypoint _pilotGroup + 1,""];
 if(!_disableWP2) then {
-    private _de = _pilotGroup addWaypoint [_dropZoneLocs select (1-_indexOfMin),-1,currentWaypoint _pilotGroup + 2,""];
+    private _de = _pilotGroup addWaypoint [_dropZoneLocs select 0,-1,currentWaypoint _pilotGroup + 2,""];
 };
 
 // Add the paradrop operation. To store variables, adds info to vehicle characteristics hash that can be referenced globally
@@ -212,3 +216,4 @@ private _fnc_dropParas = {
 };
 
 _dp setWaypointStatements ["true",toString _fnc_dropParas];
+
