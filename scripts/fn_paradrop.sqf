@@ -21,8 +21,14 @@
  * therefore it can be used with multiple waypoints without issue.
  *
  * Known behavior: 
- * Locked planes/helicopters result in no drops.
- * Planes/helicopters in combatMode "COMBAT" have altitude overrides.
+ * 1. Locked planes/helicopters result in no drops.
+ * 2. Planes/helicopters in combatMode "COMBAT" have altitude overrides.
+ * 3. Drop distribution ultimately depends on AI pathing, and AI is stupid.
+ * 4. Function is designed to be called synchronously with craft reaching the
+ * WP from which it is called; if it is held up, then the drop WPs will not
+ * reflect the current azimuth.  If synchronizing WPs, recommend you sync WPs
+ * BEFORE the one that calls this function to avoid weird behavior, especially
+ * if the drop marker is close by.
  *
  * Optional Arguments: Drop Mode
  * For convenience, this function has the following pre-set modes for drops:
@@ -68,7 +74,7 @@
  */
 
 
-#define DROP_MODES [[150,1000,140],[90,1000,80],[250,1000,140],[4500,1000,900],[3000,1000,900]]
+#define DROP_MODES [[150,1000,140],[105,1000,80],[250,1000,140],[4500,1000,900],[3000,1000,900]]
 
 params ["_pilotGroup","_dropGroups","_loc",["_dropMode",0],["_resetHeight",false],["_disableWP2",false]];
 
@@ -112,88 +118,97 @@ private _dropRunOrigin = getPosATL _vehicle; // calling position from leader wil
 // Between current position and drop target, find angle
 private _dropTarget = [_loc,true] call CBA_fnc_randPosArea;
 
-private _theta = _dropRunOrigin getDir _dropTarget;
+if (_dropTarget isEqualTo []) exitWith {};
 
-// For a known drop point and known radius with azimuth _theta,
-// and radius r given by _dropLength/2,
-// then coordinates in the xy-plane relative to _dropTarget are:
-// +/- r*sin _theta for x (Easting) and +/- r*cos _theta for y (Northing)
-private _xDiff = _dropLength/2 * sin _theta;
-private _yDiff = _dropLength/2 * cos _theta;
-// set all coordinates based on DZ points in xy-plane; z coord does not matter
-// double lengths on second DZ coordinate to ensure straight line flight
-private _dropZoneLocs = [[(_dropTarget select 0) + 2*_xDiff,(_dropTarget select 1) + 2*_yDiff,_dropHeight],
-    [(_dropTarget select 1) - _xDiff,(_dropTarget select 1) - _yDiff,_dropHeight]];
+private _fnc_dzLocs = {
+    params ["_dropTarget","_dropRunOrigin","_dropLength"];
+    private _theta = _dropRunOrigin getDir _dropTarget;
 
-//expand waypoint 
-private _dp = _pilotGroup addWaypoint [_dropZoneLocs select 1,-1,currentWaypoint _pilotGroup + 1,""];
-if(!_disableWP2) then {
-    private _de = _pilotGroup addWaypoint [_dropZoneLocs select 0,-1,currentWaypoint _pilotGroup + 2,""];
+    // For a known drop point and known radius with azimuth _theta,
+    // and radius r given by _dropLength/2,
+    // then coordinates in the xy-plane relative to _dropTarget are:
+    // +/- r*cos _theta for x (Northing) and +/- r*sin _theta for x (Easting)
+    // however, closest one is determined dynamically due to quadrant dependence
+
+    private _yDiff = (sin _theta) * _dropLength/2;
+    private _xDiff = (cos _theta) * _dropLength/2;
+    // set all coordinates based on DZ points in xy-plane; z coord does not matter
+    // double lengths on second DZ coordinate to ensure straight line flight
+    [[(_dropTarget select 0) + _xDiff,(_dropTarget select 1) + _yDiff,_dropHeight],
+        [(_dropTarget select 0) - _xDiff,(_dropTarget select 1) - _yDiff,_dropHeight]];
 };
 
-// Add the waypoint paradrop operation.  Eject automatically gives people a parachute 
-// Adds a key,value pair to the vehicle characteristics hash that can be referenced globally
-// No global variable names required
+private _dropZoneLocs = [_dropTarget, _dropRunOrigin, _dropLength] call _fnc_dzLocs;
+private _distanceToDZ = [_dropRunOrigin distance (_dropZoneLocs select 0), _dropRunOrigin distance (_dropZoneLocs select 1)];
+private _minDistance = selectMin _distanceToDZ;
+private _indexOfMin = _distanceToDZ find _minDistance;
+
+// Handling for when calling waypoint is within distance _dropLength
+// indexOfMin is still the same, however, because that only depends on azimuth which hasn't changed
+if (_minDistance < _dropLength) then {
+    _dropLength = _minDistance - 100; //arbitrary distance to allow for a helicopter turn
+    if (_dropLength < 0) exitWith {ERROR_1("Waypoint too close to DZ for drop!")};
+    _dropZoneLocs = [_dropTarget,_dropRunOrigin, _dropLength] call _fnc_dzLocs;
+}; 
+
+private _dp = _pilotGroup addWaypoint [_dropZoneLocs select _indexOfMin,-1,currentWaypoint _pilotGroup + 1,""];
+if(!_disableWP2) then {
+    private _de = _pilotGroup addWaypoint [_dropZoneLocs select (1-_indexOfMin),-1,currentWaypoint _pilotGroup + 2,""];
+};
+
+// Add the paradrop operation. To store variables, adds info to vehicle characteristics hash that can be referenced globally
 _vehicle setVariable [QGVAR(paradropGroups), _dropGroups];
 _vehicle setVariable [QGVAR(paradropChuteHeight), _chuteHeight];
 
-// note - moveOut instantly pushes them out of vehicle without playing animation
+// Note - moveOut instantly pushes them out of vehicle without playing animation
 // this emulates a static line drop dropping very quickly, but needs to be spaced
 // it also means that you need to spawn in a parachute otherwise they freefall to their deaths
 // currently this is set for a drop interval of 1/2 second, allowing AI to keep cohesion
 // but not collide into each other
 
-// if _groupAdjust is not used, then each group being parachuted will getOut a unit
-// at the same time as the forEach executes in parallel. 
-// Nominally, could use count units _x with _forEachIndex but will not work with groups
-// of different sizes
-
-//  Other notes:
-//  Vehicles are unassigned and allowGetIn is set to false to prevent the paratroopers from
-//  running back to a landed plane or helicopter to get back in again.
-//  Velocity adjustment occurs to differentiate helicopters from planes to alter jump intervals
+// Other notes:
+// Vehicles are unassigned and allowGetIn is set to false to prevent the paratroopers from
+// running back to a landed plane or helicopter to get back in again.
+// Velocity adjustment occurs to differentiate helicopters from planes to alter jump intervals
 
 private _fnc_dropParas = {
     private _vehicle = vehicle this; 
-    private _paraGroups = _vehicle getVariable [QGVAR(paradropGroups), []];
     private _chuteHeight = _vehicle getVariable [QGVAR(paradropChuteHeight), []];
-    private _dropCount = _paraGroups apply {count units _x};
-    private _groupAdjust = [];
-    _groupAdjust resize (count _dropCount);
+    private _paraGroups = _vehicle getVariable [QGVAR(paradropGroups), []];
+    // Waypoint statements execute globally, ignore any groups not local and exit if none local
+    _paraGroups = _paraGroups select {local (leader _x)};
+    if (_paraGroups isEqualTo []) exitWith {};
 
-    for "_i" from 0 to (count _dropCount)-1 do {
-        private _sum = 0;
-        for "_j" from 0 to _i do {
-            _sum = _sum + (_dropCount select _j);
-        };
-        _groupAdjust set [_i,_sum];
-    };
+    // Deal with units from here on
+    private _dropUnits = _paraGroups apply {units _x};
+    _dropUnits = flatten _dropUnits;
 
-    private _jumpFreq = [0.3, 0.5] select (speed _vehicle < 250);
+    private _chuteHeight = _vehicle getVariable [QGVAR(paradropChuteHeight), []];
+    private _jumpFreq = [0.5, 0.7] select (speed _vehicle < 250);
 
     {
         (units _x) allowGetIn false;
-        private _groupCount = _forEachIndex;
-        {
-            private _jumpDelay = _forEachIndex*_jumpFreq+(_groupAdjust select _groupCount)*_jumpFreq;
-            [{
-                params ["_man"];
-                unassignVehicle _man;
-                moveOut _man;
-                [{
-                    params ["_man", "_chuteHeight", "_vehicle"];
-                    (getPosATL _man) select 2 <= _chuteHeight && {_man distance _vehicle >= 15}
-                }, {
-                    params ["_man", "_chuteHeight"];
 
-                    private _manPos = getPosATL _man;
-                    private _chute = createVehicle ["Steerable_Parachute_F", _manPos, [], 0, "FLY"];
-                    _chute setPosATL _manPos;
-                    _man moveInDriver _chute;
-                }, _this] call CBA_fnc_waitUntilAndExecute;
-            }, [_x, _chuteHeight, _vehicle] ,_jumpDelay] call CBA_fnc_waitAndExecute;
-        } forEach units _x; 
-    } forEach (_paraGroups select {local leader _x}); 
+        private _jumpDelay = _forEachIndex * _jumpFreq;
+        [{
+            params ["_man"];
+
+            unassignVehicle _man;
+            moveOut _man;
+
+            [{
+                params ["_man", "_chuteHeight", "_vehicle"];
+                (getPosATL _man) select 2 <= _chuteHeight && {_man distance _vehicle >= 15}
+            }, {
+                params ["_man", "_chuteHeight"];
+
+                private _manPos = getPosATL _man;
+                private _chute = createVehicle ["Steerable_Parachute_F", _manPos, [], 0, "FLY"];
+
+                _man moveInDriver _chute;
+            }, _this] call CBA_fnc_waitUntilAndExecute;
+        }, [_x, _chuteHeight, _vehicle], _jumpDelay] call CBA_fnc_waitAndExecute;
+    } forEach _dropUnits;
 };
 
 _dp setWaypointStatements ["true",toString _fnc_dropParas];
