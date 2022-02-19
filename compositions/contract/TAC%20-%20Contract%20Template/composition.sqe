@@ -195,7 +195,7 @@ class items
 		class Attributes
 		{
 			name="Actual_Group";
-			init="[this, ""Actual""] call CBA_fnc_setCallsign;";
+			init="if (isServer) then {[this, ""Actual""] call CBA_fnc_setCallsign;};";
 		};
 		id=150;
 	};
@@ -810,7 +810,7 @@ class items
 		class Attributes
 		{
 			name="Ares1_Group";
-			init="[this, ""Ares 1""] call CBA_fnc_setCallsign;";
+			init="if (isServer) then {[this, ""Ares 1""] call CBA_fnc_setCallsign;};";
 		};
 		id=154;
 	};
@@ -1425,7 +1425,7 @@ class items
 		class Attributes
 		{
 			name="Ares2_Group";
-			init="[this, ""Ares 2""] call CBA_fnc_setCallsign;";
+			init="if (isServer) then {[this, ""Ares 2""] call CBA_fnc_setCallsign;};";
 		};
 		id=165;
 	};
@@ -2040,7 +2040,7 @@ class items
 		class Attributes
 		{
 			name="Ares3_Group";
-			init="[this, ""Ares 3""] call CBA_fnc_setCallsign;";
+			init="if (isServer) then {[this, ""Ares 3""] call CBA_fnc_setCallsign;};";
 		};
 		id=176;
 	};
@@ -2257,7 +2257,7 @@ class items
 		class Attributes
 		{
 			name="Helios_Group";
-			init="[this, ""Helios""] call CBA_fnc_setCallsign;";
+			init="if (isServer) then {[this, ""Helios""] call CBA_fnc_setCallsign;};";
 		};
 		id=187;
 	};
