@@ -1,21 +1,15 @@
 #include "..\script_component.hpp"
 /*
  * Author: Josh Vee, Jonpas, Veteran29
- * This is an all-purpose paradrop function meant to be called from waypoints
- * on a group piloting and aircraft and 1 or more groups to be dropped.
+ * An all-purpose paradrop function
+ * Call from vehicle waypoint with (isServer) check.
  * 
  * The vehicle will set move waypoints on two points of a circle surrounding 
  * a marker and initiate the drop at the fist waypoint.  Can be called multiple
  * times for different groups loaded on the same vehicle, but optimally
  * used either for single group on helicopter or multiple groups on planes.
  *
- * Conventional paradrop functions use the "Eject" action which has a lag for
- * animations; this makes each drop take about 3 seconds, much too slow
- * This instead uses getOut, which also requires spawning parachutes.
  * 
- * Call from move waypoints of the group piloting with (isServer) check.
- * Technically you could call the piloting group as the drop group,
- * which would result in the vehicle becoming unoccupied after the pilot drops.
  * 
  * It inserts waypoints in front of the one in which it is called
  * therefore it can be used with multiple waypoints without issue.
@@ -58,9 +52,9 @@
  * 0: Pilot Group <GROUP>
  * 1: Drop Groups <ARRAY>
  * 2: Drop Target <MARKER>
- * 3: Drop Mode <ARRAY> or <NUMBER> (Default 0)
- * 4: Reset Height <BOOLEAN> (Default false) 
- * 5: Disable Waypoint 2 (Default false)
+ * 3: Drop Mode <ARRAY> or <NUMBER> (default: 0)
+ * 4: Reset Height <BOOL> (default: false) 
+ * 5: Disable Waypoint 2 <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -76,7 +70,7 @@
 
 #define DROP_MODES [[150,1000,140],[105,1000,80],[250,1000,140],[4500,1000,900],[3000,1000,900]]
 
-params ["_pilotGroup","_dropGroups","_loc",["_dropMode",0],["_resetHeight",false],["_disableWP2",false]];
+params ["_pilotGroup", "_dropGroups", "_loc", ["_dropMode", 0], ["_resetHeight", false], ["_disableWP2", false]];
 
 if (_loc isEqualTo []) exitWith {};
 
@@ -97,7 +91,7 @@ if(isNull _vehicle) exitWith {}; // group not in vehicle
 
 private _origHeight = (getPosATL _vehicle) select 2;
 _vehicle flyInHeight _dropHeight; // set forced flying height
-if(_resetHeight) then {
+if (_resetHeight) then {
     [{
         params ["_vehicle"];
         (fullCrew [_vehicle,"cargo"]) isEqualTo []
@@ -116,7 +110,7 @@ private _dropRunOrigin = getPosATL _vehicle; // calling position from leader wil
 
 // Obtain a random location within drop target
 // Between current position and drop target, find angle
-private _dropTarget = [_loc,true] call CBA_fnc_randPosArea;
+private _dropTarget = [_loc, true] call CBA_fnc_randPosArea;
 
 if (_dropTarget isEqualTo []) exitWith {};
 
@@ -156,7 +150,7 @@ if (_minDistance < _dropLength) then {
 }; 
 
 private _dp = _pilotGroup addWaypoint [_dropZoneLocs select 1,-1,currentWaypoint _pilotGroup + 1,""];
-if(!_disableWP2) then {
+if (!_disableWP2) then {
     private _de = _pilotGroup addWaypoint [_dropZoneLocs select 0,-1,currentWaypoint _pilotGroup + 2,""];
 };
 
