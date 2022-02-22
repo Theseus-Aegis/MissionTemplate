@@ -116,7 +116,7 @@ if (_dropTarget isEqualTo []) exitWith {};
 
     diag_log [_pilotGroup];
 private _fnc_dzLocs = {
-    params ["_dropTarget","_dropRunOrigin","_dropLength"];
+    params ["_dropTarget", "_dropRunOrigin", "_dropLength"];
     // getDir gives the azimuth, which differs in convention from trig
     // in two ways: (1) azimuth has zero origin at North and
     // (2) advances clockwise rather than counterclockwise
