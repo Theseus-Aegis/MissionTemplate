@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Josh Vee, Jonpas, Veteran29
- * An all-purpose paradrop function
+ * An all-purpose paradrop function.
  * Call from vehicle waypoint with (isServer) check.
  * 
  * The vehicle will set move waypoints on two points of a circle surrounding 
@@ -9,8 +9,6 @@
  * times for different groups loaded on the same vehicle, but optimally
  * used either for single group on helicopter or multiple groups on planes.
  *
- * 
- * 
  * It inserts waypoints in front of the one in which it is called
  * therefore it can be used with multiple waypoints without issue.
  *
@@ -27,11 +25,12 @@
  * Optional Arguments: Drop Mode
  * For convenience, this function has the following pre-set modes for drops:
  * 0: Modern combat drop, 150m, parachutes deploy at 140m.
- * 1: Dangerous combat drop, 90m, parachutes deploy at 80m. 
+ * 1: Dangerous combat drop, 105m, parachutes deploy at 80m. 
  * 2: Training drop, 250m, parachutes deploy at 140m.
  * 3: HALO drop, 4.5km, parachutes deploy at 900m.
  * 4: Civilian drop, 3km, parachutes deploy at 900m. 
- * For custom drops, drop altitude, drop zone length, deployment altitude can be set.
+ * For custom drops, drop altitude, drop zone length, deployment altitude can be set
+ * by providing an array of those values, in meters.
  * 
  * Note that for HALO or Civilian drops, most maps are not big enough to get to
  * sufficient altitude and it is recommended to have several waypoints steadily
@@ -67,16 +66,19 @@
  * [pilot_group, [airborne_1], "drop_marker", [200,1000,150]] call TAC_Scripts_fnc_paradrop;
  */
 
-
-#define DROP_MODES [[150,1000,140],[105,1000,80],[250,1000,140],[4500,1000,900],[3000,1000,900]]
+#define DROP_MODES [[150, 1000, 140], [105, 1000, 80], [250, 1000, 140] ,[4500, 1000, 900], [3000, 1000, 900]]
 
 params ["_pilotGroup", "_dropGroups", "_loc", ["_dropMode", 0], ["_resetHeight", false], ["_disableWP2", false]];
 
-if (_loc isEqualTo []) exitWith {};
+if (_loc isEqualTo "") exitWith {ERROR("Paradrop given invalid marker!")};
 
 private _dropData = [];
 // first process dropMode
 if (_dropMode isEqualType 0) then {
+    if (_dropMode < 0 || {_dropMode > 4}) then {
+        ERROR_1("Paradrop mode %1 invalid - defaulting to 0!",_dropMode);
+        _dropMode = 0;
+    };
     _dropData = DROP_MODES select _dropMode;
 } else {
     if (_dropMode isEqualType [] && {count _dropMode == 3}) then {
@@ -87,7 +89,7 @@ if (_dropMode isEqualType 0) then {
 _dropData params ["_dropHeight", "_dropLength", "_chuteHeight"];
 
 private _vehicle = vehicle (leader _pilotGroup);
-if(isNull _vehicle) exitWith {}; // group not in vehicle
+if (isNull _vehicle) exitWith {ERROR("Paradrop pilot group not in vehicle!")};
 
 private _origHeight = (getPosATL _vehicle) select 2;
 _vehicle flyInHeight _dropHeight; // set forced flying height
@@ -106,15 +108,14 @@ if (_resetHeight) then {
 // if not then script will be run in this function.
 
 // Use addWayPoint for the group piloting the vehicle to add the drop waypoints
-private _dropRunOrigin = getPosATL _vehicle; // calling position from leader will call last position on the ground
+private _dropRunOrigin = getPosATL _vehicle;
 
 // Obtain a random location within drop target
 // Between current position and drop target, find angle
 private _dropTarget = [_loc, true] call CBA_fnc_randPosArea;
 
-if (_dropTarget isEqualTo []) exitWith {};
+if (_dropTarget isEqualTo []) exitWith {ERROR_1("Paradrop target for marker '%1' not found!",_loc)};
 
-    diag_log [_pilotGroup];
 private _fnc_dzLocs = {
     params ["_dropTarget", "_dropRunOrigin", "_dropLength"];
     // getDir gives the azimuth, which differs in convention from trig
@@ -135,8 +136,11 @@ private _fnc_dzLocs = {
     private _xDiff = (cos _theta) * _dropLength/2;
     // set all coordinates based on DZ points in xy-plane; z coord does not matter
     // double lengths on second DZ coordinate to ensure straight line flight
-    [[(_dropTarget select 0) + _xDiff,(_dropTarget select 1) + _yDiff,_dropHeight],
-        [(_dropTarget select 0) - _xDiff,(_dropTarget select 1) - _yDiff,_dropHeight]];
+    _dropTarget params ["_dropTargetX", "_dropTargetY"];
+    [
+        [_dropTargetX + _xDiff, _dropTargetY + _yDiff, _dropHeight],
+        [_dropTargetX - _xDiff, _dropTargetY - _yDiff, _dropHeight]
+    ];
 };
 
 private _dropZoneLocs = [_dropTarget, _dropRunOrigin, _dropLength] call _fnc_dzLocs;
@@ -149,12 +153,12 @@ if (_minDistance < _dropLength) then {
     _dropZoneLocs = [_dropTarget,_dropRunOrigin, _dropLength] call _fnc_dzLocs;
 }; 
 
-private _dp = _pilotGroup addWaypoint [_dropZoneLocs select 1,-1,currentWaypoint _pilotGroup + 1,""];
+private _dp = _pilotGroup addWaypoint [_dropZoneLocs select 1, -1,currentWaypoint _pilotGroup + 1, ""];
 if (!_disableWP2) then {
-    private _de = _pilotGroup addWaypoint [_dropZoneLocs select 0,-1,currentWaypoint _pilotGroup + 2,""];
+    private _de = _pilotGroup addWaypoint [_dropZoneLocs select 0, -1, currentWaypoint _pilotGroup + 2, ""];
 };
 
-// Add the paradrop operation. To store variables, adds info to vehicle characteristics hash that can be referenced globally
+// Add the paradrop operation. To store variables, adds info to vehicle name space that can be referenced later
 _vehicle setVariable [QGVAR(paradropGroups), _dropGroups];
 _vehicle setVariable [QGVAR(paradropChuteHeight), _chuteHeight];
 
@@ -209,5 +213,5 @@ private _fnc_dropParas = {
     } forEach _dropUnits;
 };
 
-_dp setWaypointStatements ["true",toString _fnc_dropParas];
+_dp setWaypointStatements ["true", toString _fnc_dropParas];
 
