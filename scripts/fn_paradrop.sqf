@@ -76,7 +76,7 @@ private _dropData = [];
 // first process dropMode
 if (_dropMode isEqualType 0) then {
     if (_dropMode < 0 || {_dropMode > 4}) then {
-        ERROR_1("Paradrop mode %1 invalid - defaulting to 0!",_dropMode);
+        ERROR("Paradrop mode %1 invalid - defaulting to 0!",_dropMode);
         _dropMode = 0;
     };
     _dropData = DROP_MODES select _dropMode;
@@ -103,10 +103,6 @@ if (_resetHeight) then {
     }, [_vehicle, _origHeight]] call CBA_fnc_waitUntilAndExecute;
 };
 
-// next process waypoints if waypoints desired. 
-// if waypoint is desired, then script will be run on setWaypointStatements
-// if not then script will be run in this function.
-
 // Use addWayPoint for the group piloting the vehicle to add the drop waypoints
 private _dropRunOrigin = getPosATL _vehicle;
 
@@ -114,7 +110,7 @@ private _dropRunOrigin = getPosATL _vehicle;
 // Between current position and drop target, find angle
 private _dropTarget = [_loc, true] call CBA_fnc_randPosArea;
 
-if (_dropTarget isEqualTo []) exitWith {ERROR_1("Paradrop target for marker '%1' not found!",_loc)};
+if (_dropTarget isEqualTo []) exitWith {ERROR("Paradrop target for marker '%1' not found!",_loc)};
 
 private _fnc_dzLocs = {
     params ["_dropTarget", "_dropRunOrigin", "_dropLength"];
@@ -149,7 +145,7 @@ private _minDistance = _dropRunOrigin distance (_dropZoneLocs select 1);
 // Handling for when calling waypoint is within distance _dropLength
 if (_minDistance < _dropLength) then {
     _dropLength = _minDistance - 100; //arbitrary distance to allow for a helicopter turn
-    if (_dropLength < 0) exitWith {ERROR_1("Waypoint too close to DZ for drop!")};
+    if (_dropLength < 0) exitWith { exitWith { ERROR ("Waypoint too close to DZ for drop!")}; };
     _dropZoneLocs = [_dropTarget,_dropRunOrigin, _dropLength] call _fnc_dzLocs;
 }; 
 
