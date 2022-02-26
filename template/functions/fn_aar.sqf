@@ -16,6 +16,10 @@
 
 params [["_timeUntilStart", 0]];
 
+if !(["OCAP"] call ACEFUNC(common,isModLoaded)) exitWith {
+    WARNING("AAR disabled - OCAP not loaded!");
+};
+
 // Functions
 FUNC(canStartAAR) = {
     isNil "ocap_capture" || {!ocap_capture}
