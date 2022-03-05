@@ -40,41 +40,53 @@ FUNC(stopAAR) = {
 };
 
 // Auto-AAR (only non-Gimmick)
+GVAR(disableAutoAAR) = false;
 if (_missionType in AUTOAAR_TYPES) then {
     INFO_1("Auto-AAR waiting for start [type: %1]",_missionType);
     [{
         [{
-            params ["_args"];
-            _args params ["_autoStarted"];
+            params ["_args", "_handle"];
+
+            if (GVAR(disableAutoAAR)) exitWith {
+                [_handle] call CBA_fnc_removePerFrameHandler;
+                INFO("Auto-AAR disabled");
+            };
 
             private _playerCount = count (call CBA_fnc_players);
 
             if (call FUNC(canStartAAR) && {_playerCount >= AUTOAAR_PLAYER_COUNT}) exitWith {
                 call FUNC(startAAR);
-                _args set [0, true];
                 INFO_1("Auto-AAR started [players: %1]",_playerCount);
             };
 
-            // Only end AAR if it was started with Auto-AAR (don't stop a Manual-AAR automatically)
-            if (_autoStarted && {call FUNC(canStopAAR)} && {_playerCount < AUTOAAR_PLAYER_COUNT}) exitWith {
+            if (call FUNC(canStopAAR) && {_playerCount < AUTOAAR_PLAYER_COUNT}) exitWith {
                 call FUNC(stopAAR);
-                _args set [0, false];
                 INFO_1("Auto-AAR stopped [players: %1]",_playerCount);
             };
-        }, 60, [_autoStarted]] call CBA_fnc_addPerFrameHandler;
+        }, 60, []] call CBA_fnc_addPerFrameHandler;
     }, [], _timeUntilStart] call CBA_fnc_waitAndExecute;
 };
 
 // Manual-AAR
 [QGVAR(manualAAR), {
-    if (call FUNC(canStartAAR)) exitWith {
+    params ["_executor"];
+
+    if (call FUNC(canStartAAR)) then {
         call FUNC(startAAR);
-        INFO("Manual-AAR started");
+        INFO_1("Manual-AAR started [executor: %1]",_executor);
+    } else {
+        if (call FUNC(canStopAAR)) then {
+            if (!GVAR(disableAutoAAR)) then {
+                INFO_1("Auto-AAR running - converting to Manual-AAR [executor: %1]",_executor);
+                [QACEGVAR(common,systemChatGlobal), "AAR running - stop again to confirm", _executor] call CBA_fnc_targetEvent;
+            } else {
+                call FUNC(stopAAR);
+                INFO_1("Manual-AAR stopped [executor: %1]",_executor);
+            };
+        };
     };
-    if (call FUNC(canStopAAR)) exitWith {
-        call FUNC(stopAAR);
-        INFO("Manual-AAR stopped");
-    };
+
+    GVAR(disableAutoAAR) = true;
 }] call CBA_fnc_addEventHandler;
 
 // Handle mission ending
