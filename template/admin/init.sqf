@@ -17,13 +17,6 @@
 } forEach ["ACRE_PRC152", "ACRE_PRC117F"];
 
 // Sets Fuel canisters as carryable
-[
-    "Land_CanisterFuel_F",
-    "init",
-    {
-        [(_this select 0), true, [0, 3, 1], 10] call ACEFUNC(dragging,setCarryable);
-    },
-    true,
-    [],
-    true
-] call CBA_fnc_addClassEventHandler;
+["Land_CanisterFuel_F", "init", {
+    [_this select 0, true, [0, 3, 1], 10] call ACEFUNC(dragging,setCarryable);
+}, true, [], true] call CBA_fnc_addClassEventHandler;
