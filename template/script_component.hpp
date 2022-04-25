@@ -4,7 +4,7 @@
 // Version
 #define MAJOR 3
 #define MINOR 6
-#define PATCHLVL 0
+#define PATCHLVL 1
 
 // Mission
 #define MISSION_TYPES ["Contract", "Non-Contract", "Training", "Special", "PvP", "Gimmick"]
