@@ -4,8 +4,7 @@
 
 // Mathematical Heresy
 systemTimeUTC params ["", "", "", "_hour", "_minute"];
-private _weekDay = [systemTimeUTC] call CBA_fnc_weekDay;
-private _startTime = [15, 14] select (_weekDay == 6); // 1400z on Saturday, 1500z otherwise
+private _startTime = 14; // 1400z always
 private _timeUntilStart = ((_startTime * 60) - (_hour * 60 + _minute)) * 60; // start time - current time = time until start time
 _timeUntilStart = _timeUntilStart max 0;
 INFO_1("Time Until Start: %1",_timeUntilStart);
