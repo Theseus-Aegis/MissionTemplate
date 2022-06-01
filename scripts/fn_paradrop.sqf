@@ -72,11 +72,20 @@ params ["_pilotGroup", "_dropGroups", "_loc", ["_dropMode", 0], ["_resetHeight",
 
 if (_loc isEqualTo "") exitWith {ERROR("Paradrop given invalid marker!")};
 
+// make sure you delete these 2 lines later below in the script (and this comment too)! I just moved them here as early exit is better, and we have a use for it early here now
+private _vehicle = vehicle (leader _pilotGroup);
+if (isNull _vehicle) exitWith {ERROR("Paradrop pilot group not in vehicle!")};
+
+private _origDropGroupsCount = count _dropGroups;
+_dropGroups = _dropGroups select {_vehicle != vehicle (leader _x)};
+if (count _dropGroups < _origDropGroupsCount) then {
+    WARNING_1("Paradrop %1 drop group(s) skipped because they are not in the same vehicle as pilot group!",_origDropGroupsCount - count _dropGroup)
+};
 private _dropData = [];
 // first process dropMode
 if (_dropMode isEqualType 0) then {
     if (_dropMode < 0 || {_dropMode > 4}) then {
-        ERROR("Paradrop mode %1 invalid - defaulting to 0!",_dropMode);
+        ERROR_1("Paradrop mode %1 invalid - defaulting to 0!",_dropMode);
         _dropMode = 0;
     };
     _dropData = DROP_MODES select _dropMode;
@@ -110,7 +119,7 @@ private _dropRunOrigin = getPosATL _vehicle;
 // Between current position and drop target, find angle
 private _dropTarget = [_loc, true] call CBA_fnc_randPosArea;
 
-if (_dropTarget isEqualTo []) exitWith {ERROR("Paradrop target for marker '%1' not found!",_loc)};
+if (_dropTarget isEqualTo []) exitWith {ERROR_1("Paradrop target for marker '%1' not found!",_loc)};
 
 private _fnc_dzLocs = {
     params ["_dropTarget", "_dropRunOrigin", "_dropLength"];
