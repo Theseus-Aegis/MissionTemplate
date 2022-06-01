@@ -151,14 +151,9 @@ private _fnc_dzLocs = {
 private _dropZoneLocs = [_dropTarget, _dropRunOrigin, _dropLength] call _fnc_dzLocs;
 private _minDistance = _dropRunOrigin distance (_dropZoneLocs select 1);
 
-// Handling for when calling waypoint is within distance _dropLength
+// Error handling for when calling waypoint is within distance _dropLength
 if (_minDistance < _dropLength) then {
-    _dropLength = _minDistance - 100; //arbitrary distance to allow for a helicopter turn
-    if (_dropLength > 0) then {
-        _dropZoneLocs = [_dropTarget,_dropRunOrigin, _dropLength] call _fnc_dzLocs;
-    } else {
-        diag_log("Warning: Vehicle too close to DZ!");
-    };
+    WARNING_1("Paradrop vehicle '%1' too close to DZ!",_vehicle);
 }; 
 
 private _dp = _pilotGroup addWaypoint [_dropZoneLocs select 1, -1,currentWaypoint _pilotGroup + 1, ""];
