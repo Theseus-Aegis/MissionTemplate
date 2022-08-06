@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Tyrone
+ * Author: Mike
  * Switches ACRE spoken language on unconsciousness
  * Call from initPlayerLocal.sqf.
  *
@@ -53,11 +53,11 @@ if (!hasInterface) exitWith {};
 
 // Handle feature camera (eg. Zeus)
 ["featureCamera", {
-    params ["_unit", "_newCamera"]; 
-    
+    params ["_unit", "_newCamera"];
+
     if (_newCamera == "" && {ACE_player getVariable ["ACE_isUnconscious", false]}) then {
-        ["un"] call acre_api_fnc_babelSetSpokenLanguages; 
-    } else { 
-        ["en"] call acre_api_fnc_babelSetSpokenLanguages; 
-    }; 
+        ["un"] call acre_api_fnc_babelSetSpokenLanguages;
+    } else {
+        ["en"] call acre_api_fnc_babelSetSpokenLanguages;
+    };
 }, false] call CBA_fnc_addPlayerEventHandler;

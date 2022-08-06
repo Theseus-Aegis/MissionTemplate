@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Jonpas, TyroneMF
+ * Author: Jonpas, Mike
  * Requires a Battery to IED setup, handles disconnecting battery from IED and defusing it.
  *
  * Call from initPlayerLocal.sqf

@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Alganthe, TyroneMF
+ * Author: Alganthe, Mike
  * Specified masks protect from a contamination zone while providing HUD/Sound effects.
  * Requires a marker covering an area named "Contamination" for damage to take effect.
  *

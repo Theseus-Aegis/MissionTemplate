@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Tyrone
+ * Author: Mike
  * Functionality for toggling switches, When "OFF" switch is red and power levels are 0, when "ON" switch is Green and power levels are either 1 or player defined.
  *
  * Default state is 0 (OFF) or 1 (ON)

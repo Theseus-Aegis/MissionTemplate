@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Tyrone, Jonpas
+ * Author: Mike, Jonpas
  * Sets up a unit as a suicide bomber, they will wait until a player comes within the Activation distance and sprint at them to detonate.
  * Will use either a Satchel charge or a Demolition charge.
  *

@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Tyrone, Jonpas
+ * Author: Mike, Jonpas
  * Modified version of mortarStrike for use with CUP D30 Artillery.
  *
  * Orders D30 to fire on an area.

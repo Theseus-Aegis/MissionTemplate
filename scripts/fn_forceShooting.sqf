@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Jonpas, Rory, Tyrone
+ * Author: Jonpas, Rory, Mike
  * Orders a unit to target an object and begin firing until either the shooter or target is dead or the timer elapses.
  * Firemode types Single (0) and Full auto (1)
  * Set firing timer to 0.1 for full auto

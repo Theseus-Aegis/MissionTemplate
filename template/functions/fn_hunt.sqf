@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Tyrone
+ * Author: Mike
  * Has an enemy group hunt a player group.
  * If no hunted group is given it will select nearest player group within a given distance and target those.
  *

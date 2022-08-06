@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Rory, Jonpas, Tyrone
+ * Author: Rory, Jonpas, Mike
  * Teleports the player from base (this) to teleport locations (objects).
  * Condition to show teleport action can be set.
  * Call from initPlayerLocal.sqf

@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: TyroneMF, Jonpas
+ * Author: Mike, Jonpas
  * Orders mortars to fire on an area.
  * If amount fired is 0 the amount is randomly selected between 1-8
  * Markers must be either Area Markers (Ellipse or Rectangle)

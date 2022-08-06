@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Muta, TyroneMF
+ * Author: Muta, Mike
  * Switches Lights on or off in a defined radius.
  * Call from init.sqf or Trigger.
  *
