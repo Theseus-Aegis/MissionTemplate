@@ -27,25 +27,13 @@ params ["_player", "_markers"];
 private _nightTime = date;
 _nightTime set [3, DATE_TIME];
 
-// Check Gear Event
-[QGVAR(CaveGearCheck), {
-    params ["_player"];
-    // Check if player has GPS
-    private _gpsCheck = "ACE_microDAGR" in ([_player] call CBA_fnc_uniqueUnitItems);
-    _player setVariable [QGVAR(hasGPS), _gpsCheck];
-
-    // Check if player has Watch
-    private _watchCheck = "ItemWatch" in ([_player] call CBA_fnc_uniqueUnitItems);
-    _player setVariable [QGVAR(hasWatch), _watchCheck];
-}] call CBA_fnc_addEventHandler;
-
 [{
     params ["_args", "_handle"];
     _args params ["_player", "_markers", "_nightTime", ["_radioSet", false], ["_itemChecks", false]];
 
     private _inArea = _markers findIf {_player inArea _x};
-    private _hasGPS = _player getVariable QGVAR(hasGPS);
-    private _hasWatch = _player getVariable QGVAR(hasWatch);
+    private _hasGPS = _player getVariable [QGVAR(hasGPS), false];
+    private _hasWatch = _player getVariable [QGVAR(hasWatch), false];
 
     if (_inArea >= 0) then {
         setDate _nightTime;
@@ -58,11 +46,18 @@ _nightTime set [3, DATE_TIME];
 
         // Remove Items
         if (!_itemChecks) then {
-            [QGVAR(CaveGearCheck), [_player]] call CBA_fnc_localEvent;
-            if (_hasGPS) then {
+            // Check if player has GPS
+            private _gpsCheck = "ACE_microDAGR" in ([_player] call CBA_fnc_uniqueUnitItems);
+            _player setVariable [QGVAR(hasGPS), _gpsCheck];
+
+            // Check if player has Watch
+            private _watchCheck = "ItemWatch" in ([_player] call CBA_fnc_uniqueUnitItems);
+            _player setVariable [QGVAR(hasWatch), _watchCheck];
+
+            if (_gpsCheck) then {
                 _player removeItem "ACE_microDAGR";
             };
-            if (_hasWatch) then {
+            if (_watchCheck) then {
                 _player unlinkItem "ItemWatch";
             };
             _args set [4, true];
