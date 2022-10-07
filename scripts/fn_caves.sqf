@@ -47,7 +47,7 @@ _nightTime set [3, DATE_TIME];
     private _hasGPS = _player getVariable QGVAR(hasGPS);
     private _hasWatch = _player getVariable QGVAR(hasWatch);
 
-    if (_inArea >= 1) then {
+    if (_inArea >= 0) then {
         setDate _nightTime;
 
         // Wreck Radios
