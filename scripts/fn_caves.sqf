@@ -4,6 +4,7 @@
  * Handles night-time cycle in caves, removes Map & MicroDAGR if player has one.
  * Testing in single player or local multiplayer will not reset the date back to original, This is handled by syncing to the server date.
  * Will check an array of markers instead of running multiple per frame handlers on players.
+ * The time of day, how long it waits to check gear and custom ACRE signal can be edited in the defines.
  *
  * Call from initPlayerLocal
  *
