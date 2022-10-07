@@ -32,19 +32,11 @@ _nightTime set [3, DATE_TIME];
     params ["_player"];
     // Check if player has GPS
     private _gpsCheck = "ACE_microDAGR" in ([_player] call CBA_fnc_uniqueUnitItems);
-    if (_gpsCheck) then {
-        _player setVariable [QGVAR(hasGPS), true];
-    } else {
-        _player setVariable [QGVAR(hasGPS), false];
-    };
+    _player setVariable [QGVAR(hasGPS), _gpsCheck];
 
     // Check if player has Watch
     private _watchCheck = "ItemWatch" in ([_player] call CBA_fnc_uniqueUnitItems);
-    if (_watchCheck) then {
-        _player setVariable [QGVAR(hasWatch), true];
-    } else {
-        _player setVariable [QGVAR(hasWatch), false];
-    };
+    _player setVariable [QGVAR(hasWatch), _watchCheck];
 }] call CBA_fnc_addEventHandler;
 
 [{
