@@ -34,7 +34,7 @@
 _player setVariable [QGVAR(hasGPS), 0];
 _player setVariable [QGVAR(hasWatch), 0];
 
-// Wait 1 hour 5 minutes for gear check.
+// Wait 1 hour 5 minutes for gear check (default).
 [{
     params ["_player"];
     // Check if player has GPS
