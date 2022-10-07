@@ -5,7 +5,7 @@
  * Will check an array of markers instead of running multiple per frame handlers on players.
  * The time of day and custom ACRE signal can be edited in the defines.
  *
- * Call from initPlayerLocal
+ * Call from initPlayerLocal.sqf.
  *
  * Arguments:
  * 0: Player <OBJECT>
