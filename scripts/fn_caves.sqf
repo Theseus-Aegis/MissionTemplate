@@ -47,17 +47,17 @@ _nightTime set [3, DATE_TIME];
         // Remove Items
         if (!_itemChecks) then {
             // Check if player has GPS
-            private _gpsCheck = "ACE_microDAGR" in ([_player] call CBA_fnc_uniqueUnitItems);
-            _player setVariable [QGVAR(hasGPS), _gpsCheck];
+            private _hasGps = "ACE_microDAGR" in ([_player] call CBA_fnc_uniqueUnitItems);
+            _player setVariable [QGVAR(hasGPS), _hasGps];
 
             // Check if player has Watch
-            private _watchCheck = "ItemWatch" in ([_player] call CBA_fnc_uniqueUnitItems);
-            _player setVariable [QGVAR(hasWatch), _watchCheck];
+            private _hasWatch = "ItemWatch" in ([_player] call CBA_fnc_uniqueUnitItems);
+            _player setVariable [QGVAR(hasWatch), _hasWatch];
 
-            if (_gpsCheck) then {
+            if (_hasGps) then {
                 _player removeItem "ACE_microDAGR";
             };
-            if (_watchCheck) then {
+            if (_hasWatch) then {
                 _player unlinkItem "ItemWatch";
             };
             _args set [4, true];
