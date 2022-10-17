@@ -7,6 +7,7 @@ force ace_weather_windSimulation = false;     // Wind based on the maps geograph
 force ace_mk6mortar_useAmmoHandling = true;   // Set to 'false' to allow usage of Mortar & D30 strike functions.
 force ace_spectator_restrictModes = 1;        // Lock spectator into First/Third person only. (Default: 0)
 
+//SOG SPECIFIC SETTINGS
 // ACE Medical
 ace_medical_deathChance = 0.05; // 5% (default: 100%)
 ace_medical_spontaneousWakeUpChance = 0.5; // 50% (default: 5%)
