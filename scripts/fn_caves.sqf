@@ -67,6 +67,7 @@ _nightTime set [3, _time];
         if (is3DENPreview) then {
             private _testingDate = date;
             _testingDate set [3, 10];
+            setDate _testingDate;
         };
 
         // Reset Radios
