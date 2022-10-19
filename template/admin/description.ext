@@ -7,13 +7,6 @@ onLoadIntroTime = 1;
 onLoadMissionTime = 1;
 loadScreen = "x\tacr\addons\images\general\MissionLoad.paa";
 
-// Gametype and playercount
-class Header {
-    gameType = "COOP";
-    minPlayers = 1;
-    maxPlayers = 38;
-};
-
 // Respawn settings
 respawn = "BASE";
 respawnButton = 1;

@@ -6,5 +6,12 @@ OnLoadMission = "MISSION SUMMARY";
 author = "YOUR NAME, Theseus Inc.";
 tac_type = 0; // 0: Contract, 1: Non-Contract, 2: Training, 3: Special, 4: PvP, 5: Gimmick
 
+// Gametype and playercount
+class Header {
+    gameType = "COOP";
+    minPlayers = 1;
+    maxPlayers = 38;
+};
+
 // Randomization
 disableRandomization[] = {}; // Disables randomization of units and vehicles based off of variable name or classname

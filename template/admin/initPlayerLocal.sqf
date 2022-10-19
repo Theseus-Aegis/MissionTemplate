@@ -3,10 +3,10 @@
 // Disables ambient animals and ambient sounds
 [{time > 0}, {enableEnvironment [false, true];}] call CBA_fnc_waitUntilAndExecute;
 
-[_player, specScreen] call FUNC(baseSpectator);
+[_player, specScreen] call MFUNC(baseSpectator);
 [_player] call FUNC(briefing);
-[_player] call FUNC(godMode);
-[_player] call FUNC(unconscious);
+[_player] call MFUNC(godMode);
+[_player] call MFUNC(unconscious);
 
 // Disable CUP street lights based on lighting levels (bad performance script)
 CUP_stopLampCheck = true;

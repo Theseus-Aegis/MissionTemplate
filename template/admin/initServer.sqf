@@ -16,7 +16,7 @@ if (_missionType == -1 || {_missionType >= count MISSION_TYPES}) exitWith {
 };
 
 // AAR
-[_timeUntilStart] call FUNC(aar);
+[_timeUntilStart] call MFUNC(aar);
 
 // Mission Name call on mission start
 [{
