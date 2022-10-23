@@ -19,7 +19,6 @@
 [{
     params ["_player", "_didJIP"];
 
-
     #include "admin\initPlayerLocal.sqf"
 
     // START USER CODE
