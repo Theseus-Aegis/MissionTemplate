@@ -1,14 +1,14 @@
 version=54;
-center[]={1512.9518,5,4004.281};
+center[]={1512.9749,5,4004.793};
 class items
 {
-	items=10;
+	items=12;
 	class Item0
 	{
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-7.1489258,0,4.8674316};
+			position[]={-7.1719971,0,4.3554688};
 		};
 		id=0;
 		type="ModuleCurator_F";
@@ -74,7 +74,7 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-7.1489258,0,6.3674316};
+			position[]={-7.1719971,0,5.8554688};
 			angles[]={0,0.0138731,0};
 		};
 		name="headlessclient1";
@@ -84,10 +84,29 @@ class items
 	};
 	class Item2
 	{
+		dataType="Marker";
+		position[]={-7.1719971,0,6.8393555};
+		name="respawn_west";
+		type="Empty";
+		angle=180.40349;
+		id=2;
+	};
+	class Item3
+	{
+		dataType="Marker";
+		position[]={-7.1690674,0,7.7363281};
+		name="Theseus_Marker";
+		text="Theseus";
+		type="hd_start";
+		colorName="ColorWEST";
+		id=3;
+	};
+	class Item4
+	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-5.6489258,1.0431652,6.8674316};
+			position[]={-5.6719971,1.0431652,6.3554688};
 			angles[]={0,3.1554656,0};
 		};
 		side="Empty";
@@ -117,12 +136,12 @@ class items
 			nAttributes=1;
 		};
 	};
-	class Item3
+	class Item5
 	{
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-7.1538086,0,2.9150391};
+			position[]={-7.1768799,0,2.4030762};
 		};
 		id=5;
 		type="ModuleCurator_F";
@@ -183,12 +202,12 @@ class items
 			nAttributes=4;
 		};
 	};
-	class Item4
+	class Item6
 	{
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-7.1428223,0,1.3410645};
+			position[]={-7.1658936,0,0.82910156};
 		};
 		id=6;
 		type="ModuleCurator_F";
@@ -249,7 +268,7 @@ class items
 			nAttributes=4;
 		};
 	};
-	class Item5
+	class Item7
 	{
 		dataType="Group";
 		side="West";
@@ -261,7 +280,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.1228027,0.0014390945,1.4279785};
+					position[]={-1.145874,0.0014390945,0.91601563};
 				};
 				side="West";
 				flags=7;
@@ -391,7 +410,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.1917725,0.0014390945,-0.54492188};
+					position[]={-1.2148438,0.0014390945,-1.0568848};
 				};
 				side="West";
 				flags=5;
@@ -534,7 +553,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.2147217,0.0014390945,-2.4609375};
+					position[]={-1.237793,0.0014390945,-2.9729004};
 				};
 				side="West";
 				flags=5;
@@ -664,7 +683,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.1125488,0.0014390945,-4.1271973};
+					position[]={-1.1356201,0.0014390945,-4.6391602};
 				};
 				side="West";
 				flags=5;
@@ -807,7 +826,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.135498,0.0014390945,-6.0432129};
+					position[]={-1.1585693,0.0014390945,-6.5551758};
 				};
 				side="West";
 				flags=5;
@@ -937,7 +956,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.96496582,0.0014390945,-4.220459};
+					position[]={0.94189453,0.0014390945,-4.7324219};
 				};
 				side="West";
 				flags=5;
@@ -1067,7 +1086,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.80175781,0.0014390945,-6.2502441};
+					position[]={0.77868652,0.0014390945,-6.762207};
 				};
 				side="West";
 				flags=5;
@@ -1197,7 +1216,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.0148926,0.0014390945,-2.2438965};
+					position[]={0.99182129,0.0014390945,-2.7558594};
 				};
 				side="West";
 				flags=5;
@@ -1327,7 +1346,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.9552002,0.0014390945,-0.29345703};
+					position[]={0.93212891,0.0014390945,-0.80541992};
 				};
 				side="West";
 				flags=5;
@@ -1457,7 +1476,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.93664551,0.0014390945,1.7414551};
+					position[]={0.91357422,0.0014390945,1.2294922};
 				};
 				side="West";
 				flags=5;
@@ -1588,7 +1607,7 @@ class items
 		};
 		id=50;
 	};
-	class Item6
+	class Item8
 	{
 		dataType="Group";
 		side="West";
@@ -1600,7 +1619,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.8111572,0.0014390945,1.6181641};
+					position[]={3.7880859,0.0014390945,1.1062012};
 				};
 				side="West";
 				flags=7;
@@ -1730,7 +1749,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7425537,0.0014390945,-0.35522461};
+					position[]={3.7194824,0.0014390945,-0.8671875};
 				};
 				side="West";
 				flags=5;
@@ -1873,7 +1892,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7196045,0.0014390945,-2.2712402};
+					position[]={3.6965332,0.0014390945,-2.7832031};
 				};
 				side="West";
 				flags=5;
@@ -2003,7 +2022,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.8217773,0.0014390945,-3.9375};
+					position[]={3.7987061,0.0014390945,-4.4494629};
 				};
 				side="West";
 				flags=5;
@@ -2146,7 +2165,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7988281,0.0014390945,-5.8535156};
+					position[]={3.7757568,0.0014390945,-6.3654785};
 				};
 				side="West";
 				flags=5;
@@ -2276,7 +2295,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.899292,0.0014390945,-4.0307617};
+					position[]={5.8762207,0.0014390945,-4.5427246};
 				};
 				side="West";
 				flags=5;
@@ -2406,7 +2425,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.736084,0.0014390945,-6.0605469};
+					position[]={5.7130127,0.0014390945,-6.5725098};
 				};
 				side="West";
 				flags=5;
@@ -2536,7 +2555,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.9492188,0.0014390945,-2.0541992};
+					position[]={5.9261475,0.0014390945,-2.5661621};
 				};
 				side="West";
 				flags=5;
@@ -2666,7 +2685,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.8895264,0.0014390945,-0.10375977};
+					position[]={5.8664551,0.0014390945,-0.61572266};
 				};
 				side="West";
 				flags=5;
@@ -2796,7 +2815,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.8709717,0.0014390945,1.9311523};
+					position[]={5.8479004,0.0014390945,1.4191895};
 				};
 				side="West";
 				flags=5;
@@ -2944,18 +2963,18 @@ class items
 			nAttributes=1;
 		};
 	};
-	class Item7
+	class Item9
 	{
 		dataType="Comment";
 		class PositionInfo
 		{
-			position[]={-2.3217773,0,6.815918};
+			position[]={-2.3448486,0,6.3039551};
 		};
 		title="Zues Template";
 		description="- 2 Zues Slots in addition to regular admin zues" \n "- Players will need to select weapon and ammo" \n "- Full SOG Arsenal Provided";
 		id=92;
 	};
-	class Item8
+	class Item10
 	{
 		dataType="Group";
 		side="West";
@@ -2967,7 +2986,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-5.0780029,0.0014390945,2.1640625};
+					position[]={-5.1010742,0.0014390945,1.6520996};
 				};
 				side="West";
 				flags=7;
@@ -3016,7 +3035,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-3.2729492,0.0014390945,2.177002};
+					position[]={-3.2960205,0.0014390945,1.6650391};
 				};
 				side="West";
 				flags=5;
@@ -3082,12 +3101,12 @@ class items
 			nAttributes=1;
 		};
 	};
-	class Item9
+	class Item11
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.16516113,0.89242268,6.6398926};
+			position[]={0.14208984,0.89242268,6.1279297};
 		};
 		side="Empty";
 		flags=4;

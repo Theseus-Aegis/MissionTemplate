@@ -6,6 +6,7 @@ requiredAddons[]=
 {
 	"A3_Modules_F_Curator_Curator",
 	"A3_Characters_F",
+	"A3_Ui_F",
 	"A3_Props_F_Exp_Military_Camps",
 	"characters_f_vietnam_c",
 	"A3_Weapons_F",
