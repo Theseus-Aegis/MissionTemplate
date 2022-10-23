@@ -15,8 +15,7 @@
  * None
  */
 [{
-    #include "admin\init.sqf"
-
+    #include "\x\tac\addons\mission\template\init.hpp"
     // START USER CODE
 
     // END USER CODE

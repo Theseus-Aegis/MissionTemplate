@@ -1,4 +1,5 @@
-#include "admin\description.ext"
+#include "\x\tac\addons\mission\template\description.hpp"
+#include "CfgFunctions.hpp"
 
 // Mission settings - title, description, author etc.
 OnLoadName = "MISSION NAME";
@@ -15,3 +16,9 @@ class Header {
 
 // Randomization
 disableRandomization[] = {}; // Disables randomization of units and vehicles based off of variable name or classname
+
+// Disable Chat Channels
+disableChannels[] = { // Disables unused chat channels - Comment out Global in PVP events.
+    {0, true, true}, // Global
+    {2, true, true} // Command
+};

@@ -14,7 +14,7 @@
  * None
  */
 [{
-    #include "admin\initServer.sqf"
+    #include "\x\tac\addons\mission\template\initServer.hpp"
 
     // START USER CODE
 
