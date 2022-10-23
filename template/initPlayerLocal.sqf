@@ -19,7 +19,8 @@
 [{
     params ["_player", "_didJIP"];
 
-    #include "\x\tac\addons\mission\template\initPlayerLocal.hpp"
+
+    #include "admin\initPlayerLocal.sqf"
 
     // START USER CODE
 
