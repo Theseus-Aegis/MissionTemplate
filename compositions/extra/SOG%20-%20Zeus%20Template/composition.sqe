@@ -1,14 +1,14 @@
 version=54;
-center[]={1512.5573,5,4004.7729};
+center[]={1512.9497,5,4004.2842};
 class items
 {
-	items=12;
+	items=10;
 	class Item0
 	{
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-6.7543945,0,4.3754883};
+			position[]={-7.1468506,0,4.8642578};
 		};
 		id=0;
 		type="ModuleCurator_F";
@@ -74,7 +74,7 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-6.7543945,0,5.8754883};
+			position[]={-7.1468506,0,6.3642578};
 			angles[]={0,0.0138731,0};
 		};
 		name="headlessclient1";
@@ -84,30 +84,11 @@ class items
 	};
 	class Item2
 	{
-		dataType="Marker";
-		position[]={-6.7543945,0,6.859375};
-		name="respawn_west";
-		type="Empty";
-		angle=180.40349;
-		id=2;
-	};
-	class Item3
-	{
-		dataType="Marker";
-		position[]={-6.7514648,0,7.7563477};
-		name="Theseus_Marker";
-		text="Theseus";
-		type="hd_start";
-		colorName="ColorWEST";
-		id=3;
-	};
-	class Item4
-	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-5.2543945,1.0431652,6.3754883};
-			angles[]={-0,3.1554656,0};
+			position[]={-5.6468506,1.0431652,6.8642578};
+			angles[]={0,3.1554656,0};
 		};
 		side="Empty";
 		flags=4;
@@ -136,12 +117,12 @@ class items
 			nAttributes=1;
 		};
 	};
-	class Item5
+	class Item3
 	{
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-6.7592773,0,2.4230957};
+			position[]={-7.1517334,0,2.9118652};
 		};
 		id=5;
 		type="ModuleCurator_F";
@@ -202,12 +183,12 @@ class items
 			nAttributes=4;
 		};
 	};
-	class Item6
+	class Item4
 	{
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-6.748291,0,0.84912109};
+			position[]={-7.1407471,0,1.3378906};
 		};
 		id=6;
 		type="ModuleCurator_F";
@@ -268,7 +249,7 @@ class items
 			nAttributes=4;
 		};
 	};
-	class Item7
+	class Item5
 	{
 		dataType="Group";
 		side="West";
@@ -280,7 +261,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.72827148,0.0014390945,0.93603516};
+					position[]={-1.1207275,0.0014390945,1.4248047};
 				};
 				side="West";
 				flags=7;
@@ -410,7 +391,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.79724121,0.0014390945,-1.0368652};
+					position[]={-1.1896973,0.0014390945,-0.5480957};
 				};
 				side="West";
 				flags=5;
@@ -553,7 +534,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.82019043,0.0014390945,-2.9528809};
+					position[]={-1.2126465,0.0014390945,-2.4641113};
 				};
 				side="West";
 				flags=5;
@@ -683,7 +664,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.71801758,0.0014390945,-4.6191406};
+					position[]={-1.1104736,0.0014390945,-4.1303711};
 				};
 				side="West";
 				flags=5;
@@ -826,7 +807,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.7409668,0.0014390945,-6.5351563};
+					position[]={-1.1334229,0.0014390945,-6.0463867};
 				};
 				side="West";
 				flags=5;
@@ -956,7 +937,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.3594971,0.0014390945,-4.7124023};
+					position[]={0.96704102,0.0014390945,-4.2236328};
 				};
 				side="West";
 				flags=5;
@@ -1086,7 +1067,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.1962891,0.0014390945,-6.7421875};
+					position[]={0.80383301,0.0014390945,-6.253418};
 				};
 				side="West";
 				flags=5;
@@ -1216,7 +1197,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.4094238,0.0014390945,-2.7358398};
+					position[]={1.0169678,0.0014390945,-2.2470703};
 				};
 				side="West";
 				flags=5;
@@ -1346,7 +1327,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.3497314,0.0014390945,-0.78540039};
+					position[]={0.95727539,0.0014390945,-0.29663086};
 				};
 				side="West";
 				flags=5;
@@ -1476,7 +1457,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.3311768,0.0014390945,1.2495117};
+					position[]={0.9387207,0.0014390945,1.7382813};
 				};
 				side="West";
 				flags=5;
@@ -1607,7 +1588,7 @@ class items
 		};
 		id=50;
 	};
-	class Item8
+	class Item6
 	{
 		dataType="Group";
 		side="West";
@@ -1619,7 +1600,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.2056885,0.0014390945,1.1262207};
+					position[]={3.8132324,0.0014390945,1.6149902};
 				};
 				side="West";
 				flags=7;
@@ -1749,7 +1730,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.137085,0.0014390945,-0.84716797};
+					position[]={3.7446289,0.0014390945,-0.35839844};
 				};
 				side="West";
 				flags=5;
@@ -1892,7 +1873,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.1141357,0.0014390945,-2.7631836};
+					position[]={3.7216797,0.0014390945,-2.2744141};
 				};
 				side="West";
 				flags=5;
@@ -2022,7 +2003,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.2163086,0.0014390945,-4.4294434};
+					position[]={3.8238525,0.0014390945,-3.9406738};
 				};
 				side="West";
 				flags=5;
@@ -2165,7 +2146,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.1933594,0.0014390945,-6.345459};
+					position[]={3.8009033,0.0014390945,-5.8566895};
 				};
 				side="West";
 				flags=5;
@@ -2295,7 +2276,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.2938232,0.0014390945,-4.5227051};
+					position[]={5.9013672,0.0014390945,-4.0339355};
 				};
 				side="West";
 				flags=5;
@@ -2425,7 +2406,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.1306152,0.0014390945,-6.5524902};
+					position[]={5.7381592,0.0014390945,-6.0637207};
 				};
 				side="West";
 				flags=5;
@@ -2555,7 +2536,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.34375,0.0014390945,-2.5461426};
+					position[]={5.9512939,0.0014390945,-2.057373};
 				};
 				side="West";
 				flags=5;
@@ -2685,7 +2666,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.2840576,0.0014390945,-0.59570313};
+					position[]={5.8916016,0.0014390945,-0.10693359};
 				};
 				side="West";
 				flags=5;
@@ -2815,7 +2796,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.2655029,0.0014390945,1.439209};
+					position[]={5.8730469,0.0014390945,1.9279785};
 				};
 				side="West";
 				flags=5;
@@ -2963,63 +2944,161 @@ class items
 			nAttributes=1;
 		};
 	};
+	class Item7
+	{
+		dataType="Comment";
+		class PositionInfo
+		{
+			position[]={-2.3197021,0,6.8127441};
+		};
+		title="Zues Template";
+		description="- 2 Zues Slots in addition to regular admin zues" \n "- Players will need to select weapon and ammo" \n "- Full SOG Arsenal Provided";
+		id=92;
+	};
+	class Item8
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-5.0759277,0.0014390945,2.1608887};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					name="zeus_1";
+					description="Zeus@Zeus";
+					isPlayer=1;
+					isPlayable=1;
+				};
+				id=94;
+				type="vn_b_men_army_28";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="Male08ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.95999998;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-3.270874,0.0014390945,2.1738281};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					name="zeus_2";
+					description="Zeus@Zeus";
+					isPlayable=1;
+				};
+				id=95;
+				type="vn_b_men_army_28";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="Male09ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.99000001;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=93;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="groupID";
+				expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+				class Value
+				{
+					class data
+					{
+						singleType="STRING";
+						value="Alpha 1-3";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
 	class Item9
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={2.0612793,-0.0012426376,6.5900879};
-			angles[]={0,3.1359203,0};
+			position[]={0.10302734,0.89242268,6.7382813};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=91;
-		type="vn_b_ammobox_full_07";
+		id=96;
+		type="tac_armory_Locker";
 		class CustomAttributes
 		{
 			class Attribute0
-			{
-				property="allowDamage";
-				expression="_this allowdamage _value;";
-				class Value
-				{
-					class data
-					{
-						singleType="BOOL";
-						value=0;
-					};
-				};
-			};
-			class Attribute1
-			{
-				property="ammoBox";
-				expression="[_this,_value] call bis_fnc_initAmmoBox;";
-				class Value
-				{
-					class data
-					{
-						singleType="STRING";
-						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-					};
-				};
-			};
-			class Attribute2
-			{
-				property="ace_isMedicalFacility";
-				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
-				class Value
-				{
-					class data
-					{
-						singleType="BOOL";
-						value=1;
-					};
-				};
-			};
-			class Attribute3
 			{
 				property="ace_arsenal_attribute";
 				expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
@@ -10075,170 +10154,6 @@ class items
 								};
 							};
 						};
-					};
-				};
-			};
-			class Attribute4
-			{
-				property="ace_cookoff_enableAmmoCookoff";
-				expression="if !(_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true];};";
-				class Value
-				{
-					class data
-					{
-						singleType="BOOL";
-						value=0;
-					};
-				};
-			};
-			class Attribute5
-			{
-				property="ace_cargo_size";
-				expression="[_this, _value] call ace_cargo_fnc_setSize;";
-				class Value
-				{
-					class data
-					{
-						singleType="SCALAR";
-						value=-1;
-					};
-				};
-			};
-			nAttributes=6;
-		};
-	};
-	class Item10
-	{
-		dataType="Comment";
-		class PositionInfo
-		{
-			position[]={-1.9272461,0,6.3239746};
-		};
-		title="Zues Template";
-		description="- 2 Zues Slots in addition to regular admin zues" \n "- Players will need to select weapon and ammo" \n "- Full SOG Arsenal Provided";
-		id=92;
-	};
-	class Item11
-	{
-		dataType="Group";
-		side="West";
-		class Entities
-		{
-			items=2;
-			class Item0
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={-4.6834717,0.0014390945,1.6721191};
-				};
-				side="West";
-				flags=7;
-				class Attributes
-				{
-					name="zeus_1";
-					description="Zeus@Zeus";
-					isPlayer=1;
-					isPlayable=1;
-				};
-				id=94;
-				type="vn_b_men_army_28";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								singleType="STRING";
-								value="Male08ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								singleType="SCALAR";
-								value=0.95999998;
-							};
-						};
-					};
-					nAttributes=2;
-				};
-			};
-			class Item1
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={-2.878418,0.0014390945,1.6850586};
-				};
-				side="West";
-				flags=5;
-				class Attributes
-				{
-					name="zeus_2";
-					description="Zeus@Zeus";
-					isPlayable=1;
-				};
-				id=95;
-				type="vn_b_men_army_28";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								singleType="STRING";
-								value="Male09ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								singleType="SCALAR";
-								value=0.99000001;
-							};
-						};
-					};
-					nAttributes=2;
-				};
-			};
-		};
-		class Attributes
-		{
-		};
-		id=93;
-		class CustomAttributes
-		{
-			class Attribute0
-			{
-				property="groupID";
-				expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
-				class Value
-				{
-					class data
-					{
-						singleType="STRING";
-						value="Alpha 1-3";
 					};
 				};
 			};
