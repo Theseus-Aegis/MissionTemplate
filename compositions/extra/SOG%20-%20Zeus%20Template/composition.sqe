@@ -1,5 +1,5 @@
 version=54;
-center[]={1512.9749,5,4004.793};
+center[]={6862.4902,5,3354.9565};
 class items
 {
 	items=12;
@@ -8,7 +8,7 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-7.1719971,0,4.3554688};
+			position[]={-6.7270508,0,4.409668};
 		};
 		id=0;
 		type="ModuleCurator_F";
@@ -74,7 +74,7 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-7.1719971,0,5.8554688};
+			position[]={-6.7270508,0,5.909668};
 			angles[]={0,0.0138731,0};
 		};
 		name="headlessclient1";
@@ -85,7 +85,7 @@ class items
 	class Item2
 	{
 		dataType="Marker";
-		position[]={-7.1719971,0,6.8393555};
+		position[]={-6.7270508,0,6.8935547};
 		name="respawn_west";
 		type="Empty";
 		angle=180.40349;
@@ -94,7 +94,7 @@ class items
 	class Item3
 	{
 		dataType="Marker";
-		position[]={-7.1690674,0,7.7363281};
+		position[]={-6.7241211,0,7.7905273};
 		name="Theseus_Marker";
 		text="Theseus";
 		type="hd_start";
@@ -106,8 +106,8 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-5.6719971,1.0431652,6.3554688};
-			angles[]={0,3.1554656,0};
+			position[]={-5.2270508,1.0431652,6.409668};
+			angles[]={-0,3.1554656,0};
 		};
 		side="Empty";
 		flags=4;
@@ -141,7 +141,7 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-7.1768799,0,2.4030762};
+			position[]={-6.7319336,0,2.4572754};
 		};
 		id=5;
 		type="ModuleCurator_F";
@@ -207,7 +207,7 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-7.1658936,0,0.82910156};
+			position[]={-6.7211914,0,0.88330078};
 		};
 		id=6;
 		type="ModuleCurator_F";
@@ -280,7 +280,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.145874,0.0014390945,0.91601563};
+					position[]={-0.70117188,0.0014390945,0.97021484};
 				};
 				side="West";
 				flags=7;
@@ -372,7 +372,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=51;
+				id=8;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -410,7 +410,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.2148438,0.0014390945,-1.0568848};
+					position[]={-0.77001953,0.0014390945,-1.0026855};
 				};
 				side="West";
 				flags=5;
@@ -502,7 +502,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=52;
+				id=9;
 				type="vn_b_men_sog_02";
 				class CustomAttributes
 				{
@@ -553,7 +553,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.237793,0.0014390945,-2.9729004};
+					position[]={-0.79296875,0.0014390945,-2.9187012};
 				};
 				side="West";
 				flags=5;
@@ -645,7 +645,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=53;
+				id=10;
 				type="vn_b_men_sog_03";
 				class CustomAttributes
 				{
@@ -683,7 +683,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.1356201,0.0014390945,-4.6391602};
+					position[]={-0.69091797,0.0014390945,-4.5849609};
 				};
 				side="West";
 				flags=5;
@@ -775,7 +775,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=67;
+				id=11;
 				type="vn_b_men_sog_02";
 				class CustomAttributes
 				{
@@ -826,7 +826,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.1585693,0.0014390945,-6.5551758};
+					position[]={-0.71386719,0.0014390945,-6.5009766};
 				};
 				side="West";
 				flags=5;
@@ -918,7 +918,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=68;
+				id=12;
 				type="vn_b_men_sog_03";
 				class CustomAttributes
 				{
@@ -956,7 +956,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.94189453,0.0014390945,-4.7324219};
+					position[]={1.3867188,0.0014390945,-4.6782227};
 				};
 				side="West";
 				flags=5;
@@ -1048,7 +1048,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=70;
+				id=13;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1086,7 +1086,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.77868652,0.0014390945,-6.762207};
+					position[]={1.2236328,0.0014390945,-6.7080078};
 				};
 				side="West";
 				flags=5;
@@ -1178,7 +1178,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=72;
+				id=14;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1216,7 +1216,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.99182129,0.0014390945,-2.7558594};
+					position[]={1.4365234,0.0014390945,-2.7016602};
 				};
 				side="West";
 				flags=5;
@@ -1308,7 +1308,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=74;
+				id=15;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1346,7 +1346,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.93212891,0.0014390945,-0.80541992};
+					position[]={1.3769531,0.0014390945,-0.7512207};
 				};
 				side="West";
 				flags=5;
@@ -1438,7 +1438,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=76;
+				id=16;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1476,7 +1476,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.91357422,0.0014390945,1.2294922};
+					position[]={1.3583984,0.0014390945,1.2836914};
 				};
 				side="West";
 				flags=5;
@@ -1568,7 +1568,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=78;
+				id=17;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1605,7 +1605,7 @@ class items
 		class Attributes
 		{
 		};
-		id=50;
+		id=7;
 	};
 	class Item8
 	{
@@ -1619,7 +1619,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7880859,0.0014390945,1.1062012};
+					position[]={4.2329102,0.0014390945,1.1604004};
 				};
 				side="West";
 				flags=7;
@@ -1711,7 +1711,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=80;
+				id=19;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1749,7 +1749,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7194824,0.0014390945,-0.8671875};
+					position[]={4.1640625,0.0014390945,-0.81298828};
 				};
 				side="West";
 				flags=5;
@@ -1841,7 +1841,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=81;
+				id=20;
 				type="vn_b_men_sog_02";
 				class CustomAttributes
 				{
@@ -1892,7 +1892,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.6965332,0.0014390945,-2.7832031};
+					position[]={4.1416016,0.0014390945,-2.7290039};
 				};
 				side="West";
 				flags=5;
@@ -1984,7 +1984,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=82;
+				id=21;
 				type="vn_b_men_sog_03";
 				class CustomAttributes
 				{
@@ -2022,7 +2022,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7987061,0.0014390945,-4.4494629};
+					position[]={4.2436523,0.0014390945,-4.3952637};
 				};
 				side="West";
 				flags=5;
@@ -2114,7 +2114,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=83;
+				id=22;
 				type="vn_b_men_sog_02";
 				class CustomAttributes
 				{
@@ -2165,7 +2165,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.7757568,0.0014390945,-6.3654785};
+					position[]={4.2207031,0.0014390945,-6.3112793};
 				};
 				side="West";
 				flags=5;
@@ -2257,7 +2257,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=84;
+				id=23;
 				type="vn_b_men_sog_03";
 				class CustomAttributes
 				{
@@ -2295,7 +2295,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.8762207,0.0014390945,-4.5427246};
+					position[]={6.3212891,0.0014390945,-4.4885254};
 				};
 				side="West";
 				flags=5;
@@ -2387,7 +2387,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=85;
+				id=24;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -2425,7 +2425,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.7130127,0.0014390945,-6.5725098};
+					position[]={6.1577148,0.0014390945,-6.5183105};
 				};
 				side="West";
 				flags=5;
@@ -2517,7 +2517,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=86;
+				id=25;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -2555,7 +2555,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.9261475,0.0014390945,-2.5661621};
+					position[]={6.3710938,0.0014390945,-2.5119629};
 				};
 				side="West";
 				flags=5;
@@ -2647,7 +2647,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=87;
+				id=26;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -2685,7 +2685,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.8664551,0.0014390945,-0.61572266};
+					position[]={6.3115234,0.0014390945,-0.56152344};
 				};
 				side="West";
 				flags=5;
@@ -2777,7 +2777,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=88;
+				id=27;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -2815,7 +2815,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={5.8479004,0.0014390945,1.4191895};
+					position[]={6.2929688,0.0014390945,1.4733887};
 				};
 				side="West";
 				flags=5;
@@ -2907,7 +2907,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=89;
+				id=28;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -2944,35 +2944,18 @@ class items
 		class Attributes
 		{
 		};
-		id=79;
-		class CustomAttributes
-		{
-			class Attribute0
-			{
-				property="groupID";
-				expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
-				class Value
-				{
-					class data
-					{
-						singleType="STRING";
-						value="Alpha 1-2";
-					};
-				};
-			};
-			nAttributes=1;
-		};
+		id=18;
 	};
 	class Item9
 	{
 		dataType="Comment";
 		class PositionInfo
 		{
-			position[]={-2.3448486,0,6.3039551};
+			position[]={-1.8999023,0,6.3581543};
 		};
 		title="Zues Template";
 		description="- 2 Zues Slots in addition to regular admin zues" \n "- Players will need to select weapon and ammo" \n "- Full SOG Arsenal Provided";
-		id=92;
+		id=29;
 	};
 	class Item10
 	{
@@ -2986,7 +2969,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-5.1010742,0.0014390945,1.6520996};
+					position[]={-4.65625,0.0014390945,1.7062988};
 				};
 				side="West";
 				flags=7;
@@ -2997,7 +2980,7 @@ class items
 					isPlayer=1;
 					isPlayable=1;
 				};
-				id=94;
+				id=31;
 				type="vn_b_men_army_28";
 				class CustomAttributes
 				{
@@ -3035,7 +3018,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-3.2960205,0.0014390945,1.6650391};
+					position[]={-2.8510742,0.0014390945,1.7192383};
 				};
 				side="West";
 				flags=5;
@@ -3045,7 +3028,7 @@ class items
 					description="Zeus@Zeus";
 					isPlayable=1;
 				};
-				id=95;
+				id=32;
 				type="vn_b_men_army_28";
 				class CustomAttributes
 				{
@@ -3082,38 +3065,21 @@ class items
 		class Attributes
 		{
 		};
-		id=93;
-		class CustomAttributes
-		{
-			class Attribute0
-			{
-				property="groupID";
-				expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
-				class Value
-				{
-					class data
-					{
-						singleType="STRING";
-						value="Alpha 1-3";
-					};
-				};
-			};
-			nAttributes=1;
-		};
+		id=30;
 	};
 	class Item11
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.14208984,0.89242268,6.1279297};
+			position[]={0.58691406,0.89242268,6.182373};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=96;
+		id=33;
 		type="I_supplyCrate_F";
 		class CustomAttributes
 		{
@@ -3136,7 +3102,7 @@ class items
 									singleType="ARRAY";
 									class value
 									{
-										items=878;
+										items=934;
 										class Item0
 										{
 											class data
@@ -10159,6 +10125,454 @@ class items
 											{
 												singleType="STRING";
 												value="vn_b_acc_towel_02";
+											};
+										};
+										class Item878
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_p38s";
+											};
+										};
+										class Item879
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_hd";
+											};
+										};
+										class Item880
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_hp";
+											};
+										};
+										class Item881
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_izh54_p";
+											};
+										};
+										class Item882
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_m1895";
+											};
+										};
+										class Item883
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_m1911";
+											};
+										};
+										class Item884
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_mx991_m1911";
+											};
+										};
+										class Item885
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_m_m51_etool_01";
+											};
+										};
+										class Item886
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_m712";
+											};
+										};
+										class Item887
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_m79_p";
+											};
+										};
+										class Item888
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_mk22";
+											};
+										};
+										class Item889
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_m10";
+											};
+										};
+										class Item890
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_mx991";
+											};
+										};
+										class Item891
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_mx991_red";
+											};
+										};
+										class Item892
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACRE_PRC152";
+											};
+										};
+										class Item893
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACRE_PRC343";
+											};
+										};
+										class Item894
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_fieldDressing";
+											};
+										};
+										class Item895
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_elasticBandage";
+											};
+										};
+										class Item896
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_packingBandage";
+											};
+										};
+										class Item897
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_quikclot";
+											};
+										};
+										class Item898
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACRE_BF888S";
+											};
+										};
+										class Item899
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_bloodIV";
+											};
+										};
+										class Item900
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_bloodIV_250";
+											};
+										};
+										class Item901
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_bloodIV_500";
+											};
+										};
+										class Item902
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_bodyBag";
+											};
+										};
+										class Item903
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_CableTie";
+											};
+										};
+										class Item904
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_EarPlugs";
+											};
+										};
+										class Item905
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_DefusalKit";
+											};
+										};
+										class Item906
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_adenosine";
+											};
+										};
+										class Item907
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_EntrenchingTool";
+											};
+										};
+										class Item908
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_epinephrine";
+											};
+										};
+										class Item909
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_Flashlight_MX991";
+											};
+										};
+										class Item910
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_M26_Clacker";
+											};
+										};
+										class Item911
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_Clacker";
+											};
+										};
+										class Item912
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_MapTools";
+											};
+										};
+										class Item913
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_morphine";
+											};
+										};
+										class Item914
+										{
+											class data
+											{
+												singleType="STRING";
+												value="tac_medical_painkillers";
+											};
+										};
+										class Item915
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_plasmaIV";
+											};
+										};
+										class Item916
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_plasmaIV_250";
+											};
+										};
+										class Item917
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_plasmaIV_500";
+											};
+										};
+										class Item918
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_salineIV";
+											};
+										};
+										class Item919
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_salineIV_250";
+											};
+										};
+										class Item920
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_salineIV_500";
+											};
+										};
+										class Item921
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_splint";
+											};
+										};
+										class Item922
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_surgicalKit";
+											};
+										};
+										class Item923
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_tourniquet";
+											};
+										};
+										class Item924
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ACE_wirecutter";
+											};
+										};
+										class Item925
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_mine_tm57_mag";
+											};
+										};
+										class Item926
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ATMine_Range_Mag";
+											};
+										};
+										class Item927
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ClaymoreDirectionalMine_Remote_Mag";
+											};
+										};
+										class Item928
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_mine_punji_04_mag";
+											};
+										};
+										class Item929
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_mine_punji_01_mag";
+											};
+										};
+										class Item930
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_mine_punji_05_mag";
+											};
+										};
+										class Item931
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_mine_punji_02_mag";
+											};
+										};
+										class Item932
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_mine_punji_03_mag";
+											};
+										};
+										class Item933
+										{
+											class data
+											{
+												singleType="STRING";
+												value="vn_b_item_compass";
 											};
 										};
 									};
