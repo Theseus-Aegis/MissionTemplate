@@ -23,7 +23,7 @@ respawnDialog = 0;
 // Disable Chat Channels
 disableChannels[] = { // Disables unused chat channels - Comment out Side in PVP events.
     {1, true, true}, // Side
-    {2, true, true}, // Command
+    {2, true, true} // Command
 };
 
 // AI & debug
