@@ -14,8 +14,10 @@
 #include "script_macros_mission.hpp"
 
 // Userconfig
+// Requires -filePatching (which also prevents clients to load their local userconfig as they can't join with file patching)
+// HEMTT doesn't support __has_include so we do it in the template for now
 #if __has_include("\userconfig\tac\staff.hpp")
-    #include "userconfig\tac\staff.hpp"
+    #include "\userconfig\tac\staff.hpp"
 #endif
 #ifndef ADMINS
     #define ADMINS
