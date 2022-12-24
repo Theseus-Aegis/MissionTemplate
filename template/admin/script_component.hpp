@@ -12,3 +12,8 @@
 #define DEBUG_SYNCHRONOUS
 
 #include "script_macros_mission.hpp"
+
+// Userconfig
+#if __has_include("\userconfig\tac\staff.hpp")
+    #include "userconfig\tac\staff.hpp"
+#endif
