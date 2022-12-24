@@ -22,6 +22,12 @@
 #ifndef ADMINS
     #define ADMINS
 #endif
-#ifndef DEBUG_ADMINS
-    #define DEBUG_ADMINS
-#endif
+
+// Enable Debug Console and similar tools for given admins
+// Primarily used in description.ext (debug console) which gets resolved locally on clients where
+// userconfig is not available, so must have it hardcoded to take effect
+#define DEBUG_ADMINS \
+    "76561198048995566", /* Jonpas */ \
+    "76561198085500182", /* JoramD */ \
+    "76561198040879834", /* Mike */ \
+    "76561197993041837"  /* Phil */
