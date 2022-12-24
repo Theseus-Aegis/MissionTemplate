@@ -7,12 +7,6 @@ private _timeUntilStart = ((_startTime * 60) - (_hour * 60 + _minute)) * 60; // 
 _timeUntilStart = _timeUntilStart max 0;
 INFO_1("Time Until Start: %1",_timeUntilStart);
 
-// Verify mission type is correct
-private _missionType = getMissionConfigValue ["tac_type", -1];
-if (_missionType == -1 || {_missionType >= count MISSION_TYPES}) exitWith {
-    ERROR_WITH_TITLE_2("Invalid mission type %1!","Expected 0-%2",_missionType,count _missionTypes - 1);
-};
-
 // AAR
 [_timeUntilStart] call MFUNC(aar);
 
