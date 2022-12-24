@@ -3,10 +3,10 @@
 // Disables ambient animals and ambient sounds
 [{time > 0}, {enableEnvironment [false, true];}] call CBA_fnc_waitUntilAndExecute;
 
-[_player, specScreen] call FUNC(baseSpectator);
+[_player, specScreen] call MFUNC(baseSpectator);
 [_player] call FUNC(briefing);
-[_player] call FUNC(godMode);
-[_player] call FUNC(unconscious);
+[_player] call MFUNC(godMode);
+[_player] call MFUNC(unconscious);
 
 // Disable CUP street lights based on lighting levels (bad performance script)
 CUP_stopLampCheck = true;
@@ -18,11 +18,11 @@ CUP_stopLampCheck = true;
             [getMissionConfigValue ["onLoadName", ""], "<t size = '1.5' underline = '1'>%1</t><br/>"],
             ["Theseus Incorporated"],
             [getText (configFile >> "CfgWorlds" >> worldName >> "description"), "<t size = '1' font='puristaSemiBold'>%1</t>", 70]
-        ], 1, 0.75, "<t align = 'center' shadow = '1' size = '1.0'>%1</t>"
+        ]
     ] spawn BIS_fnc_typeText;
 }] call CBA_fnc_addEventHandler;
 
 // Chat Commands
 ["tac-aar", {
-    [QGVAR(manualAAR), _thisArgs] call CBA_fnc_serverEvent;
+    [QMGVAR(manualAAR), _thisArgs] call CBA_fnc_serverEvent;
 }, "admin", [_player]] call CBA_fnc_registerChatCommand;
