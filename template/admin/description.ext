@@ -33,8 +33,9 @@ corpseManagerMode = 0; // No bodies will be cleaned up
 allowProfileGlasses = 0; // Disables glasses set in profile being added to player gear
 
 // Defines
-OnLoadName = MISSION_NAME;
-OnLoadMission = MISSION_SUMMARY;
-author = MISSION_AUTHOR; // TODO Add company
+OnLoadName = QUOTE(MISSION_NAME);
+OnLoadMission = QUOTE(MISSION_SUMMARY);
+#define MISSION_AUTHOR_FULL MISSION_AUTHOR, Theseus Inc.
+author = QUOTE(MISSION_AUTHOR_FULL);
 
 tac_type = MISSION_TYPE;
