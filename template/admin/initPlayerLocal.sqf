@@ -24,5 +24,5 @@ CUP_stopLampCheck = true;
 
 // Chat Commands
 ["tac-aar", {
-    [QGVAR(manualAAR), _thisArgs] call CBA_fnc_serverEvent;
+    [QMGVAR(manualAAR), _thisArgs] call CBA_fnc_serverEvent;
 }, "admin", [_player]] call CBA_fnc_registerChatCommand;
