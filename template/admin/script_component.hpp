@@ -17,3 +17,9 @@
 #if __has_include("\userconfig\tac\staff.hpp")
     #include "userconfig\tac\staff.hpp"
 #endif
+#ifndef ADMINS
+    #define ADMINS
+#endif
+#ifndef DEBUG_ADMINS
+    #define DEBUG_ADMINS
+#endif
