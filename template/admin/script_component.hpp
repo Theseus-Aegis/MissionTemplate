@@ -28,6 +28,6 @@
 // userconfig is not available, so must have it hardcoded to take effect
 #define DEBUG_ADMINS \
     "76561198048995566", /* Jonpas */ \
-    "76561198085500182", /* JoramD */ \
-    "76561198040879834", /* Mike */ \
+    "76561198085500182", /* Mike */ \
+    "76561198040879834", /* JoramD */ \
     "76561197993041837"  /* Phil */
