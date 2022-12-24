@@ -27,6 +27,13 @@
 #define PATHTOTACF(var1,var2) PATHTOF_SYS(\x\tac\addons,var1,var2)
 #define QPATHTOTACF(var1,var2) QUOTE(PATHTOTACF(var1,var2))
 
+// TAC Mods Mission component
+#define MGVAR(var) TRIPLES(TAC_PREFIX,mission,var)
+#define QMGVAR(var) QUOTE(MGVAR(var))
+
+#define MFUNC(var) TRIPLES(DOUBLES(TAC_PREFIX,mission),fnc,var)
+#define QMFUNC(var) QUOTE(MFUNC(var))
+
 // Useful macros from ACE3
 // https://github.com/acemod/ACE3/blob/c241f2e2a20e4a3c4ca22dd0d81a7b5fa4457c8e/addons/main/script_macros.hpp
 
