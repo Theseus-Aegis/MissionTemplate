@@ -21,14 +21,14 @@ respawnDelay = 5;
 respawnDialog = 0;
 
 // Disable Chat Channels
-disableChannels[] = { // Disables unused chat channels - Comment out Global in PVP events.
-    {0, true, true}, // Global
+disableChannels[] = { // Disables unused chat channels - Comment out Side in PVP events.
+    {1, true, true}, // Side
     {2, true, true} // Command
 };
 
 // AI & debug
 disabledAI = 1;  // Disables AI for Playable Units
-enableDebugConsole[] = {"76561198048995566", "76561198085500182", "76561198040879834"};  // Enables Debug Console for players with specified UIDs (Jonpas, JoramD And Tyrone) and Host/Admin
+enableDebugConsole[] = {"76561198048995566", "76561198085500182", "76561198040879834"};  // Enables Debug Console for players with specified UIDs (Jonpas, JoramD And Mike) and Host/Admin
 enableTargetDebug = 1;
 
 // Other settings -  Do Not Edit.
