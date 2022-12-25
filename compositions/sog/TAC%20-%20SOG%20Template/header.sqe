@@ -1,5 +1,5 @@
 version=54;
-name="SOG - Default Template";
+name="TAC - SOG Template";
 author="Lairdd1989";
 category="EdSubcat_Tools";
 requiredAddons[]=
