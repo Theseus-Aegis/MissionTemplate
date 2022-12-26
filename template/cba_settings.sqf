@@ -21,4 +21,5 @@ force ace_medical_deathChance = 0.05; // 5% (default: 100%)
 force ace_medical_spontaneousWakeUpChance = 0.5; // 50% (default: 5%)
 force ace_medical_treatment_advancedBandages = 1; // Enabled & Cannot Reopen (default: 1 - Enabled)
 force ace_medical_treatment_medicIV = 0; // Allows non-medics to transfuse fluids (default: 1)
+force ace_respawn_savePreDeathGear = true; // Save and respawn with pre-set gear upon death
 #endif
