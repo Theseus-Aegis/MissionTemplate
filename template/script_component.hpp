@@ -5,5 +5,6 @@
 #define MISSION_SETTINGS 0 // 0: Contract, 1: Non-Contract, 2: SOG
 
 //#define DEBUG_MODE_FULL
+//#define RECOMPILE
 
 #include "admin\script_component.hpp"
