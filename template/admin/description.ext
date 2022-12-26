@@ -39,3 +39,7 @@ OnLoadMission = QUOTE(MISSION_SUMMARY);
 author = QUOTE(MISSION_AUTHOR_FULL);
 
 tac_type = MISSION_TYPE;
+
+#ifdef ALLOW_RECOMPILE
+allowFunctionsRecompile = 1;
+#endif
