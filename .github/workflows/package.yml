@@ -14,8 +14,6 @@ jobs:
       uses: actions/checkout@v2
     - name: Package
       run: |
-        # Rename
-        mv -v guide Theseus_Mission_Making_Guide.VR
         # Version
         MAJOR=$(grep -oP "#define MAJOR \K(\d+)" template/admin/script_component.hpp)
         MINOR=$(grep -oP "#define MINOR \K(\d+)" template/admin/script_component.hpp)
@@ -24,14 +22,13 @@ jobs:
         echo "VERSION=$VERSION" >> $GITHUB_ENV
         echo "Version: $VERSION"
         # Archive for GitHub Release
-        zip -r TAC-Mission-Template_$VERSION.zip compositions Theseus_Mission_Making_Guide.VR template LICENSE README.md
+        zip -r TAC-Mission-Template_$VERSION.zip compositions template LICENSE README.md
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
         name: TAC-Mission-Template
         path: |
           compositions
-          Theseus_Mission_Making_Guide.VR
           template
           LICENSE
           README.md
