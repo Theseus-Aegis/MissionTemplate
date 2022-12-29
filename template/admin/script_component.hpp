@@ -4,9 +4,9 @@
 #define COMPONENT Scripts
 
 // Version
-#define MAJOR 3
-#define MINOR 6
-#define PATCHLVL 2
+#define MAJOR 4
+#define MINOR 0
+#define PATCHLVL 0
 
 // Debug
 #define DEBUG_SYNCHRONOUS
