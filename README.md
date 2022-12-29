@@ -10,6 +10,6 @@ Theseus Mission Template for Arma 3. Always requires the latest Theseus Modpack.
 
 ## Release Procedure
 
-- Update version number in `template/script_component.hpp`
+- Update version number in `template/admin/script_component.hpp`
 - Push a tag (eg. through GitHub Releases)
 - CI will build the package and add it to the tagged release
