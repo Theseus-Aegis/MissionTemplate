@@ -1,9 +1,0 @@
-#include "admin\description.ext"
-
-// Mission settings - title, description, author etc.
-OnLoadName = "Mission Making Guide";
-OnLoadMission = "Learn Stuff";
-author = "Tyrone Woods, Theseus Inc.";
-
-// Randomization
-disableRandomization[] = {}; // Disables randomization of units and vehicles based off of variable name or classname
