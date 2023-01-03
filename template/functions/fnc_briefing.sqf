@@ -38,13 +38,13 @@ switch (side _player) do {
         "]];
 
         _player createDiaryRecord ["Diary", ["Equipment", "
-            <br/><font color='#0ECE68'>GROUND ASSETS:</font color>
+            <br/><font color='#0ECE68'>GROUND:</font color>
             <br/>- N/A
             <br/>
-            <br/><font color='#0ECE68'>AIR ASSETS:</font color>
+            <br/><font color='#0ECE68'>AIR:</font color>
             <br/>- N/A
             <br/>
-            <br/><font color='#0ECE68'>SPECIAL ASSETS:</font color>
+            <br/><font color='#0ECE68'>SPECIAL:</font color>
             <br/>- N/A
         "]];
 
@@ -70,6 +70,16 @@ switch (side _player) do {
             <br/><font color='#D81717'>ENEMY FORCES:</font color>
             <br/>- Enemy combatants
         "]];
+
+        _player createDiaryRecord ["Diary", ["General", "
+            <br/>Location: Map name here as on website
+            <br/>Employer(s): Employer name here as on website
+            <br/>Campaign: Campaign name here as on website, if any, otherwise delete line
+            <br/>
+            <br/><font color='#E3D310'>Technical Details</font color>
+            <br/>Any mission specific parameters go here
+        "]];
+
     };
 
     // OPFOR briefing
