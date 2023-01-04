@@ -73,6 +73,8 @@ switch (side _player) do {
 
         _player createDiaryRecord ["Diary", ["General", "
             <br/>Location: Map name here as on website
+            <br/>Local Time: 15:00
+            <br/>Local Weather: Clear Skies
             <br/>Employer(s): Employer name here as on website
             <br/>Campaign: Campaign name here as on website, if any, otherwise delete line
             <br/>
