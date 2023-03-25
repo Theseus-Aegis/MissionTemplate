@@ -15,7 +15,7 @@
 
 // Userconfig
 // __has_include requires -filePatching (which also prevents clients to load their local userconfig as they can't join with file patching)
-// __has_include is not supported by HEMTT so we do it in the template for now
+// __has_include is not supported by HEMTT preprocessing so we do it in the template
 #if __has_include("\userconfig\tac\staff.hpp")
     #include "\userconfig\tac\staff.hpp"
 #endif
