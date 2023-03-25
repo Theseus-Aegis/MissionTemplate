@@ -19,8 +19,14 @@
 #if __has_include("\userconfig\tac\staff.hpp")
     #include "\userconfig\tac\staff.hpp"
 #endif
+#if __has_include("\userconfig\tac\auth.hpp")
+    #include "\userconfig\tac\auth.hpp"
+#endif
 #ifndef ADMINS
     #define ADMINS
+#endif
+#ifndef SERVER_COMMAND_PASSWORD
+    #define SERVER_COMMAND_PASSWORD ""
 #endif
 
 // Enable Debug Console and similar tools for given admins
