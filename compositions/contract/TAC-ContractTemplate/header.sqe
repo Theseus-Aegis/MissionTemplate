@@ -4,13 +4,13 @@ author="Theseus";
 category="EdSubcat_Tools";
 requiredAddons[]=
 {
-	"A3_Structures_F_Items_Vessels",
-	"ace_cargo",
 	"tacs_units",
 	"tac_armory",
 	"tacgt_supplies",
+	"A3_Structures_F_Items_Vessels",
+	"ace_cargo",
 	"A3_Props_F_Exp_Military_Camps",
-	"A3_Characters_F",
 	"A3_Modules_F_Curator_Curator",
+	"A3_Characters_F",
 	"A3_Ui_F"
 };

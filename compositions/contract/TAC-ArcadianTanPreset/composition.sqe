@@ -1,5 +1,5 @@
 version=54;
-center[]={5159.0815,5,328.20602};
+center[]={2774.615,5,3658.5078};
 class items
 {
 	items=6;
@@ -8,163 +8,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-3.5292969,0.088064194,-3.6627808};
-			angles[]={-0,3.1415927,0};
-		};
-		side="Empty";
-		flags=4;
-		class Attributes
-		{
-			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 01""; " \n "};";
-		};
-		id=12;
-		type="tacs_Arcadian_B_Tan";
-		class CustomAttributes
-		{
-			class Attribute0
-			{
-				property="ace_repair_editorLoadedWheels";
-				expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
-						value=0;
-					};
-				};
-			};
-			class Attribute1
-			{
-				property="ammoBox";
-				expression="[_this,_value] call bis_fnc_initAmmoBox;";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"STRING"
-							};
-						};
-						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
-					};
-				};
-			};
-			class Attribute2
-			{
-				property="ace_cargo_space";
-				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
-						value=6;
-					};
-				};
-			};
-			nAttributes=3;
-		};
-	};
-	class Item1
-	{
-		dataType="Object";
-		class PositionInfo
-		{
-			position[]={-0.029296875,0.088064194,-3.6627808};
-			angles[]={-0,3.1415927,0};
-		};
-		side="Empty";
-		flags=4;
-		class Attributes
-		{
-			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 02""; " \n "};";
-		};
-		id=13;
-		type="tacs_Arcadian_B_Tan";
-		class CustomAttributes
-		{
-			class Attribute0
-			{
-				property="ace_repair_editorLoadedWheels";
-				expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
-						value=0;
-					};
-				};
-			};
-			class Attribute1
-			{
-				property="ammoBox";
-				expression="[_this,_value] call bis_fnc_initAmmoBox;";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"STRING"
-							};
-						};
-						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
-					};
-				};
-			};
-			class Attribute2
-			{
-				property="ace_cargo_space";
-				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
-						value=6;
-					};
-				};
-			};
-			nAttributes=3;
-		};
-	};
-	class Item2
-	{
-		dataType="Object";
-		class PositionInfo
-		{
-			position[]={3.4707031,0.088064194,-3.6627808};
+			position[]={3.4709473,0.088064194,-3.6628418};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
@@ -172,162 +16,6 @@ class items
 		class Attributes
 		{
 			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 03""; " \n "};";
-		};
-		id=14;
-		type="tacs_Arcadian_B_Tan";
-		class CustomAttributes
-		{
-			class Attribute0
-			{
-				property="ace_repair_editorLoadedWheels";
-				expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
-						value=0;
-					};
-				};
-			};
-			class Attribute1
-			{
-				property="ammoBox";
-				expression="[_this,_value] call bis_fnc_initAmmoBox;";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"STRING"
-							};
-						};
-						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
-					};
-				};
-			};
-			class Attribute2
-			{
-				property="ace_cargo_space";
-				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
-						value=6;
-					};
-				};
-			};
-			nAttributes=3;
-		};
-	};
-	class Item3
-	{
-		dataType="Object";
-		class PositionInfo
-		{
-			position[]={-3.5292969,0.088064194,2.8372192};
-			angles[]={-0,3.1415927,0};
-		};
-		side="Empty";
-		flags=4;
-		class Attributes
-		{
-			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 04""; " \n "};";
-		};
-		id=15;
-		type="tacs_Arcadian_B_Tan";
-		class CustomAttributes
-		{
-			class Attribute0
-			{
-				property="ace_repair_editorLoadedWheels";
-				expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
-						value=0;
-					};
-				};
-			};
-			class Attribute1
-			{
-				property="ammoBox";
-				expression="[_this,_value] call bis_fnc_initAmmoBox;";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"STRING"
-							};
-						};
-						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
-					};
-				};
-			};
-			class Attribute2
-			{
-				property="ace_cargo_space";
-				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
-						value=6;
-					};
-				};
-			};
-			nAttributes=3;
-		};
-	};
-	class Item4
-	{
-		dataType="Object";
-		class PositionInfo
-		{
-			position[]={-0.029296875,0.088064194,2.8372192};
-			angles[]={-0,3.1415927,0};
-		};
-		side="Empty";
-		flags=4;
-		class Attributes
-		{
-			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 05""; " \n "};";
 		};
 		id=16;
 		type="tacs_Arcadian_B_Tan";
@@ -341,13 +29,7 @@ class items
 				{
 					class data
 					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
+						singleType="SCALAR";
 						value=0;
 					};
 				};
@@ -360,14 +42,8 @@ class items
 				{
 					class data
 					{
-						class type
-						{
-							type[]=
-							{
-								"STRING"
-							};
-						};
-						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
+						singleType="STRING";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6"",""ToolKit""],[1,1]],[[],[]]],false]";
 					};
 				};
 			};
@@ -379,13 +55,7 @@ class items
 				{
 					class data
 					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
+						singleType="SCALAR";
 						value=6;
 					};
 				};
@@ -393,19 +63,19 @@ class items
 			nAttributes=3;
 		};
 	};
-	class Item5
+	class Item1
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={3.4707031,0.088064194,2.8372192};
+			position[]={-3.5290527,0.088064194,2.8371582};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
-			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 06""; " \n "};";
+			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 04""; " \n "};";
 		};
 		id=17;
 		type="tacs_Arcadian_B_Tan";
@@ -419,13 +89,7 @@ class items
 				{
 					class data
 					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
+						singleType="SCALAR";
 						value=0;
 					};
 				};
@@ -438,14 +102,8 @@ class items
 				{
 					class data
 					{
-						class type
-						{
-							type[]=
-							{
-								"STRING"
-							};
-						};
-						value="[[[[],[]],[[],[]],[[""ACE_rope6""],[1]],[[],[]]],false]";
+						singleType="STRING";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6"",""ToolKit""],[1,1]],[[],[]]],false]";
 					};
 				};
 			};
@@ -457,13 +115,247 @@ class items
 				{
 					class data
 					{
-						class type
-						{
-							type[]=
-							{
-								"SCALAR"
-							};
-						};
+						singleType="SCALAR";
+						value=6;
+					};
+				};
+			};
+			nAttributes=3;
+		};
+	};
+	class Item2
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.029052734,0.088064194,2.8371582};
+			angles[]={-0,3.1415927,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 05""; " \n "};";
+		};
+		id=18;
+		type="tacs_Arcadian_B_Tan";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_repair_editorLoadedWheels";
+				expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						singleType="STRING";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6"",""ToolKit""],[1,1]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ace_cargo_space";
+				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=6;
+					};
+				};
+			};
+			nAttributes=3;
+		};
+	};
+	class Item3
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={3.4709473,0.088064194,2.8371582};
+			angles[]={-0,3.1415927,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 06""; " \n "};";
+		};
+		id=19;
+		type="tacs_Arcadian_B_Tan";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_repair_editorLoadedWheels";
+				expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						singleType="STRING";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6"",""ToolKit""],[1,1]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ace_cargo_space";
+				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=6;
+					};
+				};
+			};
+			nAttributes=3;
+		};
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-3.5290527,0.088064194,-3.6628418};
+			angles[]={-0,3.1415927,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 01""; " \n "};";
+		};
+		id=14;
+		type="tacs_Arcadian_B_Tan";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_repair_editorLoadedWheels";
+				expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						singleType="STRING";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6"",""ToolKit""],[1,1]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ace_cargo_space";
+				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=6;
+					};
+				};
+			};
+			nAttributes=3;
+		};
+	};
+	class Item5
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.029052734,0.088064194,-3.6628418};
+			angles[]={-0,3.1415927,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="if (isServer) then { " \n "    [""ACE_Wheel"", this, 4] call ace_cargo_fnc_addCargoItem;" \n "    this setPlateNumber ""  TACS - 02""; " \n "};";
+		};
+		id=15;
+		type="tacs_Arcadian_B_Tan";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_repair_editorLoadedWheels";
+				expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						singleType="STRING";
+						value="[[[[],[]],[[],[]],[[""ACE_rope6"",""ToolKit""],[1,1]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ace_cargo_space";
+				expression="[_this, _value] call ace_cargo_fnc_setSpace;";
+				class Value
+				{
+					class data
+					{
+						singleType="SCALAR";
 						value=6;
 					};
 				};
