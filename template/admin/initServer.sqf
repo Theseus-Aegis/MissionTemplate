@@ -16,6 +16,9 @@ INFO_1("Time Until Start: %1",_timeUntilStart);
 // AAR
 [_timeUntilStart] call MFUNC(aar);
 
+// APC Skill
+[] call MFUNC(apcSkill);
+
 // Mission Name call on mission start
 [{
     [QGVAR(missionName), []] call CBA_fnc_globalEvent;
