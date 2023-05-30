@@ -12,7 +12,7 @@ private _startTime = 14; // 1400z always
 GVAR(timeUntilStart) = ((_startTime * 60) - (_hour * 60 + _minute)) * 60; // start time - current time = time until start time
 GVAR(timeUntilStart) = GVAR(timeUntilStart) max 0;
 publicVariable QGVAR(timeUntilStart);
-INFO_1("Time Until Start: %1", GVAR(timeUntilStart));
+INFO_1("Time Until Start: %1",GVAR(timeUntilStart));
 
 // AAR
 [GVAR(timeUntilStart)] call MFUNC(aar);
