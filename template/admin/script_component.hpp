@@ -16,14 +16,8 @@
 // Userconfig
 // __has_include requires -filePatching (which also prevents clients to load their local userconfig as they can't join with file patching)
 // __has_include is not supported by HEMTT preprocessing so we do it in the template
-#if __has_include("\userconfig\tac\staff.hpp")
-    #include "\userconfig\tac\staff.hpp"
-#endif
 #if __has_include("\userconfig\tac\auth.hpp")
-    #include "\userconfig\tac\auth.hpp"
-#endif
-#ifndef ADMINS
-    #define ADMINS
+    #include "\userconfig\tac\auth.hpp" // Contents available in Tools repository
 #endif
 #ifndef SERVER_COMMAND_PASSWORD
     #define SERVER_COMMAND_PASSWORD ""
