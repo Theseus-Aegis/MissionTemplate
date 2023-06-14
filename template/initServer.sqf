@@ -13,10 +13,11 @@
  * Example:
  * None
  */
-[{
-    #include "admin\initServer.sqf"
 
-    // START USER CODE
+START_USER_CODE_INITS
+// START USER CODE
 
-    // END USER CODE
-}] call CBA_fnc_directCall;
+
+
+// END USER CODE
+END_USER_CODE_INIT
