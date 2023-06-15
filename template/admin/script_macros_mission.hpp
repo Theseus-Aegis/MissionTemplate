@@ -8,6 +8,13 @@
 #include "\x\cba\addons\main\script_macros_mission.hpp"
 #include "\x\tac\addons\mission\script_macros_mission.hpp"
 
+// User code wrappers
+#define START_USER_CODE_INITS [{ #include "admin\initServer.sqf
+#define START_USER_CODE_INIT  [{ #include "admin\init.sqf
+#define END_USER_CODE_INIT    }] call CBA_fnc_directCall;
+#define START_USER_CODE_INIT  [{ params ["_player", "_didJIP"]; #include "admin\initPlayerLocal.sqf"
+#define END_USER_CODE_INITPL  }, _this] call CBA_fnc_directCall;
+
 // Functions (shortened PATHTO_FNC with functions in subfolder)
 #define DFUNC(func) class func {\
     file = QUOTE(functions\DOUBLES(fnc,func).sqf);\
