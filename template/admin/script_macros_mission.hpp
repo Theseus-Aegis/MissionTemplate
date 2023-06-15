@@ -8,6 +8,10 @@
 #include "\x\cba\addons\main\script_macros_mission.hpp"
 #include "\x\tac\addons\mission\script_macros_mission.hpp"
 
+// User code wrappers
+#define START_SIDE_BRIEF(briefSide) if (side _player == briefSide) then {
+#define END_SIDE_BRIEF              };
+
 // Functions (shortened PATHTO_FNC with functions in subfolder)
 #define DFUNC(func) class func {\
     file = QUOTE(functions\DOUBLES(fnc,func).sqf);\
