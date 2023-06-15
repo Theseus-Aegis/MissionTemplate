@@ -14,6 +14,8 @@
 #define END_USER_CODE_INIT    }] call CBA_fnc_directCall;
 #define START_USER_CODE_INIT  [{ params ["_player", "_didJIP"]; #include "admin\initPlayerLocal.sqf"
 #define END_USER_CODE_INITPL  }, _this] call CBA_fnc_directCall;
+#define START_SIDE_BRIEF(briefSide) if (side _player == briefSide) then {
+#define END_SIDE_BRIEF              };
 
 // Functions (shortened PATHTO_FNC with functions in subfolder)
 #define DFUNC(func) class func {\
