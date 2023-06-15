@@ -16,12 +16,10 @@
  * None
  */
 
-[{
-    params ["_player", "_didJIP"];
+START_USER_CODE_INITPL
+// START USER CODE
 
-    #include "admin\initPlayerLocal.sqf"
 
-    // START USER CODE
 
-    // END USER CODE
-}, _this] call CBA_fnc_directCall;
+// END USER CODE
+END_USER_CODE_INITPL
