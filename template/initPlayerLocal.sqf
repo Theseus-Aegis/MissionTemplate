@@ -16,10 +16,11 @@
  * None
  */
 
-START_USER_CODE_INITPL
+START_USER_CODE
+#include "admin\initPlayerLocal.sqf" // provides [_player, _didJIP]
 // START USER CODE
 
 
 
 // END USER CODE
-END_USER_CODE_INITPL
+END_USER_CODE

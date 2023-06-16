@@ -15,10 +15,11 @@
  * None
  */
 
-START_USER_CODE_INIT
+START_USER_CODE
+#include "admin\init.sqf"
 // START USER CODE
 
 
 
 // END USER CODE
-END_USER_CODE_INIT
+END_USER_CODE

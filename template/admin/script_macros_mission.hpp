@@ -9,11 +9,8 @@
 #include "\x\tac\addons\mission\script_macros_mission.hpp"
 
 // User code wrappers
-#define START_USER_CODE_INITS [{ #include "admin\initServer.sqf
-#define START_USER_CODE_INIT  [{ #include "admin\init.sqf
-#define END_USER_CODE_INIT    }] call CBA_fnc_directCall;
-#define START_USER_CODE_INIT  [{ params ["_player", "_didJIP"]; #include "admin\initPlayerLocal.sqf"
-#define END_USER_CODE_INITPL  }, _this] call CBA_fnc_directCall;
+#define START_USER_CODE [{
+#define END_USER_CODE   }, _this] call CBA_fnc_directCall;
 #define START_SIDE_BRIEF(briefSide) if (side _player == briefSide) then {
 #define END_SIDE_BRIEF              };
 
