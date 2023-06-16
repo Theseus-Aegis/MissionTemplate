@@ -9,8 +9,9 @@
 #include "\x\tac\addons\mission\script_macros_mission.hpp"
 
 // User code wrappers
-#define START_USER_CODE [{
-#define END_USER_CODE   }, _this] call CBA_fnc_directCall;
+#define START_USER_CODE     [{
+#define END_USER_CODE       }] call CBA_fnc_directCall;
+#define END_USER_CODE_ARGS  }, _this] call CBA_fnc_directCall;
 #define START_SIDE_BRIEF(briefSide) if (side _player == briefSide) then {
 #define END_SIDE_BRIEF              };
 
