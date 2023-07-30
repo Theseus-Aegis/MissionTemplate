@@ -36,7 +36,7 @@ params ["_player"];
 //START_SIDE_BRIEF(west) // SIDE-SPECIFIC BRIEFING
 
 _player createDiaryRecord ["Diary", ["Intelligence", "
-    <br/> See Mission making wiki (difficulty guidelines) for requirements, then delete this line.
+    <br/>See Mission Making Wiki (Difficulty Guidelines) for requirements, then delete this line.
     <br/>Enemy Capabilities:
     <br/>Enemy Vehicle Composition:
     <br/>EOD Required:
