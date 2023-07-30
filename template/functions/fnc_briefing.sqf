@@ -36,8 +36,15 @@ params ["_player"];
 //START_SIDE_BRIEF(west) // SIDE-SPECIFIC BRIEFING
 
 _player createDiaryRecord ["Diary", ["Intelligence", "
-    <br/>You can flesh out the intel we have on enemy compositions and equipment here
-    <br/>As well as other things that fits the intel section
+    <br/> See Mission making wiki (difficulty guidelines) for requirements, then delete this line.
+    <br/>Locked Doors:
+    <br/>EOD Required:
+    <br/>Est. Enemy Force:
+    <br/>Enemy Vehicle Composition:
+    <br/>Enemy Capabilities:
+    <br/>Est. Time Frame:
+    <br/>
+    <br/>Any other item that fits the intelligence section. If none, delete line.
 "]];
 
 _player createDiaryRecord ["Diary", ["Equipment", "
