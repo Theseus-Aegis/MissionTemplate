@@ -37,12 +37,12 @@ params ["_player"];
 
 _player createDiaryRecord ["Diary", ["Intelligence", "
     <br/> See Mission making wiki (difficulty guidelines) for requirements, then delete this line.
-    <br/>Locked Doors:
+    <br/>Enemy Capabilities:
+    <br/>Enemy Vehicle Composition:
     <br/>EOD Required:
     <br/>Est. Enemy Force:
-    <br/>Enemy Vehicle Composition:
-    <br/>Enemy Capabilities:
     <br/>Est. Time Frame:
+    <br/>Locked Doors:
     <br/>
     <br/>Any other item that fits the intelligence section. If none, delete line.
 "]];
