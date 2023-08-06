@@ -36,15 +36,14 @@ params ["_player"];
 //START_SIDE_BRIEF(west) // SIDE-SPECIFIC BRIEFING
 
 _player createDiaryRecord ["Diary", ["Intelligence", "
-    <br/>See Mission Making Wiki (Difficulty Guidelines) for requirements, then delete this line.
-    <br/>Enemy Capabilities:
-    <br/>Enemy Vehicle Composition:
-    <br/>EOD Required:
-    <br/>Est. Enemy Force:
-    <br/>Est. Time Frame:
-    <br/>Locked Doors:
+    <br/>- Enemy Capabilities: eg. Near Peer
+    <br/>- Enemy Vehicle Composition: eg. Heavy Armoured Support Capabilities
+    <br/>- EOD Required: eg. Not Required
+    <br/>- Est. Enemy Force: eg. 2x Platoon Sized Elements (32-50)
+    <br/>- Est. Time Frame: eg. 1 Hour
+    <br/>- Locked Doors: Yes/No
     <br/>
-    <br/>Any other item that fits the intelligence section. If none, delete line.
+    <br/>Any additional intelligence goes here
 "]];
 
 _player createDiaryRecord ["Diary", ["Equipment", "
