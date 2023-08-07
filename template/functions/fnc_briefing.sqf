@@ -36,8 +36,14 @@ params ["_player"];
 //START_SIDE_BRIEF(west) // SIDE-SPECIFIC BRIEFING
 
 _player createDiaryRecord ["Diary", ["Intelligence", "
-    <br/>You can flesh out the intel we have on enemy compositions and equipment here
-    <br/>As well as other things that fits the intel section
+    <br/>- Enemy Capabilities: eg. Near Peer
+    <br/>- Enemy Vehicle Composition: eg. Heavy Armoured Support Capabilities
+    <br/>- EOD Required: eg. Not Required
+    <br/>- Est. Enemy Force: eg. 2x Platoon Sized Elements (32-50)
+    <br/>- Est. Time Frame: eg. 1 Hour
+    <br/>- Locked Doors: Yes/No
+    <br/>
+    <br/>Any additional intelligence goes here
 "]];
 
 _player createDiaryRecord ["Diary", ["Equipment", "
