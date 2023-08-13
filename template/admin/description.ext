@@ -35,7 +35,7 @@ allowProfileGlasses = 0; // Disables glasses set in profile being added to playe
 // Defines
 OnLoadName = QUOTE(MISSION_NAME);
 OnLoadMission = QUOTE(MISSION_SUMMARY);
-#define MISSION_AUTHOR_FULL MISSION_AUTHOR, Theseus Inc.
+#define MISSION_AUTHOR_FULL MISSION_AUTHOR, Theseus Incorporated
 author = QUOTE(MISSION_AUTHOR_FULL);
 
 tac_type = MISSION_TYPE;
