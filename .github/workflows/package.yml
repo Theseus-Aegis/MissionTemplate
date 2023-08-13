@@ -22,11 +22,11 @@ jobs:
         echo "VERSION=$VERSION" >> $GITHUB_ENV
         echo "Version: $VERSION"
         # Archive for GitHub Release
-        zip -r TAC-Mission-Template_$VERSION.zip compositions template LICENSE README.md
+        zip -r TheseusMissionTemplate_$VERSION.zip compositions template LICENSE README.md
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: TAC-Mission-Template
+        name: Theseus_MissionTemplate
         path: |
           compositions
           template
@@ -38,5 +38,5 @@ jobs:
       with:
         draft: true
         files: "*.zip"
-        name: "TAC Mission Template"
+        name: "Theseus Mission Template"
         tag_name: ${{ github.ref_name }}
