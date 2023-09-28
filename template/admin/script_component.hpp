@@ -6,7 +6,7 @@
 // Version
 #define MAJOR 4
 #define MINOR 3
-#define PATCHLVL 1
+#define PATCHLVL 2
 
 // Debug
 #define DEBUG_SYNCHRONOUS
