@@ -12,7 +12,6 @@ requiredAddons[]=
 	"A3_Soft_F_Gamma_Truck_01",
 	"A3_Soft_F_Exp_Truck_01",
 	"ace_realisticnames",
-	"tac_heavylifter",
 	"Desert",
 	"tacs_variants_melb"
 };

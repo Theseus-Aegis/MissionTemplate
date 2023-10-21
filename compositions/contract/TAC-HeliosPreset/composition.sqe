@@ -59,7 +59,7 @@ class items
 		flags=4;
 		class Attributes
 		{
-			init="call{if (isServer) then { " \n "    [""Land_CanisterFuel_F"", this, 2] call ace_cargo_fnc_addCargoItem; };}";
+			init="call{if (isServer) then { " \n "    [""tacgt_CanisterFuel_Theseus"", this, 2] call ace_cargo_fnc_addCargoItem; };}";
 		};
 		id=5;
 		type="B_Truck_01_fuel_F";

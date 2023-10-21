@@ -2322,7 +2322,7 @@ class items
 		{
 		};
 		id=28;
-		type="Land_CanisterFuel_F";
+		type="tacgt_CanisterFuel_Theseus";
 	};
 	class Item34
 	{
@@ -2337,7 +2337,7 @@ class items
 		{
 		};
 		id=29;
-		type="Land_CanisterFuel_F";
+		type="tacgt_CanisterFuel_Theseus";
 	};
 	class Item35
 	{
@@ -2352,7 +2352,7 @@ class items
 		{
 		};
 		id=30;
-		type="Land_CanisterFuel_F";
+		type="tacgt_CanisterFuel_Theseus";
 	};
 	class Item36
 	{
@@ -2367,7 +2367,7 @@ class items
 		{
 		};
 		id=31;
-		type="Land_CanisterFuel_F";
+		type="tacgt_CanisterFuel_Theseus";
 	};
 	class Item37
 	{
