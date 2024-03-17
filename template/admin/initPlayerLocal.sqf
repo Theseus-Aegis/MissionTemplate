@@ -10,9 +10,6 @@ params ["_player", "_didJIP"];
 [_player] call MFUNC(godMode);
 [_player] call MFUNC(unconscious);
 
-// Disable CUP street lights based on lighting levels (bad performance script)
-CUP_stopLampCheck = true;
-
 // Mission name event
 [QGVAR(missionName), {
     [
