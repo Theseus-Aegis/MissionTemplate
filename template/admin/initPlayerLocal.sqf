@@ -25,3 +25,21 @@ params ["_player", "_didJIP"];
 ["tac-aar", {
     [QMGVAR(manualAAR), _thisArgs] call CBA_fnc_serverEvent;
 }, "admin", [_player]] call CBA_fnc_registerChatCommand;
+
+// Vehicle Spawner List
+GVAR(vehicleSpawnerList) = [
+    "tacs_Arcadian_B_Black", // Arcadians
+    "tacs_Arcadian_B_Green",
+    "tacs_Arcadian_B_Grey",
+    "tacs_Arcadian_B_Tan",
+    "tacs_HEMTT_B_Transport", // HEMTT Transport
+    "tacs_Offroad_B_Black", // Offroad
+    "tacs_Offroad_B_Covered_Black",
+    "tacs_Polaris_B_Black", // Polaris DAGOR
+    "tacs_Polaris_B_Green",
+    "tacs_Polaris_B_Tan",
+    "tacs_Van_Cargo_B_Black", // Van
+    "tacs_Van_Transport_B_Black"
+];
+
+[TemplateVehicleSpawner, TemplateVehiclePosition] call MFUNC(vehicleSpawner);
