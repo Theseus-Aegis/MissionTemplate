@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Package
       run: |
         # Version
@@ -24,7 +24,7 @@ jobs:
         # Archive for GitHub Release
         zip -r TheseusMissionTemplate_$VERSION.zip compositions template LICENSE README.md
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: Theseus_MissionTemplate
         path: |
@@ -32,8 +32,9 @@ jobs:
           template
           LICENSE
           README.md
+        include-hidden-files: true
     - name: Upload to GitHub
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       if: startsWith(github.ref, 'refs/tags/')
       with:
         draft: true
