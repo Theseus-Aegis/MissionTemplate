@@ -1,16 +1,16 @@
 version=54;
-center[]={4052.8828,5,7609.3599};
+center[]={2973.6367,5,6153.918};
 class items
 {
-	items=12;
+	items=11;
 	class Item0
 	{
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-6.7285156,0,4.4082031};
+			position[]={-6.7858887,0,4.6005859};
 		};
-		id=5;
+		id=79;
 		type="ModuleCurator_F";
 		class CustomAttributes
 		{
@@ -74,39 +74,39 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-6.7285156,0,5.9082031};
+			position[]={-6.7858887,0,6.1005859};
 			angles[]={0,0.0138731,0};
 		};
 		name="headlessclient1";
 		isPlayable=1;
-		id=6;
+		id=80;
 		type="HeadlessClient_F";
 	};
 	class Item2
 	{
 		dataType="Marker";
-		position[]={-6.7285156,0,6.8920898};
+		position[]={-6.7858887,0,7.0844727};
 		name="respawn_west";
 		type="Empty";
 		angle=180.40349;
-		id=7;
+		id=81;
 	};
 	class Item3
 	{
 		dataType="Marker";
-		position[]={-6.7255859,0,7.7890625};
+		position[]={-6.782959,0,7.9814453};
 		name="Theseus_Marker";
 		text="Theseus";
 		type="hd_start";
 		colorName="ColorWEST";
-		id=8;
+		id=82;
 	};
 	class Item4
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-5.2285156,1.0431652,6.4082031};
+			position[]={-5.2858887,1.0431652,6.6005859};
 			angles[]={-0,3.1554656,0};
 		};
 		side="Empty";
@@ -116,7 +116,7 @@ class items
 			name="SpecScreen";
 			disableSimulation=1;
 		};
-		id=9;
+		id=83;
 		type="Land_TripodScreen_01_large_F";
 		class CustomAttributes
 		{
@@ -141,9 +141,9 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-6.7333984,0,2.4555664};
+			position[]={-6.7907715,0,2.6479492};
 		};
-		id=10;
+		id=84;
 		type="ModuleCurator_F";
 		class CustomAttributes
 		{
@@ -207,9 +207,9 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-6.7226563,0,0.88183594};
+			position[]={-6.7800293,0,1.0742188};
 		};
-		id=11;
+		id=85;
 		type="ModuleCurator_F";
 		class CustomAttributes
 		{
@@ -280,7 +280,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.70263672,0.0014390945,0.96875};
+					position[]={-0.76000977,0.0014390945,1.1611328};
 				};
 				side="West";
 				flags=7;
@@ -372,7 +372,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=13;
+				id=87;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -410,7 +410,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.77148438,0.0014390945,-1.0043945};
+					position[]={-0.82885742,0.0014390945,-0.81201172};
 				};
 				side="West";
 				flags=5;
@@ -502,7 +502,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=14;
+				id=88;
 				type="vn_b_men_sog_02";
 				class CustomAttributes
 				{
@@ -553,7 +553,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.79443359,0.0014390945,-2.9204102};
+					position[]={-0.85180664,0.0014390945,-2.7280273};
 				};
 				side="West";
 				flags=5;
@@ -645,7 +645,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=15;
+				id=89;
 				type="vn_b_men_sog_03";
 				class CustomAttributes
 				{
@@ -683,7 +683,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.69238281,0.0014390945,-4.5864258};
+					position[]={-0.74975586,0.0014390945,-4.394043};
 				};
 				side="West";
 				flags=5;
@@ -775,7 +775,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=16;
+				id=90;
 				type="vn_b_men_sog_02";
 				class CustomAttributes
 				{
@@ -826,7 +826,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.71533203,0.0014390945,-6.5024414};
+					position[]={-0.77270508,0.0014390945,-6.3100586};
 				};
 				side="West";
 				flags=5;
@@ -918,7 +918,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=17;
+				id=91;
 				type="vn_b_men_sog_03";
 				class CustomAttributes
 				{
@@ -956,7 +956,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.3852539,0.0014390945,-4.6796875};
+					position[]={1.3278809,0.0014390945,-4.4873047};
 				};
 				side="West";
 				flags=5;
@@ -1048,7 +1048,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=18;
+				id=92;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1086,7 +1086,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.222168,0.0014390945,-6.7094727};
+					position[]={1.1647949,0.0014390945,-6.5170898};
 				};
 				side="West";
 				flags=5;
@@ -1178,7 +1178,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=19;
+				id=93;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1216,7 +1216,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.4350586,0.0014390945,-2.703125};
+					position[]={1.3776855,0.0014390945,-2.5107422};
 				};
 				side="West";
 				flags=5;
@@ -1308,7 +1308,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=20;
+				id=94;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1346,7 +1346,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.3754883,0.0014390945,-0.75244141};
+					position[]={1.3181152,0.0014390945,-0.56005859};
 				};
 				side="West";
 				flags=5;
@@ -1438,7 +1438,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=21;
+				id=95;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1476,7 +1476,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.3569336,0.0014390945,1.2822266};
+					position[]={1.2995605,0.0014390945,1.4746094};
 				};
 				side="West";
 				flags=5;
@@ -1568,7 +1568,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=22;
+				id=96;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1605,7 +1605,7 @@ class items
 		class Attributes
 		{
 		};
-		id=12;
+		id=86;
 	};
 	class Item8
 	{
@@ -1619,7 +1619,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.2314453,0.0014390945,1.1586914};
+					position[]={4.1740723,0.0014390945,1.3510742};
 				};
 				side="West";
 				flags=7;
@@ -1711,7 +1711,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=24;
+				id=98;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -1749,7 +1749,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.1625977,0.0014390945,-0.81445313};
+					position[]={4.1052246,0.0014390945,-0.62207031};
 				};
 				side="West";
 				flags=5;
@@ -1841,7 +1841,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=25;
+				id=99;
 				type="vn_b_men_sog_02";
 				class CustomAttributes
 				{
@@ -1892,7 +1892,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.1401367,0.0014390945,-2.7304688};
+					position[]={4.0827637,0.0014390945,-2.5380859};
 				};
 				side="West";
 				flags=5;
@@ -1984,7 +1984,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=26;
+				id=100;
 				type="vn_b_men_sog_03";
 				class CustomAttributes
 				{
@@ -2022,7 +2022,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.2421875,0.0014390945,-4.3969727};
+					position[]={4.1848145,0.0014390945,-4.2045898};
 				};
 				side="West";
 				flags=5;
@@ -2114,7 +2114,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=27;
+				id=101;
 				type="vn_b_men_sog_02";
 				class CustomAttributes
 				{
@@ -2165,7 +2165,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.2192383,0.0014390945,-6.3129883};
+					position[]={4.1618652,0.0014390945,-6.1206055};
 				};
 				side="West";
 				flags=5;
@@ -2257,7 +2257,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=28;
+				id=102;
 				type="vn_b_men_sog_03";
 				class CustomAttributes
 				{
@@ -2295,7 +2295,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.3198242,0.0014390945,-4.4897461};
+					position[]={6.2624512,0.0014390945,-4.2973633};
 				};
 				side="West";
 				flags=5;
@@ -2387,7 +2387,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=29;
+				id=103;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -2425,7 +2425,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.15625,0.0014390945,-6.5200195};
+					position[]={6.098877,0.0014390945,-6.3276367};
 				};
 				side="West";
 				flags=5;
@@ -2517,7 +2517,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=30;
+				id=104;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -2555,7 +2555,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.3696289,0.0014390945,-2.5131836};
+					position[]={6.3122559,0.0014390945,-2.3208008};
 				};
 				side="West";
 				flags=5;
@@ -2647,7 +2647,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=31;
+				id=105;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -2685,7 +2685,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.3100586,0.0014390945,-0.56298828};
+					position[]={6.2526855,0.0014390945,-0.37060547};
 				};
 				side="West";
 				flags=5;
@@ -2777,7 +2777,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=32;
+				id=106;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -2815,7 +2815,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.2915039,0.0014390945,1.472168};
+					position[]={6.2341309,0.0014390945,1.6645508};
 				};
 				side="West";
 				flags=5;
@@ -2907,7 +2907,7 @@ class items
 						headgear="vn_b_helmet_m1_11_01";
 					};
 				};
-				id=33;
+				id=107;
 				type="vn_b_men_sog_01";
 				class CustomAttributes
 				{
@@ -2944,20 +2944,9 @@ class items
 		class Attributes
 		{
 		};
-		id=23;
+		id=97;
 	};
 	class Item9
-	{
-		dataType="Comment";
-		class PositionInfo
-		{
-			position[]={-1.9013672,0,6.3569336};
-		};
-		title="Zues Template";
-		description="- 2 Zues Slots in addition to regular admin zues" \n "- Players will need to select weapon and ammo" \n "- Full SOG Arsenal Provided";
-		id=34;
-	};
-	class Item10
 	{
 		dataType="Group";
 		side="West";
@@ -2969,7 +2958,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.6577148,0.0014390945,1.7045898};
+					position[]={-4.7150879,0.0014390945,1.8969727};
 				};
 				side="West";
 				flags=7;
@@ -2980,7 +2969,7 @@ class items
 					isPlayer=1;
 					isPlayable=1;
 				};
-				id=36;
+				id=110;
 				type="vn_b_men_army_28";
 				class CustomAttributes
 				{
@@ -3018,7 +3007,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.8525391,0.0014390945,1.7177734};
+					position[]={-2.9099121,0.0014390945,1.9101563};
 				};
 				side="West";
 				flags=5;
@@ -3028,7 +3017,7 @@ class items
 					description="Zeus@Zeus";
 					isPlayable=1;
 				};
-				id=37;
+				id=111;
 				type="vn_b_men_army_28";
 				class CustomAttributes
 				{
@@ -3065,21 +3054,21 @@ class items
 		class Attributes
 		{
 		};
-		id=35;
+		id=109;
 	};
-	class Item11
+	class Item10
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.58520508,0.89242268,6.1811523};
+			position[]={0.52783203,0.89242268,6.3735352};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=38;
+		id=112;
 		type="I_supplyCrate_F";
 		class CustomAttributes
 		{
