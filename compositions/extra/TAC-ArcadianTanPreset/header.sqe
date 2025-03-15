@@ -1,8 +1,0 @@
-version=54;
-name="TAC - Arcadian Tan Preset";
-author="Tyrone";
-category="EdSubcat_Tools";
-requiredAddons[]=
-{
-	"tacs_arcadian"
-};
