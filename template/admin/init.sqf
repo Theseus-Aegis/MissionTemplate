@@ -17,7 +17,7 @@ if (_missionType == -1 || {_missionType >= count MISSION_TYPES}) exitWith {
     [_x, "theseus", 1, "label", "ARES 1"] call acre_api_fnc_setPresetChannelField;
     [_x, "theseus", 2, "label", "ARES 2"] call acre_api_fnc_setPresetChannelField;
     [_x, "theseus", 3, "label", "ARES 3"] call acre_api_fnc_setPresetChannelField;
-    [_x, "theseus", 4, "label", "ARES 4"] call acre_api_fnc_setPresetChannelField;
+    [_x, "theseus", 4, "label", "KERES"] call acre_api_fnc_setPresetChannelField;
     [_x, "theseus", 5, "label", "COMMAND"] call acre_api_fnc_setPresetChannelField;
     [_x, "theseus", 11, "label", "HELIOS 1"] call acre_api_fnc_setPresetChannelField;
     [_x, "theseus", 12, "label", "HELIOS 2"] call acre_api_fnc_setPresetChannelField;
