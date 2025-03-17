@@ -8,12 +8,13 @@ params ["_player", "_didJIP"];
 [_player, specScreen] call MFUNC(baseSpectator);
 [_player] call FUNC(briefing);
 [_player] call MFUNC(godMode);
-[] call MFUNC(timeUntilStart);
 [_player] call MFUNC(unconscious);
 
-// Set player time until start to 0
+// Set local player time until start (0 if debug mode enabled)
 #ifdef DEBUG_MODE_FULL
 GVAR(timeUntilStartPlayer) = 0;
+#else
+GVAR(timeUntilStartPlayer) = call MFUNC(timeUntilStart);
 #endif
 
 INFO_1("Time Until Start Player: %1",GVAR(timeUntilStartPlayer));
