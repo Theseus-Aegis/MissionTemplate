@@ -5,7 +5,7 @@
 
 // Version
 #define MAJOR 4
-#define MINOR 5
+#define MINOR 6
 #define PATCHLVL 0
 
 // Debug
@@ -30,5 +30,5 @@
     "76561198048995566", /* Jonpas */ \
     "76561198085500182", /* Mike */ \
     "76561198040879834", /* JoramD */ \
-    "76561197993041837", /* Phil */ \
+    "76561198083752170", /* Dave */ \
     "76561198025984510"  /* Flyzoor */
