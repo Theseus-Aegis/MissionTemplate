@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Kresky, Jonpas
+ * Author: Emythiel, Jonpas
  * Adds briefing.
  * Call from initPlayerLocal.sqf.
  *
